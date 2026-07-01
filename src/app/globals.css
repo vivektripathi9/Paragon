@@ -129,6 +129,32 @@ blockquote,
   );
 }
 
+@media (max-width: 767px) {
+  .btn-hero,
+  .clip-chamfer-bl {
+    display: flex !important;
+    width: 100% !important;
+    max-width: none;
+    box-sizing: border-box;
+    padding-inline: 2.5rem;
+    justify-content: center;
+  }
+
+  header nav .bg-calculator-btn {
+    display: inline-flex !important;
+    width: auto !important;
+    padding-inline: 1.75rem;
+  }
+
+  #mobile-nav-menu .bg-calculator-btn {
+    display: flex !important;
+    width: 100% !important;
+    max-width: none;
+    padding-inline: 2.5rem;
+    justify-content: center;
+  }
+}
+
 .section-anim {
   --anim-base: #021132;
   --anim-mass: #06184a;

@@ -79,7 +79,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center lg:col-span-5 lg:justify-end">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center lg:col-span-5 lg:justify-end">
             <Link
               href="/calculator"
               className="btn-hero group inline-flex items-center justify-center gap-2 bg-paragon-green px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(62,232,197,0.25)] sm:text-base"

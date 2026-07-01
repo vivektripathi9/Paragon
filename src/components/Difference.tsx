@@ -101,17 +101,17 @@ export default function Difference() {
                     <p className="mt-4 text-[0.875rem] leading-[1.65] text-white/60 lg:text-[0.9375rem] lg:leading-[1.7]">
                       {feature.description}
                     </p>
-                    {"cta" in feature && feature.cta && (
-                      <Link
-                        href="/about"
-                        className="btn-hero group mt-8 inline-flex items-center justify-center gap-2 whitespace-nowrap bg-paragon-green px-6 py-3.5 text-sm font-medium text-[#000C22] transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(62,232,197,0.25)] sm:text-base"
-                      >
-                        Discover the Paragon Difference
-                        <ArrowIcon />
-                      </Link>
-                    )}
                   </div>
                 </div>
+                {"cta" in feature && feature.cta && (
+                  <Link
+                    href="/calculator"
+                    className="btn-hero group mt-8 inline-flex w-full items-center justify-center gap-2 bg-paragon-green px-6 py-3.5 text-sm font-medium text-[#000C22] transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(62,232,197,0.25)] sm:text-base"
+                  >
+                    Estimate Your Costs
+                    <ArrowIcon />
+                  </Link>
+                )}
               </article>
             );
           })}

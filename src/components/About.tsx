@@ -58,7 +58,7 @@ export default function About() {
         <div className="mb-8 flex items-center gap-2.5 lg:mb-10">
           <AboutIcon />
           <span className="font-subheading text-sm font-medium text-paragon-blue lg:text-[0.9375rem]">
-            About Paragon
+            What makes us different
           </span>
         </div>
 
