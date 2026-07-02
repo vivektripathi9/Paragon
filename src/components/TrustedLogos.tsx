@@ -19,14 +19,14 @@ export default function TrustedLogos() {
   }, []);
 
   return (
-    <div className="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-10 sm:mt-12 lg:gap-x-16">
+    <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-8 sm:mt-12 sm:gap-x-10 lg:gap-x-16">
       {trustedLogos.map((logo) => (
         <button
           key={logo.src}
           type="button"
           aria-label={logo.alt}
           onClick={() => handleLogoClick(logo.src)}
-          className="reputation-logo-btn rounded-sm p-2 transition-opacity hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paragon-blue"
+          className="reputation-logo-btn rounded-sm p-3 transition-opacity hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paragon-blue"
         >
           <Image
             src={logo.src}

@@ -1,22 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
-import AnimatedSectionDecor from "@/components/AnimatedSectionDecor";
 import SectionEdge from "@/components/SectionEdge";
-
-function SectionLabelIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden
-      className="shrink-0"
-    >
-      <path d="M2 12L5.5 4L9 12H2Z" fill="#5D87FF" />
-      <path d="M5.5 12L9 4L12.5 12H5.5Z" fill="#5D87FF" opacity="0.65" />
-    </svg>
-  );
-}
+import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 function ArrowIcon() {
   return (
@@ -55,20 +40,28 @@ const legalLinks = [
 export default function Footer() {
   return (
     <footer className="relative z-10 section-edge-overlap overflow-x-hidden bg-paragon-navy pb-0">
-      <AnimatedSectionDecor variant="footer" />
+      <div className="footer-bg" aria-hidden>
+        <Image
+          src="/footer-background.png"
+          alt=""
+          fill
+          className="footer-bg__img"
+          sizes="100vw"
+        />
+      </div>
       <SectionEdge variant="reputation-top" className="z-20" />
 
-      <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-6 pt-[var(--section-edge-height)] lg:px-12 lg:pt-24">
+      <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-5 pt-[var(--section-edge-height)] sm:px-6 lg:px-12 lg:pt-24">
         <div className="grid gap-10 border-b border-white/10 pb-14 lg:grid-cols-2 lg:items-end lg:gap-16 lg:pb-20">
           <div>
             <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
-              <SectionLabelIcon />
+              <SectionLabelIcon variant="dark" />
               <span className="font-subheading text-sm font-medium text-paragon-blue lg:text-[0.9375rem]">
                 Getting Started
               </span>
             </div>
 
-            <h2 className="max-w-xl text-[1.75rem] font-bold leading-[1.15] tracking-tight text-white sm:text-[2.25rem] lg:text-[2.75rem] lg:leading-[1.12]">
+            <h2 className="max-w-xl text-[1.75rem] font-normal leading-[1.15] text-white sm:text-[2.25rem] lg:text-[2.75rem] lg:leading-[1.12]">
               Your deal has a timeline. Let&apos;s get ahead of it.
             </h2>
           </div>
@@ -90,7 +83,7 @@ export default function Footer() {
 
         <div className="grid gap-12 py-14 lg:grid-cols-12 lg:gap-10 lg:py-20">
           <div className="lg:col-span-5">
-            <h3 className="text-lg font-bold text-white sm:text-xl">
+            <h3 className="text-lg font-normal text-white sm:text-xl">
               Stay Informed
             </h3>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/60 lg:text-[0.9375rem] lg:leading-[1.65]">
@@ -107,7 +100,7 @@ export default function Footer() {
                 type="email"
                 autoComplete="email"
                 placeholder="Email address"
-                className="w-full border-b border-white/25 bg-transparent pb-3 text-sm text-white placeholder:text-white/40 outline-none transition-colors focus:border-white/50"
+                className="min-h-11 w-full border-b border-white/25 bg-transparent py-2 pb-3 text-base text-white placeholder:text-white/40 outline-none transition-colors focus:border-white/50 sm:text-sm"
               />
               <button
                 type="submit"
@@ -128,7 +121,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`text-base font-medium transition-opacity hover:opacity-80 ${
+                    className={`inline-flex min-h-11 items-center py-1 text-base font-medium transition-opacity hover:opacity-80 ${
                       "accent" in link && link.accent
                         ? "text-paragon-green"
                         : "text-white"
@@ -149,7 +142,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+18009402551"
-                  className="text-base font-medium text-white transition-opacity hover:opacity-80"
+                  className="inline-flex min-h-11 items-center py-1 text-base font-medium text-white transition-opacity hover:opacity-80"
                 >
                   (800) 940-2551
                 </a>
@@ -157,7 +150,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@paragonla.com"
-                  className="text-base font-medium text-white underline decoration-white/40 underline-offset-4 transition-opacity hover:opacity-80"
+                  className="inline-flex min-h-11 items-center py-1 text-base font-medium text-white underline decoration-white/40 underline-offset-4 transition-opacity hover:opacity-80"
                 >
                   info@paragonla.com
                 </a>
@@ -173,7 +166,7 @@ export default function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-sm text-white/50 transition-opacity hover:text-white/70"
+                  className="inline-flex min-h-11 items-center py-1 text-sm text-white/50 transition-opacity hover:text-white/70"
                 >
                   {label}
                 </Link>

@@ -1,32 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-function ServicesLabelIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden
-      className="shrink-0"
-    >
-      <path
-        d="M4 2L7 14"
-        stroke="#5D87FF"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M9 2L12 14"
-        stroke="#5D87FF"
-        strokeWidth="2"
-        strokeLinecap="round"
-        opacity="0.65"
-      />
-    </svg>
-  );
-}
+import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 function ArrowIcon() {
   return (
@@ -73,16 +47,16 @@ const services = [
 export default function Services() {
   return (
     <section className="relative bg-white pb-0">
-      <div className="mx-auto max-w-[1440px] px-6 pb-32 pt-16 lg:px-12 lg:pb-44 lg:pt-24">
+      <div className="mx-auto max-w-[1440px] px-5 pb-20 pt-14 sm:px-6 sm:pt-16 lg:px-12 lg:pb-44 lg:pt-24">
         <header className="max-w-3xl">
           <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
-            <ServicesLabelIcon />
+            <SectionLabelIcon variant="light" />
             <span className="font-subheading text-sm font-medium text-paragon-blue lg:text-[0.9375rem]">
               Our Services
             </span>
           </div>
 
-          <h2 className="text-[1.75rem] font-bold leading-[1.15] tracking-tight text-paragon-navy sm:text-[2.25rem] lg:text-[2.75rem] lg:leading-[1.12]">
+          <h2 className="text-[1.75rem] font-normal leading-[1.15] text-paragon-navy sm:text-[2.25rem] lg:text-[2.75rem] lg:leading-[1.12]">
             Services for every stage
           </h2>
 
@@ -92,7 +66,7 @@ export default function Services() {
           </p>
         </header>
 
-        <div className="mt-12 grid grid-cols-1 gap-12 sm:mt-14 md:grid-cols-3 md:gap-8 lg:mt-20 lg:gap-10">
+        <div className="mt-10 grid grid-cols-1 gap-10 sm:mt-12 lg:mt-20 lg:grid-cols-3 lg:gap-10">
           {services.map((service) => (
             <article key={service.title} className="flex flex-col">
               <Image
@@ -102,7 +76,7 @@ export default function Services() {
                 height={120}
                 className="h-[5.5rem] w-[5.5rem] object-contain object-left sm:h-24 sm:w-24"
               />
-              <h3 className="mt-6 text-lg font-bold leading-snug text-paragon-navy sm:mt-7 sm:text-xl">
+              <h3 className="mt-6 text-lg font-normal leading-snug text-paragon-navy sm:mt-7 sm:text-xl">
                 {service.title}
               </h3>
               <p className="mt-3 text-[0.875rem] leading-[1.65] text-paragon-navy/70 lg:text-[0.9375rem] lg:leading-[1.7]">

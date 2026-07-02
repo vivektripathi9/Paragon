@@ -1,23 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import HeroDecor from "@/components/HeroDecor";
 import SectionEdge from "@/components/SectionEdge";
-
-function ParagonIcon() {
-  return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 18 18"
-      fill="none"
-      aria-hidden
-      className="shrink-0"
-    >
-      <path d="M2 14L6 4L10 14H2Z" fill="#5D87FF" opacity="0.9" />
-      <path d="M6 14L10 4L14 14H6Z" fill="#5D87FF" opacity="0.65" />
-      <path d="M10 14L14 4L18 14H10Z" fill="#5D87FF" opacity="0.4" />
-    </svg>
-  );
-}
+import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 function ArrowIcon() {
   return (
@@ -46,18 +31,33 @@ function HeroBottomEdge() {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#021132]">
+    <section className="relative min-h-screen overflow-hidden bg-[#04143c]">
       <HeroDecor />
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 z-[2] hidden w-[58%] max-w-[820px] lg:block"
+        aria-hidden
+      >
+        <div className="relative h-full w-full">
+          <Image
+            src="/hero-vector.png"
+            alt=""
+            fill
+            sizes="58vw"
+            className="object-contain object-right-bottom"
+            priority
+          />
+        </div>
+      </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-[1440px] flex-col justify-center px-6 pb-20 pt-28 lg:px-12 lg:pb-24 lg:pt-32">
-        <div className="grid items-end gap-10 lg:grid-cols-12 lg:gap-8">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-[1440px] flex-col justify-start px-5 pb-16 pt-20 sm:px-6 sm:pt-24 lg:px-12 lg:pb-24 lg:pt-36">
+        <div className="grid items-end gap-6 sm:gap-8 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7">
-            <div className="font-subheading mb-6 flex items-center gap-2 text-sm font-medium text-white/80 lg:mb-8 lg:text-base">
-              <ParagonIcon />
+            <div className="font-subheading mb-6 flex items-center gap-2.5 text-sm font-medium text-white/80 lg:mb-8 lg:text-base">
+              <SectionLabelIcon variant="dark" />
               <span>Paragon Loan Advisors</span>
             </div>
 
-            <h1 className="max-w-3xl text-[2rem] font-normal leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
+            <h1 className="max-w-3xl text-[1.75rem] font-normal leading-[1.15] text-white sm:text-[2.25rem] lg:text-[3rem] lg:leading-[1.12]">
               Defeasance is not the deal.
               <br />
               It&apos;s the step that makes the deal{" "}
@@ -70,7 +70,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:mt-8 sm:text-lg lg:mt-10">
+            <p className="mt-8 max-w-xl text-[0.9375rem] leading-relaxed text-white/70 sm:mt-10 sm:text-base lg:mt-14">
               When you are closing a sale, executing a refinance, or repositioning
               a portfolio, defeasance is often the final requirement standing
               between you and the transaction you actually care about. Paragon

@@ -1,8 +1,7 @@
 type AnimatedSectionDecorVariant =
   | "hero"
   | "difference"
-  | "process"
-  | "footer";
+  | "process";
 
 type AnimatedSectionDecorProps = {
   variant?: AnimatedSectionDecorVariant;
@@ -26,11 +25,6 @@ const linePaths: Record<
     primary: "M 1080 120 L 1080 380 L 1340 720",
     secondary: "M 960 200 L 960 520 L 1180 820",
     tertiary: "M 200 60 L 200 340 L 420 780",
-  },
-  footer: {
-    primary: "M 160 120 L 160 420 L 520 860",
-    secondary: "M 1240 200 L 1240 500 L 920 860",
-    tertiary: "M 640 80 L 640 360 L 800 860",
   },
 };
 

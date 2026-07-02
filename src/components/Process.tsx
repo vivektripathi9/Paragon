@@ -3,22 +3,7 @@ import Link from "next/link";
 import { CalculatorContent } from "@/components/Calculator";
 import AnimatedSectionDecor from "@/components/AnimatedSectionDecor";
 import SectionEdge from "@/components/SectionEdge";
-
-function SectionLabelIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden
-      className="shrink-0"
-    >
-      <path d="M2 12L5.5 4L9 12H2Z" fill="#5D87FF" />
-      <path d="M5.5 12L9 4L12.5 12H5.5Z" fill="#5D87FF" opacity="0.65" />
-    </svg>
-  );
-}
+import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 function ArrowIcon() {
   return (
@@ -43,10 +28,7 @@ function ArrowIcon() {
 
 function ProcessGraphic() {
   return (
-    <div
-      className="process-cube relative mx-auto aspect-square w-full max-w-[17rem] sm:max-w-[18rem] lg:mx-0 lg:max-w-[20rem]"
-      aria-hidden
-    >
+    <div className="process-cube" aria-hidden>
       <Image
         src="/icons/process-cube.png"
         alt=""
@@ -61,23 +43,23 @@ function ProcessGraphic() {
 
 export default function Process() {
   return (
-    <section className="relative z-10 section-edge-overlap overflow-x-hidden bg-paragon-navy pb-0">
+    <section className="relative z-10 section-edge-overlap overflow-x-hidden bg-[#000C22] pb-0">
       <AnimatedSectionDecor variant="process" />
       <SectionEdge variant="difference-top" className="z-20" />
 
-      <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-6 pb-16 pt-[var(--section-edge-height)] lg:px-12 lg:pb-24 lg:pt-20">
+      <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-5 pb-14 pt-[var(--section-edge-height)] sm:px-6 lg:px-12 lg:pb-24 lg:pt-20">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
           <ProcessGraphic />
 
           <div className="pt-4 lg:pt-6">
             <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
-              <SectionLabelIcon />
+              <SectionLabelIcon variant="dark" />
               <span className="font-subheading text-sm font-medium text-white/80 lg:text-[0.9375rem]">
                 Our Process
               </span>
             </div>
 
-            <h2 className="text-[1.75rem] font-bold leading-[1.15] tracking-tight text-white sm:text-[2.25rem] lg:text-[2.75rem] lg:leading-[1.12]">
+            <h2 className="text-[1.75rem] font-normal leading-[1.15] text-white sm:text-[2.25rem] lg:text-[2.75rem] lg:leading-[1.12]">
               A process built backward from your closing date
             </h2>
 

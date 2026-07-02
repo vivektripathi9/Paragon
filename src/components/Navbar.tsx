@@ -92,9 +92,9 @@ export default function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 bg-transparent">
+    <header className="absolute inset-x-0 top-0 z-50 bg-transparent pt-[env(safe-area-inset-top)]">
       <nav
-        className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-5 lg:px-12"
+        className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 lg:px-12"
         aria-label="Main navigation"
       >
         <Link href="/" className="relative z-[60] shrink-0">
@@ -108,8 +108,8 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="flex items-center gap-4 md:gap-8 lg:gap-10">
-          <ul className="hidden items-center gap-8 md:flex lg:gap-10">
+        <div className="flex items-center gap-3 sm:gap-4 lg:gap-10">
+          <ul className="hidden items-center gap-6 lg:flex lg:gap-10">
             {navLinks.map(({ href, label }) => {
               const isActive =
                 href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -129,14 +129,14 @@ export default function Navbar() {
 
           <Link
             href="/calculator"
-            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90 sm:inline-flex md:px-6 lg:text-base"
+            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90 lg:inline-flex lg:px-6 lg:text-base"
           >
             Calculator
           </Link>
 
           <button
             type="button"
-            className="relative z-[60] inline-flex h-10 w-10 items-center justify-center text-white transition-opacity hover:opacity-80 md:hidden"
+            className="relative z-[60] inline-flex h-11 w-11 items-center justify-center text-white transition-opacity hover:opacity-80 lg:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav-menu"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -149,7 +149,7 @@ export default function Navbar() {
 
       <div
         id="mobile-nav-menu"
-        className={`fixed inset-0 z-[55] bg-[#021132]/98 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-[55] bg-[#021132]/98 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           menuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
@@ -165,11 +165,11 @@ export default function Navbar() {
         />
 
         <div
-          className={`relative flex min-h-full flex-col px-6 pb-10 pt-24 transition-transform duration-300 ease-out ${
+          className={`relative flex min-h-full flex-col px-5 pb-[max(2.5rem,env(safe-area-inset-bottom))] pt-24 transition-transform duration-300 ease-out sm:px-6 ${
             menuOpen ? "translate-y-0" : "-translate-y-4"
           }`}
         >
-          <ul className="flex flex-col gap-6">
+          <ul className="flex flex-col gap-1">
             {navLinks.map(({ href, label }) => {
               const isActive =
                 href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -181,20 +181,12 @@ export default function Navbar() {
                     label={label}
                     isActive={isActive}
                     onNavigate={closeMenu}
-                    className="text-lg text-white"
+                    className="block min-h-11 py-3 text-lg text-white"
                   />
                 </li>
               );
             })}
           </ul>
-
-          <Link
-            href="/calculator"
-            onClick={closeMenu}
-            className="bg-calculator-btn mt-10 inline-flex w-full justify-center bg-white px-10 py-3.5 text-base font-medium text-black transition-opacity hover:opacity-90"
-          >
-            Calculator
-          </Link>
         </div>
       </div>
     </header>

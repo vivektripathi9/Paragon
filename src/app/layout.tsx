@@ -1,34 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
-
-const barlowCondensed = localFont({
-  src: [
-    {
-      path: "../fonts/barlow-condensed/BarlowCondensed-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../fonts/barlow-condensed/BarlowCondensed-Medium.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../fonts/barlow-condensed/BarlowCondensed-SemiBold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../fonts/barlow-condensed/BarlowCondensed-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-barlow-condensed",
-  display: "swap",
-});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -50,6 +22,12 @@ export const metadata: Metadata = {
     "Commercial defeasance consulting for property owners completing a sale or refinance.",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,9 +36,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${barlowCondensed.variable} ${inter.variable} ${poppins.variable} h-full antialiased`}
+      className={`${inter.variable} ${poppins.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="flex min-h-full flex-col overflow-x-hidden font-sans">
+        {children}
+      </body>
     </html>
   );
 }

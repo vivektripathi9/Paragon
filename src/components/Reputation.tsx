@@ -1,26 +1,11 @@
 import TrustedLogos from "@/components/TrustedLogos";
-
-function ReputationLabelIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden
-      className="shrink-0"
-    >
-      <path d="M2 12L5.5 4L9 12H2Z" fill="#5D87FF" />
-      <path d="M5.5 12L9 4L12.5 12H5.5Z" fill="#5D87FF" opacity="0.65" />
-    </svg>
-  );
-}
+import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 function QuoteIcon() {
   return (
     <div
       aria-hidden
-      className="quote-mark h-24 w-[6.75rem] shrink-0 sm:h-28 sm:w-32 lg:h-36 lg:w-[9.5rem]"
+      className="quote-mark h-16 w-14 shrink-0 sm:h-28 sm:w-32 lg:h-36 lg:w-[9.5rem]"
     />
   );
 }
@@ -28,16 +13,16 @@ function QuoteIcon() {
 export default function Reputation() {
   return (
     <section className="relative bg-paragon-reputation">
-      <div className="mx-auto max-w-[1440px] px-6 pb-24 pt-16 lg:px-12 lg:pb-36 lg:pt-24">
+      <div className="mx-auto max-w-[1440px] px-5 pb-20 pt-14 sm:px-6 sm:pt-16 lg:px-12 lg:pb-36 lg:pt-24">
         <header className="max-w-3xl">
           <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
-            <ReputationLabelIcon />
+            <SectionLabelIcon variant="light" />
             <span className="font-subheading text-sm font-medium text-paragon-blue lg:text-[0.9375rem]">
               Reputation
             </span>
           </div>
 
-          <h2 className="text-[1.75rem] font-bold leading-[1.15] tracking-tight text-paragon-navy sm:text-[2.25rem] lg:text-[2.75rem] lg:leading-[1.12]">
+          <h2 className="text-[1.75rem] font-normal leading-[1.15] text-paragon-navy sm:text-[2.25rem] lg:text-[2.75rem] lg:leading-[1.12]">
             Recommended by the professionals
           </h2>
 
@@ -59,8 +44,8 @@ export default function Reputation() {
 
         <TrustedLogos />
 
-        <figure className="mx-auto mt-14 max-w-3xl sm:mt-16 lg:mt-20 lg:max-w-4xl">
-          <div className="flex items-center gap-5 sm:gap-7 lg:gap-10">
+        <figure className="mx-auto mt-12 max-w-3xl sm:mt-16 lg:mt-20 lg:max-w-4xl">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-7 lg:gap-10">
             <QuoteIcon />
             <blockquote className="min-w-0 flex-1 text-left">
               <p className="text-base font-bold italic leading-[1.65] text-paragon-navy lg:text-[1.0625rem] lg:leading-[1.7]">

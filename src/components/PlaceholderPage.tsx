@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 type PlaceholderPageProps = {
   title: string;
@@ -25,10 +26,11 @@ export default function PlaceholderPage({ title }: PlaceholderPageProps) {
       <Navbar />
 
       <main className="mx-auto flex min-h-screen max-w-[1440px] flex-col items-center justify-center px-6 py-32 text-center lg:px-12">
-        <p className="font-subheading mb-4 text-sm font-medium text-paragon-blue">
-          {title}
-        </p>
-        <h1 className="text-[2rem] font-bold leading-tight text-white sm:text-[2.5rem]">
+        <div className="font-subheading mb-4 flex items-center justify-center gap-2.5 text-sm font-medium text-paragon-blue">
+          <SectionLabelIcon variant="dark" />
+          <span>{title}</span>
+        </div>
+        <h1 className="text-[2rem] font-normal leading-tight text-white sm:text-[2.5rem]">
           Coming soon
         </h1>
         <p className="mt-4 max-w-md text-base leading-relaxed text-white/70">
