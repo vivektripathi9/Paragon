@@ -36,9 +36,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${poppins.variable} h-full antialiased`}
+      className={`${inter.variable} ${poppins.variable} h-full w-full antialiased`}
     >
-      <body className="flex min-h-full flex-col overflow-x-hidden font-sans">
+      <body className="min-h-full w-full overflow-x-clip font-sans">
         {children}
       </body>
     </html>

@@ -32,7 +32,7 @@ export default function SectionLabelIcon({
       width={icon.width}
       height={icon.height}
       aria-hidden
-      className={`section-label-icon shrink-0 ${className}`.trim()}
+      className={`section-label-icon section-label-icon--${variant} shrink-0 ${className}`.trim()}
     />
   );
 }

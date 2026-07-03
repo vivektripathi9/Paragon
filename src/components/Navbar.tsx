@@ -8,8 +8,8 @@ import { useEffect, useState } from "react";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
   { href: "/resources", label: "Resources" },
+  { href: "/services", label: "Services" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
@@ -52,11 +52,8 @@ function NavLink({
     <Link
       href={href}
       onClick={onNavigate}
-      className={`font-subheading relative pb-1 text-sm font-medium transition-opacity hover:opacity-80 lg:text-base ${className} ${
-        isActive
-          ? "after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-paragon-accent"
-          : ""
-      }`}
+      aria-current={isActive ? "page" : undefined}
+      className={`font-subheading relative inline-flex items-center pb-1 text-[16px] font-normal leading-[18.2px] tracking-[-0.5px] text-white opacity-100 transition-opacity after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#31EE97] after:opacity-0 after:transition-opacity hover:opacity-80 hover:after:opacity-100 ${className}`}
     >
       {label}
     </Link>
@@ -94,7 +91,7 @@ export default function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 bg-transparent pt-[env(safe-area-inset-top)]">
       <nav
-        className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 lg:px-12"
+        className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 lg:px-12"
         aria-label="Main navigation"
       >
         <Link href="/" className="relative z-[60] shrink-0">
@@ -120,7 +117,7 @@ export default function Navbar() {
                     href={href}
                     label={label}
                     isActive={isActive}
-                    className="text-white"
+                    className="lg:h-[19px]"
                   />
                 </li>
               );
