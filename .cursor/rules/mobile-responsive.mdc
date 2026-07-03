@@ -1,0 +1,35 @@
+---
+description: Mobile-only responsive work must not change desktop (lg+) layout
+alwaysApply: true
+---
+
+# Mobile vs desktop (Paragon)
+
+Unless the user **explicitly** asks to change desktop, treat all layout work as **mobile-only** (`< lg`, 1024px).
+
+## Required pattern: desktop-first + `max-lg:`
+
+- **Default (unprefixed) classes = desktop** — match existing `lg` specs.
+- **Mobile overrides only** via `max-lg:` — never the other way around.
+
+```tsx
+// ❌ BAD — mobile base bleeds into desktop unless every prop has lg: reset
+<section className="h-[852px] lg:h-[894px]">
+<div className="flex justify-between lg:block">
+
+// ✅ GOOD — desktop is base; mobile adds max-lg: only
+<section className="h-[894px] max-lg:h-[852px]">
+<div className="max-lg:flex max-lg:justify-between">
+```
+
+## Markup and assets
+
+- Different copy/line breaks: two blocks — `max-lg:hidden` (desktop) and `hidden max-lg:block` (mobile).
+- Different backgrounds/images: separate wrappers — `max-lg:block lg:hidden` vs `hidden lg:block`.
+- Do not share one `Image`/`className` when mobile and desktop differ materially.
+
+## Before finishing
+
+- Confirm no unprefixed class was added that changes desktop without a matching desktop spec.
+- Do not remove or weaken existing `lg:` / desktop layout unless asked.
+- Tablet (`md`/`sm`) follows mobile unless the user says otherwise.

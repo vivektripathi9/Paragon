@@ -81,7 +81,8 @@ blockquote,
 
 .btn-hero,
 .bg-calculator-btn,
-.clip-chamfer-bl {
+.clip-chamfer-bl,
+.clip-chamfer-dual {
   font-family: var(--font-inter), ui-sans-serif, sans-serif;
 }
 
@@ -163,17 +164,17 @@ blockquote,
 }
 
 /* Hero — mesh drift + light sweep (visible but still restrained) */
-/* Hero background — static film grain / sand texture */
+/* Hero & footer — static film grain / sand texture */
 .hero-bg-grain {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.32;
+  opacity: 0.55;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
-  background-size: 200px 200px;
-  mix-blend-mode: overlay;
+  background-size: 140px 140px;
+  mix-blend-mode: soft-light;
 }
 
 .hero-ambient__base {
@@ -1195,18 +1196,7 @@ blockquote,
   margin-top: calc(-1 * var(--section-edge-height));
 }
 
-/* Reputation quote mark — mask blue shape from PNG, skip black background */
-.quote-mark {
-  background-color: rgba(93, 135, 255, 0.65);
-  mask-image: url("/icons/quote-mark.png");
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-image: url("/icons/quote-mark.png");
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-}
+/* Reputation quote mark — replaced by /testimonial-quote-icon.png in Reputation.tsx */
 
 .reputation-logo-btn {
   cursor: pointer;
@@ -1245,55 +1235,63 @@ blockquote,
   margin-top: 1.25rem;
 }
 
+@media (max-width: 1023px) {
+  .calculator-cube-wrap {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 .calculator-cube {
-  --cube-size: min(50vw, 8.5rem);
-  --cube-border: clamp(11px, 2.9vw, 16px);
-  --card-offset-x: 0.5;
-  --card-width-ratio: 1.5;
-  --frame-width-scale: 1.28;
-  --frame-height-scale: 1.12;
-  --card-shift-x: -0.75rem;
-  --card-shift-y: 0.75rem;
   position: relative;
-  width: min(100%, calc(var(--cube-size) * (var(--card-offset-x) + var(--card-width-ratio))));
+  width: min(100%, 311.28px);
+  height: 272.42px;
   margin-inline: auto;
 }
 
 .calculator-cube__frame {
   position: absolute;
-  bottom: -1.5rem;
-  left: -2.5rem;
+  top: 62.07px;
+  left: 0.03px;
   z-index: 0;
   box-sizing: border-box;
-  width: calc(var(--cube-size) * var(--frame-width-scale));
-  height: calc(var(--cube-size) * var(--frame-height-scale));
-  border: var(--cube-border) solid #eef1f6;
+  width: 210.35px;
+  height: 210.35px;
+  border: 20.56px solid #eef1f6;
   opacity: 1;
   pointer-events: none;
 }
 
 .calculator-cube__card {
-  position: relative;
+  position: absolute;
+  top: -11.03px;
+  left: 58.66px;
   z-index: 1;
   box-sizing: border-box;
-  width: calc(var(--cube-size) * var(--card-width-ratio));
-  margin-left: calc(var(--cube-size) * var(--card-offset-x));
-  margin-bottom: calc(var(--cube-size) * 0.5);
-  transform: translate(var(--card-shift-x), var(--card-shift-y));
+  display: flex;
+  flex-direction: column;
+  gap: 11.63px;
+  width: 252.62px;
+  height: 227.18px;
+  margin: 0;
+  padding: 16.17px 16.17px 0 16.17px;
+  transform: none;
   overflow: hidden;
-  padding: 0;
   opacity: 1;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+}
+
+.calculator-cube__card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
   .process-cube {
     width: min(100%, 18rem);
-  }
-
-  .calculator-cube {
-    --cube-size: min(42vw, 10rem);
-    --cube-border: 14px;
   }
 }
 
@@ -1317,6 +1315,7 @@ blockquote,
   }
 
   .calculator-cube__frame {
+    top: auto;
     width: 382px;
     height: 382px;
     border-width: 40px;
@@ -1328,6 +1327,9 @@ blockquote,
     position: absolute;
     top: 0;
     right: 0;
+    left: auto;
+    display: block;
+    gap: 0;
     box-sizing: border-box;
     width: 478px;
     height: 405.18px;

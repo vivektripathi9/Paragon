@@ -39,8 +39,8 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="full-bleed relative z-10 section-edge-overlap overflow-x-hidden bg-paragon-navy pb-0">
-      <div className="footer-bg" aria-hidden>
+    <footer className="full-bleed relative z-10 section-edge-overlap overflow-x-hidden bg-paragon-navy pb-0 max-lg:min-h-[1480px] max-lg:bg-[linear-gradient(180deg,#04143c_0%,#0A2168_38%,#000C22_58%,#000C22_100%)]">
+      <div className="footer-bg max-lg:hidden" aria-hidden>
         <Image
           src="/footer-background.png"
           alt=""
@@ -49,9 +49,22 @@ export default function Footer() {
           sizes="100vw"
         />
       </div>
+      <div
+        className="pointer-events-none absolute right-[-26px] top-0 z-0 max-lg:block lg:hidden"
+        aria-hidden
+      >
+        <Image
+          src="/footer-decor-mobile.png"
+          alt=""
+          width={209}
+          height={581}
+          className="h-[581px] w-[209px] max-w-none opacity-100"
+        />
+      </div>
+      <div className="hero-bg-grain" aria-hidden />
       <SectionEdge variant="reputation-top" className="z-20" />
 
-      <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-5 pt-[var(--section-edge-height)] sm:px-6 lg:px-12 lg:pt-24">
+      <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-12 pb-0 pt-24 max-lg:min-h-[1480px] max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-16 max-lg:pt-[var(--section-edge-height)]">
         <div className="flex flex-col gap-10 border-b border-white/10 pb-14 lg:flex-row lg:items-end lg:justify-between lg:gap-0 lg:pb-20">
           <div>
             <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
@@ -61,24 +74,24 @@ export default function Footer() {
               </span>
             </div>
 
-            <h2 className="font-heading flex w-full max-w-[661px] flex-col text-[1.75rem] font-medium tracking-[-1px] text-white sm:text-[2.25rem] sm:tracking-[-2px] lg:h-[146px] lg:w-[661px] lg:justify-between lg:text-[62px] lg:tracking-[-3px]">
-              <span className="block leading-[1.18] lg:whitespace-nowrap lg:leading-[73px]">
+            <h2 className="font-heading flex h-[146px] w-full max-w-[661px] flex-col justify-between text-[62px] font-medium tracking-[-3px] text-white max-lg:h-[141px] max-lg:max-w-[367px] max-lg:text-[36px] max-lg:leading-[47px] max-lg:tracking-[-1.5px]">
+              <span className="block leading-[73px] max-lg:leading-[47px] lg:whitespace-nowrap">
                 Your deal has a timeline.
               </span>
-              <span className="block leading-[1.18] lg:leading-[73px]">
+              <span className="block leading-[73px] max-lg:leading-[47px]">
                 Let&apos;s get ahead of it.
               </span>
             </h2>
           </div>
 
           <div className="flex w-full max-w-[551px] flex-col justify-between lg:h-[146px]">
-            <p className="font-sans text-[0.9375rem] font-medium leading-[1.65] tracking-[-0.25px] text-white/70 lg:h-[60px] lg:w-[551px] lg:text-[18px] lg:leading-[30px]">
+            <p className="h-[60px] w-full max-w-[551px] font-sans text-[18px] font-medium leading-[30px] tracking-[-0.25px] text-white/70 max-lg:h-[78px] max-lg:max-w-[367px] max-lg:text-[16px] max-lg:leading-[26px]">
               Speak with Paragon about your loan, your closing date, and the
               variables that will affect your defeasance.
             </p>
             <Link
               href="/contact"
-              className="btn-hero group mt-8 inline-flex h-[54px] w-[194px] shrink-0 items-center justify-center gap-3 self-start bg-[#31EE97] px-[25px] text-sm font-medium text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] lg:mt-0 sm:mt-10 sm:text-base"
+              className="btn-hero group mt-8 inline-flex h-[54px] w-[194px] shrink-0 items-center justify-center gap-3 self-start bg-[#31EE97] px-[25px] py-5 text-sm font-medium text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-lg:mt-8 max-lg:h-[54px] max-lg:w-[362px] max-lg:gap-3 max-lg:px-[25px] max-lg:py-5 lg:mt-0 lg:text-base"
             >
               Talk to Paragon
               <ArrowIcon />
@@ -88,15 +101,15 @@ export default function Footer() {
 
         <div className="grid gap-12 py-14 lg:grid-cols-12 lg:gap-10 lg:py-20">
           <div className="lg:col-span-5">
-            <h3 className="font-heading w-full max-w-[223px] text-lg font-medium leading-tight tracking-[-1px] text-white sm:text-xl lg:h-[36px] lg:w-[223px] lg:text-[36px] lg:leading-[36px] lg:tracking-[-1.5px]">
+            <h3 className="font-heading h-[36px] w-full max-w-[223px] text-[36px] font-medium leading-[36px] tracking-[-1.5px] text-white max-lg:text-[28px] max-lg:leading-[36px] max-lg:tracking-[-1px]">
               Stay Informed
             </h3>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/60 lg:text-[0.9375rem] lg:leading-[1.65]">
+            <p className="mt-3 max-w-sm font-sans text-[0.9375rem] font-medium leading-[1.65] tracking-[-0.25px] text-white/60 max-lg:text-[16px] max-lg:leading-[26px] lg:leading-[1.65]">
               Sign up to receive market insights and defeasance updates. We
               respect your privacy and send updates sparingly.
             </p>
             <form
-              className="mt-8 flex w-full max-w-sm items-center gap-4"
+              className="mt-8 flex w-full max-w-sm flex-col items-start gap-4 max-lg:max-w-[367px] lg:flex-row lg:items-center"
               action="#"
               method="post"
             >
@@ -113,7 +126,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="clip-chamfer-bl group inline-flex h-[54px] w-[156px] shrink-0 items-center justify-center gap-3 bg-white px-[25px] text-sm font-medium text-paragon-navy opacity-100 transition-[transform,opacity] duration-300 hover:scale-[1.02] hover:opacity-90"
+                className="clip-chamfer-dual group inline-flex h-[54px] w-[156px] shrink-0 items-center justify-center gap-3 bg-white px-[25px] py-5 text-sm font-medium text-paragon-navy opacity-100 transition-[transform,opacity] duration-300 hover:scale-[1.02] hover:opacity-90 max-lg:mr-5 max-lg:h-[54px] max-lg:w-[342px] max-lg:gap-3 max-lg:px-[25px] max-lg:py-5"
               >
                 Subscribe
                 <ArrowIcon />
@@ -122,16 +135,16 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-12 sm:flex-row sm:gap-16 lg:col-span-7 lg:col-start-6 lg:justify-end">
-            <div className="flex flex-col gap-6 text-left lg:h-[172px] lg:gap-6">
-              <p className="font-heading h-5 text-[0.6875rem] font-bold uppercase leading-5 tracking-[3px] text-[#FFFFFF99] sm:text-xs lg:text-base lg:leading-5">
+            <div className="flex flex-col gap-8 text-left lg:h-[172px] lg:gap-8">
+              <span className="font-subheading block text-base font-bold uppercase leading-6 text-[#FFFFFF99] ![letter-spacing:3px]">
                 Links
-              </p>
+              </span>
               <ul className="flex flex-col gap-6">
                 {footerLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className={`inline-flex min-h-[26px] items-center rounded-[5px] py-[5px] text-base font-medium transition-opacity hover:opacity-80 ${
+                      className={`inline-flex min-h-[26px] items-center rounded-[5px] py-[5px] font-sans text-base font-medium transition-opacity hover:opacity-80 max-lg:text-[16px] max-lg:leading-[26px] max-lg:tracking-[-0.25px] ${
                         "accent" in link && link.accent
                           ? "text-paragon-green"
                           : "text-white"
@@ -144,15 +157,15 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="text-left">
-              <p className="font-heading h-5 text-[0.6875rem] font-bold uppercase leading-5 tracking-[3px] text-[#FFFFFF99] sm:text-xs lg:text-base lg:leading-5">
+            <div className="flex flex-col gap-8 text-left">
+              <span className="font-subheading block text-base font-bold uppercase leading-6 text-[#FFFFFF99] ![letter-spacing:3px]">
                 Contact
-              </p>
-              <ul className="mt-6 flex flex-col gap-6">
+              </span>
+              <ul className="flex flex-col gap-6">
                 <li>
                   <a
                     href="tel:+18009402551"
-                    className="font-sans text-base font-medium leading-[26px] tracking-[-0.25px] text-white transition-opacity hover:opacity-80 lg:text-[20px]"
+                    className="font-sans text-[20px] font-medium leading-[26px] tracking-[-0.25px] text-white transition-colors hover:text-paragon-blue active:text-paragon-blue"
                   >
                     (800) 940-2551
                   </a>
@@ -160,7 +173,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="mailto:info@paragonla.com"
-                    className="font-sans text-base font-medium leading-[26px] tracking-[-0.25px] text-white underline decoration-white/40 underline-offset-4 transition-opacity hover:opacity-80 lg:text-[20px]"
+                    className="font-sans text-[20px] font-medium leading-[26px] tracking-[-0.25px] text-white underline decoration-white/40 underline-offset-4 transition-colors hover:text-paragon-blue hover:decoration-paragon-blue/60 active:text-paragon-blue active:decoration-paragon-blue/60"
                   >
                     info@paragonla.com
                   </a>

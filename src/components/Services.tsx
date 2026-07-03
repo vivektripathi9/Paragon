@@ -58,8 +58,8 @@ const services: {
 
 export default function Services() {
   return (
-    <section className="full-bleed relative bg-white lg:h-[899px]">
-      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col px-5 pb-20 pt-14 sm:px-6 sm:pt-16 lg:px-12 lg:pb-0 lg:pt-24">
+    <section className="full-bleed relative h-[899px] bg-white max-lg:h-auto max-lg:min-h-[1218px]">
+      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col px-12 pb-0 pt-24 max-lg:min-h-[1218px] max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-12 max-lg:pt-14">
         <header className="w-full">
           <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
             <SectionLabelIcon variant="light" />
@@ -68,7 +68,7 @@ export default function Services() {
             </span>
           </div>
 
-          <h2 className="font-heading w-full max-w-[1360px] text-[1.75rem] font-medium leading-[1.26] tracking-[-1px] text-paragon-navy sm:text-[2.25rem] sm:tracking-[-1.5px] lg:h-[68px] lg:w-[1360px] lg:text-[54px] lg:leading-[68px] lg:tracking-[-2px]">
+          <h2 className="font-heading h-[68px] w-full max-w-[1360px] text-[54px] font-medium leading-[68px] tracking-[-2px] text-paragon-navy max-lg:h-[84px] max-lg:max-w-[362px] max-lg:text-[36px] max-lg:leading-[42px] max-lg:tracking-[-1.5px]">
             Services for every stage
           </h2>
 
@@ -86,9 +86,9 @@ export default function Services() {
                 alt=""
                 width={120}
                 height={103}
-                className="h-[4.5rem] w-[5.5rem] object-contain object-left sm:h-[5.5rem] sm:w-[7.5rem] lg:h-[103px] lg:w-[120px]"
+                className="h-[103px] w-[120px] object-contain object-left opacity-100 max-lg:h-[69.06px] max-lg:w-[80.39px]"
               />
-              <h3 className="font-heading mt-6 w-full max-w-[427px] text-lg font-medium leading-snug tracking-[-1px] text-[#000C22] sm:mt-7 sm:text-xl sm:tracking-[-1.25px] lg:mt-6 lg:h-[42px] lg:w-[427px] lg:text-[28px] lg:leading-[42px] lg:tracking-[-1.5px]">
+              <h3 className="font-heading mt-6 h-[42px] w-full max-w-[427px] text-[28px] font-medium leading-[42px] tracking-[-1.5px] text-[#000C22] max-lg:h-[32px] max-lg:max-w-[263px] max-lg:text-[24px] max-lg:leading-[32px] max-lg:tracking-[-1px]">
                 {service.title}
               </h3>
               <p className="mt-3 font-sans text-[0.875rem] font-normal leading-[1.65] tracking-[-0.25px] text-[#000C22B2] sm:text-base lg:mt-3 lg:text-[18px] lg:leading-[29px]">

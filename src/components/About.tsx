@@ -1,20 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 function CornerMark() {
   return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
+    <Image
+      src="/about-corner-mark.png"
+      alt=""
+      width={24}
+      height={34}
       aria-hidden
-      className="absolute right-8 top-8 text-paragon-navy transition-opacity duration-300 group-hover:opacity-0"
-    >
-      <path d="M8 2H12V6" stroke="currentColor" strokeWidth="1.25" />
-      <path d="M2 2H12" stroke="currentColor" strokeWidth="1.25" />
-    </svg>
+      className="absolute right-8 top-8 h-[34px] w-[24px] transition-opacity duration-300 group-hover:opacity-0 max-lg:right-[26.99px] max-lg:top-[26.99px]"
+    />
   );
 }
 
@@ -54,8 +52,8 @@ const stats = [
 
 export default function About() {
   return (
-    <section className="full-bleed relative bg-white">
-      <div className="relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-5 py-10 sm:px-6 lg:px-10 lg:pb-[calc(var(--section-edge-height)+2.5rem)] lg:pt-[54px]">
+    <section className="full-bleed relative bg-white max-lg:z-[2]">
+      <div className="relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-10 pb-[calc(var(--section-edge-height)+2.5rem)] pt-[54px] max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-[calc(var(--section-edge-height)+4rem)] max-lg:pt-12">
         <div className="shrink-0 lg:pl-2">
           <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
             <SectionLabelIcon variant="light" />
@@ -64,7 +62,7 @@ export default function About() {
             </span>
           </div>
 
-          <p className="w-full max-w-[1081px] font-heading text-lg font-medium leading-[1.35] tracking-[-1px] sm:text-[1.625rem] sm:leading-[1.35] sm:tracking-[-1.5px] lg:min-h-[204px] lg:w-[1081px] lg:text-[48px] lg:leading-[68px] lg:tracking-[-2px]">
+          <p className="font-heading w-full max-w-[1081px] text-[48px] font-medium leading-[68px] tracking-[-2px] lg:min-h-[204px] max-lg:h-[210px] max-lg:max-w-[362px] max-lg:text-[28px] max-lg:leading-[42px] max-lg:tracking-[-1.5px]">
             <span className="text-paragon-muted">
               Paragon is the only independent defeasance
             </span>{" "}
@@ -75,20 +73,20 @@ export default function About() {
           </p>
         </div>
 
-        <div className="about-stats-row relative z-[1] mt-8 flex w-full max-w-[1362px] flex-col gap-4 pb-4 sm:mt-10 lg:mt-10 lg:min-h-[487px] lg:flex-row lg:items-end lg:gap-[39px] lg:pb-4">
+        <div className="about-stats-row relative z-[1] mt-10 flex w-full max-w-[1362px] min-h-[487px] flex-row items-end gap-[39px] pb-4 max-lg:mt-[79px] max-lg:min-h-0 max-lg:flex-col max-lg:items-stretch max-lg:gap-[34px] max-lg:pb-0 max-lg:pr-6">
           {stats.map((stat) => (
             <article
               key={stat.value}
-              className={`about-stat-card group relative box-border flex w-full min-w-0 flex-col overflow-visible p-6 sm:p-7 lg:min-w-[153.6px] lg:w-[428px] lg:max-w-[428px] lg:shrink-0 lg:p-8 ${stat.height} ${stat.variant}`}
+              className={`about-stat-card group relative box-border flex w-[428px] max-w-[428px] min-w-[153.6px] shrink-0 flex-col overflow-visible p-8 ${stat.height} ${stat.variant} max-lg:h-[290px] max-lg:w-full max-lg:max-w-[361px] max-lg:min-w-[129.56px] max-lg:justify-between max-lg:gap-[60px] max-lg:p-[26.99px]`}
             >
               <CornerMark />
               <p
-                className={`relative z-[1] shrink-0 font-heading text-[1.875rem] font-medium leading-none tracking-[-1px] text-paragon-navy transition-colors duration-300 group-hover:text-white sm:text-[2.125rem] sm:tracking-[-1.5px] lg:w-[183px] lg:text-[63px] lg:leading-[61.6px] lg:tracking-[-2px] ${stat.valueClass || "lg:h-[123px]"} ${stat.valueWrap}`}
+                className={`relative z-[1] shrink-0 font-heading text-[63px] font-medium leading-[61.6px] tracking-[-2px] text-paragon-navy transition-colors duration-300 group-hover:text-white lg:w-[183px] ${stat.valueClass || "lg:h-[123px]"} ${stat.valueWrap} max-lg:text-[1.875rem] max-lg:leading-none max-lg:tracking-[-1px]`}
               >
                 {stat.value}
               </p>
               <p
-                className={`font-neue-montreal relative z-[1] shrink-0 pt-6 text-base font-normal leading-[1.2] tracking-normal text-paragon-navy/80 transition-colors duration-300 group-hover:text-white/90 lg:text-[22px] lg:leading-[26.4px] ${stat.descriptionMt} ${stat.descriptionClass || "lg:pt-10"}`}
+                className={`font-neue-montreal relative z-[1] shrink-0 text-[22px] font-normal leading-[26.4px] tracking-normal text-paragon-navy/80 transition-colors duration-300 group-hover:text-white/90 ${stat.descriptionMt} ${stat.descriptionClass || "lg:pt-10"} max-lg:mt-0 max-lg:pt-0 max-lg:text-base max-lg:leading-[1.2]`}
               >
                 {stat.description}
               </p>

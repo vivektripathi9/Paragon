@@ -33,7 +33,7 @@ function CalculatorCard() {
           alt="Sample defeasance estimate report showing securities cost, fees, and total cost"
           width={478}
           height={405}
-          className="h-full w-full object-cover opacity-100 lg:h-[405.18px] lg:w-[478px]"
+          className="h-full w-full object-cover opacity-100"
           priority
         />
       </div>
@@ -43,9 +43,9 @@ function CalculatorCard() {
 
 export function CalculatorContent() {
   return (
-    <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-5 pb-16 pt-8 sm:px-6 lg:px-12 lg:pb-32 lg:pt-12">
-      <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-10">
-        <div className="lg:order-1">
+    <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-12 pb-32 pt-12 max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-28 max-lg:pt-6">
+      <div className="grid items-center gap-10 max-lg:grid-cols-1 max-lg:gap-6 lg:grid-cols-2 lg:gap-10">
+        <div className="max-lg:order-2 lg:order-1">
           <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
             <SectionLabelIcon variant="dark" />
             <span className="font-subheading text-sm font-medium text-white/80 lg:text-[0.9375rem]">
@@ -79,7 +79,7 @@ export function CalculatorContent() {
           </Link>
         </div>
 
-        <div className="calculator-cube-wrap flex w-full justify-center lg:order-2 lg:justify-end">
+        <div className="calculator-cube-wrap flex w-full justify-center max-lg:order-1 lg:order-2 lg:justify-end">
           <CalculatorCard />
         </div>
       </div>

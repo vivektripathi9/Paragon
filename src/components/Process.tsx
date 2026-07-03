@@ -28,7 +28,7 @@ function ArrowIcon() {
 function ProcessGraphic() {
   return (
     <div
-      className="process-cube mx-auto aspect-square w-full max-w-[20rem] opacity-100 sm:max-w-[18rem] lg:mx-0 lg:h-[532px] lg:w-[532px] lg:max-w-none"
+      className="process-cube mx-auto aspect-square w-full max-w-[20rem] opacity-100 max-lg:pt-10 sm:max-w-[18rem] lg:mx-0 lg:h-[532px] lg:w-[532px] lg:max-w-none lg:pt-0"
       aria-hidden
     >
       <Image
@@ -48,8 +48,8 @@ export default function Process() {
     <section className="full-bleed relative z-10 section-edge-overlap overflow-x-hidden bg-[#000C22] pb-0">
       <SectionEdge variant="difference-top" className="z-20" />
 
-      <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-5 pb-14 pt-[var(--section-edge-height)] sm:px-6 lg:px-12 lg:pb-24 lg:pt-20">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
+      <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-12 pb-24 pt-20 max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-6 max-lg:pt-[var(--section-edge-height)]">
+        <div className="grid items-center gap-8 max-lg:grid-cols-1 lg:grid-cols-2 lg:gap-10">
           <ProcessGraphic />
 
           <div className="pt-4 lg:pt-6">
@@ -60,20 +60,22 @@ export default function Process() {
               </span>
             </div>
 
-            <h2 className="font-heading w-full max-w-[680px] text-[1.75rem] font-medium leading-[1.2] tracking-[-1px] text-white sm:text-[2.25rem] sm:tracking-[-1.5px] lg:h-[140px] lg:w-[680px] lg:text-[54px] lg:leading-[70px] lg:tracking-[-2px]">
+            <h2 className="font-heading h-[140px] w-full max-w-[680px] text-[54px] font-medium leading-[70px] tracking-[-2px] text-white max-lg:h-auto max-lg:max-w-[402px] max-lg:text-[36px] max-lg:leading-[47px] max-lg:tracking-[-1.5px]">
               A process built backward from your closing date
             </h2>
 
-            <p className="mt-5 font-sans text-[0.9375rem] font-medium leading-[1.65] tracking-[-0.25px] text-white/70 sm:mt-6 lg:text-[18px] lg:leading-[30px]">
-              Every defeasance follows a sequence. The challenge is that the
-              timing is driven by a transaction with its own closing deadline.
-            </p>
-            <p className="mt-4 font-sans text-[0.9375rem] font-medium leading-[1.65] tracking-[-0.25px] text-white/70 lg:text-[18px] lg:leading-[30px]">
-              Paragon works backward from that date. Servicer requirements,
-              securities structuring, documentation, and approvals are
-              addressed before they become urgent. By the time a request
-              arrives, the work behind it is already done.
-            </p>
+            <div className="mt-5 flex flex-col gap-4 max-lg:mt-5 max-lg:max-w-[367px] max-lg:min-h-[156px]">
+              <p className="font-sans text-[18px] font-medium leading-[30px] tracking-[-0.25px] text-white/70 max-lg:text-[16px] max-lg:leading-[26px] max-lg:text-[#FFFFFFCC]">
+                Every defeasance follows a sequence. The challenge is that the
+                timing is driven by a transaction with its own closing deadline.
+              </p>
+              <p className="font-sans text-[18px] font-medium leading-[30px] tracking-[-0.25px] text-white/70 max-lg:text-[16px] max-lg:leading-[26px] max-lg:text-[#FFFFFFCC]">
+                Paragon works backward from that date. Servicer requirements,
+                securities structuring, documentation, and approvals are
+                addressed before they become urgent. By the time a request
+                arrives, the work behind it is already done.
+              </p>
+            </div>
 
             <Link
               href="/process"
