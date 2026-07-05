@@ -163,7 +163,126 @@ blockquote,
   );
 }
 
-/* Hero — mesh drift + light sweep (visible but still restrained) */
+/* Hero — ambient overlays (image stays fixed) */
+.hero-bg-shimmer {
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    transparent 36%,
+    rgba(69, 133, 255, 0.08) 44%,
+    rgba(180, 210, 255, 0.16) 50%,
+    rgba(69, 133, 255, 0.08) 56%,
+    transparent 64%,
+    transparent 100%
+  );
+  background-size: 280% 100%;
+  animation: hero-bg-shimmer 14s linear infinite;
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+.hero-bg-orbs .hero-glow {
+  opacity: 0.55;
+}
+
+.hero-bg-vignette {
+  background: radial-gradient(
+    ellipse 82% 72% at 50% 42%,
+    transparent 38%,
+    rgba(0, 12, 34, 0.28) 100%
+  );
+  animation: hero-vignette-pulse 14s ease-in-out infinite;
+}
+
+.hero-enter {
+  opacity: 0;
+  animation: hero-enter-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-enter--1 {
+  animation-delay: 0.15s;
+}
+
+.hero-enter--2 {
+  animation-delay: 0.35s;
+}
+
+.hero-enter--3 {
+  animation-delay: 0.55s;
+}
+
+.hero-enter--4 {
+  animation-delay: 0.72s;
+}
+
+.hero-highlight {
+  transform-origin: left center;
+  animation:
+    hero-highlight-draw 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.85s both,
+    hero-highlight-pulse 4s ease-in-out 1.6s infinite;
+}
+
+@keyframes hero-bg-shimmer {
+  0% {
+    background-position: 160% 0;
+  }
+  100% {
+    background-position: -160% 0;
+  }
+}
+
+@keyframes hero-vignette-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+
+@keyframes hero-enter-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes hero-highlight-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes hero-highlight-pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+    box-shadow: 0 0 0 rgba(49, 238, 151, 0);
+  }
+  50% {
+    filter: brightness(1.18);
+    box-shadow: 0 0 14px rgba(49, 238, 151, 0.35);
+  }
+}
+
+@keyframes hero-grain-flicker {
+  0%,
+  100% {
+    opacity: 0.52;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
 /* Hero & footer — static film grain / sand texture */
 .hero-bg-grain {
   position: absolute;
@@ -175,6 +294,7 @@ blockquote,
   background-repeat: repeat;
   background-size: 140px 140px;
   mix-blend-mode: soft-light;
+  animation: hero-grain-flicker 10s ease-in-out infinite;
 }
 
 .hero-ambient__base {
@@ -388,6 +508,20 @@ blockquote,
   .hero-ambient__mesh,
   .hero-ambient__shimmer {
     animation-duration: 20s;
+  }
+
+  .hero-bg-shimmer {
+    animation-duration: 18s;
+    opacity: 0.55;
+  }
+
+  .hero-bg-orbs .hero-glow {
+    opacity: 0.3;
+  }
+
+  .hero-bg-vignette {
+    animation-duration: 18s;
+    opacity: 0.6;
   }
 
   .hero-ambient__orb {
@@ -1059,6 +1193,9 @@ blockquote,
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-bg-shimmer,
+  .hero-bg-vignette,
+  .hero-bg-grain,
   .hero-ambient__base,
   .hero-ambient__mesh,
   .hero-ambient__shimmer,
@@ -1082,6 +1219,17 @@ blockquote,
   .navy-shape-2,
   .navy-line-art {
     animation: none;
+  }
+
+  .hero-enter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-highlight {
+    animation: none;
+    transform: scaleX(1);
   }
 }
 .navy-section-gradient {
