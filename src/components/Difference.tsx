@@ -26,21 +26,27 @@ function ArrowIcon() {
 
 const features = [
   {
-    icon: "/icons/difference-1.png",
+    icon: "/icons/difference-1.svg",
+    iconWidth: 102,
+    iconHeight: 94,
     title: "We know what servicers need before they ask for it.",
     description:
       "Our team has worked inside major CMBS servicer organizations. We know what each servicer requires, what they'll question, and what 'complete' means to the team approving the file.",
     layout: "lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:pt-0",
   },
   {
-    icon: "/icons/difference-2.png",
+    icon: "/icons/difference-2.svg",
+    iconWidth: 99,
+    iconHeight: 77,
     title: "Every deal is built to preempt problems, not react to them.",
     description:
       "We map the servicer's requirements against your closing date before the process begins. The result is fewer last-minute requests and surprises when timing matters most.",
     layout: "lg:col-span-4 lg:col-start-5 lg:row-start-1 lg:-ml-10 lg:pt-[348px]",
   },
   {
-    icon: "/icons/difference-3.png",
+    icon: "/icons/difference-3.svg",
+    iconWidth: 82,
+    iconHeight: 73,
     title: "Senior-led execution on every transaction.",
     description:
       "You work directly with experienced professionals who have personally closed defeasance transactions, not with associates relaying messages.",
@@ -119,11 +125,11 @@ export default function Difference() {
               className={`w-full lg:w-[592px] lg:max-w-none ${feature.layout}`}
             >
               <div className="flex items-start gap-[29px] opacity-100 lg:h-[220px] lg:w-[592px] max-lg:gap-[8.54px]">
-                <Image
+                <img
                   src={feature.icon}
                   alt=""
-                  width={99}
-                  height={82}
+                  width={feature.iconWidth}
+                  height={feature.iconHeight}
                   className="h-[82.08px] w-[98.95px] shrink-0 object-contain object-left opacity-100 max-lg:h-[60.02px] max-lg:w-[65.13px]"
                 />
                 <div className="flex min-w-0 flex-1 flex-col gap-5 text-left lg:h-[220px] lg:w-[461px] max-lg:w-[277px] max-lg:gap-0">

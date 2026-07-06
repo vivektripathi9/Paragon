@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
@@ -26,17 +25,23 @@ function ArrowIcon() {
 
 const services: {
   icon: string;
+  iconWidth: number;
+  iconHeight: number;
   title: string;
   description: ReactNode;
 }[] = [
   {
-    icon: "/icons/service-1.png",
+    icon: "/icons/service-1.svg",
+    iconWidth: 120,
+    iconHeight: 103,
     title: "1. Defeasance Advisory",
     description:
       "Complimentary review of your loan documents, timing constraints, and transaction objectives before you commit to a course of action.",
   },
   {
-    icon: "/icons/service-2.png",
+    icon: "/icons/service-2.svg",
+    iconWidth: 93,
+    iconHeight: 103,
     title: "2. Defeasance Execution",
     description: (
       <>
@@ -49,7 +54,9 @@ const services: {
     ),
   },
   {
-    icon: "/icons/service-3.png",
+    icon: "/icons/service-3.svg",
+    iconWidth: 103,
+    iconHeight: 103,
     title: "3. Legal Coordination",
     description:
       "When borrower-side defeasance counsel is needed, we connect you with attorneys who specialize in this work.",
@@ -81,11 +88,11 @@ export default function Services() {
         <div className="mt-10 grid grid-cols-1 gap-10 sm:mt-12 lg:mt-20 lg:grid-cols-3 lg:gap-10">
           {services.map((service) => (
             <article key={service.title} className="flex flex-col">
-              <Image
+              <img
                 src={service.icon}
                 alt=""
-                width={120}
-                height={103}
+                width={service.iconWidth}
+                height={service.iconHeight}
                 className="h-[103px] w-[120px] object-contain object-left opacity-100 max-lg:h-[69.06px] max-lg:w-[80.39px]"
               />
               <h3 className="font-heading mt-6 h-[42px] w-full max-w-[427px] text-[28px] font-medium leading-[42px] tracking-[-1.5px] text-[#000C22] max-lg:h-[32px] max-lg:max-w-[263px] max-lg:text-[24px] max-lg:leading-[32px] max-lg:tracking-[-1px]">

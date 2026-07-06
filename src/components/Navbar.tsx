@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -95,13 +94,12 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         <Link href="/" className="relative z-[60] shrink-0">
-          <Image
-            src="/logo.png"
+          <img
+            src="/logo.svg"
             alt="Paragon"
-            width={160}
-            height={36}
+            width={146}
+            height={40}
             className="h-8 w-auto lg:h-9"
-            priority
           />
         </Link>
 

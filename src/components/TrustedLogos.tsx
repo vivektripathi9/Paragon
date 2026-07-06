@@ -1,13 +1,32 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useState } from "react";
 
 const trustedLogos = [
-  { src: "/logos/keybank.png", alt: "KeyBank Real Estate Capital", width: 220, height: 72 },
-  { src: "/logos/grandbridge.png", alt: "Grandbridge", width: 210, height: 72 },
-  { src: "/logos/berkadia.png", alt: "Berkadia", width: 200, height: 64 },
-  { src: "/logos/newmark.png", alt: "Newmark", width: 200, height: 60 },
+  {
+    src: "/logos/trusted-7.svg",
+    alt: "KeyBank Real Estate Capital",
+    width: 189,
+    height: 79,
+  },
+  {
+    src: "/logos/trusted-8.svg",
+    alt: "Grandbridge",
+    width: 189,
+    height: 79,
+  },
+  {
+    src: "/logos/trusted-9.svg",
+    alt: "Berkadia",
+    width: 189,
+    height: 79,
+  },
+  {
+    src: "/logos/trusted-10.svg",
+    alt: "Newmark",
+    width: 189,
+    height: 79,
+  },
 ] as const;
 
 export default function TrustedLogos() {
@@ -28,7 +47,7 @@ export default function TrustedLogos() {
           onClick={() => handleLogoClick(logo.src)}
           className="reputation-logo-btn rounded-sm p-3 transition-opacity hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paragon-blue"
         >
-          <Image
+          <img
             src={logo.src}
             alt={logo.alt}
             width={logo.width}
