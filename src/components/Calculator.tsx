@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
@@ -28,13 +27,12 @@ function CalculatorCard() {
     <div className="calculator-cube">
       <div className="calculator-cube__frame" aria-hidden />
       <div className="calculator-cube__card">
-        <Image
-          src="/report-defeasance-estimate.png"
+        <img
+          src="/report-defeasance-estimate.svg"
           alt="Sample defeasance estimate report showing securities cost, fees, and total cost"
-          width={478}
-          height={405}
+          width={357}
+          height={299}
           className="h-full w-full object-cover opacity-100"
-          priority
         />
       </div>
     </div>
