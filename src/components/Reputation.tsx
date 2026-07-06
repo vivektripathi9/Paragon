@@ -7,10 +7,10 @@ function QuoteIcon() {
     <Image
       src="/testimonial-quote-icon.png"
       alt=""
-      width={107}
-      height={103}
+      width={192}
+      height={185}
       aria-hidden
-      className="h-[428px] w-[368px] shrink-0 self-start object-contain object-left opacity-100 max-lg:mb-8 max-lg:h-[103px] max-lg:w-[107px]"
+      className="mt-16 h-[185px] w-[192px] shrink-0 self-start object-contain object-left opacity-100 max-lg:mt-0"
     />
   );
 }
@@ -50,7 +50,7 @@ export default function Reputation() {
         <TrustedLogos />
 
         <figure className="mt-20 w-full max-lg:mt-12">
-          <div className="flex items-start gap-[10px] max-lg:flex-col max-lg:items-start max-lg:gap-0">
+          <div className="flex items-start gap-16 max-lg:flex-col max-lg:items-start max-lg:gap-10">
             <QuoteIcon />
             <blockquote className="min-w-0 flex-1 text-left">
               <div className="h-[342px] w-full max-w-[904px] font-sans text-[24px] font-semibold italic leading-[38px] tracking-[-0.25px] text-[#000C22] opacity-100 max-lg:h-[480px] max-lg:max-w-[362px] max-lg:text-[18px] max-lg:leading-[30px]">
@@ -69,7 +69,7 @@ export default function Reputation() {
                   advisor.
                 </p>
               </div>
-              <figcaption className="mt-8 flex flex-col gap-4 opacity-100 not-italic lg:mt-8">
+              <figcaption className="mt-8 flex flex-col gap-4 text-left opacity-100 not-italic lg:mt-8">
                 <p className="font-heading text-[24px] font-semibold leading-[24px] tracking-[-0.5px] text-[#1E4FFF] max-lg:text-[20px] max-lg:leading-[24px]">
                   Jonathan H. Chattley
                 </p>

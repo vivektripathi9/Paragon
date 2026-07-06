@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroMotionOverlay from "@/components/HeroMotionOverlay";
 import SectionEdge from "@/components/SectionEdge";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
@@ -66,6 +67,7 @@ export default function Hero() {
         aria-hidden
       />
       <div className="hero-bg-grain" aria-hidden />
+      <HeroMotionOverlay />
 
       <div className="relative z-10 mx-auto h-full w-full max-w-[1440px] max-lg:flex max-lg:max-w-[402px] max-lg:flex-col max-lg:justify-between max-lg:px-[21px] max-lg:pb-20 max-lg:pt-20 lg:px-0 lg:pt-0">
         <div className="lg:pl-12 lg:pt-36">
@@ -82,7 +84,7 @@ export default function Hero() {
               <span className="relative inline-block whitespace-nowrap">
                 <span className="relative z-[1]">possible.</span>
                 <span
-                  className="hero-highlight absolute bottom-0.5 left-0 z-0 h-2 w-full bg-[#31EE97]"
+                  className="hero-highlight absolute bottom-1.5 left-0 z-0 h-[10px] w-[243px] bg-[#31EE97] opacity-100"
                   aria-hidden
                 />
               </span>
@@ -96,7 +98,7 @@ export default function Hero() {
                 <span className="relative inline-block whitespace-nowrap">
                   <span className="relative z-[1]">possible.</span>
                   <span
-                    className="hero-highlight absolute bottom-0.5 left-0 z-0 h-2 w-full bg-[#31EE97]"
+                    className="hero-highlight absolute bottom-1.5 left-0 z-0 h-[10px] w-[243px] bg-[#31EE97] opacity-100"
                     aria-hidden
                   />
                 </span>
