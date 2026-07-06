@@ -98,7 +98,7 @@ export default function Hero() {
                 <span className="relative inline-block whitespace-nowrap">
                   <span className="relative z-[1]">possible.</span>
                   <span
-                    className="hero-highlight absolute bottom-1.5 left-0 z-0 h-[10px] w-[243px] bg-[#31EE97] opacity-100"
+                    className="hero-highlight absolute bottom-1.5 left-0 z-0 h-[5px] w-[161px] bg-[#31EE97] opacity-100"
                     aria-hidden
                   />
                 </span>
