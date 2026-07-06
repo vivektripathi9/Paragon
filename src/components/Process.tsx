@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CalculatorContent } from "@/components/Calculator";
 import SectionEdge from "@/components/SectionEdge";
@@ -31,13 +30,12 @@ function ProcessGraphic() {
       className="process-cube mx-auto aspect-square w-full max-w-[20rem] opacity-100 max-lg:pt-10 sm:max-w-[18rem] lg:mx-0 lg:h-[532px] lg:w-[532px] lg:max-w-none lg:pt-0"
       aria-hidden
     >
-      <Image
-        src="/icons/process-cube.png"
+      <img
+        src="/icons/process-graphic.svg"
         alt=""
-        width={532}
-        height={532}
+        width={439}
+        height={439}
         className="h-full w-full object-contain opacity-100"
-        priority
       />
     </div>
   );

@@ -1,16 +1,15 @@
-import Image from "next/image";
 import TrustedLogos from "@/components/TrustedLogos";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 function QuoteIcon() {
   return (
-    <Image
-      src="/testimonial-quote-icon.png"
+    <img
+      src="/icons/testimonial-quote-icon.svg"
       alt=""
-      width={192}
-      height={185}
+      width={160}
+      height={154}
       aria-hidden
-      className="mt-16 h-[185px] w-[192px] shrink-0 self-start object-contain object-left opacity-100 max-lg:mt-0"
+      className="mt-16 h-[154px] w-[160px] shrink-0 self-start object-contain object-left opacity-100 max-lg:mt-0"
     />
   );
 }

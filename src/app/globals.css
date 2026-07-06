@@ -620,15 +620,6 @@ blockquote,
   object-position: center right;
 }
 
-/* Section label icons — PNGs ship on black; blend mode removes the matte */
-.section-label-icon--light {
-  mix-blend-mode: multiply;
-}
-
-.section-label-icon--dark {
-  mix-blend-mode: screen;
-}
-
 @media (max-width: 767px) {
   .btn-hero,
   .clip-chamfer-bl {
@@ -1416,7 +1407,7 @@ blockquote,
   margin-top: calc(-1 * var(--section-edge-height));
 }
 
-/* Reputation quote mark — replaced by /testimonial-quote-icon.png in Reputation.tsx */
+/* Reputation quote mark — /icons/testimonial-quote-icon.svg in Reputation.tsx */
 
 .reputation-logo-btn {
   cursor: pointer;
