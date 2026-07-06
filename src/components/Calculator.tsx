@@ -25,8 +25,15 @@ function ArrowIcon() {
 function CalculatorCard() {
   return (
     <div className="calculator-cube">
-      <div className="calculator-cube__frame" aria-hidden />
-      <div className="calculator-cube__card">
+      <img
+        src="/calculator-mobile.svg"
+        alt="Sample defeasance estimate report showing securities cost, fees, and total cost"
+        width={311}
+        height={277}
+        className="mx-auto h-[277.24px] w-[311.28px] object-contain opacity-100 max-lg:block lg:hidden"
+      />
+      <div className="calculator-cube__frame max-lg:hidden" aria-hidden />
+      <div className="calculator-cube__card max-lg:hidden">
         <img
           src="/report-defeasance-estimate.svg"
           alt="Sample defeasance estimate report showing securities cost, fees, and total cost"
