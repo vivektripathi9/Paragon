@@ -273,7 +273,7 @@ blockquote,
 
 .hero-bg-drift__layer {
   will-change: transform;
-  animation: hero-bg-drift 26s ease-in-out infinite alternate;
+  animation: hero-bg-drift 14s ease-in-out infinite alternate;
 }
 
 .hero-bg-drift__layer--desktop {
@@ -283,7 +283,7 @@ blockquote,
 
 .hero-bg-drift__layer--mobile {
   transform-origin: center center;
-  animation-duration: 22s;
+  animation-duration: 12s;
 }
 
 @keyframes hero-bg-drift {
@@ -291,7 +291,7 @@ blockquote,
     transform: translate3d(0, 0, 0) scale(1.06);
   }
   100% {
-    transform: translate3d(-1.75%, -1.25%, 0) scale(1.1);
+    transform: translate3d(-2.25%, -1.5%, 0) scale(1.11);
   }
 }
 
