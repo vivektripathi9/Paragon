@@ -735,6 +735,33 @@ blockquote,
   object-position: center right;
 }
 
+.footer-bg-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.footer-bg-mobile__layer {
+  will-change: transform;
+  animation: footer-bg-mobile-drift 16s ease-in-out infinite;
+}
+
+@keyframes footer-bg-mobile-drift {
+  0%,
+  100% {
+    transform: translate3d(1px, 0, 0);
+  }
+  25% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  75% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+
 @media (max-width: 767px) {
   .btn-hero,
   .clip-chamfer-bl {
@@ -1403,6 +1430,11 @@ blockquote,
   }
 
   .hero-bg-drift__layer {
+    animation: none;
+    transform: none;
+  }
+
+  .footer-bg-mobile__layer {
     animation: none;
     transform: none;
   }

@@ -48,17 +48,16 @@ export default function Footer() {
           className="footer-bg__img"
         />
       </div>
-      <div
-        className="pointer-events-none absolute right-[-26px] top-0 z-0 max-lg:block lg:hidden"
-        aria-hidden
-      >
-        <img
-          src="/footer-decor-mobile.png"
-          alt=""
-          width={209}
-          height={581}
-          className="h-[581px] w-[209px] max-w-none opacity-100"
-        />
+      <div className="footer-bg-mobile max-lg:block lg:hidden" aria-hidden>
+        <div className="footer-bg-mobile__layer">
+          <img
+            src="/footer-decor-mobile.png"
+            alt=""
+            width={209}
+            height={581}
+            className="h-[581px] w-[209px] max-w-none"
+          />
+        </div>
       </div>
       <div className="hero-bg-grain" aria-hidden />
       <SectionEdge variant="reputation-top" className="z-20" />
