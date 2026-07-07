@@ -31,7 +31,7 @@ function HeroBottomEdge() {
 
 export default function Hero() {
   return (
-    <section className="full-bleed relative h-[894px] overflow-hidden bg-[#04143c] max-lg:h-[852px]">
+    <section className="hero-bg-color full-bleed relative h-[894px] overflow-hidden max-lg:h-[852px]">
       <div
         className="hero-bg-drift pointer-events-none absolute left-1/2 top-0 z-0 max-lg:block max-lg:-translate-x-1/2 lg:hidden"
         aria-hidden
@@ -49,23 +49,23 @@ export default function Hero() {
       </div>
       <div className="hero-bg-drift absolute inset-0 z-0 hidden lg:block" aria-hidden>
         <div className="hero-bg-drift__layer hero-bg-drift__layer--desktop">
-          <Image
-            src="/hero-background.png"
+          <img
+            src="/hero-bg-vector.svg"
             alt=""
-            fill
-            priority
-            sizes="(max-width: 1440px) 100vw, 1440px"
-            className="object-cover object-center"
+            width={641}
+            height={894}
+            className="pointer-events-none absolute right-0 top-0 h-[894px] w-[641px] max-w-none"
           />
         </div>
       </div>
       <div className="hero-bg-vignette pointer-events-none absolute inset-0 z-[1]" aria-hidden />
       <div className="hero-bg-scrim pointer-events-none absolute inset-0 z-[1] max-lg:hidden" aria-hidden />
       <div
-        className="pointer-events-none absolute inset-0 z-[1] max-lg:block max-lg:bg-[linear-gradient(180deg,rgba(0,12,34,0.22)_0%,rgba(0,12,34,0.08)_24%,rgba(0,12,34,0.62)_48%,rgba(0,12,34,0.96)_66%,#000C22_80%,#000C22_100%)] lg:hidden"
+        className="pointer-events-none absolute inset-0 z-[1] max-lg:block max-lg:bg-[linear-gradient(180deg,rgba(3,18,55,0.28)_0%,rgba(3,18,55,0.06)_22%,rgba(7,26,82,0.18)_46%,rgba(0,11,32,0.55)_66%,#000B20_82%,#000B20_100%)] lg:hidden"
         aria-hidden
       />
       <div className="hero-bg-grain hero-bg-grain--intense" aria-hidden />
+      <div className="hero-bg-sandpaper" aria-hidden />
       <HeroMotionOverlay />
 
       <div className="relative z-10 mx-auto h-full w-full max-w-[1440px] max-lg:flex max-lg:max-w-[402px] max-lg:flex-col max-lg:justify-between max-lg:px-[21px] max-lg:pb-20 max-lg:pt-20 lg:px-0 lg:pt-0">

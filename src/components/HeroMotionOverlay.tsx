@@ -33,7 +33,7 @@ const beams = [
 function HeroMotionOverlay() {
   return (
     <div
-      className="hero-motion-overlay pointer-events-none absolute inset-0 z-[2] overflow-hidden"
+      className="hero-motion-overlay pointer-events-none absolute inset-0 z-[3] overflow-hidden"
       aria-hidden
     >
       <svg
