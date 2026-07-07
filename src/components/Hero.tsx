@@ -58,7 +58,7 @@ export default function Hero() {
       <div className="hero-bg-vignette pointer-events-none absolute inset-0 z-[1]" aria-hidden />
       <div className="hero-bg-scrim pointer-events-none absolute inset-0 z-[1] max-lg:hidden" aria-hidden />
       <div
-        className="pointer-events-none absolute inset-0 z-[1] max-lg:block max-lg:bg-[linear-gradient(180deg,rgba(0,12,34,0.12)_0%,transparent_28%,rgba(0,12,34,0.52)_50%,rgba(0,12,34,0.92)_68%,#000C22_82%,#000C22_100%)] lg:hidden"
+        className="pointer-events-none absolute inset-0 z-[1] max-lg:block max-lg:bg-[linear-gradient(180deg,rgba(0,12,34,0.22)_0%,rgba(0,12,34,0.08)_24%,rgba(0,12,34,0.62)_48%,rgba(0,12,34,0.96)_66%,#000C22_80%,#000C22_100%)] lg:hidden"
         aria-hidden
       />
       <div className="hero-bg-grain" aria-hidden />
