@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import HeroMotionOverlay from "@/components/HeroMotionOverlay";
+import HeroSection from "@/components/HeroSection";
 import SectionEdge from "@/components/SectionEdge";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
@@ -31,31 +31,7 @@ function HeroBottomEdge() {
 
 export default function Hero() {
   return (
-    <section className="full-bleed relative h-[894px] overflow-hidden bg-[#04143c] max-lg:h-[852px]">
-      <div
-        className="pointer-events-none absolute left-1/2 top-0 z-0 max-lg:block max-lg:-translate-x-1/2 lg:hidden"
-        aria-hidden
-      >
-        <Image
-          src="/hero-background-mobile.png"
-          alt=""
-          width={402}
-          height={544}
-          priority
-          className="h-[544px] w-[402px] max-w-none"
-        />
-      </div>
-      <div className="absolute inset-0 z-0 hidden lg:block" aria-hidden>
-        <Image
-          src="/hero-background.png"
-          alt=""
-          fill
-          priority
-          sizes="(max-width: 1440px) 100vw, 1440px"
-          className="object-cover object-center"
-        />
-      </div>
-      <div className="hero-bg-shimmer pointer-events-none absolute inset-0 z-[1]" aria-hidden />
+    <HeroSection>
       <div className="hero-bg-orbs pointer-events-none absolute inset-0 z-[1] overflow-hidden" aria-hidden>
         <div className="hero-glow hero-glow-1" />
         <div className="hero-glow hero-glow-2" />
@@ -135,6 +111,6 @@ export default function Hero() {
       </div>
 
       <HeroBottomEdge />
-    </section>
+    </HeroSection>
   );
 }
