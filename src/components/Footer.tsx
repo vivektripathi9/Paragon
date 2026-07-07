@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import SectionEdge from "@/components/SectionEdge";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
@@ -40,25 +39,13 @@ const legalLinks = [
 export default function Footer() {
   return (
     <footer className="full-bleed relative z-10 section-edge-overlap overflow-x-hidden bg-paragon-navy pb-0 max-lg:min-h-[1480px] max-lg:bg-[linear-gradient(180deg,#04143c_0%,#0A2168_38%,#000C22_58%,#000C22_100%)]">
-      <div className="footer-bg max-lg:hidden" aria-hidden>
-        <Image
-          src="/footer-background.png"
+      <div className="footer-bg" aria-hidden>
+        <img
+          src="/footer-background.svg"
           alt=""
-          fill
+          width={1440}
+          height={884}
           className="footer-bg__img"
-          sizes="100vw"
-        />
-      </div>
-      <div
-        className="pointer-events-none absolute right-[-26px] top-0 z-0 max-lg:block lg:hidden"
-        aria-hidden
-      >
-        <Image
-          src="/footer-decor-mobile.png"
-          alt=""
-          width={209}
-          height={581}
-          className="h-[581px] w-[209px] max-w-none opacity-100"
         />
       </div>
       <div className="hero-bg-grain" aria-hidden />
