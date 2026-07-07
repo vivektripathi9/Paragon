@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import HeroMotionOverlay from "@/components/HeroMotionOverlay";
 import SectionEdge from "@/components/SectionEdge";
@@ -37,12 +36,11 @@ export default function Hero() {
         aria-hidden
       >
         <div className="hero-bg-drift__layer hero-bg-drift__layer--mobile">
-          <Image
+          <img
             src="/hero-background-mobile.png"
             alt=""
             width={402}
             height={544}
-            priority
             className="h-[544px] w-[402px] max-w-none"
           />
         </div>
