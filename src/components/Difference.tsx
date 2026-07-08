@@ -1,28 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import ArrowIcon from "@/components/ArrowIcon";
 import SectionEdge from "@/components/SectionEdge";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
-
-function ArrowIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden
-      className="transition-transform group-hover:translate-x-0.5"
-    >
-      <path
-        d="M3 8H13M13 8L9 4M13 8L9 12"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 const features = [
   {
@@ -31,7 +11,7 @@ const features = [
     iconHeight: 94,
     title: "We know what servicers need before they ask for it.",
     description:
-      "Our team has worked inside major CMBS servicer organizations. We know what each servicer requires, what they'll question, and what 'complete' means to the team approving the file.",
+      "Our team has worked inside major CMBS servicer organizations. We know what each servicer requires, what they\u2019ll question, and what \u201ccomplete\u201d means to the team approving the file.",
     layout: "lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:pt-0",
   },
   {
@@ -64,10 +44,10 @@ export default function Difference() {
         aria-hidden
       >
         <Image
-          src="/difference-decor-mobile-bl.png"
+          src="/icons/Group 14.svg"
           alt=""
-          width={127}
-          height={518}
+          width={516}
+          height={1393}
           className="h-[518px] w-[127px] max-w-none opacity-100"
         />
       </div>
@@ -76,10 +56,10 @@ export default function Difference() {
         aria-hidden
       >
         <Image
-          src="/difference-decor-mobile.png"
+          src="/icons/Group 13.svg"
           alt=""
-          width={206}
-          height={518}
+          width={516}
+          height={1393}
           className="h-[518px] w-[206px] max-w-none opacity-100"
         />
       </div>
@@ -88,14 +68,14 @@ export default function Difference() {
         aria-hidden
       >
         <Image
-          src="/difference-decor.png"
+          src="/icons/Group 13.svg"
           alt=""
           width={516}
           height={1393}
           className="absolute left-[940px] top-[-518px] h-[1393px] w-[516px] max-w-none opacity-100"
         />
         <Image
-          src="/difference-decor-bl.png"
+          src="/icons/Group 14.svg"
           alt=""
           width={516}
           height={1393}
@@ -145,9 +125,11 @@ export default function Difference() {
                 <div className="mt-6 lg:mt-8 lg:pl-[128px]">
                   <Link
                     href="/calculator"
-                    className="btn-hero group inline-flex h-[54px] w-full items-center justify-center gap-3 bg-[#31EE97] px-[25px] text-sm font-medium text-[#000C22] opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] sm:text-base lg:w-[317px]"
+                    className="btn-hero group inline-flex h-[54px] w-full items-center justify-center gap-3 whitespace-nowrap bg-[#31EE97] px-[25px] text-[16px] font-semibold leading-[14px] tracking-[-0.5px] text-[#0A1330] opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] lg:w-[317px]"
                   >
-                    Estimate Your Costs
+                    <span className="inline-flex h-[14px] w-[236px] items-center">
+                      Discover the Paragon Difference
+                    </span>
                     <ArrowIcon />
                   </Link>
                 </div>

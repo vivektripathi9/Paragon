@@ -13,6 +13,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -36,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${poppins.variable} h-full w-full antialiased`}
+      className={`${inter.variable} ${poppins.variable} h-full w-full overflow-x-clip antialiased`}
     >
       <body className="min-h-full w-full overflow-x-clip font-sans">
         {children}

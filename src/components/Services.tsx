@@ -1,27 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import ArrowIcon from "@/components/ArrowIcon";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
-
-function ArrowIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden
-      className="transition-transform group-hover:translate-x-0.5"
-    >
-      <path
-        d="M3 8H13M13 8L9 4M13 8L9 12"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 const services: {
   icon: string;
@@ -65,7 +45,7 @@ const services: {
 
 export default function Services() {
   return (
-    <section className="full-bleed relative h-[899px] bg-white max-lg:h-auto max-lg:min-h-[1218px]">
+    <section className="full-bleed relative h-[899px] bg-[#F0F3FC] max-lg:h-auto max-lg:min-h-[1218px]">
       <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col px-12 pb-0 pt-24 max-lg:min-h-[1218px] max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-12 max-lg:pt-14">
         <header className="w-full">
           <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
@@ -107,7 +87,7 @@ export default function Services() {
 
         <Link
           href="/services"
-          className="btn-hero group mt-8 inline-flex h-[54px] w-[234px] items-center justify-center gap-3 bg-[#31EE97] px-[25px] text-sm font-medium text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] sm:mt-10 sm:text-base lg:mt-10"
+          className="btn-hero group mt-8 inline-flex h-[54px] w-[234px] items-center justify-center gap-3 whitespace-nowrap bg-[#31EE97] px-[25px] text-sm font-medium text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] sm:mt-10 sm:text-base lg:mt-10"
         >
           Explore Our Services
           <ArrowIcon />

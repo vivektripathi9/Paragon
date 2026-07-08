@@ -10,6 +10,12 @@ const trustedLogos = [
     height: 79,
   },
   {
+    src: "/logos/trusted-10.svg",
+    alt: "Newmark",
+    width: 189,
+    height: 79,
+  },
+  {
     src: "/logos/trusted-8.svg",
     alt: "Grandbridge",
     width: 189,
@@ -18,12 +24,6 @@ const trustedLogos = [
   {
     src: "/logos/trusted-9.svg",
     alt: "Berkadia",
-    width: 189,
-    height: 79,
-  },
-  {
-    src: "/logos/trusted-10.svg",
-    alt: "Newmark",
     width: 189,
     height: 79,
   },
@@ -38,7 +38,7 @@ export default function TrustedLogos() {
   }, []);
 
   return (
-    <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-8 sm:mt-12 sm:gap-x-10 lg:gap-x-16">
+    <div className="mt-8 flex flex-wrap items-center justify-center gap-x-28 gap-y-10 sm:mt-12 max-lg:gap-x-6 max-lg:gap-y-8 sm:max-lg:gap-x-10">
       {trustedLogos.map((logo) => (
         <button
           key={logo.src}
@@ -52,7 +52,7 @@ export default function TrustedLogos() {
             alt={logo.alt}
             width={logo.width}
             height={logo.height}
-            className={`h-14 w-auto object-contain opacity-80 sm:h-16 lg:h-[4.75rem] ${
+            className={`h-[79px] w-[189px] object-contain opacity-[0.67] max-lg:h-14 max-lg:w-auto max-lg:opacity-65 sm:max-lg:h-16 ${
               activeLogo === logo.src ? "reputation-logo-pop" : ""
             }`}
           />

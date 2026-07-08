@@ -1,28 +1,8 @@
 import Link from "next/link";
+import ArrowIcon from "@/components/ArrowIcon";
 import HeroMotionOverlay from "@/components/HeroMotionOverlay";
 import SectionEdge from "@/components/SectionEdge";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
-
-function ArrowIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden
-      className="transition-transform group-hover:translate-x-0.5"
-    >
-      <path
-        d="M3 8H13M13 8L9 4M13 8L9 12"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 function HeroBottomEdge() {
   return <SectionEdge variant="hero-bottom" className="z-20" />;
@@ -116,7 +96,7 @@ export default function Hero() {
           <div className="hero-enter hero-enter--4 flex shrink-0 flex-row items-center gap-4 max-lg:w-full max-lg:max-w-[362px] max-lg:flex-col">
             <Link
               href="/calculator"
-              className="btn-hero group inline-flex items-center justify-center gap-2 bg-[#31EE97] px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-lg:h-[54px] max-lg:w-full max-lg:gap-3 max-lg:px-[25px] lg:text-base"
+              className="btn-hero group inline-flex items-center justify-center gap-2 whitespace-nowrap bg-[#31EE97] px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-lg:h-[54px] max-lg:w-full max-lg:gap-3 max-lg:px-[25px] lg:text-base"
             >
               Estimate Your Costs
               <ArrowIcon />

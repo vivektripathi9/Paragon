@@ -1,26 +1,6 @@
 import Link from "next/link";
+import ArrowIcon from "@/components/ArrowIcon";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
-
-function ArrowIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden
-      className="transition-transform group-hover:translate-x-0.5"
-    >
-      <path
-        d="M3 8H13M13 8L9 4M13 8L9 12"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 function CalculatorCard() {
   return (
@@ -48,9 +28,9 @@ function CalculatorCard() {
 
 export function CalculatorContent() {
   return (
-    <div className="relative z-[2] mx-auto w-full max-w-[1440px] px-12 pb-32 pt-12 max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-28 max-lg:pt-6">
+    <div className="relative z-[2] isolate mx-auto w-full max-w-[1440px] px-12 pb-[calc(7rem+var(--section-edge-height))] pt-12 max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-[calc(6rem+var(--section-edge-height))] max-lg:pt-6">
       <div className="grid items-center gap-10 max-lg:grid-cols-1 max-lg:gap-6 lg:grid-cols-2 lg:gap-10">
-        <div className="max-lg:order-2 lg:order-1">
+        <div className="relative z-[3] max-lg:order-2 lg:order-1">
           <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
             <SectionLabelIcon variant="dark" />
             <span className="font-subheading text-sm font-medium text-white/80 lg:text-[0.9375rem]">
@@ -77,14 +57,14 @@ export function CalculatorContent() {
 
           <Link
             href="/calculator"
-            className="btn-hero group mt-8 inline-flex h-[54px] w-[216px] items-center justify-center gap-3 bg-[#31EE97] px-[25px] text-sm font-medium text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] sm:mt-10 sm:text-base"
+            className="btn-hero group mt-8 inline-flex h-[54px] w-[216px] items-center justify-center gap-3 whitespace-nowrap bg-[#31EE97] px-[25px] text-sm font-medium text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] sm:mt-10 sm:text-base"
           >
             Run the Calculator
             <ArrowIcon />
           </Link>
         </div>
 
-        <div className="calculator-cube-wrap flex w-full justify-center max-lg:order-1 lg:order-2 lg:justify-end">
+        <div className="calculator-cube-wrap relative z-[1] flex w-full justify-center max-lg:order-1 lg:order-2 lg:justify-end">
           <CalculatorCard />
         </div>
       </div>

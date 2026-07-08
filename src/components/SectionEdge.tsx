@@ -24,16 +24,18 @@ export default function SectionEdge({
   const underlayFill =
     "underlayFill" in preset ? preset.underlayFill : GEOMETRY_COLORS.navy;
   const positionClass = position === "bottom" ? "bottom-0" : "top-0";
+  const hostPositionClass =
+    position === "top" ? "section-edge-host--top" : "";
 
   return (
     <div
-      className={`pointer-events-none absolute inset-x-0 ${positionClass} z-10 leading-[0] ${className}`}
+      className={`section-edge-host pointer-events-none absolute inset-x-0 ${positionClass} z-10 leading-[0] ${hostPositionClass} ${className}`}
     >
       <svg
         className="section-edge block w-full"
         viewBox={SECTION_EDGE_VIEWBOX}
         preserveAspectRatio="none"
-        shapeRendering="geometricPrecision"
+        shapeRendering="auto"
         aria-hidden
       >
         {underlayPath && <path fill={underlayFill} d={underlayPath} />}

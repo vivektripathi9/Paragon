@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import type { ReactNode } from "react";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 function CornerMark() {
   return (
     <Image
-      src="/about-corner-mark.png"
+      src="/icons/Vector (2).svg"
       alt=""
       width={24}
       height={34}
@@ -24,7 +25,8 @@ const stats = [
     height: "lg:h-[487px]",
     variant: "about-stat-card--first",
     valueWrap: "",
-    descriptionClass: "",
+    descriptionClass:
+      "lg:box-border lg:h-[106px] lg:w-[271px] lg:overflow-hidden group-hover:text-[#FFFFFF]",
     valueClass: "",
     descriptionMt: "mt-auto",
   },
@@ -40,19 +42,27 @@ const stats = [
   },
   {
     value: "3 Weeks",
-    description: "Average closing time for defeasance transactions",
+    description: (
+      <>
+        <span className="block whitespace-nowrap">
+          Average closing time for defeasance
+        </span>
+        <span className="block">transactions</span>
+      </>
+    ),
     height: "lg:h-[248px]",
     variant: "about-stat-card--stacked",
     valueWrap: "whitespace-nowrap",
     valueClass: "lg:h-auto",
     descriptionMt: "mt-auto",
-    descriptionClass: "lg:pt-6",
+    descriptionClass:
+      "lg:box-border lg:h-[53px] lg:w-[364px] lg:overflow-hidden opacity-100",
   },
-] as const;
+];
 
 export default function About() {
   return (
-    <section className="full-bleed relative bg-white max-lg:z-[2]">
+    <section className="full-bleed relative bg-[#F0F3FC] max-lg:z-[2]">
       <div className="relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-10 pb-[calc(var(--section-edge-height)+2.5rem)] pt-[54px] max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-[calc(var(--section-edge-height)+4rem)] max-lg:pt-12">
         <div className="shrink-0 lg:pl-2">
           <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
@@ -86,7 +96,7 @@ export default function About() {
                 {stat.value}
               </p>
               <p
-                className={`font-neue-montreal relative z-[1] shrink-0 text-[22px] font-normal leading-[26.4px] tracking-normal text-paragon-navy/80 transition-colors duration-300 group-hover:text-white/90 ${stat.descriptionMt} ${stat.descriptionClass || "lg:pt-10"} max-lg:mt-0 max-lg:pt-0 max-lg:text-base max-lg:leading-[1.2]`}
+                className={`font-neue-montreal relative z-[1] min-w-0 shrink text-[22px] font-normal leading-[26.4px] tracking-[0] break-words text-paragon-navy/80 opacity-100 transition-colors duration-300 group-hover:text-white/90 ${stat.descriptionMt} ${stat.descriptionClass || "lg:pt-10"} max-lg:mt-0 max-lg:pt-0 max-lg:h-auto max-lg:w-auto max-lg:text-base max-lg:leading-[1.2]`}
               >
                 {stat.description}
               </p>

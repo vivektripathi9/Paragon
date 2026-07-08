@@ -21,19 +21,21 @@ export const GEOMETRY_COLORS = {
   navy: "#050a18",
   difference: "#000C22",
   white: "#ffffff",
-  reputation: "#f0f4f8",
+  sectionLight: "#F0F3FC",
+  services: "#F0F3FC",
+  reputation: "#F0F3FC",
   blue: "#4585ff",
 } as const;
 
-/** Hero bottom — white wedge cuts in from bottom-left */
+/** Hero bottom — light wedge cuts in from bottom-left */
 export const HERO_BOTTOM_WHITE_PATH =
   "M0 24 L216 24 L288 96 H1440 V96 H0 Z";
 
 /** About bottom — navy fill on the left of the edge strip */
 export const ABOUT_BOTTOM_NAVY_PATH = `M0 0 L${ABOUT_SLOPE_TOP_X} 0 L${ABOUT_SLOPE_BOTTOM_X} 96 L0 96 Z`;
 
-/** About bottom — white tab on the right, single \ diagonal (no corner kink) */
-export const ABOUT_BOTTOM_WHITE_PATH = `M1440 0 L${ABOUT_SLOPE_TOP_X} 0 L${ABOUT_SLOPE_BOTTOM_X} 96 H0 V96 H1440 Z`;
+/** About bottom — light tab on the right, single \ diagonal (no corner kink) */
+export const ABOUT_BOTTOM_WHITE_PATH = `M1440 0 L${ABOUT_SLOPE_TOP_X} 0 L${ABOUT_SLOPE_BOTTOM_X} 96 H1440 V0 Z`;
 
 /** Difference top — white wedge only (dark fill comes from section bg + decor) */
 export const DIFFERENCE_TOP_WHITE_PATH = ABOUT_BOTTOM_WHITE_PATH;
@@ -55,14 +57,14 @@ export type SectionEdgeVariant =
 export const SECTION_EDGE_PRESETS = {
   "hero-bottom": {
     path: HERO_BOTTOM_WHITE_PATH,
-    fill: GEOMETRY_COLORS.white,
+    fill: GEOMETRY_COLORS.sectionLight,
     position: "bottom" as const,
     accentLine: false,
     underlayPath: undefined,
   },
   "about-bottom": {
     path: ABOUT_BOTTOM_WHITE_PATH,
-    fill: GEOMETRY_COLORS.white,
+    fill: GEOMETRY_COLORS.sectionLight,
     underlayPath: ABOUT_BOTTOM_NAVY_PATH,
     underlayFill: GEOMETRY_COLORS.navy,
     position: "bottom" as const,
@@ -70,14 +72,14 @@ export const SECTION_EDGE_PRESETS = {
   },
   "difference-top": {
     path: DIFFERENCE_TOP_WHITE_PATH,
-    fill: GEOMETRY_COLORS.white,
+    fill: GEOMETRY_COLORS.sectionLight,
     position: "top" as const,
     accentLine: false,
     underlayPath: undefined,
   },
   "services-top": {
     path: SERVICES_TOP_WHITE_PATH,
-    fill: GEOMETRY_COLORS.white,
+    fill: GEOMETRY_COLORS.services,
     position: "top" as const,
     accentLine: false,
     underlayPath: undefined,
