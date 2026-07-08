@@ -19,15 +19,17 @@ function CalculatorCard() {
         height={391}
         className="calculator-cube-tablet mx-auto hidden h-auto w-full max-w-full object-contain opacity-100 md:max-[1194px]:block min-[1195px]:hidden"
       />
-      <div className="calculator-cube__frame hidden min-[1195px]:block" aria-hidden />
-      <div className="calculator-cube__card hidden min-[1195px]:block">
-        <img
-          src="/report-defeasance-estimate.svg"
-          alt="Sample defeasance estimate report showing securities cost, fees, and total cost"
-          width={357}
-          height={299}
-          className="h-full w-full object-cover opacity-100"
-        />
+      <div className="calculator-cube-desktop hidden min-[1195px]:block">
+        <div className="calculator-cube__frame" aria-hidden />
+        <div className="calculator-cube__card">
+          <img
+            src="/report-defeasance-estimate.svg"
+            alt="Sample defeasance estimate report showing securities cost, fees, and total cost"
+            width={357}
+            height={299}
+            className="h-full w-full object-cover opacity-100"
+          />
+        </div>
       </div>
     </div>
   );
