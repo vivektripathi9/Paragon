@@ -18,8 +18,8 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 w-full section-edge-overlap overflow-hidden bg-paragon-navy pb-0 max-lg:min-h-[1480px] max-lg:bg-[linear-gradient(180deg,#04143c_0%,#0A2168_38%,#000C22_58%,#000C22_100%)]">
-      <div className="footer-bg max-lg:hidden" aria-hidden>
+    <footer className="relative z-10 w-full section-edge-overlap overflow-hidden bg-paragon-navy pb-0 max-md:min-h-[1480px] max-md:bg-[linear-gradient(180deg,#04143c_0%,#0A2168_38%,#000C22_58%,#000C22_100%)]">
+      <div className="footer-bg max-md:hidden" aria-hidden>
         <img
           src="/footer-background.svg"
           alt=""
@@ -28,7 +28,7 @@ export default function Footer() {
           className="footer-bg__img max-w-none"
         />
       </div>
-      <div className="footer-bg-mobile max-lg:block lg:hidden" aria-hidden>
+      <div className="footer-bg-mobile max-md:block md:hidden" aria-hidden>
         <div className="footer-bg-mobile__layer">
           <img
             src="/footer-decor-mobile.png"
@@ -42,7 +42,7 @@ export default function Footer() {
       <div className="hero-bg-grain" aria-hidden />
       <SectionEdge variant="reputation-top" className="z-20" />
 
-      <div className="relative z-[2] mx-auto w-full min-w-0 max-w-[1440px] overflow-x-hidden px-12 pb-0 pt-24 max-lg:min-h-[1480px] max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-16 max-lg:pt-[var(--section-edge-height)]">
+      <div className="relative z-[2] mx-auto w-full min-w-0 max-w-[1440px] overflow-x-hidden px-12 pb-0 pt-24 max-md:min-h-[1480px] max-md:max-w-[402px] max-md:px-5 max-md:pb-16 max-md:pt-[var(--section-edge-height)]">
         <div className="flex min-w-0 flex-col gap-10 border-b border-white/10 pb-14 lg:flex-row lg:items-end lg:justify-between lg:gap-0 lg:pb-20">
           <div className="-ml-1 min-w-0 max-lg:ml-0 lg:max-w-[661px] lg:shrink">
             <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
@@ -77,8 +77,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid gap-10 pt-20 pb-20 lg:grid-cols-12 max-lg:gap-12 max-lg:py-14">
-          <div className="-mt-6 lg:col-span-5 max-lg:mt-0">
+        <div className="grid gap-10 pt-20 pb-20 md:max-lg:grid-cols-12 lg:grid-cols-12 max-md:gap-12 max-md:py-14">
+          <div className="-mt-6 lg:col-span-5 md:max-lg:col-span-5 md:max-lg:mt-0 max-md:mt-0">
             <div className="flex h-[233px] w-[462px] flex-col gap-8 opacity-100 max-lg:h-auto max-lg:w-full max-lg:max-w-[367px]">
               <div className="flex flex-col gap-2">
                 <h3 className="font-heading h-[36px] w-full max-w-[223px] text-[36px] font-medium leading-[36px] tracking-[-1.5px] text-white max-lg:text-[28px] max-lg:leading-[36px] max-lg:tracking-[-1px]">
@@ -116,7 +116,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="-mt-6 flex flex-row gap-24 lg:col-span-7 lg:col-start-6 lg:justify-end max-lg:mt-0 max-lg:flex-col max-lg:gap-12">
+          <div className="-mt-6 flex flex-row gap-24 lg:col-span-7 lg:col-start-6 lg:justify-end md:max-lg:col-span-7 md:max-lg:col-start-6 md:max-lg:mt-0 max-md:mt-0 max-md:flex-col max-md:gap-12">
             <div className="-ml-2 flex h-[172px] w-[104px] flex-col gap-2 text-left opacity-100 max-lg:ml-0 max-lg:h-auto max-lg:w-auto max-lg:gap-8">
               <span className="font-subheading block text-base font-bold uppercase leading-6 text-[#FFFFFF99] ![letter-spacing:3px]">
                 Links
@@ -147,7 +147,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="tel:+18009402551"
-                    className="inline-flex min-h-[26px] items-center py-[5px] font-sans text-[20px] font-[500] not-italic leading-[26px] tracking-[-0.25px] text-white transition-colors hover:text-paragon-blue active:text-paragon-blue"
+                    className="inline-flex min-h-[26px] items-center py-[5px] font-sans text-[20px] font-[500] not-italic leading-[26px] tracking-[-0.25px] text-[#B0CCFF] transition-opacity hover:opacity-80"
                   >
                     (800) 940-2551
                   </a>
@@ -155,7 +155,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="mailto:info@paragonla.com"
-                    className="inline-flex min-h-[26px] items-center py-[5px] font-sans text-[20px] font-[500] not-italic leading-[26px] tracking-[-0.25px] text-white underline decoration-white/40 underline-offset-4 transition-colors hover:text-paragon-blue hover:decoration-paragon-blue/60 active:text-paragon-blue active:decoration-paragon-blue/60"
+                    className="inline-flex min-h-[26px] items-center py-[5px] font-sans text-[20px] font-[500] not-italic leading-[26px] tracking-[-0.25px] text-[#B0CCFF] underline decoration-[#B0CCFF]/40 underline-offset-4 transition-opacity hover:opacity-80 hover:decoration-[#B0CCFF]/60"
                   >
                     info@paragonla.com
                   </a>

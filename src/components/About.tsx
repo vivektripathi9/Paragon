@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import type { ReactNode } from "react";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 function CornerMark() {
@@ -12,7 +11,7 @@ function CornerMark() {
       width={24}
       height={34}
       aria-hidden
-      className="absolute right-8 top-8 h-[34px] w-[24px] transition-opacity duration-300 group-hover:opacity-0 max-lg:right-[26.99px] max-lg:top-[26.99px]"
+      className="absolute right-8 top-8 h-[34px] w-[24px] transition-opacity duration-300 group-hover:opacity-0 max-md:right-[26.99px] max-md:top-[26.99px] md:max-[1194px]:right-[26.51px] md:max-[1194px]:top-[26.51px]"
     />
   );
 }
@@ -22,18 +21,20 @@ const stats = [
     value: "$50 Billion+",
     description:
       "Paragon principals' experience in securitized loan transactions involving defeasance",
-    height: "lg:h-[487px]",
+    height: "h-[487px]",
+    tabletHeight: "md:max-[1194px]:h-[403.47px]",
     variant: "about-stat-card--first",
     valueWrap: "",
     descriptionClass:
-      "lg:box-border lg:h-[106px] lg:w-[271px] lg:overflow-hidden group-hover:text-[#FFFFFF]",
+      "min-[1195px]:box-border min-[1195px]:h-[106px] min-[1195px]:w-[271px] min-[1195px]:overflow-hidden group-hover:text-[#FFFFFF]",
     valueClass: "",
     descriptionMt: "mt-auto",
   },
   {
     value: "5,000+",
     description: "Defeasance transactions completed",
-    height: "lg:h-[360px]",
+    height: "h-[360px]",
+    tabletHeight: "md:max-[1194px]:h-[298.25px]",
     variant: "about-stat-card--stacked",
     valueWrap: "",
     descriptionClass: "",
@@ -50,29 +51,30 @@ const stats = [
         <span className="block">transactions</span>
       </>
     ),
-    height: "lg:h-[248px]",
+    height: "h-[248px]",
+    tabletHeight: "md:max-[1194px]:min-h-[205.46px] md:max-[1194px]:h-auto",
     variant: "about-stat-card--stacked",
     valueWrap: "whitespace-nowrap",
-    valueClass: "lg:h-auto",
+    valueClass: "min-[1195px]:h-auto",
     descriptionMt: "mt-auto",
     descriptionClass:
-      "lg:box-border lg:h-[53px] lg:w-[364px] lg:overflow-hidden opacity-100",
+      "min-[1195px]:box-border min-[1195px]:h-[53px] min-[1195px]:w-[364px] min-[1195px]:overflow-hidden opacity-100 md:max-[1194px]:[&_span:first-child]:whitespace-normal",
   },
 ];
 
 export default function About() {
   return (
-    <section className="full-bleed relative bg-[#F0F3FC] max-lg:z-[2]">
-      <div className="relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-10 pb-[calc(var(--section-edge-height)+2.5rem)] pt-[54px] max-lg:max-w-[402px] max-lg:px-5 max-lg:pb-[calc(var(--section-edge-height)+4rem)] max-lg:pt-12">
-        <div className="shrink-0 lg:pl-2">
-          <div className="mb-6 flex items-center gap-2.5 lg:mb-8">
+    <section className="full-bleed relative bg-[#F0F3FC] max-md:z-[2]">
+      <div className="relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-10 pb-[calc(var(--section-edge-height)+2.5rem)] pt-[54px] max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(var(--section-edge-height)+4rem)] max-md:pt-12 md:max-[1194px]:max-w-[1194px] md:max-[1194px]:px-8">
+        <div className="shrink-0 min-[1195px]:pl-2">
+          <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
             <SectionLabelIcon variant="light" />
-            <span className="font-subheading text-sm font-medium text-paragon-blue lg:text-[0.9375rem]">
+            <span className="font-subheading text-sm font-medium text-paragon-blue min-[1195px]:text-[0.9375rem]">
               About Paragon
             </span>
           </div>
 
-          <p className="font-heading w-full max-w-[1081px] text-[48px] font-medium leading-[68px] tracking-[-2px] lg:min-h-[204px] max-lg:h-[210px] max-lg:max-w-[362px] max-lg:text-[28px] max-lg:leading-[42px] max-lg:tracking-[-1.5px]">
+          <p className="font-heading w-full max-w-[1081px] text-[48px] font-medium leading-[68px] tracking-[-2px] min-[1195px]:min-h-[204px] max-md:h-[210px] max-md:max-w-[362px] max-md:text-[28px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1194px]:h-auto md:max-[1194px]:max-w-[900px] md:max-[1194px]:min-h-0 md:max-[1194px]:text-[36px] md:max-[1194px]:leading-[50px] md:max-[1194px]:tracking-[-1.75px]">
             <span className="text-paragon-muted">
               Paragon is the only independent defeasance
             </span>{" "}
@@ -83,20 +85,20 @@ export default function About() {
           </p>
         </div>
 
-        <div className="about-stats-row relative z-[1] mt-10 flex w-full max-w-[1362px] min-h-[487px] flex-row items-end gap-[39px] pb-4 max-lg:mt-[79px] max-lg:min-h-0 max-lg:flex-col max-lg:items-stretch max-lg:gap-[34px] max-lg:pb-0 max-lg:pr-6">
+        <div className="about-stats-row relative z-[1] mt-10 flex w-full max-w-[1362px] min-h-[487px] flex-row items-end gap-[39px] pb-4 max-md:mt-[79px] max-md:min-h-0 max-md:flex-col max-md:items-stretch max-md:gap-[34px] max-md:pb-0 max-md:pr-6 md:max-[1194px]:mt-10 md:max-[1194px]:w-full md:max-[1194px]:max-w-full md:max-[1194px]:min-h-[403.47px] md:max-[1194px]:flex-row md:max-[1194px]:items-end md:max-[1194px]:justify-between md:max-[1194px]:gap-8 md:max-[1194px]:pb-4 md:max-[1194px]:pr-0">
           {stats.map((stat) => (
             <article
               key={stat.value}
-              className={`about-stat-card group relative box-border flex w-[428px] max-w-[428px] min-w-[153.6px] shrink-0 flex-col overflow-visible p-8 ${stat.height} ${stat.variant} max-lg:h-[290px] max-lg:w-full max-lg:max-w-[361px] max-lg:min-w-[129.56px] max-lg:justify-between max-lg:gap-[60px] max-lg:p-[26.99px]`}
+              className={`about-stat-card group relative box-border flex w-[428px] max-w-[428px] min-w-[153.6px] flex-col justify-between overflow-visible p-8 opacity-100 min-[1195px]:shrink-0 ${stat.height} ${stat.tabletHeight} ${stat.variant} max-md:h-[290px] max-md:w-full max-md:max-w-[361px] max-md:min-w-[129.56px] max-md:gap-[60px] max-md:p-[26.99px] md:max-[1194px]:w-[354.59px] md:max-[1194px]:max-w-[min(354.59px,calc((100%-4rem)/3))] md:max-[1194px]:min-w-[127.25px] md:max-[1194px]:flex-1 md:max-[1194px]:basis-0 md:max-[1194px]:shrink md:max-[1194px]:justify-between md:max-[1194px]:p-[26.51px]`}
             >
               <CornerMark />
               <p
-                className={`relative z-[1] shrink-0 font-heading text-[63px] font-medium leading-[61.6px] tracking-[-2px] text-paragon-navy transition-colors duration-300 group-hover:text-white lg:w-[183px] ${stat.valueClass || "lg:h-[123px]"} ${stat.valueWrap} max-lg:text-[1.875rem] max-lg:leading-none max-lg:tracking-[-1px]`}
+                className={`relative z-[1] shrink-0 font-heading text-[63px] font-medium leading-[61.6px] tracking-[-2px] text-paragon-navy transition-colors duration-300 group-hover:text-white min-[1195px]:w-[183px] ${stat.valueClass || "min-[1195px]:h-[123px]"} ${stat.valueWrap} max-md:text-[1.875rem] max-md:leading-none max-md:tracking-[-1px] md:max-[1194px]:text-[2.5rem] md:max-[1194px]:leading-none md:max-[1194px]:tracking-[-1px]`}
               >
                 {stat.value}
               </p>
               <p
-                className={`font-neue-montreal relative z-[1] min-w-0 shrink text-[22px] font-normal leading-[26.4px] tracking-[0] break-words text-paragon-navy/80 opacity-100 transition-colors duration-300 group-hover:text-white/90 ${stat.descriptionMt} ${stat.descriptionClass || "lg:pt-10"} max-lg:mt-0 max-lg:pt-0 max-lg:h-auto max-lg:w-auto max-lg:text-base max-lg:leading-[1.2]`}
+                className={`font-neue-montreal relative z-[1] min-w-0 shrink text-[22px] font-normal leading-[26.4px] tracking-[0] break-words text-paragon-navy/80 opacity-100 transition-colors duration-300 group-hover:text-white/90 ${stat.descriptionMt} ${stat.descriptionClass || "min-[1195px]:pt-10"} max-md:mt-0 max-md:pt-0 max-md:h-auto max-md:w-auto max-md:text-base max-md:leading-[1.2] md:max-[1194px]:mt-0 md:max-[1194px]:h-auto md:max-[1194px]:w-auto md:max-[1194px]:pt-0 md:max-[1194px]:text-base md:max-[1194px]:leading-[1.2]`}
               >
                 {stat.description}
               </p>

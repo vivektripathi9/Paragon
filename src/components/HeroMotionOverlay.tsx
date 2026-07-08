@@ -63,7 +63,7 @@ function HeroMotionOverlay() {
       </svg>
 
       <svg
-        className="hero-line-art hero-line-art-tertiary max-lg:opacity-60"
+        className="hero-line-art hero-line-art-tertiary max-md:opacity-60"
         viewBox="0 0 1440 900"
         fill="none"
         preserveAspectRatio="xMidYMid slice"
@@ -76,7 +76,7 @@ function HeroMotionOverlay() {
       </svg>
 
       <svg
-        className="hero-line-art hero-line-art-quaternary max-lg:opacity-50"
+        className="hero-line-art hero-line-art-quaternary max-md:opacity-50"
         viewBox="0 0 1440 900"
         fill="none"
         preserveAspectRatio="xMidYMid slice"

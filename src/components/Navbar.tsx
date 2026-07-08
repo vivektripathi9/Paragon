@@ -90,7 +90,7 @@ export default function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 bg-transparent pt-[env(safe-area-inset-top)]">
       <nav
-        className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 lg:px-12"
+        className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 md:max-lg:px-8 lg:px-12"
         aria-label="Main navigation"
       >
         <Link href="/" className="relative z-[60] shrink-0">
@@ -104,7 +104,7 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-3 sm:gap-4 lg:gap-10">
-          <ul className="hidden items-center gap-6 lg:flex lg:gap-10">
+          <ul className="hidden items-center gap-6 md:max-lg:flex md:max-lg:gap-8 lg:flex lg:gap-10">
             {navLinks.map(({ href, label }) => {
               const isActive =
                 href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -124,14 +124,14 @@ export default function Navbar() {
 
           <Link
             href="/calculator"
-            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90 lg:inline-flex lg:px-6 lg:text-base"
+            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90 md:max-lg:inline-flex lg:inline-flex lg:px-6 lg:text-base"
           >
             Calculator
           </Link>
 
           <button
             type="button"
-            className="relative z-[60] inline-flex h-11 w-11 items-center justify-center text-white transition-opacity hover:opacity-80 lg:hidden"
+            className="relative z-[60] inline-flex h-11 w-11 items-center justify-center text-white transition-opacity hover:opacity-80 md:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav-menu"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -144,7 +144,7 @@ export default function Navbar() {
 
       <div
         id="mobile-nav-menu"
-        className={`fixed inset-0 z-[55] bg-[#021132]/98 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-[55] bg-[#021132]/98 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
           menuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
