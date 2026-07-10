@@ -25,7 +25,7 @@ const features = [
       "We map the servicer's requirements against your closing date before the process begins. The result is fewer last-minute requests and surprises when timing matters most.",
     variant: "difference-feature--2",
     desktopLayout:
-      "min-[1195px]:col-span-4 min-[1195px]:col-start-5 min-[1195px]:row-start-1 min-[1195px]:-ml-10 min-[1195px]:pt-[348px]",
+      "min-[1195px]:col-span-4 min-[1195px]:col-start-5 min-[1195px]:row-start-1 min-[1195px]:ml-[clamp(-40px,-2.8vw,0px)] min-[1195px]:pt-[clamp(0px,24vw,348px)]",
   },
   {
     icon: "/icons/difference-3.svg",
@@ -36,7 +36,7 @@ const features = [
       "You work directly with experienced professionals who have personally closed defeasance transactions, not with associates relaying messages.",
     variant: "difference-feature--3",
     desktopLayout:
-      "min-[1195px]:col-span-4 min-[1195px]:col-start-9 min-[1195px]:row-start-1 min-[1195px]:-ml-32 min-[1195px]:pt-[696px]",
+      "min-[1195px]:col-span-4 min-[1195px]:col-start-9 min-[1195px]:row-start-1 min-[1195px]:ml-[clamp(-128px,-8.9vw,0px)] min-[1195px]:pt-[clamp(0px,48vw,696px)]",
     cta: true,
   },
 ] as const;
@@ -124,7 +124,7 @@ export default function Difference() {
           {features.map((feature) => (
             <article
               key={feature.title}
-              className={`difference-feature w-full min-[1195px]:w-[592px] min-[1195px]:max-w-none ${feature.variant} ${feature.desktopLayout}`}
+              className={`difference-feature w-full min-[1195px]:w-full min-[1195px]:max-w-[592px] ${feature.variant} ${feature.desktopLayout}`}
             >
               <div className="difference-feature__row flex items-start gap-[29px] opacity-100 max-md:gap-[8.54px] min-[1195px]:h-[220px] min-[1195px]:w-[592px]">
                 <img
