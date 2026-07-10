@@ -18,8 +18,8 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="footer-section relative z-10 w-full section-edge-overlap overflow-hidden bg-paragon-navy pb-0">
-      <div className="footer-bg max-md:hidden" aria-hidden>
+    <footer className="footer-section relative z-10 w-full section-edge-overlap overflow-hidden bg-paragon-navy pb-0 max-[768px]:min-h-[1480px]">
+      <div className="footer-bg max-[768px]:hidden min-[769px]:block" aria-hidden>
         <img
           src="/footer-background.svg"
           alt=""
@@ -28,7 +28,7 @@ export default function Footer() {
           className="footer-bg__img max-w-none"
         />
       </div>
-      <div className="footer-bg-mobile max-md:block md:hidden" aria-hidden>
+      <div className="footer-bg-mobile max-[768px]:block min-[769px]:hidden" aria-hidden>
         <div className="footer-bg-mobile__layer">
           <img
             src="/footer-decor-mobile.png"
@@ -42,7 +42,7 @@ export default function Footer() {
       <div className="hero-bg-grain" aria-hidden />
       <SectionEdge variant="reputation-top" className="z-20" />
 
-      <div className="footer-shell relative z-[2] mx-auto w-full min-w-0 max-w-[1440px] overflow-x-hidden">
+      <div className="footer-shell relative z-[2] mx-auto w-full min-w-0 max-w-[1440px] overflow-x-hidden max-[768px]:max-w-[402px] max-[768px]:px-5 max-[768px]:pb-16">
         <div className="footer-cta flex min-w-0 flex-col border-b border-white/10">
           <div className="footer-cta__left min-w-0">
             <div className="footer-label mb-6 flex items-center gap-2.5">
