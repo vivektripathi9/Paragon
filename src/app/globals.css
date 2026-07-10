@@ -2589,6 +2589,7 @@ blockquote,
     font-size: 54px;
     font-weight: 500;
     height: auto;
+    margin-left: -0.25rem;
     letter-spacing: -2px;
     line-height: 68px;
     max-width: 863px;
