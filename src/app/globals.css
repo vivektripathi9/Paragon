@@ -189,23 +189,13 @@ blockquote,
   }
 }
 
-@media (min-width: 1195px) and (max-width: 1441px) {
+@media (min-width: 1195px) {
   .hero-bg-color {
-    --hero-cta-right-padding: clamp(0.75rem, 2.25vw, 1.5rem);
+    --hero-cta-right-padding: 3rem;
   }
 
   .hero-content-shell {
-    --hero-inline-padding: clamp(2.5rem, 4.25vw, 3.75rem);
-  }
-}
-
-@media (min-width: 1442px) {
-  .hero-bg-color {
-    --hero-cta-right-padding: clamp(1rem, 2.5vw, 1.5rem);
-  }
-
-  .hero-content-shell {
-    --hero-inline-padding: clamp(2.25rem, 3.25vw, 3rem);
+    --hero-inline-padding: 3rem;
   }
 }
 
@@ -2598,6 +2588,7 @@ blockquote,
     height: 68px;
     letter-spacing: -2px;
     line-height: 68px;
+    margin-left: -1.5rem;
     max-width: 863px;
   }
 
@@ -2687,12 +2678,6 @@ blockquote,
     font-size: 20px;
     letter-spacing: 0.5px;
     line-height: 14px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .reputation-heading {
-    margin-left: 1.25rem;
   }
 }
 
