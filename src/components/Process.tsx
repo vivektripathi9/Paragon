@@ -20,7 +20,7 @@ function ProcessGraphic() {
         alt=""
         width={439}
         height={439}
-        className="process-cube-tablet mx-auto hidden h-auto w-full max-w-full object-contain opacity-100 md:max-[1194px]:block min-[1195px]:hidden"
+        className="process-cube-tablet mx-auto h-auto w-full max-w-full object-contain opacity-100 max-md:hidden min-[768px]:max-[1195px]:block min-[1195px]:hidden"
         aria-hidden
       />
       <div className="process-cube-desktop hidden min-[1195px]:block">
@@ -44,12 +44,12 @@ export default function Process() {
       <SectionEdge variant="difference-top" className="z-20" />
 
       <div className="process-shell relative z-[2] isolate mx-auto w-full max-w-[1440px] px-12 pb-24 pt-20 max-md:max-w-[402px] max-md:px-5 max-md:pb-6 max-md:pt-[var(--section-edge-height)]">
-        <div className="process-block grid min-w-0 items-center gap-8 max-md:grid-cols-1 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
-          <div className="process-cube-wrap relative z-[1] max-md:mx-auto min-[1195px]:justify-self-start">
+        <div className="process-block grid min-w-0 items-center gap-8 max-md:grid-cols-1 min-[768px]:max-[1195px]:grid-cols-2 min-[768px]:max-[1195px]:gap-6 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
+          <div className="process-cube-wrap relative z-[1] max-md:mx-auto min-[768px]:max-[1195px]:order-1 min-[768px]:max-[1195px]:col-start-1 min-[1195px]:justify-self-start">
             <ProcessGraphic />
           </div>
 
-          <div className="relative z-[3] min-w-0 max-md:pt-4 min-[1195px]:pt-6">
+          <div className="process-copy-wrap relative z-[3] min-w-0 max-md:pt-4 min-[768px]:max-[1195px]:order-2 min-[768px]:max-[1195px]:col-start-2 min-[1195px]:pt-6">
             <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
               <SectionLabelIcon variant="dark" />
               <span className="font-subheading text-sm font-medium text-white/80 min-[1195px]:text-[0.9375rem]">
@@ -62,11 +62,11 @@ export default function Process() {
             </h2>
 
             <div className="process-copy__stack mt-5 flex flex-col gap-4 max-md:mt-5 max-md:max-w-[367px] max-md:min-h-[156px] min-[1195px]:mt-5 min-[1195px]:gap-4">
-              <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC] min-[1195px]:text-[18px] min-[1195px]:leading-[30px]">
+              <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC] min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
                 Every defeasance follows a sequence. The challenge is that the
                 timing is driven by a transaction with its own closing deadline.
               </p>
-              <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC] min-[1195px]:text-[18px] min-[1195px]:leading-[30px]">
+              <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC] min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
                 Paragon works backward from that date. Servicer requirements,
                 securities structuring, documentation, and approvals are
                 addressed before they become urgent. By the time a request

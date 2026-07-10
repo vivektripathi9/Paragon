@@ -84,10 +84,10 @@ export default function Reputation() {
                 </p>
               </div>
               <figcaption className="reputation-quote__attribution flex flex-col text-left not-italic">
-                <p className="reputation-quote__name font-heading font-semibold not-italic tracking-[-0.5px] text-[#1E4FFF]">
+                <p className="reputation-quote__name font-heading font-semibold not-italic text-[#1E4FFF]">
                   Jonathan H. Chattley
                 </p>
-                <p className="reputation-quote__role font-heading font-normal tracking-[-0.5px] text-[#000C22]">
+                <p className="reputation-quote__role font-heading font-normal text-[#000C22]">
                   CPA, CFO, RP Management, Inc
                 </p>
               </figcaption>

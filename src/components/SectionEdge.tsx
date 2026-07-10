@@ -22,7 +22,7 @@ export default function SectionEdge({
   const fill = fillOverride ?? presetFill;
   const underlayPath = "underlayPath" in preset ? preset.underlayPath : undefined;
   const underlayFill =
-    "underlayFill" in preset ? preset.underlayFill : GEOMETRY_COLORS.navy;
+    "underlayFill" in preset ? preset.underlayFill : GEOMETRY_COLORS.difference;
   const positionClass = position === "bottom" ? "bottom-0" : "top-0";
   const hostPositionClass =
     position === "top" ? "section-edge-host--top" : "";

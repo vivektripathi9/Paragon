@@ -17,7 +17,7 @@ function CalculatorCard() {
         alt="Sample defeasance estimate report showing securities cost, fees, and total cost"
         width={439}
         height={391}
-        className="calculator-cube-tablet mx-auto hidden h-auto w-full max-w-full object-contain opacity-100 md:max-[1194px]:block min-[1195px]:hidden"
+        className="calculator-cube-tablet mx-auto h-auto w-full max-w-full object-contain opacity-100 max-md:hidden min-[768px]:max-[1195px]:block min-[1195px]:hidden"
       />
       <div className="calculator-cube-desktop hidden min-[1195px]:block">
         <div className="calculator-cube__frame" aria-hidden />
@@ -38,8 +38,8 @@ function CalculatorCard() {
 export function CalculatorContent() {
   return (
     <div className="calculator-shell relative z-[2] isolate mx-auto w-full max-w-[1440px] px-12 pb-[calc(7rem+var(--section-edge-height))] pt-12 max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(6rem+var(--section-edge-height))] max-md:pt-6">
-      <div className="calculator-block grid min-w-0 items-center gap-10 max-md:grid-cols-1 max-md:gap-6 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
-        <div className="relative z-[3] min-w-0 max-md:order-2 min-[1195px]:order-1">
+      <div className="calculator-block grid min-w-0 items-center gap-10 max-md:grid-cols-1 max-md:gap-6 min-[768px]:max-[1195px]:grid-cols-2 min-[768px]:max-[1195px]:gap-6 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
+        <div className="calculator-copy-wrap relative z-[3] min-w-0 max-md:order-2 min-[768px]:max-[1195px]:order-1 min-[768px]:max-[1195px]:col-start-1 min-[1195px]:order-1">
           <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
             <SectionLabelIcon variant="dark" />
             <span className="font-subheading text-sm font-medium text-white/80 min-[1195px]:text-[0.9375rem]">
@@ -52,13 +52,13 @@ export function CalculatorContent() {
           </h2>
 
           <div className="calculator-copy__stack mt-5 flex w-full flex-col gap-6 min-[1195px]:mt-6 min-[1195px]:gap-6">
-            <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 min-[1195px]:text-[18px] min-[1195px]:leading-[30px]">
+            <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
               Paragon&apos;s calculator pulls your loan data from Trepp&apos;s
               market-leading commercial real estate loan database so you can
               weigh the cost of defeasance or prepayment against the economics
               of your sale, refinance, or recapitalization.
             </p>
-            <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 min-[1195px]:text-[18px] min-[1195px]:leading-[30px]">
+            <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
               Save your estimate, compare scenarios, and share results with your
               counsel or deal team through the Paragon portal.
             </p>
@@ -73,7 +73,7 @@ export function CalculatorContent() {
           </Link>
         </div>
 
-        <div className="calculator-cube-wrap relative z-[1] flex w-full min-w-0 justify-center max-md:order-1 min-[1195px]:order-2 min-[1195px]:justify-end">
+        <div className="calculator-cube-wrap relative z-[1] flex w-full min-w-0 justify-center max-md:order-1 min-[768px]:max-[1195px]:order-2 min-[768px]:max-[1195px]:col-start-2 min-[1195px]:order-2 min-[1195px]:justify-end">
           <CalculatorCard />
         </div>
       </div>

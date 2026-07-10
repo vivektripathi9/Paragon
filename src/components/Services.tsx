@@ -19,11 +19,11 @@ const services: {
     description: (
       <>
         Complimentary review of your loan documents,
-        <br className="hidden md:max-[1194px]:block min-[1195px]:hidden" />{" "}
+        <br className="hidden min-[768px]:max-[1195px]:block min-[1195px]:hidden" />{" "}
         timing constraints, and transaction
-        <br className="hidden md:max-[1194px]:block min-[1195px]:hidden" />{" "}
+        <br className="hidden min-[768px]:max-[1195px]:block min-[1195px]:hidden" />{" "}
         objectives before you
-        <br className="hidden md:max-[1194px]:block min-[1195px]:hidden" />{" "}
+        <br className="hidden min-[768px]:max-[1195px]:block min-[1195px]:hidden" />{" "}
         commit to a course of action.
       </>
     ),
@@ -48,7 +48,7 @@ const services: {
 
 export default function Services() {
   return (
-    <section className="services-section full-bleed relative section-edge-overlap bg-[#F0F3FC] max-md:h-auto max-md:min-h-[1218px] md:max-[1194px]:h-auto min-[1195px]:h-[899px]">
+    <section className="services-section full-bleed relative section-edge-overlap bg-[#F0F3FC] max-md:h-auto max-md:min-h-[1218px] min-[768px]:max-[1195px]:h-auto min-[1195px]:h-[899px]">
       <SectionEdge variant="services-top" className="z-20" />
 
       <div className="services-shell mx-auto flex h-full w-full max-w-[1440px] flex-col px-12 pb-0 pt-24 max-md:min-h-[1218px] max-md:max-w-[402px] max-md:px-5 min-[1195px]:px-12">
@@ -60,33 +60,33 @@ export default function Services() {
             </span>
           </div>
 
-          <h2 className="font-heading h-[68px] w-full max-w-[1360px] text-[54px] font-medium leading-[68px] tracking-[-2px] text-paragon-navy max-md:h-[84px] max-md:max-w-[362px] max-md:text-[36px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1194px]:h-auto md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(2rem,3.75vw,2.625rem)] md:max-[1194px]:leading-[clamp(2.75rem,4.8vw,3.5rem)] md:max-[1194px]:tracking-[-1.5px] min-[1195px]:text-[54px] min-[1195px]:leading-[68px] min-[1195px]:tracking-[-2px]">
+          <h2 className="font-heading h-[68px] w-full max-w-[1360px] text-[54px] font-medium leading-[68px] tracking-[-2px] text-paragon-navy max-md:h-[84px] max-md:max-w-[362px] max-md:text-[36px] max-md:leading-[42px] max-md:tracking-[-1.5px] min-[768px]:max-[1195px]:h-auto min-[768px]:max-[1195px]:max-w-full min-[768px]:max-[1195px]:text-[clamp(2rem,3.75vw,2.625rem)] min-[768px]:max-[1195px]:leading-[clamp(2.75rem,4.8vw,3.5rem)] min-[768px]:max-[1195px]:tracking-[-1.5px] min-[1195px]:text-[54px] min-[1195px]:leading-[68px] min-[1195px]:tracking-[-2px]">
             Services for every stage
           </h2>
 
-          <p className="mt-4 w-full max-w-[776px] font-sans text-[0.9375rem] font-medium leading-[1.4] tracking-[-0.25px] text-[#000C22B2] max-md:mt-4 md:max-[1194px]:mt-3 md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(0.875rem,1.5vw,0.9375rem)] md:max-[1194px]:leading-[1.45] min-[1195px]:mt-5 min-[1195px]:h-[28px] min-[1195px]:text-[20px] min-[1195px]:leading-[28px]">
+          <p className="mt-4 w-full max-w-[776px] font-sans text-[0.9375rem] font-medium leading-[1.4] tracking-[-0.25px] text-[#000C22B2] max-md:mt-4 min-[768px]:max-[1195px]:mt-3 min-[768px]:max-[1195px]:max-w-full min-[768px]:max-[1195px]:text-[clamp(0.875rem,1.5vw,0.9375rem)] min-[768px]:max-[1195px]:leading-[1.45] min-[1195px]:mt-5 min-[1195px]:h-[28px] min-[1195px]:text-[20px] min-[1195px]:leading-[28px]">
             Paragon&apos;s services are tailored to the needs borrowers face
             during defeasance
           </p>
         </header>
 
-        <div className="services-grid mt-10 grid min-w-0 grid-cols-1 gap-10 max-md:gap-10 min-[1195px]:mt-20 min-[1195px]:min-h-0 min-[1195px]:w-full min-[1195px]:max-w-none min-[1195px]:grid-cols-3 min-[1195px]:gap-10">
+        <div className="services-grid mt-10 grid min-w-0 max-md:grid-cols-1 max-md:gap-10 min-[768px]:max-[1195px]:grid-cols-3 min-[768px]:max-[1195px]:gap-[clamp(1rem,2.5vw,2.5rem)] min-[1195px]:mt-20 min-[1195px]:min-h-0 min-[1195px]:w-full min-[1195px]:max-w-none min-[1195px]:grid-cols-3 min-[1195px]:gap-10">
           {services.map((service) => (
             <article
               key={service.title}
-              className="services-card flex min-w-0 flex-col min-[1195px]:box-border min-[1195px]:min-h-0"
+              className="services-card flex min-w-0 flex-col min-[768px]:max-[1195px]:box-border min-[768px]:max-[1195px]:min-h-0 min-[1195px]:box-border min-[1195px]:min-h-0"
             >
               <img
                 src={service.icon}
                 alt=""
                 width={service.iconWidth}
                 height={service.iconHeight}
-                className="services-card__icon h-[103px] w-[120px] shrink-0 object-contain object-left opacity-100 max-md:h-[69.06px] max-md:w-[80.39px] min-[1195px]:h-[103px] min-[1195px]:w-[120px]"
+                className="services-card__icon h-[103px] w-[120px] shrink-0 object-contain object-left opacity-100 max-md:h-[69.06px] max-md:w-[80.39px] min-[768px]:max-[1195px]:h-[clamp(4rem,7.2vw,5.34rem)] min-[768px]:max-[1195px]:w-[clamp(4.5rem,8.3vw,6.22rem)] min-[1195px]:h-[103px] min-[1195px]:w-[120px]"
               />
-              <h3 className="services-card__title font-heading mt-6 h-[42px] w-full max-w-[427px] text-[28px] font-medium leading-[42px] tracking-[-1.5px] text-[#000C22] max-md:mt-6 max-md:h-[32px] max-md:max-w-[263px] max-md:text-[24px] max-md:leading-[32px] max-md:tracking-[-1px] min-[1195px]:mt-6 min-[1195px]:h-[42px] min-[1195px]:max-w-[427px] min-[1195px]:text-[28px] min-[1195px]:leading-[42px] min-[1195px]:tracking-[-1.5px]">
+              <h3 className="services-card__title font-heading mt-6 h-[42px] w-full max-w-[427px] text-[28px] font-medium leading-[42px] tracking-[-1.5px] text-[#000C22] max-md:mt-6 max-md:h-[32px] max-md:max-w-[263px] max-md:text-[24px] max-md:leading-[32px] max-md:tracking-[-1px] min-[768px]:max-[1195px]:mt-0 min-[768px]:max-[1195px]:h-auto min-[768px]:max-[1195px]:max-w-full min-[768px]:max-[1195px]:text-[clamp(1.25rem,2.25vw,1.5rem)] min-[768px]:max-[1195px]:leading-[1.45] min-[1195px]:mt-6 min-[1195px]:h-[42px] min-[1195px]:max-w-[427px] min-[1195px]:text-[28px] min-[1195px]:leading-[42px] min-[1195px]:tracking-[-1.5px]">
                 {service.title}
               </h3>
-              <p className="services-card__copy mt-3 font-sans text-[0.875rem] font-normal leading-[1.65] tracking-[-0.25px] text-[#000C22B2] max-md:mt-3 max-md:text-base min-[1195px]:mt-3 min-[1195px]:text-[18px] min-[1195px]:leading-[29px]">
+              <p className="services-card__copy mt-3 font-sans text-[0.875rem] font-normal leading-[1.65] tracking-[-0.25px] text-[#000C22B2] max-md:mt-3 max-md:text-base min-[768px]:max-[1195px]:mt-0 min-[768px]:max-[1195px]:text-[clamp(0.875rem,1.5vw,1rem)] min-[768px]:max-[1195px]:leading-[1.5] min-[1195px]:mt-3 min-[1195px]:text-[18px] min-[1195px]:leading-[29px]">
                 {service.description}
               </p>
             </article>
