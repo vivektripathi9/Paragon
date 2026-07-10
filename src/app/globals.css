@@ -3078,6 +3078,16 @@ blockquote,
   }
 }
 
+@media (max-width: 768px) {
+  h2.calculator-copy__title.font-heading {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 47px;
+    letter-spacing: -1.5px;
+    max-width: 362px;
+  }
+}
+
 @media (min-width: 1120px) and (width < 1195px) {
   .process-copy__title,
   .calculator-copy__title {

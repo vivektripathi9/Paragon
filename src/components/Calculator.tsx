@@ -47,7 +47,7 @@ export function CalculatorContent() {
             </span>
           </div>
 
-          <h2 className="calculator-copy__title font-heading w-full font-medium text-white">
+          <h2 className="calculator-copy__title font-heading w-full font-medium text-white max-[768px]:max-w-[362px] max-[768px]:text-[36px] max-[768px]:leading-[47px] max-[768px]:!tracking-[-1.5px]">
             Estimate defeasance cost
           </h2>
 
