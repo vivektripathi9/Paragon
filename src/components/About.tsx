@@ -18,12 +18,18 @@ function CornerMark() {
 
 const stats = [
   {
-    value: "$50 Billion+",
+    id: "50-billion",
+    value: (
+      <>
+        <span className="min-[768px]:max-[1194px]:block min-[1195px]:inline">$50</span>{" "}
+        <span className="min-[768px]:max-[1194px]:block min-[1195px]:inline">Billion+</span>
+      </>
+    ),
     description:
       "Paragon principals' experience in securitized loan transactions involving defeasance",
     height: "min-[1440px]:h-[487px]",
     variant: "about-stat-card--first",
-    valueWrap: "md:max-[1439px]:whitespace-normal md:max-[1439px]:break-words",
+    valueWrap: "",
     descriptionClass:
       "min-[1440px]:box-border min-[1440px]:h-[106px] min-[1440px]:w-[271px] min-[1440px]:overflow-hidden",
     valueClass:
@@ -31,6 +37,7 @@ const stats = [
     descriptionMt: "mt-auto",
   },
   {
+    id: "5000",
     value: "5,000+",
     description: "Defeasance transactions completed",
     height: "min-[1440px]:h-[360px]",
@@ -41,6 +48,7 @@ const stats = [
     descriptionMt: "mt-auto",
   },
   {
+    id: "3-weeks",
     value: "3 Weeks",
     description: (
       <>
@@ -86,7 +94,7 @@ export default function About() {
         <div className="about-stats-row relative z-[1] mt-10 flex w-full max-w-[1362px] min-h-[487px] flex-row items-end gap-[39px] pb-4 max-md:mt-[79px] max-md:min-h-0 max-md:flex-col max-md:items-stretch max-md:gap-[34px] max-md:pb-0 max-md:pr-6 md:max-[1439px]:mt-10 md:max-[1439px]:w-full md:max-[1439px]:max-w-full md:max-[1439px]:min-h-0 md:max-[1439px]:flex-row md:max-[1439px]:items-end md:max-[1439px]:pb-4 md:max-[1439px]:pr-0">
           {stats.map((stat) => (
             <article
-              key={stat.value}
+              key={stat.id}
               className={`about-stat-card group relative box-border flex w-[428px] max-w-[428px] min-w-[153.6px] touch-manipulation flex-col justify-between max-md:overflow-hidden p-8 opacity-100 min-[1440px]:shrink-0 min-[1440px]:overflow-visible ${stat.height} ${stat.variant} max-md:min-h-[290px] max-md:h-auto max-md:w-full max-md:max-w-[361px] max-md:min-w-0 max-md:gap-[60px] max-md:p-[26.99px] md:max-[1439px]:h-auto md:max-[1439px]:w-auto md:max-[1439px]:min-w-0 md:max-[1439px]:max-w-none md:max-[1439px]:flex-1 md:max-[1439px]:basis-0 md:max-[1439px]:shrink md:max-[1439px]:justify-between md:max-[1439px]:overflow-visible md:max-[1439px]:p-[clamp(1.5rem,2vw,2rem)]`}
             >
               <CornerMark />

@@ -2588,7 +2588,7 @@ blockquote,
     height: 68px;
     letter-spacing: -2px;
     line-height: 68px;
-    margin-left: -1.5rem;
+    
     max-width: 863px;
   }
 
@@ -3276,10 +3276,33 @@ blockquote,
 @media (min-width: 768px) and (max-width: 1194px) {
   .about-stat-card--first {
     border-width: 0 0 0 10px;
+    height: clamp(22.5rem, 37vw, 27.25rem);
+  }
+
+  .about-stat-card--first .about-stat-value {
+    margin-top: clamp(0.625rem, 1.5vw, 1rem);
   }
 
   .about-stat-card--stacked {
     border-width: 4px 0 0;
+  }
+
+  .about-stats-row {
+    min-height: clamp(22.5rem, 37vw, 27.25rem);
+  }
+}
+
+@media (min-width: 810px) and (max-width: 899px) {
+  .about-stat-card--first {
+    height: clamp(21.25rem, 35vw, 25.75rem);
+  }
+
+  .about-stat-card--stacked:nth-child(2) {
+    height: clamp(17.25rem, 28vw, 21rem);
+  }
+
+  .about-stats-row {
+    min-height: clamp(21.25rem, 35vw, 25.75rem);
   }
 }
 
