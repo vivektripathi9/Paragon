@@ -175,6 +175,10 @@ blockquote,
   );
 }
 
+.hero-bg-color {
+  --hero-cta-right-padding: 21px;
+}
+
 .hero-content-shell {
   --hero-inline-padding: 21px;
 }
@@ -186,12 +190,20 @@ blockquote,
 }
 
 @media (min-width: 1195px) and (max-width: 1441px) {
+  .hero-bg-color {
+    --hero-cta-right-padding: clamp(0.75rem, 2.25vw, 1.5rem);
+  }
+
   .hero-content-shell {
     --hero-inline-padding: clamp(2.5rem, 4.25vw, 3.75rem);
   }
 }
 
 @media (min-width: 1442px) {
+  .hero-bg-color {
+    --hero-cta-right-padding: clamp(1rem, 2.5vw, 1.5rem);
+  }
+
   .hero-content-shell {
     --hero-inline-padding: clamp(2.25rem, 3.25vw, 3rem);
   }

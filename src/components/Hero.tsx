@@ -60,8 +60,8 @@ export default function Hero() {
       <div className="hero-bg-sandpaper" aria-hidden />
       <HeroMotionOverlay />
 
-      <div className="hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402px] max-md:flex-col max-md:justify-between max-md:px-[var(--hero-inline-padding)] max-md:pb-20 max-md:pt-20 md:block md:max-w-[1194px] md:px-0 md:pb-0 md:pt-0 min-[1195px]:max-w-[1440px]">
-        <div className="max-md:hidden px-[var(--hero-inline-padding)] pt-24 min-[1195px]:pt-36">
+      <div className="hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402px] max-md:flex-col max-md:justify-between max-md:px-[var(--hero-inline-padding)] max-md:pb-20 max-md:pt-20 md:block md:max-w-[1194px] md:px-0 md:pb-0 md:pt-0 min-[1195px]:ml-0 min-[1195px]:mr-auto min-[1195px]:max-w-[1440px] min-[1195px]:pl-0 min-[1195px]:pr-0">
+        <div className="max-md:hidden px-[var(--hero-inline-padding)] pt-24 min-[1195px]:pl-12 min-[1195px]:pr-12 min-[1195px]:pt-36">
           <div className="hero-enter hero-enter--1 font-subheading mb-5 flex items-center gap-2.5 text-sm font-medium text-white/80 min-[1195px]:mb-8 min-[1195px]:text-base">
             <SectionLabelIcon variant="dark" />
             <span>Paragon Loan Advisors</span>
@@ -104,8 +104,8 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="absolute top-[clamp(26rem,62%,34rem)] flex h-auto w-full flex-row items-center justify-between gap-[clamp(1.25rem,2.5vw,2rem)] max-md:static max-md:h-auto max-md:w-full max-md:flex-col max-md:gap-6 md:left-[var(--hero-inline-padding)] md:right-[var(--hero-inline-padding)] md:w-auto min-[1195px]:top-[579px] min-[1195px]:h-[120px]">
-          <p className="hero-enter hero-enter--3 min-w-0 flex-1 font-sans text-[clamp(1rem,1.45vw,1.125rem)] font-medium leading-[clamp(1.75rem,2.55vw,1.95rem)] tracking-[-0.25px] text-[#FFFFFFCC] max-md:h-[182px] max-md:max-w-[362px] max-md:flex-none max-md:text-[15px] max-md:leading-[26px] md:max-w-[min(640px,46%)] min-[1195px]:h-[120px] min-[1195px]:max-w-[min(709px,48%)] min-[1195px]:text-[18px] min-[1195px]:leading-[30px] min-[1195px]:max-[1441px]:max-w-[min(640px,46%)]">
+        <div className="absolute top-[clamp(26rem,62%,34rem)] flex h-auto w-full flex-row items-center justify-between gap-[clamp(1.25rem,2.5vw,2rem)] max-md:static max-md:h-auto max-md:w-full max-md:flex-col max-md:gap-6 md:left-[var(--hero-inline-padding)] md:right-[var(--hero-inline-padding)] md:w-auto min-[1195px]:inset-x-0 min-[1195px]:top-[579px] min-[1195px]:h-[120px] min-[1195px]:w-full min-[1195px]:justify-start min-[1195px]:px-12">
+          <p className="hero-enter hero-enter--3 min-w-0 flex-1 font-sans text-[clamp(1rem,1.45vw,1.125rem)] font-medium leading-[clamp(1.75rem,2.55vw,1.95rem)] tracking-[-0.25px] text-[#FFFFFFCC] max-md:h-[182px] max-md:max-w-[362px] max-md:flex-none max-md:text-[15px] max-md:leading-[26px] md:max-w-[min(640px,46%)] min-[1195px]:-ml-9 min-[1195px]:h-[120px] min-[1195px]:max-w-[min(709px,48%)] min-[1195px]:text-[18px] min-[1195px]:leading-[30px] min-[1195px]:max-[1441px]:max-w-[min(640px,46%)]">
             When you are closing a sale, executing a refinance, or repositioning
             a portfolio, defeasance is often the final requirement standing
             between you and the transaction you actually care about. Paragon
@@ -113,7 +113,7 @@ export default function Hero() {
             transaction itself.
           </p>
 
-          <div className="hero-enter hero-enter--4 flex shrink-0 flex-row items-center gap-[clamp(0.75rem,1.25vw,1rem)] max-md:w-full max-md:max-w-[362px] max-md:flex-col">
+          <div className="hero-enter hero-enter--4 flex shrink-0 flex-row items-center gap-[clamp(0.75rem,1.25vw,1rem)] max-md:w-full max-md:max-w-[362px] max-md:flex-col md:max-[1194px]:flex min-[1195px]:hidden">
             <Link
               href="/calculator"
               className="btn-hero group inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-[#31EE97] px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:w-full max-md:gap-3 max-md:px-[25px] min-[1195px]:text-base"
@@ -129,6 +129,22 @@ export default function Hero() {
             </Link>
           </div>
         </div>
+      </div>
+
+      <div className="hero-enter hero-enter--4 pointer-events-auto absolute right-[var(--hero-cta-right-padding)] z-10 hidden flex-row items-center gap-[clamp(0.75rem,1.25vw,1rem)] min-[1195px]:top-[579px] min-[1195px]:flex min-[1195px]:h-[120px]">
+        <Link
+          href="/calculator"
+          className="btn-hero group inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-[#31EE97] px-6 py-3.5 text-base font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)]"
+        >
+          Estimate Your Costs
+          <ArrowIcon />
+        </Link>
+        <Link
+          href="/contact"
+          className="btn-hero inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-white px-6 py-3.5 text-base font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-95 hover:shadow-[0_8px_30px_rgba(255,255,255,0.12)]"
+        >
+          Talk to Paragon
+        </Link>
       </div>
 
       <HeroBottomEdge />
