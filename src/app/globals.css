@@ -1042,16 +1042,19 @@ blockquote,
 @media (min-width: 768px) and (width < 1195px) {
   .services-section {
     height: auto;
-    min-height: clamp(42rem, 68vw, 46.5rem);
+    min-height: 0;
     max-width: 100%;
+    overflow: visible;
   }
 
   .services-shell {
     --services-inline-padding: clamp(1.75rem, 3.25vw, 2.0625rem);
+    height: auto;
     max-width: min(100%, 75rem);
     padding-inline: var(--services-inline-padding);
     padding-top: calc(var(--section-edge-height) + clamp(1.25rem, 2.5vw, 1.75rem));
-    padding-bottom: calc(var(--section-edge-height) + clamp(1.25rem, 2.5vw, 1.75rem));
+    /* Extra clearance so the CTA clears the navy bottom-edge / Process overlap */
+    padding-bottom: calc(var(--section-edge-height) + clamp(3rem, 5vw, 4.5rem));
   }
 
   .services-grid {
@@ -1066,7 +1069,7 @@ blockquote,
   .services-card {
     box-sizing: border-box;
     gap: clamp(0.75rem, 1.5vw, 1.04rem);
-    min-height: clamp(15rem, 22vw, 15.65rem);
+    min-height: 0;
     width: 100%;
   }
 
@@ -1092,9 +1095,37 @@ blockquote,
     width: 100%;
   }
 
+  .services-cta,
+  .services-cta.btn-hero {
+    margin-top: clamp(1.5rem, 3vw, 2rem);
+    width: 14.625rem !important;
+    max-width: 14.625rem;
+    padding-inline: 25px;
+  }
+}
+
+/* Services mobile (≤767px) */
+@media (max-width: 767px) {
+  .services-section {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .services-shell {
+    height: auto;
+    max-width: 402px;
+    padding-inline: 1.25rem;
+    padding-top: calc(var(--section-edge-height) + 1.5rem);
+    padding-bottom: calc(var(--section-edge-height) + 3.5rem);
+  }
+
   .services-cta {
-    margin-top: clamp(1.25rem, 2.5vw, 1.5rem);
-    width: min(14.625rem, 100%);
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -1731,6 +1762,22 @@ blockquote,
     width: 100% !important;
     max-width: 100% !important;
     padding-inline: clamp(0.5rem, 4.5cqi, 1.25rem);
+  }
+}
+
+/* Keep services CTA at design size from 768px up (overrides mobile btn-hero 100% width at 768) */
+@media (min-width: 768px) {
+  .services-cta.btn-hero {
+    width: 14.625rem !important;
+    max-width: 14.625rem;
+    padding-inline: 25px;
+  }
+
+  /* Hero CTAs must not inherit mobile full-width at exactly 768 — it squeezes the description */
+  .hero-content-shell .btn-hero {
+    width: auto !important;
+    max-width: none !important;
+    padding-inline: 1.5rem !important;
   }
 }
 

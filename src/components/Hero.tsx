@@ -10,7 +10,7 @@ function HeroBottomEdge() {
 
 export default function Hero() {
   return (
-    <section className="hero-bg-color full-bleed relative h-[894px] overflow-hidden max-md:h-[852px] md:max-[1194px]:h-[clamp(760px,88vh,860px)]">
+    <section className="hero-bg-color full-bleed relative h-[894px] overflow-hidden max-md:h-[852px] md:max-[820px]:h-[clamp(820px,92vh,880px)] min-[821px]:max-[1194px]:h-[clamp(760px,88vh,860px)]">
       <div
         className="hero-bg-drift pointer-events-none absolute left-1/2 top-0 z-0 max-md:block max-md:-translate-x-1/2 md:hidden"
         aria-hidden
@@ -104,8 +104,8 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="absolute top-[clamp(26rem,62%,34rem)] flex h-auto w-full flex-row items-center justify-between gap-[clamp(1.5rem,3vw,2.5rem)] max-md:static max-md:h-auto max-md:w-full max-md:flex-col max-md:gap-8 md:left-[var(--hero-inline-padding)] md:right-[var(--hero-inline-padding)] md:w-auto min-[1195px]:inset-x-0 min-[1195px]:top-[579px] min-[1195px]:h-[120px] min-[1195px]:w-full min-[1195px]:justify-between min-[1195px]:gap-16 min-[1195px]:px-0">
-          <p className="hero-enter hero-enter--3 min-w-0 flex-1 font-sans text-[clamp(1rem,1.45vw,1.125rem)] font-medium leading-[clamp(1.75rem,2.55vw,1.95rem)] tracking-[-0.25px] text-[#FFFFFFCC] max-md:h-[182px] max-md:max-w-[362px] max-md:flex-none max-md:text-[15px] max-md:leading-[26px] md:max-w-[min(640px,46%)] min-[1440px]:-ml-30 min-[1195px]:h-[120px] min-[1195px]:max-w-[min(709px,48%)] min-[1195px]:text-[18px] min-[1195px]:leading-[30px] min-[1195px]:max-[1441px]:max-w-[min(640px,46%)]">
+        <div className="hero-description-row absolute top-[clamp(26rem,62%,34rem)] flex h-auto w-full flex-row items-center justify-between gap-[clamp(1.5rem,3vw,2.5rem)] max-md:static max-md:h-auto max-md:w-full max-md:flex-col max-md:gap-8 md:left-[var(--hero-inline-padding)] md:right-[var(--hero-inline-padding)] md:w-auto md:max-[820px]:top-[clamp(24rem,56%,30rem)] min-[1195px]:inset-x-0 min-[1195px]:top-[579px] min-[1195px]:h-[120px] min-[1195px]:w-full min-[1195px]:justify-between min-[1195px]:gap-16 min-[1195px]:px-0">
+          <p className="hero-description hero-enter hero-enter--3 min-w-0 flex-1 font-sans text-[clamp(1rem,1.45vw,1.125rem)] font-medium leading-[clamp(1.75rem,2.55vw,1.95rem)] tracking-[-0.25px] text-[#FFFFFFCC] max-md:h-[182px] max-md:max-w-[362px] max-md:flex-none max-md:text-[15px] max-md:leading-[26px] md:max-w-[min(640px,46%)] md:max-[820px]:max-w-[min(28rem,54%)] min-[1440px]:-ml-30 min-[1195px]:h-[120px] min-[1195px]:max-w-[min(709px,48%)] min-[1195px]:text-[18px] min-[1195px]:leading-[30px] min-[1195px]:max-[1441px]:max-w-[min(640px,46%)]">
             When you are closing a sale, executing a refinance, or repositioning
             a portfolio, defeasance is often the final requirement standing
             between you and the transaction you actually care about. Paragon
@@ -116,14 +116,14 @@ export default function Hero() {
           <div className="hero-enter hero-enter--4 flex shrink-0 flex-row items-center gap-[clamp(0.75rem,1.25vw,1rem)] max-md:w-full max-md:max-w-[362px] max-md:flex-col md:max-[1194px]:flex min-[1195px]:flex min-[1440px]:translate-x-24">
             <Link
               href="/calculator"
-              className="btn-hero group inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-[#31EE97] px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:w-full max-md:gap-3 max-md:px-[25px] min-[1195px]:text-base"
+              className="btn-hero group inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-[#31EE97] px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:w-full max-md:gap-3 max-md:px-[25px] md:!w-auto md:!max-w-none md:!px-6 min-[1195px]:text-base"
             >
               Estimate Your Costs
               <ArrowIcon />
             </Link>
             <Link
               href="/contact"
-              className="btn-hero inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-white px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-95 hover:shadow-[0_8px_30px_rgba(255,255,255,0.12)] max-md:w-full max-md:gap-3 max-md:px-[25px] min-[1195px]:text-base"
+              className="btn-hero inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-white px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-95 hover:shadow-[0_8px_30px_rgba(255,255,255,0.12)] max-md:w-full max-md:gap-3 max-md:px-[25px] md:!w-auto md:!max-w-none md:!px-6 min-[1195px]:text-base"
             >
               Talk to Paragon
             </Link>
