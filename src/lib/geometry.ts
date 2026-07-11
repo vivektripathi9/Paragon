@@ -73,8 +73,9 @@ export const SECTION_EDGE_PRESETS = {
   "difference-top": {
     path: DIFFERENCE_TOP_WHITE_PATH,
     fill: GEOMETRY_COLORS.sectionLight,
-    underlayPath: ABOUT_BOTTOM_NAVY_PATH,
-    underlayFill: GEOMETRY_COLORS.difference,
+    // No navy underlay — section bg + Group 13 decor show through;
+    // only the light right-hand wedge is drawn by the edge SVG.
+    underlayPath: undefined,
     position: "top" as const,
     accentLine: false,
   },

@@ -641,43 +641,296 @@ blockquote,
   }
 }
 
-/* Top-right decor — flush right, grows from difference-top diagonal wedge */
+/* ── Difference section: continuous fluid layout (375 → 1440+) ──
+   Piecewise-linear clamps pass through today’s values at
+   375 (mobile), 768 (tablet), 1194 (tablet edge), and 1440 (desktop).
+   No stepped jumps at 768 / 1195 / 1440 — adjacent widths interpolate. */
+
+.difference-shell {
+  --difference-inline-padding: clamp(1.25rem, 3.5vw, 3rem);
+  /* Shared fluid tokens (375 → 1440) */
+  --diff-pt-2: calc(
+    clamp(0px, (100vw - 375px) * 256 / 393, 256px) +
+      clamp(0px, (100vw - 768px) * 90 / 426, 90px) +
+      clamp(0px, (100vw - 1194px) * 2 / 246, 2px)
+  );
+  --diff-pt-3: calc(
+    clamp(0px, (100vw - 375px) * 496 / 393, 496px) +
+      clamp(0px, (100vw - 768px) * 196.5 / 426, 196.5px) +
+      clamp(0px, (100vw - 1194px) * 3.5 / 246, 3.5px)
+  );
+  /* Block 3 left nudge: 600=0 / 768=-40 / 1194=-60 / 1440=-72 */
+  --diff-ml-3: calc(
+    -1 *
+      (
+        clamp(0px, (100vw - 600px) * 40 / 168, 40px) +
+          clamp(0px, (100vw - 768px) * 20 / 426, 20px) +
+          clamp(0px, (100vw - 1194px) * 12 / 246, 12px)
+      )
+  );
+  /* Always keep a little air on the right of block 3 */
+  --diff-pr-3: clamp(0.75rem, 2vw, 1.5rem);
+  position: relative;
+  z-index: 3;
+  margin-inline: auto;
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  flex-direction: column;
+  padding-inline: var(--difference-inline-padding);
+  padding-bottom: clamp(3rem, 5vw, 4rem);
+  padding-top: clamp(var(--section-edge-height), 6vw, var(--difference-pt));
+  min-height: clamp(52rem, 95vw, 89.8125rem); /* ~1122px → 1437px */
+}
+
+.difference-features {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+  align-items: start;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  min-height: clamp(36rem, 72vw, 70rem);
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.difference-feature {
+  width: 100%;
+  /* Tighter than before so nowrap lines (esp. block 3) stay inside the section */
+  max-width: clamp(15.5rem, 34vw, 30.5rem); /* ~248 → 488 */
+  justify-self: start;
+  overflow: visible;
+}
+
+.difference-feature--1 {
+  grid-column: 1 / 5;
+  grid-row: 1;
+  padding-top: 0;
+  margin-left: 0;
+}
+
+/* Block 2 — middle stagger. 768=256 / 1194=346 / 1440=348 */
+.difference-feature--2 {
+  grid-column: 5 / 9;
+  grid-row: 1;
+  padding-top: var(--diff-pt-2);
+  margin-left: 0;
+}
+
+/* Block 3 — bottom-right + CTA. 768=496 / 1194≈692 / 1440=696
+   Left nudge also widens the box so the right edge ( + padding) stays inset. */
+.difference-feature--3 {
+  grid-column: 9 / 13;
+  grid-row: 1;
+  padding-top: var(--diff-pt-3);
+  padding-right: var(--diff-pr-3);
+  margin-left: var(--diff-ml-3);
+  box-sizing: border-box;
+  width: calc(100% - var(--diff-ml-3));
+  max-width: calc(
+    clamp(15.5rem, 34vw, 30.5rem) - var(--diff-ml-3)
+  );
+}
+
+.difference-feature--3 .difference-feature__row {
+  max-width: 100%;
+}
+
+.difference-feature__row {
+  display: flex;
+  width: 100%;
+  max-width: clamp(15.5rem, 34vw, 30.5rem);
+  min-height: clamp(7.5rem, 13.5vw, 12rem);
+  height: auto;
+  align-items: flex-start;
+  gap: clamp(0.4rem, 1.6vw, 1.25rem);
+  opacity: 1;
+}
+
+.difference-feature__row img {
+  width: clamp(3.5rem, 5.8vw, 5.25rem); /* ~56 → 84 */
+  height: clamp(3.2rem, 4.8vw, 4.35rem); /* ~51 → 70 */
+  flex-shrink: 0;
+  object-fit: contain;
+  object-position: left;
+  opacity: 1;
+}
+
+.difference-feature__body {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: clamp(0px, 1.2vw, 1rem);
+  text-align: left;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  /* CTA scales to this column so it shares the title/copy edge */
+  container-type: inline-size;
+  container-name: diff-body;
+}
+
+.difference-feature__title {
+  width: auto;
+  height: auto;
+  font-size: clamp(1.0625rem, 0.62rem + 1.15vw, 1.75rem); /* ~17 → 28 */
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.difference-feature__copy {
+  width: auto;
+  height: auto;
+  font-size: clamp(0.75rem, 0.52rem + 0.6vw, 1rem); /* ~12 → 16 */
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: -0.0139em;
+  color: #ffffffb2;
+}
+
+/* Tablet / small desktop columns are tighter — shrink type a bit more */
+@media (min-width: 766px) and (max-width: 1194px) {
+  .difference-feature__title {
+    font-size: clamp(1rem, 1.45vw, 1.375rem); /* ~16 → 22 */
+    line-height: 1.28;
+  }
+
+  .difference-feature__copy {
+    font-size: clamp(0.75rem, 1.05vw, 0.9375rem); /* ~12 → 15 */
+    line-height: 1.5;
+  }
+
+  .difference-feature__row img {
+    width: clamp(3.25rem, 5.2vw, 4.5rem);
+    height: clamp(3rem, 4.3vw, 3.75rem);
+  }
+}
+
+.difference-feature__cta {
+  margin-top: clamp(1.5rem, 2.5vw, 2rem);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.difference-feature__cta .difference-feature__cta-btn {
+  box-sizing: border-box;
+  display: inline-flex !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0;
+  height: clamp(2.75rem, 4.2vw, 3.375rem); /* ~44 → 54 */
+  /* Scale to the text column (same edge as title/copy) */
+  padding-inline: clamp(0.4rem, 4.5cqi, 1.5625rem);
+  gap: clamp(0.25rem, 2.5cqi, 0.75rem);
+  font-size: clamp(0.5625rem, 4.2cqi, 1rem); /* ~9 → 16 */
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  justify-content: center;
+}
+
+.difference-feature__cta-label {
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.difference-feature__cta .difference-feature__cta-arrow {
+  flex-shrink: 0;
+  width: clamp(0.7rem, 4.2cqi, 1.1875rem);
+  height: clamp(0.5rem, 3.2cqi, 0.875rem);
+}
+
+/* Very narrow text columns: two-line label instead of cropping */
+@container diff-body (max-width: 13.5rem) {
+  .difference-feature__cta .difference-feature__cta-btn {
+    height: auto;
+    min-height: 2.75rem;
+    padding-block: 0.625rem;
+    font-size: clamp(0.6875rem, 6.5cqi, 0.8125rem);
+  }
+
+  .difference-feature__cta-label {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+/* Narrow phones: stacked flow (stagger tokens already ~0 near 375;
+   avoid three cards painting on top of each other before offsets grow). */
+@media (max-width: 599px) {
+  .difference-features {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    min-height: 0;
+  }
+
+  .difference-feature--1,
+  .difference-feature--2,
+  .difference-feature--3 {
+    padding-top: 0;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .difference-feature__cta .difference-feature__cta-btn {
+    height: 3.375rem;
+    padding-inline: clamp(0.75rem, 4vw, 1.25rem);
+    font-size: clamp(0.8125rem, 3.8vw, 0.9375rem);
+    gap: 0.625rem;
+  }
+
+  .difference-feature__cta .difference-feature__cta-arrow {
+    width: 1.0625rem;
+    height: 0.8125rem;
+  }
+}
+
+/* Legacy tablet decor wrappers (unused when .difference-decor-desktop is on) */
 .difference-decor-tr {
   position: absolute;
   top: 0;
   right: 0;
   bottom: var(--section-edge-height);
   z-index: 2;
-  width: min(64vw, 50rem);
+  width: clamp(16rem, 50vw, 50rem);
   pointer-events: none;
   overflow: hidden;
 }
 
 .difference-decor-tr__img {
+  --difference-tr-scale: clamp(1.15, calc(0.95 + 0.35 * 100vw / 1440px), 1.45);
   position: absolute;
-  top: -26.75rem;
+  top: clamp(-26.75rem, -30vw, -18rem);
   right: 0;
   height: 100%;
   width: auto;
   max-width: none;
   display: block;
-  transform: scale(1.45);
+  transform: scale(var(--difference-tr-scale));
   transform-origin: top right;
 }
 
-/* Bottom-left decor — flush left & bottom, mirrors top-right corner anchor */
 .difference-decor-bl {
   position: absolute;
   top: var(--section-edge-height);
   bottom: 0;
   left: 0;
   z-index: 2;
-  width: min(62vw, 48rem);
+  width: clamp(15rem, 48vw, 48rem);
   pointer-events: none;
   overflow: hidden;
 }
 
 .difference-decor-bl__img {
+  --difference-bl-scale: clamp(1.1, calc(0.95 + 0.35 * 100vw / 1440px), 1.48);
+  --difference-bl-ty: clamp(14rem, 20vw, 21.5rem);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -685,21 +938,83 @@ blockquote,
   width: auto;
   max-width: none;
   display: block;
-  transform: scale(1.48) translate(-2px, 21.5rem);
+  transform: scale(var(--difference-bl-scale)) translate(-2px, var(--difference-bl-ty));
   transform-origin: bottom left;
 }
 
-@media (max-width: 767px) {
-  .difference-decor-tr {
-    width: min(72vw, 32rem);
+/* Group 13 / 14 — full-bleed to match SectionEdge width */
+.difference-decor-desktop {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* Diagonal START — ABOUT_SLOPE_TOP_X / 1440 (where the angled edge begins) */
+  --diff-diagonal-start: calc(1176 / 1440 * 100%);
+}
+
+/*
+ * TR (Group 13) — blue column starts where the diagonal edge starts.
+ * left = diagonalStart − (blueFillLeft / viewBoxWidth) × imageWidth
+ * Desktop blue starts at x=137 in viewBox 1197.
+ */
+.difference-decor-desktop__tr {
+  --diff-tr-w: clamp(
+    206px,
+    calc(206px + (100vw - 375px) * 991 / 1065),
+    1197px
+  );
+  --diff-tr-h: clamp(
+    518px,
+    calc(518px + (100vw - 375px) * 875 / 1065),
+    1393px
+  );
+  --diff-tr-blue-left: calc(137 / 1197 * var(--diff-tr-w));
+  position: absolute;
+  top: calc(-1 * var(--section-edge-height) - 160px);
+  left: calc(var(--diff-diagonal-start) - var(--diff-tr-blue-left) - 80px);
+  right: auto;
+  width: var(--diff-tr-w);
+  height: var(--diff-tr-h);
+  max-width: none;
+  opacity: 1;
+}
+
+/* Mobile: dedicated asset — blue starts at x≈50.94 in viewBox 445 */
+.difference-decor-desktop__tr--mobile {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .difference-decor-desktop__tr--desktop {
+    display: none;
   }
 
-  .difference-decor-bl {
-    width: min(68vw, 30rem);
+  .difference-decor-desktop__tr--mobile {
+    --diff-tr-w: 445.11px;
+    --diff-tr-blue-left: calc(50.94 / 445 * var(--diff-tr-w));
+    display: block;
+    top: calc(-1 * var(--section-edge-height));
+    left: calc(var(--diff-diagonal-start) - var(--diff-tr-blue-left));
+    right: auto;
+    width: var(--diff-tr-w);
+    height: 518px;
+    transform: rotate(0deg);
+    opacity: 1;
   }
 }
 
-/* Hero tablet + small laptop band (768px–1194px) */
+/* BL: mobile 127×518 @ left -8 / bottom -24 → desktop 516×1393 @ left -16 / bottom -500 */
+.difference-decor-desktop__bl {
+  position: absolute;
+  bottom: clamp(-500px, calc(-24px + (100vw - 375px) * -476 / 1065), -24px);
+  left: clamp(-16px, calc(-8px + (100vw - 375px) * -8 / 1065), -8px);
+  width: clamp(127px, calc(127px + (100vw - 375px) * 389 / 1065), 516px);
+  height: clamp(518px, calc(518px + (100vw - 375px) * 875 / 1065), 1393px);
+  max-width: none;
+  opacity: 1;
+}
+
+/* Hero tablet + small laptop band (768px–1194px) — hero only; difference is fluid above */
 @media (min-width: 768px) and (max-width: 1194px) {
   .hero-bg-drift__layer--tablet {
     position: absolute;
@@ -720,99 +1035,6 @@ blockquote,
 
   .hero-motion-overlay {
     opacity: 1;
-  }
-
-  .difference-decor-tr {
-    width: min(46vw, 26rem);
-  }
-
-  .difference-decor-bl {
-    width: min(44vw, 24rem);
-  }
-
-  .difference-decor-tr__img {
-    top: -22rem;
-    transform: scale(1.3);
-  }
-
-  .difference-decor-bl__img {
-    transform: scale(1.25) translate(-2px, 18rem);
-  }
-
-  .difference-shell {
-    --difference-inline-padding: clamp(1.75rem, 3.25vw, 2.0625rem);
-    min-height: clamp(52rem, 100vw, 75rem);
-    padding-inline: var(--difference-inline-padding);
-  }
-
-  .difference-features {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: 1fr;
-    margin-top: 1.5rem;
-    min-height: clamp(44rem, 82vw, 56rem);
-  }
-
-  .difference-feature {
-    width: min(37rem, 100%);
-    max-width: none;
-  }
-
-  .difference-feature--1 {
-    grid-column: 1 / span 10;
-    grid-row: 1;
-    padding-top: 0;
-  }
-
-  .difference-feature--2 {
-    grid-column: 4 / span 9;
-    grid-row: 1;
-    padding-top: clamp(16rem, 29vw, 21.75rem);
-    margin-left: clamp(-4.5rem, -7vw, -1.75rem);
-  }
-
-  .difference-feature--3 {
-    grid-column: 6 / span 7;
-    grid-row: 1;
-    padding-top: clamp(31rem, 58vw, 43.5rem);
-    margin-left: clamp(-8rem, -12vw, -3.5rem);
-  }
-
-  .difference-feature__row {
-    width: 100%;
-    height: auto;
-    min-height: clamp(12rem, 18vw, 13.75rem);
-    gap: clamp(1rem, 2.5vw, 1.8125rem);
-  }
-
-  .difference-feature__row img {
-    width: clamp(4.5rem, 9vw, 6.18rem);
-    height: clamp(3.75rem, 8vw, 5.13rem);
-  }
-
-  .difference-feature__body {
-    width: auto;
-    height: auto;
-    flex: 1;
-    min-width: 0;
-  }
-
-  .difference-feature__title {
-    width: auto;
-    height: auto;
-    font-size: clamp(1.5rem, 2.75vw, 1.75rem);
-    line-height: 1.5;
-  }
-
-  .difference-feature__copy {
-    width: auto;
-    height: auto;
-    font-size: clamp(0.9375rem, 1.65vw, 1.0625rem);
-    line-height: 1.65;
-  }
-
-  .difference-feature__cta {
-    padding-left: clamp(4.5rem, 10vw, 8rem);
   }
 }
 
@@ -877,15 +1099,6 @@ blockquote,
 }
 
 @media (max-width: 767px) {
-  .difference-decor-tr__img {
-    top: -18rem;
-    transform: scale(1.15);
-  }
-
-  .difference-decor-bl__img {
-    transform: scale(1.1) translate(-2px, 14rem);
-  }
-
   .hero-ambient__mesh,
   .hero-ambient__shimmer {
     animation-duration: 20s;
@@ -1511,6 +1724,13 @@ blockquote,
     box-sizing: border-box;
     padding-inline: 2.5rem;
     justify-content: center;
+  }
+
+  /* Difference CTA stays full-width of its feature column (never max-content) */
+  .difference-feature__cta .difference-feature__cta-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-inline: clamp(0.5rem, 4.5cqi, 1.25rem);
   }
 }
 
