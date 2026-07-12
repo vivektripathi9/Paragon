@@ -95,20 +95,20 @@ const features = [
     iconHeight: 82,
     title: (
       <>
-        <span className="hidden min-[766px]:block">
+        <span className="hidden min-[1000px]:block">
           <span className="block whitespace-nowrap">
             Senior-led execution on every
           </span>
           <span className="block whitespace-nowrap">transaction.</span>
         </span>
-        <span className="min-[766px]:hidden">
+        <span className="min-[1000px]:hidden">
           Senior-led execution on every transaction.
         </span>
       </>
     ),
     description: (
       <>
-        <span className="hidden min-[766px]:block">
+        <span className="hidden min-[1000px]:block">
           <span className="block whitespace-nowrap">
             You work directly with experienced professionals
           </span>
@@ -120,7 +120,7 @@ const features = [
           </span>
           <span className="block whitespace-nowrap">messages.</span>
         </span>
-        <span className="min-[766px]:hidden">
+        <span className="min-[1000px]:hidden">
           You work directly with experienced professionals who have personally
           closed defeasance transactions, not with associates relaying messages.
         </span>
