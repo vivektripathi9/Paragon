@@ -1,0 +1,382 @@
+{
+  "analysis": {
+    "classified": [
+      {
+        "x": 800,
+        "localY": 0,
+        "pageApprox": 290,
+        "vsSeam": -10,
+        "hex": "#062258",
+        "rgba": [
+          6,
+          34,
+          88,
+          255
+        ],
+        "kind": "hero-navy",
+        "toNavy": 36.796738985948195,
+        "toLight": 354.02401048516464,
+        "toWhite": 372.4661058405181
+      },
+      {
+        "x": 800,
+        "localY": 1,
+        "pageApprox": 291,
+        "vsSeam": -9,
+        "hex": "#07155c",
+        "rgba": [
+          7,
+          21,
+          92,
+          255
+        ],
+        "kind": "hero-navy",
+        "toNavy": 37.33630940518894,
+        "toLight": 359.40645514514625,
+        "toWhite": 377.9272416749023
+      },
+      {
+        "x": 800,
+        "localY": 2,
+        "pageApprox": 292,
+        "vsSeam": -8,
+        "hex": "#082067",
+        "rgba": [
+          8,
+          32,
+          103,
+          255
+        ],
+        "kind": "other",
+        "toNavy": 50.24937810560445,
+        "toLight": 347.19735022030335,
+        "toWhite": 365.8442291467777
+      },
+      {
+        "x": 800,
+        "localY": 3,
+        "pageApprox": 293,
+        "vsSeam": -7,
+        "hex": "#061f62",
+        "rgba": [
+          6,
+          31,
+          98,
+          255
+        ],
+        "kind": "other",
+        "toNavy": 45.02221673796172,
+        "toLight": 351.3061343045407,
+        "toWhite": 369.89998648283296
+      },
+      {
+        "x": 800,
+        "localY": 4,
+        "pageApprox": 294,
+        "vsSeam": -6,
+        "hex": "#071e64",
+        "rgba": [
+          7,
+          30,
+          100,
+          255
+        ],
+        "kind": "other",
+        "toNavy": 46.74398357008098,
+        "toLight": 350.3740857997349,
+        "toWhite": 368.9905147832394
+      },
+      {
+        "x": 800,
+        "localY": 5,
+        "pageApprox": 295,
+        "vsSeam": -5,
+        "hex": "#09244d",
+        "rgba": [
+          9,
+          36,
+          77,
+          255
+        ],
+        "kind": "hero-navy",
+        "toNavy": 29.051678092667903,
+        "toLight": 356.13901780063355,
+        "toWhite": 374.38082215840063
+      },
+      {
+        "x": 800,
+        "localY": 6,
+        "pageApprox": 296,
+        "vsSeam": -4,
+        "hex": "#0a2948",
+        "rgba": [
+          10,
+          41,
+          72,
+          255
+        ],
+        "kind": "hero-navy",
+        "toNavy": 29.444863728670914,
+        "toLight": 355.1112501738012,
+        "toWhite": 373.24254848556586
+      },
+      {
+        "x": 800,
+        "localY": 7,
+        "pageApprox": 297,
+        "vsSeam": -3,
+        "hex": "#092763",
+        "rgba": [
+          9,
+          39,
+          99,
+          255
+        ],
+        "kind": "other",
+        "toNavy": 49.12229636326054,
+        "toLight": 344.0726667435238,
+        "toWhite": 362.6403176702778
+      },
+      {
+        "x": 800,
+        "localY": 8,
+        "pageApprox": 298,
+        "vsSeam": -2,
+        "hex": "#0c1b61",
+        "rgba": [
+          12,
+          27,
+          97,
+          255
+        ],
+        "kind": "other",
+        "toNavy": 43.886216514983374,
+        "toLight": 350.23563496594693,
+        "toWhite": 368.7777108232004
+      },
+      {
+        "x": 800,
+        "localY": 9,
+        "pageApprox": 299,
+        "vsSeam": -1,
+        "hex": "#061b60",
+        "rgba": [
+          6,
+          27,
+          96,
+          255
+        ],
+        "kind": "other",
+        "toNavy": 42.08325082500162,
+        "toLight": 354.60964453889295,
+        "toWhite": 373.1836009258713
+      },
+      {
+        "x": 800,
+        "localY": 10,
+        "pageApprox": 300,
+        "vsSeam": 0,
+        "hex": "#082052",
+        "rgba": [
+          8,
+          32,
+          82,
+          255
+        ],
+        "kind": "hero-navy",
+        "toNavy": 30.822070014844883,
+        "toLight": 356.7141712912454,
+        "toWhite": 375.05599581929096
+      },
+      {
+        "x": 800,
+        "localY": 11,
+        "pageApprox": 301,
+        "vsSeam": 1,
+        "hex": "#061a58",
+        "rgba": [
+          6,
+          26,
+          88,
+          255
+        ],
+        "kind": "hero-navy",
+        "toNavy": 34.08812109811862,
+        "toLight": 358.8049609467517,
+        "toWhite": 377.2678093874429
+      },
+      {
+        "x": 800,
+        "localY": 12,
+        "pageApprox": 302,
+        "vsSeam": 2,
+        "hex": "#09185c",
+        "rgba": [
+          9,
+          24,
+          92,
+          255
+        ],
+        "kind": "hero-navy",
+        "toNavy": 37.96050579220461,
+        "toLight": 356.2611401766968,
+        "toWhite": 374.7612573359205
+      },
+      {
+        "x": 800,
+        "localY": 13,
+        "pageApprox": 303,
+        "vsSeam": 3,
+        "hex": "#091f5c",
+        "rgba": [
+          9,
+          31,
+          92,
+          255
+        ],
+        "kind": "hero-navy",
+        "toNavy": 39.67366884975475,
+        "toLight": 352.00142045167945,
+        "toWhite": 370.48751665879377
+      },
+      {
+        "x": 800,
+        "localY": 14,
+        "pageApprox": 304,
+        "vsSeam": 4,
+        "hex": "#0b2562",
+        "rgba": [
+          11,
+          37,
+          98,
+          255
+        ],
+        "kind": "other",
+        "toNavy": 47.686476070265456,
+        "toLight": 344.3733439161632,
+        "toWhite": 362.9173459618595
+      },
+      {
+        "x": 800,
+        "localY": 15,
+        "pageApprox": 305,
+        "vsSeam": 5,
+        "hex": "#0c246b",
+        "rgba": [
+          12,
+          36,
+          107,
+          255
+        ],
+        "kind": "other",
+        "toNavy": 55.758407437802596,
+        "toLight": 340.37920030460145,
+        "toWhite": 359.04595806108165
+      },
+      {
+        "x": 800,
+        "localY": 16,
+        "pageApprox": 306,
+        "vsSeam": 6,
+        "hex": "#071c62",
+        "rgba": [
+          7,
+          28,
+          98,
+          255
+        ],
+        "kind": "other",
+        "toNavy": 44.328320518603,
+        "toLight": 352.4627639907512,
+        "toWhite": 371.0552519504339
+      },
+      {
+        "x": 800,
+        "localY": 17,
+        "pageApprox": 307,
+        "vsSeam": 7,
+        "hex": "#0a2867",
+        "rgba": [
+          10,
+          40,
+          103,
+          255
+        ],
+        "kind": "other",
+        "toNavy": 53.2634959423431,
+        "toLight": 341.04251934326317,
+        "toWhite": 359.65817104578616
+      },
+      {
+        "x": 800,
+        "localY": 18,
+        "pageApprox": 308,
+        "vsSeam": 8,
+        "hex": "#0a2358",
+        "rgba": [
+          10,
+          35,
+          88,
+          255
+        ],
+        "kind": "hero-navy",
+        "toNavy": 37.77565353504821,
+        "toLight": 350.79908779812985,
+        "toWhite": 369.2072588668863
+      },
+      {
+        "x": 800,
+        "localY": 19,
+        "pageApprox": 309,
+        "vsSeam": 9,
+        "hex": "#0c263c",
+        "rgba": [
+          12,
+          38,
+          60,
+          255
+        ],
+        "kind": "hero-navy",
+        "toNavy": 22.49444375840399,
+        "toLight": 361.763735053695,
+        "toWhite": 379.6880298350213
+      }
+    ],
+    "seamY": 300,
+    "stripY": 290
+  },
+  "more": {
+    "varRaw": "clamp(3.5rem, 6.67vw, 6rem)",
+    "resolved": "96px",
+    "resolvedNum": 96,
+    "remPx": 16,
+    "vwAt1440_6_67": 96.04799999999999,
+    "heroEdgeHeight": 96,
+    "diffEdgeHeight": 96,
+    "diffEdgePageTop": 1787.421875,
+    "diffEdgePageBottom": 1883.421875,
+    "aboutPageBottom": 1884.421875,
+    "aboutPageTop": 894,
+    "diffPageTop": 1787.421875,
+    "pathD": "M0 24 L216 24 L288 96 H1440 V96 H0 Z",
+    "pathBBox": {
+      "x": 0,
+      "y": 24,
+      "w": 1440,
+      "h": 72
+    },
+    "svgOverflow": "hidden",
+    "svgHeight": "96px",
+    "hostTransform": "none",
+    "hostBottom": "0px",
+    "hostTop": "798px",
+    "servicesMarginTop": "-97px",
+    "servicesMarginTopNum": -97,
+    "viewBoxToCss": {
+      "scaleY": 1,
+      "pathBottomCss": 96,
+      "svgHeight": 96,
+      "uncoveredAtBottom": 0
+    }
+  }
+}

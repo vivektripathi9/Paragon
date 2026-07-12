@@ -1,0 +1,1021 @@
+{
+  "report": {
+    "dpr": 1,
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "sectionEdgeHeightVar": "clamp(3.5rem, 6.67vw, 6rem)",
+    "edgeHeightComputed": "96px",
+    "gapHeroBottomToAboutTop": 0,
+    "hero": {
+      "tag": "section",
+      "className": "hero-bg-color full-bleed relative h-[894px] overflow-hidden max-md:h-[852px] md:max-[820px]:h-[clamp(820px,92vh,880px)] min-[821px]:max-[1194px]:h-[clamp(760px,88vh,860px)]",
+      "top": 0,
+      "bottom": 894,
+      "left": 0,
+      "right": 1440,
+      "width": 1440,
+      "height": 894,
+      "pageTop": 0,
+      "pageBottom": 894,
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "heightCSS": "894px",
+      "overflow": "hidden",
+      "overflowX": "hidden",
+      "overflowY": "hidden",
+      "position": "relative",
+      "topCSS": "0px",
+      "bottomCSS": "0px",
+      "transform": "none",
+      "backgroundColor": "rgb(3, 18, 55)",
+      "zIndex": "auto",
+      "lineHeight": "24px",
+      "display": "block"
+    },
+    "about": {
+      "tag": "section",
+      "className": "full-bleed relative bg-[#F0F3FC] max-md:z-[2]",
+      "top": 894,
+      "bottom": 1884.421875,
+      "left": 0,
+      "right": 1440,
+      "width": 1440,
+      "height": 990.421875,
+      "pageTop": 894,
+      "pageBottom": 1884.421875,
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "heightCSS": "990.422px",
+      "overflow": "visible",
+      "overflowX": "visible",
+      "overflowY": "visible",
+      "position": "relative",
+      "topCSS": "0px",
+      "bottomCSS": "0px",
+      "transform": "none",
+      "backgroundColor": "rgb(240, 243, 252)",
+      "zIndex": "auto",
+      "lineHeight": "24px",
+      "display": "block"
+    },
+    "edgeHost": {
+      "tag": "div",
+      "className": "section-edge-host pointer-events-none absolute inset-x-0 bottom-0 z-10 leading-[0] section-edge-host--bottom z-20",
+      "top": 798,
+      "bottom": 894,
+      "left": 0,
+      "right": 1440,
+      "width": 1440,
+      "height": 96,
+      "pageTop": 798,
+      "pageBottom": 894,
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "heightCSS": "96px",
+      "overflow": "visible",
+      "overflowX": "visible",
+      "overflowY": "visible",
+      "position": "absolute",
+      "topCSS": "798px",
+      "bottomCSS": "0px",
+      "transform": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "zIndex": "20",
+      "lineHeight": "0px",
+      "display": "block"
+    },
+    "edgeSvg": {
+      "tag": "svg",
+      "className": "[object SVGAnimatedString]",
+      "top": 798,
+      "bottom": 894,
+      "left": 0,
+      "right": 1440,
+      "width": 1440,
+      "height": 96,
+      "pageTop": 798,
+      "pageBottom": 894,
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "heightCSS": "96px",
+      "overflow": "hidden",
+      "overflowX": "hidden",
+      "overflowY": "hidden",
+      "position": "static",
+      "topCSS": "auto",
+      "bottomCSS": "auto",
+      "transform": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "zIndex": "auto",
+      "lineHeight": "0px",
+      "display": "block"
+    },
+    "pathFill": "#F0F3FC",
+    "pathD": "M0 24 L216 24 L288 96 H1440 V96 H0 Z",
+    "viewBox": "0 0 1440 96",
+    "preserveAspectRatio": "none",
+    "shapeRendering": "auto",
+    "pathBBox": {
+      "x": 0,
+      "y": 24,
+      "width": 1440,
+      "height": 72
+    },
+    "svgBBox": {
+      "x": 0,
+      "y": 24,
+      "width": 1440,
+      "height": 72
+    },
+    "aboutBg": "rgb(240, 243, 252)",
+    "heroBg": "rgb(3, 18, 55)",
+    "subpixel": {
+      "heroHeight": false,
+      "heroBottom": false,
+      "aboutTop": false,
+      "aboutHeight": true,
+      "edgeHostTop": false,
+      "edgeHostBottom": false,
+      "edgeSvgHeight": false,
+      "edgeSvgBottom": false
+    },
+    "rawNumbers": {
+      "heroPageBottom": 894,
+      "aboutPageTop": 894,
+      "edgeHostPageTop": 798,
+      "edgeHostPageBottom": 894,
+      "edgeSvgHeight": 96,
+      "edgeSvgPageTop": 798,
+      "edgeSvgPageBottom": 894
+    },
+    "overflowChain": [
+      {
+        "tag": "div",
+        "className": "section-edge-host pointer-events-none absolute inset-x-0 bottom-0 z-10 leading-[0] section-edge-host--bottom z-20",
+        "overflow": "visible",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "transform": "none"
+      },
+      {
+        "tag": "section",
+        "className": "hero-bg-color full-bleed relative h-[894px] overflow-hidden max-md:h-[852px] md:max-[820px]:h-[clamp(820px,92vh,880px)] ",
+        "overflow": "hidden",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "div",
+        "className": "relative w-full overflow-x-hidden",
+        "overflow": "hidden auto",
+        "overflowX": "hidden",
+        "overflowY": "auto",
+        "transform": "none"
+      },
+      {
+        "tag": "body",
+        "className": "min-h-full w-full overflow-x-clip font-sans",
+        "overflow": "clip visible",
+        "overflowX": "clip",
+        "overflowY": "visible",
+        "transform": "none"
+      }
+    ],
+    "hostVsHero": {
+      "hostBottomMinusHeroBottom": 0,
+      "hostTop": 798,
+      "expectedHostTop": 798
+    },
+    "aboutBgHex": "#f0f3fc",
+    "heroBgHex": "#031237"
+  },
+  "aboutDiff": {
+    "aboutBottom": 1884.421875,
+    "aboutHeight": 990.421875,
+    "aboutOverflow": "visible",
+    "diffTop": 1787.421875,
+    "diffHeight": 1368,
+    "diffOverflow": "hidden",
+    "gapAboutToDiff": -97,
+    "servicesTop": 3058.421875,
+    "servicesMarginTop": "-97px",
+    "servicesOverflow": "visible",
+    "reputationTop": 5344.84375,
+    "reputationOverflow": "hidden",
+    "gapServicesToReputation": 1385
+  },
+  "pixelRows": [
+    {
+      "y": 0,
+      "cols": [
+        {
+          "x": 50,
+          "y": 0,
+          "rgba": [
+            2,
+            17,
+            72,
+            255
+          ],
+          "hex": "#021148"
+        },
+        {
+          "x": 200,
+          "y": 0,
+          "rgba": [
+            5,
+            26,
+            65,
+            255
+          ],
+          "hex": "#051a41"
+        },
+        {
+          "x": 400,
+          "y": 0,
+          "rgba": [
+            3,
+            24,
+            64,
+            255
+          ],
+          "hex": "#031840"
+        },
+        {
+          "x": 700,
+          "y": 0,
+          "rgba": [
+            4,
+            37,
+            74,
+            255
+          ],
+          "hex": "#04254a"
+        },
+        {
+          "x": 1000,
+          "y": 0,
+          "rgba": [
+            0,
+            20,
+            44,
+            255
+          ],
+          "hex": "#00142c"
+        },
+        {
+          "x": 1200,
+          "y": 0,
+          "rgba": [
+            0,
+            21,
+            36,
+            255
+          ],
+          "hex": "#001524"
+        },
+        {
+          "x": 1400,
+          "y": 0,
+          "rgba": [
+            3,
+            29,
+            69,
+            255
+          ],
+          "hex": "#031d45"
+        }
+      ]
+    },
+    {
+      "y": 3,
+      "cols": [
+        {
+          "x": 50,
+          "y": 3,
+          "rgba": [
+            5,
+            25,
+            76,
+            255
+          ],
+          "hex": "#05194c"
+        },
+        {
+          "x": 200,
+          "y": 3,
+          "rgba": [
+            5,
+            28,
+            86,
+            255
+          ],
+          "hex": "#051c56"
+        },
+        {
+          "x": 400,
+          "y": 3,
+          "rgba": [
+            5,
+            28,
+            90,
+            255
+          ],
+          "hex": "#051c5a"
+        },
+        {
+          "x": 700,
+          "y": 3,
+          "rgba": [
+            7,
+            36,
+            88,
+            255
+          ],
+          "hex": "#072458"
+        },
+        {
+          "x": 1000,
+          "y": 3,
+          "rgba": [
+            0,
+            13,
+            42,
+            255
+          ],
+          "hex": "#000d2a"
+        },
+        {
+          "x": 1200,
+          "y": 3,
+          "rgba": [
+            0,
+            16,
+            49,
+            255
+          ],
+          "hex": "#001031"
+        },
+        {
+          "x": 1400,
+          "y": 3,
+          "rgba": [
+            4,
+            21,
+            83,
+            255
+          ],
+          "hex": "#041553"
+        }
+      ]
+    },
+    {
+      "y": 4,
+      "cols": [
+        {
+          "x": 50,
+          "y": 4,
+          "rgba": [
+            4,
+            25,
+            82,
+            255
+          ],
+          "hex": "#041952"
+        },
+        {
+          "x": 200,
+          "y": 4,
+          "rgba": [
+            3,
+            23,
+            71,
+            255
+          ],
+          "hex": "#031747"
+        },
+        {
+          "x": 400,
+          "y": 4,
+          "rgba": [
+            4,
+            26,
+            77,
+            255
+          ],
+          "hex": "#041a4d"
+        },
+        {
+          "x": 700,
+          "y": 4,
+          "rgba": [
+            6,
+            28,
+            76,
+            255
+          ],
+          "hex": "#061c4c"
+        },
+        {
+          "x": 1000,
+          "y": 4,
+          "rgba": [
+            0,
+            16,
+            51,
+            255
+          ],
+          "hex": "#001033"
+        },
+        {
+          "x": 1200,
+          "y": 4,
+          "rgba": [
+            0,
+            18,
+            48,
+            255
+          ],
+          "hex": "#001230"
+        },
+        {
+          "x": 1400,
+          "y": 4,
+          "rgba": [
+            4,
+            19,
+            82,
+            255
+          ],
+          "hex": "#041352"
+        }
+      ]
+    },
+    {
+      "y": 5,
+      "cols": [
+        {
+          "x": 50,
+          "y": 5,
+          "rgba": [
+            5,
+            19,
+            90,
+            255
+          ],
+          "hex": "#05135a"
+        },
+        {
+          "x": 200,
+          "y": 5,
+          "rgba": [
+            4,
+            28,
+            74,
+            255
+          ],
+          "hex": "#041c4a"
+        },
+        {
+          "x": 400,
+          "y": 5,
+          "rgba": [
+            5,
+            33,
+            84,
+            255
+          ],
+          "hex": "#052154"
+        },
+        {
+          "x": 700,
+          "y": 5,
+          "rgba": [
+            5,
+            33,
+            83,
+            255
+          ],
+          "hex": "#052153"
+        },
+        {
+          "x": 1000,
+          "y": 5,
+          "rgba": [
+            0,
+            15,
+            46,
+            255
+          ],
+          "hex": "#000f2e"
+        },
+        {
+          "x": 1200,
+          "y": 5,
+          "rgba": [
+            3,
+            26,
+            72,
+            255
+          ],
+          "hex": "#031a48"
+        },
+        {
+          "x": 1400,
+          "y": 5,
+          "rgba": [
+            5,
+            23,
+            77,
+            255
+          ],
+          "hex": "#05174d"
+        }
+      ]
+    },
+    {
+      "y": 6,
+      "cols": [
+        {
+          "x": 50,
+          "y": 6,
+          "rgba": [
+            8,
+            37,
+            89,
+            255
+          ],
+          "hex": "#082559"
+        },
+        {
+          "x": 200,
+          "y": 6,
+          "rgba": [
+            4,
+            28,
+            73,
+            255
+          ],
+          "hex": "#041c49"
+        },
+        {
+          "x": 400,
+          "y": 6,
+          "rgba": [
+            6,
+            27,
+            74,
+            255
+          ],
+          "hex": "#061b4a"
+        },
+        {
+          "x": 700,
+          "y": 6,
+          "rgba": [
+            6,
+            31,
+            83,
+            255
+          ],
+          "hex": "#061f53"
+        },
+        {
+          "x": 1000,
+          "y": 6,
+          "rgba": [
+            0,
+            15,
+            39,
+            255
+          ],
+          "hex": "#000f27"
+        },
+        {
+          "x": 1200,
+          "y": 6,
+          "rgba": [
+            4,
+            27,
+            74,
+            255
+          ],
+          "hex": "#041b4a"
+        },
+        {
+          "x": 1400,
+          "y": 6,
+          "rgba": [
+            4,
+            22,
+            67,
+            255
+          ],
+          "hex": "#041643"
+        }
+      ]
+    },
+    {
+      "y": 7,
+      "cols": [
+        {
+          "x": 50,
+          "y": 7,
+          "rgba": [
+            4,
+            30,
+            85,
+            255
+          ],
+          "hex": "#041e55"
+        },
+        {
+          "x": 200,
+          "y": 7,
+          "rgba": [
+            4,
+            28,
+            73,
+            255
+          ],
+          "hex": "#041c49"
+        },
+        {
+          "x": 400,
+          "y": 7,
+          "rgba": [
+            4,
+            28,
+            83,
+            255
+          ],
+          "hex": "#041c53"
+        },
+        {
+          "x": 700,
+          "y": 7,
+          "rgba": [
+            6,
+            35,
+            79,
+            255
+          ],
+          "hex": "#06234f"
+        },
+        {
+          "x": 1000,
+          "y": 7,
+          "rgba": [
+            0,
+            20,
+            46,
+            255
+          ],
+          "hex": "#00142e"
+        },
+        {
+          "x": 1200,
+          "y": 7,
+          "rgba": [
+            5,
+            21,
+            86,
+            255
+          ],
+          "hex": "#051556"
+        },
+        {
+          "x": 1400,
+          "y": 7,
+          "rgba": [
+            4,
+            27,
+            78,
+            255
+          ],
+          "hex": "#041b4e"
+        }
+      ]
+    },
+    {
+      "y": 11,
+      "cols": [
+        {
+          "x": 50,
+          "y": 11,
+          "rgba": [
+            5,
+            28,
+            83,
+            255
+          ],
+          "hex": "#051c53"
+        },
+        {
+          "x": 200,
+          "y": 11,
+          "rgba": [
+            4,
+            24,
+            74,
+            255
+          ],
+          "hex": "#04184a"
+        },
+        {
+          "x": 400,
+          "y": 11,
+          "rgba": [
+            3,
+            31,
+            89,
+            255
+          ],
+          "hex": "#031f59"
+        },
+        {
+          "x": 700,
+          "y": 11,
+          "rgba": [
+            3,
+            20,
+            79,
+            255
+          ],
+          "hex": "#03144f"
+        },
+        {
+          "x": 1000,
+          "y": 11,
+          "rgba": [
+            0,
+            23,
+            50,
+            255
+          ],
+          "hex": "#001732"
+        },
+        {
+          "x": 1200,
+          "y": 11,
+          "rgba": [
+            5,
+            19,
+            75,
+            255
+          ],
+          "hex": "#05134b"
+        },
+        {
+          "x": 1400,
+          "y": 11,
+          "rgba": [
+            3,
+            16,
+            62,
+            255
+          ],
+          "hex": "#03103e"
+        }
+      ]
+    }
+  ],
+  "elementFromPoint": [
+    {
+      "x": 100,
+      "viewportY": 198,
+      "dy": -2,
+      "tag": "div",
+      "className": "hero-bg-drift__layer hero-bg-drift__layer--desktop",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 400,
+      "viewportY": 198,
+      "dy": -2,
+      "tag": "div",
+      "className": "hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402p",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 720,
+      "viewportY": 198,
+      "dy": -2,
+      "tag": "div",
+      "className": "hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402p",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 1100,
+      "viewportY": 198,
+      "dy": -2,
+      "tag": "div",
+      "className": "hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402p",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 1300,
+      "viewportY": 198,
+      "dy": -2,
+      "tag": "div",
+      "className": "hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402p",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 100,
+      "viewportY": 199,
+      "dy": -1,
+      "tag": "div",
+      "className": "hero-bg-drift__layer hero-bg-drift__layer--desktop",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 400,
+      "viewportY": 199,
+      "dy": -1,
+      "tag": "div",
+      "className": "hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402p",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 720,
+      "viewportY": 199,
+      "dy": -1,
+      "tag": "div",
+      "className": "hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402p",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 1100,
+      "viewportY": 199,
+      "dy": -1,
+      "tag": "div",
+      "className": "hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402p",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 1300,
+      "viewportY": 199,
+      "dy": -1,
+      "tag": "div",
+      "className": "hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402p",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 100,
+      "viewportY": 200,
+      "dy": 0,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 400,
+      "viewportY": 200,
+      "dy": 0,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 720,
+      "viewportY": 200,
+      "dy": 0,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 1100,
+      "viewportY": 200,
+      "dy": 0,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 1300,
+      "viewportY": 200,
+      "dy": 0,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 100,
+      "viewportY": 201,
+      "dy": 1,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 400,
+      "viewportY": 201,
+      "dy": 1,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 720,
+      "viewportY": 201,
+      "dy": 1,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 1100,
+      "viewportY": 201,
+      "dy": 1,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 1300,
+      "viewportY": 201,
+      "dy": 1,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 100,
+      "viewportY": 202,
+      "dy": 2,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 400,
+      "viewportY": 202,
+      "dy": 2,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 720,
+      "viewportY": 202,
+      "dy": 2,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 1100,
+      "viewportY": 202,
+      "dy": 2,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    },
+    {
+      "x": 1300,
+      "viewportY": 202,
+      "dy": 2,
+      "tag": "div",
+      "className": "about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-",
+      "bg": "rgba(0, 0, 0, 0)",
+      "fill": null
+    }
+  ]
+}
