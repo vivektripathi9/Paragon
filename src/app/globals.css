@@ -879,6 +879,30 @@ blockquote,
     max-width: 100%;
   }
 
+  /* Let each card's row/body use the full phone column instead of the
+     desktop clamp minimum (15.5rem/248px), which otherwise pins content to
+     a narrow left strip with a large empty gutter across 351–599px. */
+  .difference-feature__row {
+    max-width: 100%;
+    min-height: 0;
+    gap: clamp(0.75rem, 3.5vw, 1.25rem);
+  }
+
+  .difference-feature__row img {
+    width: clamp(3.5rem, 14vw, 5.25rem);
+    height: clamp(3.2rem, 12vw, 4.35rem);
+  }
+
+  .difference-feature__title {
+    font-size: clamp(1.25rem, 5.2vw, 1.625rem);
+    line-height: 1.28;
+  }
+
+  .difference-feature__copy {
+    font-size: clamp(0.8125rem, 3.4vw, 1rem);
+    line-height: 1.5;
+  }
+
   .difference-feature__cta .difference-feature__cta-btn {
     height: 3.375rem;
     padding-inline: clamp(0.75rem, 4vw, 1.25rem);
