@@ -3498,8 +3498,8 @@ blockquote,
 
 .about-stat-card:hover,
 .about-stat-card:active {
-  background-color: #3e6bff;
-  border-color: #3e6bff;
+  background-color: #c4cde9;
+  border-color: #c4cde9;
   clip-path: polygon(
     0 0,
     calc(100% - 1.5rem) 0,
@@ -3508,6 +3508,25 @@ blockquote,
     100% 100%,
     0 100%
   );
+}
+
+.about-stat-card--first {
+  background-color: #3e6bff;
+  border-color: #3e6bff;
+}
+
+.about-stat-card--first .about-stat-value {
+  color: #fff;
+}
+
+.about-stat-card--first .about-stat-description {
+  color: rgb(255 255 255 / 0.9);
+}
+
+.about-stat-card--first:hover,
+.about-stat-card--first:active {
+  background-color: #1d3da6;
+  border-color: #1d3da6;
 }
 
 @media (max-width: 767px) {

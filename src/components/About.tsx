@@ -3,10 +3,10 @@
 import Image from "next/image";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
-function CornerMark() {
+function CornerMark({ src = "/icons/Vector (2).svg" }: { src?: string }) {
   return (
     <Image
-      src="/icons/Vector (2).svg"
+      src={src}
       alt=""
       width={24}
       height={34}
@@ -97,14 +97,20 @@ export default function About() {
               key={stat.id}
               className={`about-stat-card group relative box-border flex w-[428px] max-w-[428px] min-w-[153.6px] touch-manipulation flex-col justify-between max-md:overflow-hidden p-8 opacity-100 min-[1440px]:shrink-0 min-[1440px]:overflow-visible ${stat.height} ${stat.variant} max-md:min-h-[290px] max-md:h-auto max-md:w-full max-md:max-w-[361px] max-md:min-w-0 max-md:gap-[60px] max-md:p-[26.99px] md:max-[1439px]:h-auto md:max-[1439px]:w-auto md:max-[1439px]:min-w-0 md:max-[1439px]:max-w-none md:max-[1439px]:flex-1 md:max-[1439px]:basis-0 md:max-[1439px]:shrink md:max-[1439px]:justify-between md:max-[1439px]:overflow-visible md:max-[1439px]:p-[clamp(1.5rem,2vw,2rem)]`}
             >
-              <CornerMark />
+              <CornerMark
+                src={
+                  stat.variant === "about-stat-card--first"
+                    ? "/icons/Vector_white.svg"
+                    : "/icons/Vector (2).svg"
+                }
+              />
               <p
-                className={`about-stat-value relative z-[1] shrink-0 font-heading text-[63px] font-medium leading-[61.6px] tracking-[-2px] text-paragon-navy transition-colors duration-300 group-hover:text-white group-active:text-white min-[1440px]:w-[183px] ${stat.valueClass || "min-[1440px]:h-[123px]"} ${stat.valueWrap} max-md:text-[1.875rem] max-md:leading-none max-md:tracking-[-1px] md:max-[1439px]:text-[clamp(2.5rem,4vw,3.9375rem)] md:max-[1439px]:leading-none md:max-[1439px]:tracking-[-1px]`}
+                className={`about-stat-value relative z-[1] shrink-0 font-heading text-[63px] font-medium leading-[61.6px] tracking-[-2px] text-paragon-navy transition-colors duration-300 min-[1440px]:w-[183px] ${stat.variant === "about-stat-card--first" ? "group-hover:text-white group-active:text-white" : ""} ${stat.valueClass || "min-[1440px]:h-[123px]"} ${stat.valueWrap} max-md:text-[1.875rem] max-md:leading-none max-md:tracking-[-1px] md:max-[1439px]:text-[clamp(2.5rem,4vw,3.9375rem)] md:max-[1439px]:leading-none md:max-[1439px]:tracking-[-1px]`}
               >
                 {stat.value}
               </p>
               <p
-                className={`about-stat-description font-neue-montreal relative z-[1] min-w-0 shrink break-words text-[22px] font-normal leading-[26.4px] tracking-[0] text-paragon-navy/80 opacity-100 transition-colors duration-300 group-hover:text-white/90 group-active:text-white/90 ${stat.descriptionMt} ${stat.descriptionClass || "min-[1440px]:pt-10"} max-md:mt-0 max-md:h-auto max-md:w-auto max-md:pt-0 max-md:text-base max-md:leading-[1.2] md:max-[1439px]:mt-0 md:max-[1439px]:h-auto md:max-[1439px]:w-auto md:max-[1439px]:pt-0 md:max-[1439px]:text-[clamp(1rem,1.5vw,1.375rem)] md:max-[1439px]:leading-[1.2]`}
+                className={`about-stat-description font-neue-montreal relative z-[1] min-w-0 shrink break-words text-[22px] font-normal leading-[26.4px] tracking-[0] text-paragon-navy/80 opacity-100 transition-colors duration-300 ${stat.variant === "about-stat-card--first" ? "group-hover:text-white/90 group-active:text-white/90" : ""} ${stat.descriptionMt} ${stat.descriptionClass || "min-[1440px]:pt-10"} max-md:mt-0 max-md:h-auto max-md:w-auto max-md:pt-0 max-md:text-base max-md:leading-[1.2] md:max-[1439px]:mt-0 md:max-[1439px]:h-auto md:max-[1439px]:w-auto md:max-[1439px]:pt-0 md:max-[1439px]:text-[clamp(1rem,1.5vw,1.375rem)] md:max-[1439px]:leading-[1.2]`}
               >
                 {stat.description}
               </p>
