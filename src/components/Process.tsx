@@ -23,17 +23,10 @@ function ProcessGraphic() {
         className="process-cube-tablet mx-auto h-auto w-full max-w-full object-contain opacity-100 max-md:hidden min-[768px]:max-[1195px]:block min-[1195px]:hidden"
         aria-hidden
       />
-      <div className="process-cube-desktop hidden min-[1195px]:block">
-        <div className="process-cube__frame" aria-hidden />
-        <img
-          src="/icons/process-art.svg"
-          alt=""
-          width={439}
-          height={439}
-          className="process-cube__art"
-          aria-hidden
-        />
-      </div>
+      <div
+        className="process-cube-desktop hidden min-[1195px]:block"
+        aria-hidden
+      />
     </div>
   );
 }
