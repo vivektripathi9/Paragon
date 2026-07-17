@@ -17,8 +17,8 @@ function QuoteIcon() {
 
 export default function Reputation() {
   return (
-    <section className="reputation-section full-bleed relative overflow-hidden bg-[#F0F3FC]">
-      <div className="reputation-shell mx-auto flex w-full max-w-[1440px] flex-col max-md:max-w-[402px] max-md:px-5 max-md:pt-[38px]">
+    <section className="reputation-section full-bleed relative z-[2] -mt-px section-edge-overlap overflow-visible bg-[#F0F3FC]">
+      <div className="reputation-shell mx-auto flex w-full max-w-[1440px] flex-col max-md:max-w-[402px] max-md:px-5 max-md:pt-[calc(var(--section-edge-height)+1.5rem)]">
         <header className="reputation-header w-full">
           <div className="reputation-label mb-6 flex items-center gap-2.5">
             <SectionLabelIcon variant="light" />

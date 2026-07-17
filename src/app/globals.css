@@ -4,9 +4,14 @@
   --background: #ffffff;
   --foreground: #050a18;
 
-  /* Geometric design system — 45° notches & chamfers */
-  --section-edge-height: clamp(3.5rem, 6.67vw, 6rem);
+  /* Geometric design system — 45° notches & chamfers.
+     Height tracks viewport width (96/1440) so the angle stays consistent;
+     floor keeps mobile edges readable without a hard layout snap. */
+  --section-edge-height: clamp(2.75rem, calc(100vw * 96 / 1440), 6rem);
+  --section-edge-seam: 2px;
   --difference-pt: 7.5rem;
+  /* Where the About→Difference diagonal starts (ABOUT_SLOPE_TOP_X / 1440) */
+  --section-edge-diagonal-start: calc(1176 / 1440 * 100%);
   --chamfer-sm: 14px;
   --chamfer-md: 1.125rem;
   --chamfer-lg: 3rem;
@@ -993,8 +998,10 @@ blockquote,
     1393px
   );
   --diff-tr-blue-left: calc(137 / 1197 * var(--diff-tr-w));
+  /* Pull TR up under the light wedge so the diagonal overlays the graphic with no gap */
+  --diff-tr-top-extra: 160px;
   position: absolute;
-  top: calc(-1 * var(--section-edge-height) - 160px);
+  top: calc(-1 * (var(--section-edge-height) + var(--diff-tr-top-extra)));
   left: calc(var(--diff-diagonal-start) - var(--diff-tr-blue-left) - 80px);
   right: auto;
   width: var(--diff-tr-w);
@@ -1016,8 +1023,9 @@ blockquote,
   .difference-decor-desktop__tr--mobile {
     --diff-tr-w: 445.11px;
     --diff-tr-blue-left: calc(50.94 / 445 * var(--diff-tr-w));
+    --diff-tr-top-extra: 0px;
     display: block;
-    top: calc(-1 * var(--section-edge-height));
+    top: calc(-1 * (var(--section-edge-height) + var(--diff-tr-top-extra)));
     left: calc(var(--diff-diagonal-start) - var(--diff-tr-blue-left));
     right: auto;
     width: var(--diff-tr-w);
@@ -1140,7 +1148,7 @@ blockquote,
     height: auto;
     max-width: 402px;
     padding-inline: 1.25rem;
-    padding-top: calc(var(--section-edge-height) + 1.5rem);
+    padding-top: calc(var(--section-edge-height) + 2.5rem);
     padding-bottom: calc(var(--section-edge-height) + 3.5rem);
   }
 
@@ -1246,6 +1254,35 @@ blockquote,
     #0a2168 38%,
     #000c22 58%,
     #000c22 100%
+  );
+}
+
+/*
+ * Light→navy bottom diagonal via clip-path (About→Difference, Reputation→Footer).
+ * Avoids SVG edge overlays / seam-cover strips that leave an AA hairline.
+ * Geometry: ABOUT_SLOPE 1176→1224 of 1440. Navy section sits under (lower z).
+ */
+.about-section {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    calc(1224 / 1440 * 100%) 100%,
+    calc(1176 / 1440 * 100%)
+      calc(100% - var(--section-edge-height) - var(--section-edge-seam)),
+    0% calc(100% - var(--section-edge-height) - var(--section-edge-seam))
+  );
+}
+
+.reputation-section {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    calc(1224 / 1440 * 100%) 100%,
+    calc(1176 / 1440 * 100%)
+      calc(100% - var(--section-edge-height) - var(--section-edge-seam)),
+    0% calc(100% - var(--section-edge-height) - var(--section-edge-seam))
   );
 }
 
@@ -2583,22 +2620,57 @@ blockquote,
 
 /* SVG section dividers — responsive via viewBox + preserveAspectRatio */
 .section-edge-host {
-  transform: translateZ(0);
+  transform: none;
 }
 
+/* Nudge hosts 1px past the section box so AA fringes paint onto matching fill */
 .section-edge-host--top {
-  clip-path: inset(0 0 1px 0);
+  top: calc(-1 * var(--section-edge-seam));
+}
+
+.section-edge-host--bottom {
+  bottom: calc(-1 * var(--section-edge-seam));
 }
 
 .section-edge {
-  height: var(--section-edge-height);
+  height: calc(var(--section-edge-height) + var(--section-edge-seam));
   display: block;
   width: 100%;
+  overflow: visible;
   line-height: 0;
 }
 
 .section-edge-overlap {
-  margin-top: calc(-1 * var(--section-edge-height));
+  margin-top: calc(
+    -1 * (var(--section-edge-height) + var(--section-edge-seam))
+  );
+}
+
+/* Left-of-diagonal navy strip that paints into the previous light section —
+   kills the flat-edge hairline without covering the light wedge on the right. */
+div.section-edge-seam-cover {
+  position: absolute !important;
+  top: -4px !important;
+  left: 0 !important;
+  z-index: 25;
+  width: calc(1176 / 1440 * 100%) !important;
+  height: 10px !important;
+  background-color: #000c22 !important;
+  pointer-events: none;
+}
+
+/* Full-width light strip at a navy section bottom — kills Difference→Services
+   / Process→Reputation (and similar) hairlines. Tall enough to cover AA; short
+   enough to leave the notch/wedge geometry above it intact. */
+div.section-edge-seam-cover-light {
+  position: absolute !important;
+  bottom: -4px !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 25;
+  height: 12px !important;
+  background-color: #f0f3fc !important;
+  pointer-events: none;
 }
 
 /* Reputation quote mark — /icons/testimonial-quote-icon.svg in Reputation.tsx */
@@ -2671,7 +2743,7 @@ blockquote,
   .reputation-shell {
     min-height: auto;
     padding-bottom: calc(var(--section-edge-height) + 4.5rem);
-    padding-top: 2.375rem;
+    padding-top: calc(var(--section-edge-height) + 1.5rem);
   }
 
   .reputation-trusted-divider {
@@ -2740,7 +2812,7 @@ blockquote,
     max-width: min(100%, 90rem);
     padding-bottom: calc(var(--section-edge-height) + clamp(3rem, 6vw, 5.5rem));
     padding-inline: var(--reputation-inline-padding);
-    padding-top: clamp(3.5rem, 5.5vw, 6rem);
+    padding-top: calc(var(--section-edge-height) + clamp(1.25rem, 2.5vw, 1.75rem));
   }
 
   .reputation-label {
@@ -2865,7 +2937,7 @@ blockquote,
     height: 1353.5px;
     padding-bottom: 0;
     padding-inline: 3rem;
-    padding-top: 6rem;
+    padding-top: calc(var(--section-edge-height) + 2rem);
   }
 
   .reputation-label {

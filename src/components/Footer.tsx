@@ -1,6 +1,5 @@
 import Link from "next/link";
 import ArrowIcon from "@/components/ArrowIcon";
-import SectionEdge from "@/components/SectionEdge";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 const footerLinks = [
@@ -18,7 +17,7 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="footer-section relative z-10 w-full section-edge-overlap overflow-hidden bg-paragon-navy pb-0 max-[768px]:min-h-[1480px]">
+    <footer className="footer-section relative z-[1] w-full section-edge-overlap overflow-hidden bg-paragon-navy pb-0 max-[768px]:min-h-[1480px]">
       <div className="footer-bg max-[768px]:hidden min-[769px]:block" aria-hidden>
         <img
           src="/footer-background.svg"
@@ -40,7 +39,6 @@ export default function Footer() {
         </div>
       </div>
       <div className="hero-bg-grain" aria-hidden />
-      <SectionEdge variant="reputation-top" className="z-20" />
 
       <div className="footer-shell relative z-[2] mx-auto w-full min-w-0 max-w-[1440px] overflow-x-hidden max-[768px]:max-w-[402px] max-[768px]:px-5 max-[768px]:pb-16">
         <div className="footer-cta flex min-w-0 flex-col border-b border-white/10">

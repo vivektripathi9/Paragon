@@ -133,29 +133,29 @@ const features = [
 
 export default function Difference() {
   return (
-    <section className="full-bleed relative z-10 section-edge-overlap overflow-hidden bg-[#000C22] pb-0">
-      {/* Fluid decor — scales continuously; no breakpoint-swapped assets */}
-      <div className="difference-decor-desktop" aria-hidden>
-        <img
-          src="/icons/Group 13-mobile.svg"
-          alt=""
-          className="difference-decor-desktop__tr difference-decor-desktop__tr--mobile"
-        />
-        <img
-          src="/icons/Group 13.svg"
-          alt=""
-          className="difference-decor-desktop__tr difference-decor-desktop__tr--desktop"
-        />
-        <img
-          src="/icons/Group 14.svg"
-          alt=""
-          className="difference-decor-desktop__bl"
-        />
+    <section className="full-bleed relative z-[1] section-edge-overlap bg-[#000C22] pb-0">
+      {/* Background graphic — must stay below .difference-shell (z-index: 3) */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
+        <div className="difference-decor-desktop">
+          <img
+            src="/icons/Group 13-mobile.svg"
+            alt=""
+            className="difference-decor-desktop__tr difference-decor-desktop__tr--mobile"
+          />
+          <img
+            src="/icons/Group 13.svg"
+            alt=""
+            className="difference-decor-desktop__tr difference-decor-desktop__tr--desktop"
+          />
+          <img
+            src="/icons/Group 14.svg"
+            alt=""
+            className="difference-decor-desktop__bl"
+          />
+        </div>
       </div>
 
-      <SectionEdge variant="difference-top" className="z-20" />
-
-      <div className="difference-shell">
+      <div className="difference-shell relative">
         <header className="w-full">
           <div className="mb-[clamp(1rem,2vw,1.75rem)] flex items-center gap-2.5">
             <SectionLabelIcon variant="dark" />
@@ -209,6 +209,7 @@ export default function Difference() {
       </div>
 
       <SectionEdge variant="hero-bottom" className="z-20" />
+      <div className="section-edge-seam-cover-light" aria-hidden />
     </section>
   );
 }

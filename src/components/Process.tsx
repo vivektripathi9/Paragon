@@ -33,7 +33,8 @@ function ProcessGraphic() {
 
 export default function Process() {
   return (
-    <section className="full-bleed relative z-10 section-edge-overlap overflow-x-hidden bg-[#000C22] pb-0">
+    <section className="full-bleed relative z-10 section-edge-overlap bg-[#000C22] pb-0">
+      <div className="section-edge-seam-cover" aria-hidden />
       <SectionEdge variant="difference-top" className="z-20" />
 
       <div className="process-shell relative z-[2] isolate mx-auto w-full max-w-[1440px] px-12 pb-24 pt-20 max-md:max-w-[402px] max-md:px-5 max-md:pb-6 max-md:pt-[var(--section-edge-height)]">
@@ -81,6 +82,7 @@ export default function Process() {
       <CalculatorContent />
 
       <SectionEdge variant="reputation-bottom" className="z-20" />
+      <div className="section-edge-seam-cover-light" aria-hidden />
     </section>
   );
 }

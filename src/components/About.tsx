@@ -70,8 +70,8 @@ const stats = [
 
 export default function About() {
   return (
-    <section className="full-bleed relative bg-[#F0F3FC] max-md:z-[2]">
-      <div className="about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-padding)] pb-[calc(var(--section-edge-height)+2.5rem)] pt-[54px] max-md:max-w-[402px] max-md:pb-[calc(var(--section-edge-height)+4rem)] max-md:pt-12 md:max-[1439px]:max-w-[min(100%,75rem)] min-[1440px]:px-10">
+    <section className="about-section full-bleed relative z-[2] -mt-px bg-[#F0F3FC]">
+      <div className="about-content-shell relative z-0 mx-auto flex w-full max-w-[1440px] flex-col px-[var(--about-inline-padding)] pb-[calc(var(--section-edge-height)+2.5rem)] pt-[54px] max-md:max-w-[402px] max-md:pb-[calc(var(--section-edge-height)+4rem)] max-md:pt-16 md:max-[1439px]:max-w-[min(100%,75rem)] min-[1440px]:px-10">
         <div className="shrink-0 min-[1440px]:pl-2">
           <div className="mb-6 flex items-center gap-2.5 min-[1440px]:mb-8">
             <SectionLabelIcon variant="light" />
