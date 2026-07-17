@@ -998,11 +998,27 @@ blockquote,
     1393px
   );
   --diff-tr-blue-left: calc(137 / 1197 * var(--diff-tr-w));
-  /* Pull TR up under the light wedge so the diagonal overlays the graphic with no gap */
-  --diff-tr-top-extra: 160px;
+  /*
+   * Same fluid tuck under About diagonal from tablet through desktop.
+   * 160 @ 768 · ~299 @ 1037 · ~380 @ 1195 · ~507 @ 1440
+   */
+  --diff-tr-top-extra: clamp(
+    160px,
+    calc(160px + (100vw - 768px) * 220 / 427),
+    307px
+  );
+  /* Horizontal nudge — same fluid scale through desktop */
+  --diff-tr-left-nudge: clamp(
+    40px,
+    calc(40px + (100vw - 768px) * 40 / 427),
+    80px
+  );
   position: absolute;
   top: calc(-1 * (var(--section-edge-height) + var(--diff-tr-top-extra)));
-  left: calc(var(--diff-diagonal-start) - var(--diff-tr-blue-left) - 80px);
+  left: calc(
+    var(--diff-diagonal-start) - var(--diff-tr-blue-left) -
+      var(--diff-tr-left-nudge)
+  );
   right: auto;
   width: var(--diff-tr-w);
   height: var(--diff-tr-h);
@@ -1021,15 +1037,26 @@ blockquote,
   }
 
   .difference-decor-desktop__tr--mobile {
-    --diff-tr-w: 445.11px;
+    /*
+     * Mobile TR — locked to section geometry (375 reference).
+     * Blue column tracks --diff-diagonal-start; size/offsets scale with vw
+     * so the graphic stays in the same relative spot across phones.
+     */
+    --diff-tr-w: calc(445.11 / 375 * 100vw);
+    --diff-tr-h: calc(518 / 375 * 100vw);
     --diff-tr-blue-left: calc(50.94 / 445 * var(--diff-tr-w));
-    --diff-tr-top-extra: 0px;
+    --diff-tr-top-extra: calc(100 / 375 * 100vw);
+    --diff-tr-left-nudge: calc(48 / 375 * 100vw);
     display: block;
     top: calc(-1 * (var(--section-edge-height) + var(--diff-tr-top-extra)));
-    left: calc(var(--diff-diagonal-start) - var(--diff-tr-blue-left));
+    left: calc(
+      var(--diff-diagonal-start) - var(--diff-tr-blue-left) -
+        var(--diff-tr-left-nudge)
+    );
     right: auto;
     width: var(--diff-tr-w);
-    height: 518px;
+    height: var(--diff-tr-h);
+    max-width: none;
     transform: rotate(0deg);
     opacity: 1;
   }
@@ -1044,6 +1071,19 @@ blockquote,
   height: clamp(518px, calc(518px + (100vw - 375px) * 875 / 1065), 1393px);
   max-width: none;
   opacity: 1;
+}
+
+/*
+ * Mobile BL — lock tuned position (375 ref: bottom -170 / left -8 / 127×518)
+ * and scale with the section so it stays consistent across phones.
+ */
+@media (max-width: 599px) {
+  .difference-decor-desktop__bl {
+    bottom: calc(-170 / 375 * 100vw);
+    left: calc(-8 / 375 * 100vw);
+    width: calc(127 / 375 * 100vw);
+    height: calc(518 / 375 * 100vw);
+  }
 }
 
 /* Hero tablet + small laptop band (768px–1194px) — hero only; difference is fluid above */
