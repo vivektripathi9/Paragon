@@ -999,19 +999,22 @@ blockquote,
   );
   --diff-tr-blue-left: calc(137 / 1197 * var(--diff-tr-w));
   /*
-   * Same fluid tuck under About diagonal from tablet through desktop.
-   * 160 @ 768 · ~299 @ 1037 · ~380 @ 1195 · ~507 @ 1440
+   * Tuck under About diagonal — fluid tablet→desktop.
+   * 160 @ 768 · ~299 @ 1037 · 307 @ ≥1195
    */
   --diff-tr-top-extra: clamp(
     160px,
     calc(160px + (100vw - 768px) * 220 / 427),
     307px
   );
-  /* Horizontal nudge — same fluid scale through desktop */
+  /*
+   * Left nudge — locked desktop position, scales across tablet→desktop.
+   * ~62 @ 768 · ~83 @ 1037 · 96 @ 1195 · 112 @ 1440
+   */
   --diff-tr-left-nudge: clamp(
     40px,
-    calc(40px + (100vw - 768px) * 40 / 427),
-    80px
+    calc(96 / 1195 * 100vw),
+    112px
   );
   position: absolute;
   top: calc(-1 * (var(--section-edge-height) + var(--diff-tr-top-extra)));
