@@ -1,6 +1,5 @@
 import Link from "next/link";
 import ArrowIcon from "@/components/ArrowIcon";
-import SectionEdge from "@/components/SectionEdge";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 const features = [
@@ -133,7 +132,7 @@ const features = [
 
 export default function Difference() {
   return (
-    <section className="full-bleed relative z-[1] section-edge-overlap bg-[#000C22] pb-0">
+    <section className="difference-section full-bleed relative z-[5] section-edge-overlap overflow-hidden bg-[#000C22] pb-0">
       {/* Background graphic — must stay below .difference-shell (z-index: 3) */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
         <div className="difference-decor-desktop">
@@ -208,8 +207,6 @@ export default function Difference() {
         </div>
       </div>
 
-      <SectionEdge variant="hero-bottom" className="z-20" />
-      <div className="section-edge-seam-cover-light" aria-hidden />
     </section>
   );
 }

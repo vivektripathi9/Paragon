@@ -1,7 +1,6 @@
 import Link from "next/link";
 import ArrowIcon from "@/components/ArrowIcon";
 import { CalculatorContent } from "@/components/Calculator";
-import SectionEdge from "@/components/SectionEdge";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
 function ProcessGraphic() {
@@ -33,10 +32,7 @@ function ProcessGraphic() {
 
 export default function Process() {
   return (
-    <section className="full-bleed relative z-10 section-edge-overlap bg-[#000C22] pb-0">
-      <div className="section-edge-seam-cover" aria-hidden />
-      <SectionEdge variant="difference-top" className="z-20" />
-
+    <section className="process-section full-bleed relative z-[3] section-edge-overlap overflow-hidden bg-[#000C22] pb-0">
       <div className="process-shell relative z-[2] isolate mx-auto w-full max-w-[1440px] px-12 pb-24 pt-20 max-md:max-w-[402px] max-md:px-5 max-md:pb-6 max-md:pt-[var(--section-edge-height)]">
         <div className="process-block grid min-w-0 items-center gap-8 max-md:grid-cols-1 min-[768px]:max-[1195px]:grid-cols-2 min-[768px]:max-[1195px]:gap-6 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
           <div className="process-cube-wrap relative z-[1] max-md:mx-auto min-[768px]:max-[1195px]:order-1 min-[768px]:max-[1195px]:col-start-1 min-[1195px]:justify-self-start">
@@ -80,9 +76,6 @@ export default function Process() {
       </div>
 
       <CalculatorContent />
-
-      <SectionEdge variant="reputation-bottom" className="z-20" />
-      <div className="section-edge-seam-cover-light" aria-hidden />
     </section>
   );
 }

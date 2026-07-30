@@ -1,15 +1,10 @@
 import Link from "next/link";
 import ArrowIcon from "@/components/ArrowIcon";
-import SectionEdge from "@/components/SectionEdge";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
-
-function HeroBottomEdge() {
-  return <SectionEdge variant="hero-bottom" className="z-20" />;
-}
 
 export default function Hero() {
   return (
-    <section className="hero-bg-color full-bleed relative h-[894px] overflow-hidden max-md:h-[852px] md:max-[820px]:h-[clamp(820px,92vh,880px)] min-[821px]:max-[1195px]:h-[clamp(760px,88vh,860px)]">
+    <section className="hero-bg-color full-bleed relative z-[7] h-[894px] overflow-hidden max-md:h-[852px] md:max-[820px]:h-[clamp(820px,92vh,880px)] min-[821px]:max-[1195px]:h-[clamp(760px,88vh,860px)]">
       <div
         className="hero-bg-drift pointer-events-none absolute inset-0 z-0 max-md:block md:hidden"
         aria-hidden
@@ -125,7 +120,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <HeroBottomEdge />
     </section>
   );
 }

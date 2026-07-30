@@ -52,7 +52,7 @@ function NavLink({
       href={href}
       onClick={onNavigate}
       aria-current={isActive ? "page" : undefined}
-      className={`font-subheading relative inline-flex items-center pb-1 text-[16px] font-normal leading-[18.2px] tracking-[-0.5px] text-white opacity-100 transition-opacity after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#31EE97] after:opacity-0 after:transition-opacity hover:opacity-80 hover:after:opacity-100 ${className}`}
+      className={`font-subheading relative inline-flex items-center text-[16px] font-light leading-[18.2px] tracking-[-0.5px] text-white opacity-100 transition-[opacity,font-weight] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#31EE97] after:opacity-0 after:transition-opacity hover:font-normal hover:opacity-80 hover:after:opacity-100 max-md:pb-0 md:pb-1 ${className}`}
     >
       {label}
     </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-3 sm:gap-4 lg:gap-10">
-          <ul className="hidden items-center gap-6 md:max-lg:flex md:max-lg:gap-8 lg:flex lg:gap-10">
+          <ul className="hidden items-center gap-5 md:max-lg:flex md:max-lg:gap-6 lg:flex lg:gap-8">
             {navLinks.map(({ href, label }) => {
               const isActive =
                 href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -115,7 +115,7 @@ export default function Navbar() {
                     href={href}
                     label={label}
                     isActive={isActive}
-                    className="lg:h-[19px]"
+                    className="h-[18.2px]"
                   />
                 </li>
               );
@@ -124,7 +124,7 @@ export default function Navbar() {
 
           <Link
             href="/calculator"
-            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90 md:max-lg:inline-flex lg:inline-flex lg:px-6 lg:text-base"
+            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-[16px] font-medium leading-[18.2px] tracking-[-0.5px] text-black transition-opacity hover:opacity-90 md:max-lg:inline-flex lg:inline-flex lg:px-6"
           >
             Calculator
           </Link>

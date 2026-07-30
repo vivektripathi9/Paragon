@@ -4,14 +4,18 @@
   --background: #ffffff;
   --foreground: #050a18;
 
-  /* Geometric design system — 45° notches & chamfers.
-     Height tracks viewport width (96/1440) so the angle stays consistent;
-     floor keeps mobile edges readable without a hard layout snap. */
-  --section-edge-height: clamp(2.75rem, calc(100vw * 96 / 1440), 6rem);
+  /* Diagonal edge feature (light→navy right cut + shared strip height).
+     402 floor → 135×39; 1194 → ~232×48.5; 1440 → 280×58.5; capped above. */
+  --section-edge-diag-width: clamp(135px, calc(100vw * 280 / 1440), 280px);
+  --section-edge-height: clamp(39px, calc(100vw * 58.5 / 1440), 58.5px);
   --section-edge-seam: 2px;
+  /* 45° run equals height; flat tab fills the rest of the cut width */
+  --section-edge-diag-span: var(--section-edge-height);
+  --section-edge-diag-tab: calc(
+    var(--section-edge-diag-width) - var(--section-edge-diag-span)
+  );
+  --section-edge-diagonal-start: calc(100% - var(--section-edge-diag-width));
   --difference-pt: 7.5rem;
-  /* Where the About→Difference diagonal starts (ABOUT_SLOPE_TOP_X / 1440) */
-  --section-edge-diagonal-start: calc(1176 / 1440 * 100%);
   --chamfer-sm: 14px;
   --chamfer-md: 1.125rem;
   --chamfer-lg: 3rem;
@@ -827,8 +831,8 @@ blockquote,
   position: absolute;
   inset: 0;
   z-index: 1;
-  /* Diagonal START — ABOUT_SLOPE_TOP_X / 1440 (where the angled edge begins) */
-  --diff-diagonal-start: calc(1176 / 1440 * 100%);
+  /* Diagonal START — matches --section-edge-diagonal-start */
+  --diff-diagonal-start: var(--section-edge-diagonal-start);
 }
 
 /*
@@ -1127,29 +1131,37 @@ blockquote,
 }
 
 /*
- * Light→navy bottom diagonal via clip-path (About→Difference, Reputation→Footer).
+ * Light→navy bottom diagonal via clip-path (About→Difference, Services→Process, Reputation→Footer).
  * Avoids SVG edge overlays / seam-cover strips that leave an AA hairline.
- * Geometry: ABOUT_SLOPE 1176→1224 of 1440. Navy section sits under (lower z).
+ * Cut size from --section-edge-diag-width × --section-edge-height (45° span).
  */
-.about-section {
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 100%,
-    calc(1224 / 1440 * 100%) 100%,
-    calc(1176 / 1440 * 100%)
-      calc(100% - var(--section-edge-height) - var(--section-edge-seam)),
-    0% calc(100% - var(--section-edge-height) - var(--section-edge-seam))
-  );
-}
-
+.about-section,
+.services-section,
 .reputation-section {
   clip-path: polygon(
     0% 0%,
     100% 0%,
     100% 100%,
-    calc(1224 / 1440 * 100%) 100%,
-    calc(1176 / 1440 * 100%)
+    calc(100% - var(--section-edge-diag-tab)) 100%,
+    var(--section-edge-diagonal-start)
+      calc(100% - var(--section-edge-height) - var(--section-edge-seam)),
+    0% calc(100% - var(--section-edge-height) - var(--section-edge-seam))
+  );
+}
+
+/*
+ * Navy→light left notch — mirror of the right cut (same W×H / 45° vars).
+ * Light section sits under with section-edge-overlap + lower z.
+ */
+.hero-bg-color,
+.difference-section,
+.process-section {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    calc(var(--section-edge-diag-width)) 100%,
+    calc(var(--section-edge-diag-tab))
       calc(100% - var(--section-edge-height) - var(--section-edge-seam)),
     0% calc(100% - var(--section-edge-height) - var(--section-edge-seam))
   );
@@ -2482,6 +2494,7 @@ blockquote,
   width: 100%;
   overflow: visible;
   line-height: 0;
+  opacity: 1;
 }
 
 .section-edge-overlap {
@@ -2497,7 +2510,7 @@ div.section-edge-seam-cover {
   top: -4px !important;
   left: 0 !important;
   z-index: 25;
-  width: calc(1176 / 1440 * 100%) !important;
+  width: var(--section-edge-diagonal-start) !important;
   height: 10px !important;
   background-color: #000c22 !important;
   pointer-events: none;
