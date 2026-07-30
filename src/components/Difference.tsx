@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import ArrowIcon from "@/components/ArrowIcon";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
@@ -22,7 +23,7 @@ const features = [
     ),
     description: (
       <>
-        <span className="hidden min-[766px]:block">
+        <span className="difference-feature__copy-locked hidden min-[766px]:block">
           <span className="block whitespace-nowrap">
             Our team has worked inside major CMBS servicer
           </span>
@@ -31,10 +32,10 @@ const features = [
           </span>
           <span className="block whitespace-nowrap">
             what they{"\u2019"}ll question, and what {"\u201c"}complete{"\u201d"}{" "}
-            means
+            means to
           </span>
           <span className="block whitespace-nowrap">
-            to the team approving the file.
+            the team approving the file.
           </span>
         </span>
         <span className="min-[766px]:hidden">
@@ -67,7 +68,7 @@ const features = [
     ),
     description: (
       <>
-        <span className="hidden min-[766px]:block">
+        <span className="difference-feature__copy-locked hidden min-[766px]:block">
           <span className="block whitespace-nowrap">
             We map the servicer{"\u2019"}s requirements against your
           </span>
@@ -75,9 +76,9 @@ const features = [
             closing date before the process begins. The result is
           </span>
           <span className="block whitespace-nowrap">
-            fewer last-minute requests and surprises when
+            fewer last-minute requests and surprises when timing
           </span>
-          <span className="block whitespace-nowrap">timing matters most.</span>
+          <span className="block whitespace-nowrap">matters most.</span>
         </span>
         <span className="min-[766px]:hidden">
           We map the servicer{"\u2019"}s requirements against your closing date
@@ -107,19 +108,18 @@ const features = [
     ),
     description: (
       <>
-        <span className="hidden min-[1000px]:block">
+        <span className="difference-feature__copy-locked hidden min-[766px]:block">
           <span className="block whitespace-nowrap">
-            You work directly with experienced professionals
+            You work directly with experienced professionals who
           </span>
           <span className="block whitespace-nowrap">
-            who have personally closed defeasance
+            have personally closed defeasance transactions, not
           </span>
           <span className="block whitespace-nowrap">
-            transactions, not with associates relaying
+            with associates relaying messages.
           </span>
-          <span className="block whitespace-nowrap">messages.</span>
         </span>
-        <span className="min-[1000px]:hidden">
+        <span className="min-[766px]:hidden">
           You work directly with experienced professionals who have personally
           closed defeasance transactions, not with associates relaying messages.
         </span>
@@ -144,12 +144,26 @@ export default function Difference() {
           <img
             src="/icons/Group 13.svg"
             alt=""
-            className="difference-decor-desktop__tr difference-decor-desktop__tr--desktop"
+            className="difference-decor-desktop__tr difference-decor-desktop__tr--desktop difference-decor-desktop__tr--edge-locked min-[1024px]:max-[1342px]:translate-x-[5px] min-[1342px]:translate-x-[15px]"
+            style={
+              {
+                "--diff-tr-w":
+                  "clamp(760.745px, calc(761.394px + (100vw - 769px) * 435.606 / 671), 1197px)",
+                "--diff-tr-h":
+                  "clamp(822.946px, calc(823.795px + (100vw - 769px) * 569.205 / 671), 1393px)",
+                "--diff-tr-left-nudge":
+                  "clamp(63.39px, 8.2537vw, 118.85px)",
+                "--diff-tr-feature-y":
+                  "clamp(200.74px, 26.1378vw, 376.38px)",
+                "--diff-tr-top-extra":
+                  "calc(835.433 / 1393 * var(--diff-tr-h) - var(--diff-tr-feature-y) - var(--section-edge-height))",
+              } as CSSProperties
+            }
           />
           <img
             src="/icons/Group 14.svg"
             alt=""
-            className="difference-decor-desktop__bl"
+            className="difference-decor-desktop__bl difference-decor-desktop__bl--edge-locked"
           />
         </div>
       </div>

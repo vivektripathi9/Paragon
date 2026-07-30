@@ -62,7 +62,7 @@ export default function Footer() {
 
           <div className="footer-cta__right flex min-w-0 flex-col">
             <p className="footer-cta__body font-sans font-medium tracking-[-0.25px] text-white/70">
-              Speak with Paragon about your loan, your closing date, and the
+              Speak with Paragon about your loan, closing date, and the
               variables that will affect your defeasance.
             </p>
             <Link
