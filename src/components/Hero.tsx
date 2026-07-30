@@ -51,7 +51,7 @@ export default function Hero() {
 
       <div className="hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402px] max-md:flex-col max-md:justify-between max-md:px-[var(--hero-inline-padding)] max-md:pb-20 max-md:pt-20 md:block md:max-w-[1194px] md:px-0 md:pb-0 md:pt-0 min-[1195px]:px-12 min-[1440px]:max-w-[1440px]">
       <div className="max-md:hidden px-[var(--hero-inline-padding)] pt-24 min-[1195px]:pt-36 min-[1440px]:px-0">
-          <div className="font-subheading mb-5 flex items-center gap-2.5 text-sm font-medium text-white/80 min-[1440px]:-ml-20 min-[1440px]:mb-8 min-[1195px]:text-base">
+          <div className="font-subheading mb-5 flex items-center gap-2.5 text-sm font-semibold text-[#B0CCFF] min-[1440px]:-ml-20 min-[1440px]:mb-8 min-[1195px]:text-base">
             <SectionLabelIcon variant="dark" />
             <span>Paragon Loan Advisors</span>
           </div>
@@ -71,7 +71,7 @@ export default function Hero() {
         </div>
 
         <div className="md:hidden">
-          <div className="font-subheading mb-6 flex items-center gap-2.5 text-sm font-medium text-white/80">
+          <div className="font-subheading mb-6 flex items-center gap-2.5 text-sm font-semibold text-[#B0CCFF]">
             <SectionLabelIcon variant="dark" />
             <span>Paragon Loan Advisors</span>
           </div>

@@ -42,13 +42,23 @@ export default function Process() {
           <div className="process-copy-wrap relative z-[3] min-w-0 max-md:pt-4 min-[768px]:max-[1195px]:order-2 min-[768px]:max-[1195px]:col-start-2 min-[1195px]:pt-6">
             <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
               <SectionLabelIcon variant="dark" />
-              <span className="font-subheading text-sm font-medium text-white/80 min-[1195px]:text-[0.9375rem]">
+              <span className="font-subheading text-sm font-semibold text-[#B0CCFF] min-[1195px]:text-[0.9375rem]">
                 Our Process
               </span>
             </div>
 
-            <h2 className="process-copy__title font-heading w-full font-medium text-white max-md:max-w-[362px] max-md:text-[36px] max-md:leading-[47px] max-md:tracking-[-1.5px]">
-              A process built backward from your closing date
+            <h2 className="process-copy__title font-heading w-full font-medium text-white max-md:max-w-[362px] max-md:text-[34px] max-md:leading-[45px] max-md:tracking-[-1.5px]">
+              <span className="max-md:hidden">
+                <span className="block whitespace-nowrap">
+                  A process built backward
+                </span>
+                <span className="block whitespace-nowrap">
+                  from your closing date
+                </span>
+              </span>
+              <span className="hidden max-md:block">
+                A process built backward from your closing date
+              </span>
             </h2>
 
             <div className="process-copy__stack mt-5 flex flex-col gap-4 max-md:mt-5 max-md:max-w-[367px] max-md:min-h-[156px] min-[1195px]:mt-5 min-[1195px]:gap-4">

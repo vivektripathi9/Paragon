@@ -42,12 +42,12 @@ export function CalculatorContent() {
         <div className="calculator-copy-wrap relative z-[3] min-w-0 max-md:order-2 min-[768px]:max-[1195px]:order-1 min-[768px]:max-[1195px]:col-start-1 min-[1195px]:order-1">
           <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
             <SectionLabelIcon variant="dark" />
-            <span className="font-subheading text-sm font-medium text-white/80 min-[1195px]:text-[0.9375rem]">
+            <span className="font-subheading text-sm font-semibold text-[#B0CCFF] min-[1195px]:text-[0.9375rem]">
               Calculator
             </span>
           </div>
 
-          <h2 className="calculator-copy__title font-heading w-full font-medium text-white max-[768px]:max-w-[362px] max-[768px]:text-[36px] max-[768px]:leading-[47px] max-[768px]:!tracking-[-1.5px]">
+          <h2 className="calculator-copy__title font-heading w-full font-medium text-white max-[768px]:max-w-[362px] max-[768px]:text-[34px] max-[768px]:leading-[45px] max-[768px]:!tracking-[-1.5px]">
             Estimate defeasance cost
           </h2>
 

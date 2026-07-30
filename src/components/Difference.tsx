@@ -158,7 +158,7 @@ export default function Difference() {
         <header className="w-full">
           <div className="mb-[clamp(1rem,2vw,1.75rem)] flex items-center gap-2.5">
             <SectionLabelIcon variant="dark" />
-            <span className="font-subheading text-[clamp(0.875rem,1.2vw,0.9375rem)] font-medium text-[#8a9bb5]">
+            <span className="font-subheading text-[clamp(0.875rem,1.2vw,0.9375rem)] font-semibold text-[#B0CCFF]">
               What makes us different
             </span>
           </div>

@@ -2,10 +2,21 @@
 
 import { useCallback, useState } from "react";
 
+/* Locked order — do not reorder:
+   1. KeyBank Real Estate Capital
+   2. Newmark
+   3. Grandbridge
+   4. Berkadia */
 const trustedLogos = [
   {
     src: "/logos/trusted-7.svg",
     alt: "KeyBank Real Estate Capital",
+    width: 189,
+    height: 79,
+  },
+  {
+    src: "/logos/trusted-10.svg",
+    alt: "Newmark",
     width: 189,
     height: 79,
   },
@@ -18,12 +29,6 @@ const trustedLogos = [
   {
     src: "/logos/trusted-9.svg",
     alt: "Berkadia",
-    width: 189,
-    height: 79,
-  },
-  {
-    src: "/logos/trusted-10.svg",
-    alt: "Newmark",
     width: 189,
     height: 79,
   },

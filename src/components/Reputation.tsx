@@ -9,7 +9,7 @@ function QuoteIcon() {
         alt=""
         width={192}
         height={185}
-        className="reputation-quote-icon__img"
+        className="reputation-quote-icon__img min-[768px]:max-[1195px]:!ml-[clamp(3rem,6.7vw,5rem)] min-[768px]:max-[1195px]:!mt-[clamp(3.75rem,8vw,6rem)] min-[768px]:max-[1195px]:!h-auto"
       />
     </div>
   );
@@ -18,7 +18,7 @@ function QuoteIcon() {
 export default function Reputation() {
   return (
     <section className="reputation-section full-bleed relative z-[2] -mt-px section-edge-overlap overflow-visible bg-[#F0F3FC]">
-      <div className="reputation-shell mx-auto flex w-full max-w-[1440px] flex-col max-md:max-w-[402px] max-md:px-5 max-md:pt-[calc(var(--section-edge-height)+1.5rem)]">
+      <div className="reputation-shell mx-auto flex w-full max-w-[1440px] flex-col max-md:max-w-[402px] max-md:px-5 max-md:pt-[calc(var(--section-edge-height)+1.5rem)] min-[1195px]:!h-auto min-[1195px]:!pb-[calc(var(--section-edge-height)+4.375rem)]">
         <header className="reputation-header w-full">
           <div className="reputation-label mb-6 flex items-center gap-2.5">
             <SectionLabelIcon variant="light" />
@@ -40,24 +40,16 @@ export default function Reputation() {
         </header>
 
         <div className="reputation-trusted-divider flex w-full items-center gap-2">
-          <img
-            src="/icons/line-4.svg"
-            alt=""
-            width={483}
-            height={1}
+          <span
             aria-hidden
-            className="reputation-trusted-divider__line block h-px shrink opacity-100"
+            className="reputation-trusted-divider__line reputation-trusted-divider__line--start block h-px shrink opacity-100"
           />
           <span className="reputation-trusted-divider__label shrink-0 font-sans font-medium uppercase tracking-[-1px] text-[#000C22]">
             Trusted by
           </span>
-          <img
-            src="/icons/line-3.svg"
-            alt=""
-            width={483}
-            height={1}
+          <span
             aria-hidden
-            className="reputation-trusted-divider__line block h-px shrink opacity-100"
+            className="reputation-trusted-divider__line reputation-trusted-divider__line--end block h-px shrink opacity-100"
           />
         </div>
 
@@ -84,11 +76,11 @@ export default function Reputation() {
                 </p>
               </div>
               <figcaption className="reputation-quote__attribution flex flex-col text-left not-italic">
-                <p className="reputation-quote__name font-heading font-semibold not-italic text-[#1E4FFF]">
+                <p className="reputation-quote__name font-heading !font-semibold not-italic text-[#1E4FFF]">
                   Jonathan H. Chattley
                 </p>
                 <p className="reputation-quote__role font-heading font-normal text-[#000C22]">
-                  CPA, CFO, RP Management, Inc
+                  CPA, CFO, RP Management, Inc.
                 </p>
               </figcaption>
             </blockquote>
