@@ -2793,12 +2793,19 @@ div.section-edge-seam-cover-light {
   }
 
   .reputation-quote {
+    container-name: reputation-quote;
+    container-type: inline-size;
     flex: 1;
     gap: clamp(1.25rem, 2vw, 2rem);
     height: auto;
     max-width: none;
     padding-left: clamp(0.5rem, 1.25vw, 1rem);
     width: auto;
+  }
+
+  .reputation-quote__text--tablet > p > span {
+    font-size: min(1.5rem, 2.65cqw);
+    line-height: 1.58;
   }
 
   .reputation-quote__text {
