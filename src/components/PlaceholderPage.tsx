@@ -39,7 +39,7 @@ export default function PlaceholderPage({ title }: PlaceholderPageProps) {
         </p>
         <Link
           href="/"
-          className="btn-hero mt-10 inline-flex items-center justify-center bg-paragon-green px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 sm:text-base"
+          className="btn-hero mt-10 inline-flex items-center justify-center bg-paragon-green px-6 py-3.5 text-sm font-semibold text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 sm:text-base"
         >
           Back to Home
         </Link>

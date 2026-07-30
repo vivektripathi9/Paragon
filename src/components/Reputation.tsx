@@ -22,7 +22,7 @@ export default function Reputation() {
         <header className="reputation-header w-full">
           <div className="reputation-label mb-6 flex items-center gap-2.5">
             <SectionLabelIcon variant="light" />
-            <span className="reputation-label__text font-subheading text-sm font-medium text-paragon-blue">
+            <span className="reputation-label__text font-subheading text-sm font-semibold text-[#1E4FFF]">
               Reputation
             </span>
           </div>

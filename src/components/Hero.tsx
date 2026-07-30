@@ -105,14 +105,14 @@ export default function Hero() {
           <div className="flex shrink-0 flex-row items-center gap-[clamp(0.75rem,1.25vw,1rem)] max-md:w-full max-md:max-w-[362px] max-md:flex-col md:max-[1194px]:flex min-[1195px]:flex min-[1440px]:translate-x-24">
             <Link
               href="/calculator"
-              className="btn-hero group inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-[#31EE97] px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:w-full max-md:gap-3 max-md:px-[25px] md:!w-auto md:!max-w-none md:!px-6 min-[1195px]:text-base"
+              className="btn-hero group inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-[#31EE97] px-6 py-3.5 text-sm font-semibold text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:w-full max-md:gap-3 max-md:px-[25px] md:!w-auto md:!max-w-none md:!px-6 min-[1195px]:text-base"
             >
               Estimate Your Costs
               <ArrowIcon />
             </Link>
             <Link
               href="/contact"
-              className="btn-hero inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-white px-6 py-3.5 text-sm font-medium text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-95 hover:shadow-[0_8px_30px_rgba(255,255,255,0.12)] max-md:w-full max-md:gap-3 max-md:px-[25px] md:!w-auto md:!max-w-none md:!px-6 min-[1195px]:text-base"
+              className="btn-hero inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap bg-white px-6 py-3.5 text-sm font-semibold text-paragon-navy transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-95 hover:shadow-[0_8px_30px_rgba(255,255,255,0.12)] max-md:w-full max-md:gap-3 max-md:px-[25px] md:!w-auto md:!max-w-none md:!px-6 min-[1195px]:text-base"
             >
               Talk to Paragon
             </Link>

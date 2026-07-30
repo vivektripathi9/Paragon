@@ -45,7 +45,7 @@ export default function Footer() {
           <div className="footer-cta__left min-w-0">
             <div className="footer-label mb-6 flex items-center gap-2.5">
               <SectionLabelIcon variant="dark" />
-              <span className="footer-label__text font-subheading text-sm font-medium text-paragon-blue">
+              <span className="footer-label__text font-subheading text-sm font-semibold text-[#B0CCFF]">
                 Getting Started
               </span>
             </div>
@@ -67,7 +67,7 @@ export default function Footer() {
             </p>
             <Link
               href="/contact"
-              className="footer-cta__button btn-hero group inline-flex h-[54px] shrink-0 items-center justify-center gap-3 self-start whitespace-nowrap bg-[#31EE97] px-[25px] py-5 text-sm font-medium text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)]"
+              className="footer-cta__button btn-hero group inline-flex h-[54px] shrink-0 items-center justify-center gap-3 self-start whitespace-nowrap bg-[#31EE97] px-[25px] py-5 text-sm font-semibold text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)]"
             >
               Talk to Paragon
               <ArrowIcon />
@@ -105,7 +105,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="footer-newsletter__submit clip-chamfer-dual group inline-flex h-[54px] shrink-0 items-center justify-center gap-3 whitespace-nowrap bg-white px-[25px] py-5 text-sm font-medium text-paragon-navy opacity-100 transition-[transform,opacity] duration-300 hover:scale-[1.02] hover:opacity-90"
+                  className="footer-newsletter__submit clip-chamfer-dual group inline-flex h-[54px] shrink-0 items-center justify-center gap-3 whitespace-nowrap bg-white px-[25px] py-5 text-sm font-semibold text-paragon-navy opacity-100 transition-[transform,opacity] duration-300 hover:scale-[1.02] hover:opacity-90"
                 >
                   Subscribe
                   <ArrowIcon />

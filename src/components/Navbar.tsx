@@ -124,7 +124,7 @@ export default function Navbar() {
 
           <Link
             href="/calculator"
-            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-[16px] font-medium leading-[18.2px] tracking-[-0.5px] text-black transition-opacity hover:opacity-90 md:max-lg:inline-flex lg:inline-flex lg:px-6"
+            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-[16px] font-semibold leading-[18.2px] tracking-[-0.5px] text-black transition-opacity hover:opacity-90 md:max-lg:inline-flex lg:inline-flex lg:px-6"
           >
             Calculator
           </Link>

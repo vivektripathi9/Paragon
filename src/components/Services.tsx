@@ -15,25 +15,30 @@ const services: {
     iconWidth: 120,
     iconHeight: 103,
     title: "1. Defeasance Advisory",
-    description: (
-      <>
-        Complimentary review of your loan documents,
-        <br className="hidden md:max-[1194px]:block min-[1195px]:hidden" />{" "}
-        timing constraints, and transaction
-        <br className="hidden md:max-[1194px]:block min-[1195px]:hidden" />{" "}
-        objectives before you
-        <br className="hidden md:max-[1194px]:block min-[1195px]:hidden" />{" "}
-        commit to a course of action.
-      </>
-    ),
+    description:
+      "Complimentary review of your loan documents, timing constraints, and transaction objectives before you commit to a course of action.",
   },
   {
     icon: "/icons/service-2.svg",
     iconWidth: 93,
     iconHeight: 103,
     title: "2. Defeasance Execution",
-    description:
-      "Active transaction management, including structuring the securities portfolio, coordinating across multiple stakeholders, and managing the process from servicer review through closing.",
+    description: (
+      <span className="services-card__copy-locked">
+        <span className="block">
+          Active transaction management, including
+        </span>
+        <span className="block">
+          structuring the securities portfolio, coordinating
+        </span>
+        <span className="block">
+          across multiple stakeholders, and managing the
+        </span>
+        <span className="block">
+          process from servicer review through closing.
+        </span>
+      </span>
+    ),
   },
   {
     icon: "/icons/service-3.svg",
@@ -52,7 +57,7 @@ export default function Services() {
         <header className="w-full">
           <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
             <SectionLabelIcon variant="light" />
-            <span className="font-subheading text-sm font-medium text-paragon-blue min-[1195px]:text-[0.9375rem]">
+            <span className="font-subheading text-sm font-semibold text-[#1E4FFF] min-[1195px]:text-[0.9375rem]">
               Our Services
             </span>
           </div>
@@ -73,13 +78,15 @@ export default function Services() {
               key={service.title}
               className="services-card flex min-w-0 flex-col md:max-[1194px]:box-border md:max-[1194px]:min-h-0 min-[1195px]:box-border min-[1195px]:min-h-0"
             >
-              <img
-                src={service.icon}
-                alt=""
-                width={service.iconWidth}
-                height={service.iconHeight}
-                className="services-card__icon h-[103px] w-[120px] shrink-0 object-contain object-left opacity-100 max-md:h-[69.06px] max-md:w-[80.39px] md:max-[1194px]:h-[clamp(4rem,7.2vw,5.34rem)] md:max-[1194px]:w-[clamp(4.5rem,8.3vw,6.22rem)] min-[1195px]:h-[103px] min-[1195px]:w-[120px]"
-              />
+              <div className="services-card__icon-wrap flex h-[103px] w-full shrink-0 items-end max-md:h-[69.06px] md:max-[1194px]:h-[clamp(4rem,7.2vw,5.34rem)] min-[1195px]:h-[103px]">
+                <img
+                  src={service.icon}
+                  alt=""
+                  width={service.iconWidth}
+                  height={service.iconHeight}
+                  className="services-card__icon h-full w-auto max-w-full shrink-0 object-contain object-left object-bottom opacity-100"
+                />
+              </div>
               <h3 className="services-card__title font-heading mt-6 h-[42px] w-full max-w-[427px] text-[28px] font-medium leading-[42px] tracking-[-1.5px] text-[#000C22] max-md:mt-6 max-md:h-[32px] max-md:max-w-[263px] max-md:text-[24px] max-md:leading-[32px] max-md:tracking-[-1px] md:max-[1194px]:mt-0 md:max-[1194px]:h-auto md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(1.25rem,2.25vw,1.5rem)] md:max-[1194px]:leading-[1.45] min-[1195px]:mt-6 min-[1195px]:h-[42px] min-[1195px]:max-w-[427px] min-[1195px]:text-[28px] min-[1195px]:leading-[42px] min-[1195px]:tracking-[-1.5px]">
                 {service.title}
               </h3>
@@ -92,7 +99,7 @@ export default function Services() {
 
         <Link
           href="/services"
-          className="services-cta btn-hero group mt-8 inline-flex h-[54px] w-[234px] max-w-full shrink-0 items-center justify-center gap-3 whitespace-nowrap bg-[#31EE97] px-[25px] text-sm font-medium text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:mt-8 min-[1195px]:mt-10 min-[1195px]:text-base"
+          className="services-cta btn-hero group mt-8 inline-flex h-[54px] w-[234px] max-w-full shrink-0 items-center justify-center gap-3 whitespace-nowrap bg-[#31EE97] px-[25px] text-sm font-semibold text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:mt-8 min-[1195px]:mt-10 min-[1195px]:text-base"
         >
           Explore Our Services
           <ArrowIcon />

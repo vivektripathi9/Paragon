@@ -976,11 +976,19 @@ blockquote,
     gap: clamp(0.75rem, 1.5vw, 1.04rem);
     min-height: 0;
     width: 100%;
+    container-type: inline-size;
+    container-name: services-card;
+  }
+
+  .services-card__icon-wrap {
+    height: clamp(4rem, 7.2vw, 5.34rem);
+    width: 100%;
   }
 
   .services-card__icon {
-    height: clamp(4rem, 7.2vw, 5.34rem);
-    width: clamp(4.5rem, 8.3vw, 6.22rem);
+    height: 100%;
+    width: auto;
+    max-width: 100%;
   }
 
   .services-card__title {
@@ -1009,7 +1017,24 @@ blockquote,
   }
 }
 
-/* Services mobile (≤767px) */
+/*
+ * Locked 4-line Defeasance Execution copy - same breaks at every breakpoint.
+ * Longest line ~425px at 18px; scale with card width so rows never wrap.
+ */
+.services-card {
+  container-type: inline-size;
+  container-name: services-card;
+}
+
+.services-card__copy-locked > .block {
+  display: block;
+  white-space: nowrap !important;
+  /* 100 * 18 / 425 ~= 4.235cqw; min cap at 18px */
+  font-size: min(1.125rem, 4.235cqw) !important;
+  line-height: 1.61;
+}
+
+/* Services mobile (<=767px) */
 @media (max-width: 767px) {
   .services-section {
     height: auto;
