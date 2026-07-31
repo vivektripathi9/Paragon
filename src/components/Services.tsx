@@ -62,7 +62,7 @@ export default function Services() {
             </span>
           </div>
 
-          <h2 className="font-heading h-[68px] w-full max-w-[1360px] text-[54px] font-medium leading-[68px] tracking-[-2px] text-paragon-navy max-md:h-[84px] max-md:max-w-[362px] max-md:text-[36px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1194px]:h-auto md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(2rem,3.75vw,2.625rem)] md:max-[1194px]:leading-[clamp(2.75rem,4.8vw,3.5rem)] md:max-[1194px]:tracking-[-1.5px] min-[1195px]:text-[54px] min-[1195px]:leading-[68px] min-[1195px]:tracking-[-2px]">
+          <h2 className="font-heading h-[68px] w-full max-w-[1360px] text-[54px] !font-medium leading-[68px] tracking-[-2px] text-paragon-navy max-md:h-[84px] max-md:max-w-[362px] max-md:text-[36px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1194px]:h-auto md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(2rem,3.75vw,2.625rem)] md:max-[1194px]:leading-[clamp(2.75rem,4.8vw,3.5rem)] md:max-[1194px]:tracking-[-1.5px] min-[1195px]:text-[54px] min-[1195px]:leading-[68px] min-[1195px]:tracking-[-2px]">
             Services for every stage
           </h2>
 
@@ -87,7 +87,7 @@ export default function Services() {
                   className="services-card__icon h-full w-auto max-w-full shrink-0 object-contain object-left object-bottom opacity-100"
                 />
               </div>
-              <h3 className="services-card__title font-heading mt-6 h-[42px] w-full max-w-[427px] text-[28px] font-medium leading-[42px] tracking-[-1.5px] text-[#000C22] max-md:mt-6 max-md:h-[32px] max-md:max-w-[263px] max-md:text-[24px] max-md:leading-[32px] max-md:tracking-[-1px] md:max-[1194px]:mt-0 md:max-[1194px]:h-auto md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(1.25rem,2.25vw,1.5rem)] md:max-[1194px]:leading-[1.45] min-[1195px]:mt-6 min-[1195px]:h-[42px] min-[1195px]:max-w-[427px] min-[1195px]:text-[28px] min-[1195px]:leading-[42px] min-[1195px]:tracking-[-1.5px]">
+              <h3 className="services-card__title font-heading mt-6 h-[42px] w-full max-w-[427px] text-[28px] !font-medium leading-[42px] tracking-[-1.5px] text-[#000C22] max-md:mt-6 max-md:h-[32px] max-md:max-w-[263px] max-md:text-[24px] max-md:leading-[32px] max-md:tracking-[-1px] md:max-[1194px]:mt-0 md:max-[1194px]:h-auto md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(1.25rem,2.25vw,1.5rem)] md:max-[1194px]:leading-[1.45] min-[1195px]:mt-6 min-[1195px]:h-[42px] min-[1195px]:max-w-[427px] min-[1195px]:text-[28px] min-[1195px]:leading-[42px] min-[1195px]:tracking-[-1.5px]">
                 {service.title}
               </h3>
               <p className="services-card__copy mt-3 font-sans text-[0.875rem] font-normal leading-[1.65] tracking-[-0.25px] text-[#000C22B2] max-md:mt-3 max-md:text-base md:max-[1194px]:mt-0 md:max-[1194px]:text-[clamp(0.875rem,1.5vw,1rem)] md:max-[1194px]:leading-[1.5] min-[1195px]:mt-3 min-[1195px]:text-[18px] min-[1195px]:leading-[29px]">
