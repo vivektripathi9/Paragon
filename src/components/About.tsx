@@ -11,7 +11,7 @@ function CornerMark({ src = "/icons/Vector (2).svg" }: { src?: string }) {
       width={24}
       height={34}
       aria-hidden
-      className="about-stat-corner absolute right-8 top-8 h-[34px] w-[24px] transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 max-md:right-[26.99px] max-md:top-[26.99px] md:max-[1439px]:right-[clamp(1.5rem,2vw,2rem)] md:max-[1439px]:top-[clamp(1.5rem,2vw,2rem)]"
+      className="about-stat-corner pointer-events-none absolute right-8 top-8 h-[34px] w-[24px] transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 max-md:right-[26.99px] max-md:top-[26.99px] md:max-[1439px]:right-[clamp(1.5rem,2vw,2rem)] md:max-[1439px]:top-[clamp(1.5rem,2vw,2rem)]"
     />
   );
 }
@@ -25,8 +25,26 @@ const stats = [
         <span className="min-[768px]:max-[1194px]:block min-[1195px]:inline">Billion+</span>
       </>
     ),
-    description:
-      "Paragon principals' experience in securitized loan transactions involving defeasance",
+    description: (
+      <>
+        <span className="about-stat-description__locked hidden min-[768px]:block min-[1195px]:hidden">
+          <span className="block whitespace-nowrap">
+            Paragon principals{"\u2019"}
+          </span>
+          <span className="block whitespace-nowrap">
+            experience in securitized
+          </span>
+          <span className="block whitespace-nowrap">
+            loan transactions involving
+          </span>
+          <span className="block whitespace-nowrap">defeasance</span>
+        </span>
+        <span className="min-[768px]:hidden min-[1195px]:block">
+          Paragon principals{"\u2019"} experience in securitized loan transactions
+          involving defeasance
+        </span>
+      </>
+    ),
     height: "min-[1440px]:h-[487px]",
     variant: "about-stat-card--first",
     valueWrap: "",
@@ -39,7 +57,19 @@ const stats = [
   {
     id: "5000",
     value: "5,000+",
-    description: "Defeasance transactions completed",
+    description: (
+      <>
+        <span className="about-stat-description__locked hidden min-[768px]:block min-[1195px]:hidden">
+          <span className="block whitespace-nowrap">
+            Defeasance transactions
+          </span>
+          <span className="block whitespace-nowrap">completed</span>
+        </span>
+        <span className="min-[768px]:hidden min-[1195px]:block">
+          Defeasance transactions completed
+        </span>
+      </>
+    ),
     height: "min-[1440px]:h-[360px]",
     variant: "about-stat-card--stacked",
     valueWrap: "",
@@ -52,10 +82,23 @@ const stats = [
     value: "3 Weeks",
     description: (
       <>
-        <span className="block whitespace-nowrap">
-          Average closing time for defeasance
+        <span className="about-stat-description__locked hidden min-[768px]:block min-[1195px]:hidden">
+          <span className="block whitespace-nowrap">
+            Average closing time for
+          </span>
+          <span className="block whitespace-nowrap">
+            defeasance transactions
+          </span>
         </span>
-        <span className="block">transactions</span>
+        <span className="about-stat-description__desktop hidden min-[1195px]:block">
+          <span className="block whitespace-nowrap">
+            Average closing time for defeasance
+          </span>
+          <span className="block">transactions</span>
+        </span>
+        <span className="min-[768px]:hidden">
+          Average closing time for defeasance transactions
+        </span>
       </>
     ),
     height: "min-[1440px]:h-[248px]",

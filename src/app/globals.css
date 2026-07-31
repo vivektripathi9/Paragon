@@ -3519,6 +3519,14 @@ div.section-edge-seam-cover-light {
   );
 }
 
+/* Hide corner mark while pressed/hovered — reliable on touch (tablet/mobile). */
+@media (max-width: 1194px) {
+  .about-stat-card:hover .about-stat-corner,
+  .about-stat-card:active .about-stat-corner {
+    opacity: 0 !important;
+  }
+}
+
 .about-stat-card--first {
   background-color: #3e6bff;
   border-color: #3e6bff;
@@ -3555,7 +3563,6 @@ div.section-edge-seam-cover-light {
   }
 
   .about-stat-card--first {
-    height: clamp(25.2rem, 42vw, 30.4375rem);
     border-width: 0 0 0 10px;
   }
 
@@ -3573,33 +3580,19 @@ div.section-edge-seam-cover-light {
   }
 
   .about-stats-row {
-    min-height: clamp(25.2rem, 42vw, 30.4375rem);
     gap: clamp(1.5rem, 2.5vw, 2.4375rem);
-  }
-
-  .about-stat-card--stacked:nth-child(2) {
-    height: clamp(18.6rem, 29.8vw, 22.5rem);
-  }
-
-  .about-stat-card--stacked:last-child {
-    container-type: inline-size;
-    min-height: clamp(12.8rem, 20.5vw, 15.5rem);
-    height: auto;
-  }
-
-  .about-stat-card--stacked:last-child .about-stat-description {
-    font-size: clamp(0.6875rem, 4.8cqi, 1.125rem) !important;
-  }
-
-  .about-stat-card--stacked:last-child .about-stat-description span:first-child {
-    white-space: nowrap;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1194px) {
+@media (min-width: 768px) and (max-width: 1099px) {
+  .about-stat-card {
+    container-type: inline-size;
+    container-name: about-stat;
+  }
+
   .about-stat-card--first {
     border-width: 0 0 0 10px;
-    height: clamp(22.5rem, 37vw, 27.25rem);
+    height: clamp(18rem, 28vw, 18.75rem) !important;
   }
 
   .about-stat-card--first .about-stat-value {
@@ -3610,22 +3603,93 @@ div.section-edge-seam-cover-light {
     border-width: 4px 0 0;
   }
 
+  .about-stat-card--stacked:nth-child(2) {
+    height: clamp(14.5rem, 22vw, 15rem) !important;
+  }
+
+  .about-stat-card--stacked:last-child {
+    height: clamp(10rem, 15vw, 10.5rem) !important;
+    min-height: 0;
+  }
+
   .about-stats-row {
-    min-height: clamp(22.5rem, 37vw, 27.25rem);
+    min-height: clamp(18rem, 28vw, 18.75rem);
+  }
+
+  /* Same description size on all three cards; scale locked rows with card width */
+  .about-stat-description {
+    font-size: clamp(0.9375rem, 1.35vw, 1.125rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  .about-stat-description__locked > .block {
+    display: block;
+    white-space: nowrap !important;
+    font-size: min(1em, 7.65cqw) !important;
+    line-height: 1.25;
   }
 }
 
 @media (min-width: 810px) and (max-width: 899px) {
   .about-stat-card--first {
-    height: clamp(21.25rem, 35vw, 25.75rem);
+    height: clamp(17.5rem, 26vw, 18.25rem) !important;
   }
 
   .about-stat-card--stacked:nth-child(2) {
-    height: clamp(17.25rem, 28vw, 21rem);
+    height: clamp(14rem, 21vw, 14.5rem) !important;
   }
 
   .about-stats-row {
-    min-height: clamp(21.25rem, 35vw, 25.75rem);
+    min-height: clamp(17.5rem, 26vw, 18.25rem);
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1439px) {
+  /*
+   * Mid-desktop (1100–1439): stepped cards between tablet and the 1440 lock.
+   * Type uses cqw from each card so nowrap copy stays inside.
+   */
+  .about-stat-card {
+    container-type: inline-size;
+    container-name: about-stat;
+  }
+
+  .about-stat-card--first {
+    height: calc(345px + (100vw - 1100px) * 80 / 339) !important;
+    max-height: 425px;
+  }
+
+  .about-stat-card--stacked:nth-child(2) {
+    height: calc(260px + (100vw - 1100px) * 55 / 339) !important;
+    max-height: 315px;
+  }
+
+  .about-stat-card--stacked:last-child {
+    height: calc(180px + (100vw - 1100px) * 40 / 339) !important;
+    min-height: 0;
+    max-height: 220px;
+  }
+
+  .about-stats-row {
+    min-height: 0;
+  }
+
+  .about-stat-value {
+    font-size: min(3.9375rem, calc(100cqw * 63 / 364)) !important;
+    line-height: 1 !important;
+    max-width: 100%;
+  }
+
+  .about-stat-description {
+    /* 397px = measured width of "Average closing time for defeasance" at 22px */
+    font-size: min(1.375rem, calc(100cqw * 22 / 397)) !important;
+    line-height: 1.2 !important;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .about-stat-description__desktop > .block {
+    font-size: inherit !important;
   }
 }
 
