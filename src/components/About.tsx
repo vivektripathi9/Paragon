@@ -118,7 +118,7 @@ export default function About() {
         <div className="shrink-0 min-[1440px]:pl-2">
           <div className="mb-6 flex items-center gap-2.5 min-[1440px]:mb-8">
             <SectionLabelIcon variant="light" />
-            <span className="font-subheading text-sm font-semibold text-[#1E4FFF] min-[1440px]:text-[0.9375rem]">
+            <span className="font-subheading text-sm font-semibold text-[#3E6BFF] min-[1440px]:text-[0.9375rem]">
               About Paragon
             </span>
           </div>
