@@ -1,34 +1,97 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import ArrowIcon from "@/components/ArrowIcon";
 import SectionLabelIcon from "@/components/SectionLabelIcon";
 
+type CostRowProps = {
+  label: string;
+  value: string;
+  variant?: "primary" | "secondary" | "total";
+};
+
+function formatMdY(date: Date) {
+  const mm = String(date.getMonth() + 1).padStart(2, "0");
+  const dd = String(date.getDate()).padStart(2, "0");
+  const yyyy = String(date.getFullYear());
+  return `${mm}/${dd}/${yyyy}`;
+}
+
+function addDays(from: Date, days: number) {
+  const date = new Date(from);
+  date.setHours(12, 0, 0, 0);
+  date.setDate(date.getDate() + days);
+  return date;
+}
+
+function useEstimateDates() {
+  const [dates, setDates] = useState({
+    closing: "",
+    ratesAsOf: "",
+  });
+
+  useEffect(() => {
+    const today = new Date();
+    setDates({
+      closing: formatMdY(addDays(today, 30)),
+      ratesAsOf: formatMdY(addDays(today, 21)),
+    });
+  }, []);
+
+  return dates;
+}
+
+function CostRow({ label, value, variant = "secondary" }: CostRowProps) {
+  return (
+    <div className={`calculator-cube__row calculator-cube__row--${variant}`}>
+      <span className="calculator-cube__label">{label}</span>
+      <span className="calculator-cube__value">{value}</span>
+    </div>
+  );
+}
+
 function CalculatorCard() {
+  const { closing, ratesAsOf } = useEstimateDates();
+
   return (
     <div className="calculator-cube">
-      <img
-        src="/calculator-mobile.svg"
-        alt="Sample defeasance estimate report showing securities cost, fees, and total cost"
-        width={311}
-        height={277}
-        className="calculator-cube-mobile mx-auto h-[277.24px] w-[311.28px] object-contain opacity-100 max-md:block md:hidden"
-      />
-      <img
-        src="/icons/calculator-tablet.svg"
-        alt="Sample defeasance estimate report showing securities cost, fees, and total cost"
-        width={439}
-        height={391}
-        className="calculator-cube-tablet mx-auto h-auto w-full max-w-full object-contain opacity-100 max-md:hidden min-[768px]:max-[1195px]:block min-[1195px]:hidden"
-      />
-      <div className="calculator-cube-desktop hidden min-[1195px]:block">
-        <div className="calculator-cube__frame" aria-hidden />
-        <div className="calculator-cube__card">
-          <img
-            src="/report-defeasance-estimate.svg"
-            alt="Sample defeasance estimate report showing securities cost, fees, and total cost"
-            width={357}
-            height={299}
-            className="h-full w-full object-cover opacity-100"
-          />
+      <div className="calculator-cube__frame" aria-hidden />
+      <div
+        className="calculator-cube__card"
+        role="img"
+        aria-label="Sample defeasance estimate report showing securities cost, fees, and total cost"
+      >
+        <div className="calculator-cube__body">
+          <div className="calculator-cube__group">
+            <CostRow
+              label="Securities Cost"
+              value="$22,751,526"
+              variant="primary"
+            />
+            <CostRow label="Loan Balance at Defeasance" value="$22,564,320" />
+            <CostRow label="Defeasance Penalty" value="$187,206" />
+          </div>
+
+          <div className="calculator-cube__group">
+            <CostRow
+              label="Third-Party Fees"
+              value="$46,700"
+              variant="primary"
+            />
+            <CostRow
+              label="Closing Date"
+              value={closing || "\u00a0"}
+            />
+            <CostRow
+              label="Rates As Of"
+              value={ratesAsOf || "\u00a0"}
+            />
+          </div>
+        </div>
+
+        <div className="calculator-cube__footer">
+          <CostRow label="Total Cost" value="$22,808,226" variant="total" />
         </div>
       </div>
     </div>
