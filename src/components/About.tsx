@@ -123,7 +123,7 @@ export default function About() {
             </span>
           </div>
 
-          <p className="font-heading w-full max-w-[1081px] text-[48px] font-medium leading-[68px] tracking-[-2px] max-md:h-[210px] max-md:max-w-[362px] max-md:text-[28px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1439px]:h-auto md:max-[1439px]:max-w-[min(56rem,100%)] md:max-[1439px]:text-[clamp(2rem,3.75vw,3rem)] md:max-[1439px]:leading-[clamp(2.75rem,5.2vw,3.5rem)] md:max-[1439px]:tracking-[-1.75px] min-[1440px]:min-h-[204px]">
+          <p className="font-heading w-full max-w-[1081px] text-[48px] font-medium leading-[68px] tracking-[-2px] max-md:h-[210px] max-md:max-w-[362px] max-md:text-[28px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1439px]:h-auto md:max-[1439px]:max-w-[min(56rem,100%)] md:max-[1439px]:text-[clamp(2rem,3.75vw,3rem)] md:max-[1439px]:leading-[clamp(2.75rem,5.2vw,3.5rem)] md:max-[1439px]:tracking-[-1.75px] min-[1195px]:!font-medium min-[1440px]:min-h-[204px]">
             <span className="text-paragon-muted">
               Paragon is the only independent defeasance
             </span>{" "}
