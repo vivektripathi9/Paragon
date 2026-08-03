@@ -21,7 +21,7 @@ export default function Hero() {
           alt=""
           width={1440}
           height={894}
-          className="absolute left-0 top-0 z-[1] h-full w-full max-w-none object-fill opacity-[0.63]"
+          className="absolute left-0 top-0 z-[1] h-full w-full max-w-none object-fill opacity-[0.75]"
         />
       </div>
 
