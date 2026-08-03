@@ -52,9 +52,18 @@ function NavLink({
       href={href}
       onClick={onNavigate}
       aria-current={isActive ? "page" : undefined}
-      className={`font-subheading relative inline-flex items-center text-[16px] font-light leading-[18.2px] tracking-[-0.5px] text-white opacity-100 transition-opacity after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#31EE97] after:opacity-0 after:transition-opacity hover:opacity-80 hover:after:opacity-100 max-md:pb-0 md:pb-1 ${className}`}
+      className={`font-subheading group relative inline-grid items-center text-[16px] leading-[18.2px] tracking-[-0.5px] text-[#FFFFFF] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#31EE97] after:opacity-0 after:transition-opacity hover:after:opacity-100 max-md:pb-0 md:pb-1 ${className}`}
     >
-      {label}
+      {/* Invisible semibold copy reserves width so hover weight doesn't reflow the nav */}
+      <span
+        className="invisible col-start-1 row-start-1 font-semibold"
+        aria-hidden
+      >
+        {label}
+      </span>
+      <span className="col-start-1 row-start-1 font-normal group-hover:font-semibold">
+        {label}
+      </span>
     </Link>
   );
 }
