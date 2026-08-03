@@ -30,7 +30,7 @@ export default function Footer() {
       <div className="footer-bg-mobile max-[768px]:block min-[769px]:hidden" aria-hidden>
         <div className="footer-bg-mobile__layer">
           <img
-            src="/footer-decor-mobile.png"
+            src="/icons/footer-vector.svg"
             alt=""
             width={209}
             height={581}

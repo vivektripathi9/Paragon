@@ -1246,6 +1246,7 @@ blockquote,
   z-index: 1;
   pointer-events: none;
   overflow: hidden;
+  opacity: 1;
 }
 
 .footer-bg-mobile__layer {
