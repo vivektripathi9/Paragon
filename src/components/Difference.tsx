@@ -17,7 +17,11 @@ const features = [
           <span className="block whitespace-nowrap">they ask for it.</span>
         </span>
         <span className="min-[766px]:hidden">
-          We know what servicers need before they ask for it.
+          <span className="block whitespace-nowrap">We know what servicers</span>
+          <span className="block whitespace-nowrap">
+            need before they ask for
+          </span>
+          <span className="block whitespace-nowrap">it.</span>
         </span>
       </>
     ),
@@ -39,9 +43,21 @@ const features = [
           </span>
         </span>
         <span className="min-[766px]:hidden">
-          Our team has worked inside major CMBS servicer organizations. We know
-          what each servicer requires, what they{"\u2019"}ll question, and what{" "}
-          {"\u201c"}complete{"\u201d"} means to the team approving the file.
+          <span className="block whitespace-nowrap">
+            Our team has worked inside major
+          </span>
+          <span className="block whitespace-nowrap">
+            CMBS servicer organizations. We know
+          </span>
+          <span className="block whitespace-nowrap">
+            what each servicer requires, what they{"\u2019"}ll
+          </span>
+          <span className="block whitespace-nowrap">
+            question, and what {"\u201c"}complete{"\u201d"} means
+          </span>
+          <span className="block whitespace-nowrap">
+            to the team approving the file.
+          </span>
         </span>
       </>
     ),
@@ -62,7 +78,9 @@ const features = [
           </span>
         </span>
         <span className="min-[766px]:hidden">
-          Every deal is built to preempt problems, not react to them.
+          <span className="block whitespace-nowrap">Every deal is built to</span>
+          <span className="block whitespace-nowrap">preempt problems, not</span>
+          <span className="block whitespace-nowrap">react to them.</span>
         </span>
       </>
     ),
@@ -81,9 +99,19 @@ const features = [
           <span className="block whitespace-nowrap">matters most.</span>
         </span>
         <span className="min-[766px]:hidden">
-          We map the servicer{"\u2019"}s requirements against your closing date
-          before the process begins. The result is fewer last-minute requests
-          and surprises when timing matters most.
+          <span className="block whitespace-nowrap">
+            We map the servicer{"\u2019"}s requirements
+          </span>
+          <span className="block whitespace-nowrap">
+            against your closing date before the
+          </span>
+          <span className="block whitespace-nowrap">
+            process begins. The result is fewer last-
+          </span>
+          <span className="block whitespace-nowrap">
+            minute requests and surprises when
+          </span>
+          <span className="block whitespace-nowrap">timing matters most.</span>
         </span>
       </>
     ),
@@ -101,8 +129,14 @@ const features = [
           </span>
           <span className="block whitespace-nowrap">transaction.</span>
         </span>
-        <span className="min-[1000px]:hidden">
+        <span className="hidden min-[766px]:max-[999px]:block">
           Senior-led execution on every transaction.
+        </span>
+        <span className="min-[766px]:hidden">
+          <span className="block whitespace-nowrap">
+            Senior-led execution on
+          </span>
+          <span className="block whitespace-nowrap">every transaction.</span>
         </span>
       </>
     ),
@@ -120,8 +154,18 @@ const features = [
           </span>
         </span>
         <span className="min-[766px]:hidden">
-          You work directly with experienced professionals who have personally
-          closed defeasance transactions, not with associates relaying messages.
+          <span className="block whitespace-nowrap">
+            You work directly with experienced
+          </span>
+          <span className="block whitespace-nowrap">
+            professionals who have personally
+          </span>
+          <span className="block whitespace-nowrap">
+            closed defeasance transactions, not
+          </span>
+          <span className="block whitespace-nowrap">
+            with associates relaying messages.
+          </span>
         </span>
       </>
     ),
@@ -177,7 +221,13 @@ export default function Difference() {
             </span>
           </div>
           <h2 className="font-heading w-full max-w-[min(42.5rem,100%)] text-[clamp(2.25rem,3.75vw,3.375rem)] font-medium leading-[clamp(2.95rem,4.8vw,4.375rem)] tracking-[-0.04em] text-white">
-            The Paragon difference
+            <span className="hidden min-[766px]:inline">
+              The Paragon difference
+            </span>
+            <span className="min-[766px]:hidden">
+              <span className="block whitespace-nowrap">The Paragon</span>
+              <span className="block whitespace-nowrap">difference</span>
+            </span>
           </h2>
         </header>
 

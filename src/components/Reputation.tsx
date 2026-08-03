@@ -59,7 +59,58 @@ export default function Reputation() {
           <div className="reputation-testimonial__layout flex w-full min-w-0 items-start opacity-100">
             <QuoteIcon />
             <blockquote className="reputation-quote flex min-w-0 flex-col text-left opacity-100 not-italic">
-              <div className="reputation-quote__text reputation-quote__text--natural font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] md:max-[1195px]:hidden">
+              <div className="reputation-quote__text reputation-quote__text--mobile font-sans text-[#000C22] md:hidden">
+                <p>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    Over the past five years, RP
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    Management has done 10 defeasance
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    transactions with Paragon. Working
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    with Paragon was a great experience
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    from start to finish. Kevin was
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    organized, answered our questions,
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    addressed our concerns, and kept us
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    informed along the way.
+                  </span>
+                </p>
+                <p className="mt-4">
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    We will use Paragon for our future
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    defeasances due to them providing us
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    with confidence for a smooth
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    transaction and peace of mind that
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    each transaction will close as promised.
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    I highly recommend Paragon to anyone
+                  </span>
+                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                    seeking a trusted defeasance advisor.
+                  </span>
+                </p>
+              </div>
+              <div className="reputation-quote__text reputation-quote__text--natural hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] min-[1196px]:block">
                 <p>
                   Over the past five years, RP Management has done 10 defeasance
                   transactions with Paragon. Working with Paragon was a great

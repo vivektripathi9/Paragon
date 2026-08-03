@@ -112,13 +112,29 @@ export default function Hero() {
         </div>
 
         <div className="hero-description-row absolute top-[clamp(26rem,62%,34rem)] flex h-auto w-full flex-row items-center justify-between gap-[clamp(1.5rem,3vw,2.5rem)] max-md:static max-md:h-auto max-md:w-full max-md:flex-col max-md:gap-8 md:left-[var(--hero-inline-padding)] md:right-[var(--hero-inline-padding)] md:w-auto md:max-[1195px]:!static md:max-[1195px]:!inset-auto md:max-[1195px]:!top-auto md:max-[1195px]:!bottom-auto md:max-[1195px]:!w-full min-[1195px]:inset-x-0 min-[1195px]:top-[579px] min-[1195px]:h-[120px] min-[1195px]:w-full min-[1195px]:justify-between min-[1195px]:gap-16 min-[1195px]:px-0">
-          <p className="hero-description min-w-0 flex-1 font-sans text-[clamp(1rem,1.45vw,1.125rem)] font-medium leading-[clamp(1.75rem,2.55vw,1.95rem)] tracking-[-0.25px] text-[#FFFFFFCC] max-md:h-[182px] max-md:max-w-[362px] max-md:flex-none max-md:text-[15px] max-md:leading-[26px] md:max-w-[min(680px,62%)] md:max-[820px]:max-w-[min(28rem,58%)] min-[1195px]:h-[120px] min-[1195px]:!max-w-[709px] min-[1195px]:text-[18px] min-[1195px]:leading-[30px]">
+          <p className="hero-description min-w-0 flex-1 font-sans text-[clamp(1rem,1.45vw,1.125rem)] font-medium leading-[clamp(1.75rem,2.55vw,1.95rem)] tracking-[-0.25px] text-[#FFFFFFCC] max-md:h-auto max-md:max-w-[362px] max-md:flex-none max-md:overflow-visible max-md:text-[15px] max-md:leading-[26px] md:max-w-[min(680px,62%)] md:max-[820px]:max-w-[min(28rem,58%)] min-[1195px]:h-[120px] min-[1195px]:!max-w-[709px] min-[1195px]:text-[18px] min-[1195px]:leading-[30px]">
             <span className="md:hidden">
-              When you are closing a sale, executing a refinance, or repositioning
-              a portfolio, defeasance is often the final requirement standing
-              between you and the transaction you actually care about. Paragon
-              manages those moving parts so you can stay focused on the
-              transaction itself.
+              <span className="block whitespace-nowrap">
+                When you are closing a sale, executing a
+              </span>
+              <span className="block whitespace-nowrap">
+                refinance, or repositioning a portfolio,
+              </span>
+              <span className="block whitespace-nowrap">
+                defeasance is often the final requirement
+              </span>
+              <span className="block whitespace-nowrap">
+                standing between you and the transaction you
+              </span>
+              <span className="block whitespace-nowrap">
+                actually care about. Paragon manages those
+              </span>
+              <span className="block whitespace-nowrap">
+                moving parts so you can stay focused on the
+              </span>
+              <span className="block whitespace-nowrap">
+                transaction itself.
+              </span>
             </span>
             <span className="hero-description__tablet hidden md:max-[1195px]:!block">
               <span className="block whitespace-nowrap">

@@ -810,18 +810,35 @@ blockquote,
   .difference-feature__copy {
     font-size: clamp(0.8125rem, 3.4vw, 1rem);
     line-height: 1.5;
+    overflow: visible;
+  }
+
+  .difference-feature__body {
+    overflow: visible;
+  }
+
+  .difference-feature__row {
+    overflow: visible;
   }
 
   .difference-feature__cta {
-    width: 100%;
+    /* Span full feature width (icon + gap + body), not just the text column */
+    width: calc(
+      100% + clamp(3.5rem, 14vw, 5.25rem) + clamp(0.75rem, 3.5vw, 1.25rem)
+    );
+    max-width: none;
+    margin-left: calc(
+      -1 * (clamp(3.5rem, 14vw, 5.25rem) + clamp(0.75rem, 3.5vw, 1.25rem))
+    );
   }
 
   .difference-feature__cta .difference-feature__cta-btn {
     width: 100% !important;
     max-width: 100% !important;
-    height: 3.375rem;
-    padding: 1.25rem clamp(0.75rem, 4vw, 1.5625rem);
+    height: 54px;
+    padding: 1.25rem 1.5625rem; /* 20px 25px */
     gap: 0.75rem;
+    opacity: 1;
     font-size: clamp(0.8125rem, 3.8vw, 0.9375rem);
   }
 
@@ -1156,6 +1173,21 @@ blockquote,
   line-height: 1.61;
 }
 
+/*
+ * Mobile locked service descriptions — keep design row breaks.
+ * Spec: Poppins 14px / 24px lh / -0.25 tracking; shrinks on narrower widths.
+ */
+.services-card__copy-mobile > .block {
+  display: block;
+  white-space: nowrap !important;
+  line-height: 1.65;
+}
+
+.services-intro-mobile > .block {
+  display: block;
+  white-space: nowrap !important;
+}
+
 /* Services mobile (<=767px) */
 @media (max-width: 767px) {
   .services-section {
@@ -1170,6 +1202,49 @@ blockquote,
     padding-inline: 1.25rem;
     padding-top: calc(var(--section-edge-height) + 2.5rem);
     padding-bottom: calc(var(--section-edge-height) + 3.5rem);
+  }
+
+  .services-card {
+    overflow: visible;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .services-card__title {
+    font-family: var(--font-inter), ui-sans-serif, sans-serif;
+    font-weight: 500;
+    font-size: 24px !important;
+    line-height: 32px !important;
+    letter-spacing: -1px !important;
+    height: 32px;
+    max-width: 100%;
+  }
+
+  .services-card__copy {
+    overflow: visible;
+    max-width: 100%;
+    width: 100%;
+    font-family: var(--font-poppins), ui-sans-serif, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+  }
+
+  .services-card__copy-mobile {
+    display: block;
+    max-width: 100%;
+  }
+
+  .services-card__copy-mobile > .block {
+    /* Spec 14px at design width; shrinks on narrower phones so nowrap rows fit */
+    font-size: min(0.875rem, calc((100vw - 2.5rem) / 25.5)) !important;
+    line-height: 24px !important;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+  }
+
+  .services-intro-mobile > .block {
+    font-size: clamp(0.875rem, calc((100vw - 2.5rem) / 24), 1rem) !important;
+    line-height: 1.45;
   }
 
   .services-cta {
@@ -1222,21 +1297,31 @@ blockquote,
   z-index: 1;
   width: 100vw;
   max-width: 100%;
-  height: 897px;
+  height: 884px;
   transform: translateX(-50%);
   overflow: hidden;
   pointer-events: none;
-  opacity: 1;
 }
 
-.footer-bg__img {
+.footer-bg__img,
+.footer-bg__overlay {
   display: block;
   width: 100%;
-  height: 897px;
+  height: 884px;
   max-width: none;
   object-fit: cover;
   object-position: center top;
+}
+
+.footer-bg__img {
+  position: relative;
   opacity: 1;
+}
+
+.footer-bg__overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.63;
 }
 
 .footer-bg-mobile {
@@ -1269,13 +1354,7 @@ blockquote,
 
 /* Footer section */
 .footer-section {
-  background: linear-gradient(
-    180deg,
-    #04143c 0%,
-    #0a2168 38%,
-    #000c22 58%,
-    #000c22 100%
-  );
+  background: #000c22;
 }
 
 /*
@@ -1444,7 +1523,8 @@ blockquote,
     height: clamp(40rem, 78vw, 56rem);
   }
 
-  .footer-bg__img {
+  .footer-bg__img,
+  .footer-bg__overlay {
     height: 100%;
     object-fit: cover;
     object-position: center top;
@@ -1758,14 +1838,21 @@ blockquote,
 
 @media (max-width: 768px) {
   .footer-section {
-    min-height: 1480px;
+    min-height: 0;
+    background: linear-gradient(
+      180deg,
+      #04143c 0%,
+      #0a2168 38%,
+      #000c22 58%,
+      #000c22 100%
+    );
   }
 
   .footer-shell {
-    min-height: 1480px;
+    min-height: 0;
     max-width: 402px;
     padding-inline: 1.25rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     padding-top: var(--section-edge-height);
   }
 
@@ -1788,7 +1875,7 @@ blockquote,
   }
 
   .footer-cta__title-line:first-child {
-    white-space: normal;
+    white-space: nowrap;
   }
 
   .footer-cta__body {
@@ -1831,22 +1918,56 @@ blockquote,
   }
 
   .footer-nav {
-    flex-direction: column;
-    gap: 3rem;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
     width: 100%;
+  }
+
+  .footer-links,
+  .footer-contact {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .footer-links ul {
+    gap: 0.5rem;
+  }
+
+  .footer-contact ul {
+    gap: 0.5rem;
+  }
+
+  .footer-link {
+    min-height: 0;
+    padding-block: 0.125rem;
+  }
+
+  .footer-contact__item {
+    min-height: 0;
+    padding-block: 0.125rem;
   }
 
   .footer-legal {
     align-items: flex-start;
     flex-direction: column;
     gap: 1rem;
-    padding-block: 1.5rem;
+    padding-block: 1.5rem 0;
   }
 
   .footer-legal__links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .footer-legal__link {
+    min-height: 0;
+    padding-block: 0;
   }
 
   .footer-bg-mobile {
@@ -2789,6 +2910,41 @@ div.section-edge-seam-cover-light {
 
   .reputation-testimonial {
     margin-top: 3rem;
+  }
+
+  .reputation-quote {
+    max-width: 100%;
+    width: 100%;
+    overflow: visible;
+  }
+
+  /*
+   * Spec: Poppins 600 Italic 18px / 30px / -0.25 tracking.
+   * Responsive from 375px — hits 18/30 at that width when content allows;
+   * shrinks with the padded column so locked rows never crop.
+   */
+  .reputation-quote__text--mobile {
+    font-family: var(--font-poppins), ui-sans-serif, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -0.25px;
+  }
+
+  .reputation-quote__text--mobile .reputation-quote__line {
+    display: block;
+    white-space: nowrap !important;
+    font-family: var(--font-poppins), ui-sans-serif, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -0.25px;
+  }
+}
+
+/* Mobile quote type: 376–767 keep 18/30 scale; ≤375 uses a smaller size */
+@media (min-width: 376px) and (max-width: 767px) {
+  .reputation-quote__text--mobile .reputation-quote__line {
+    font-size: min(1.125rem, calc(100vw * 18 / 375)) !important;
+    line-height: min(1.875rem, calc(100vw * 30 / 375)) !important;
   }
 }
 
@@ -3785,5 +3941,13 @@ div.section-edge-seam-cover-light {
 
   .about-stats-row {
     min-height: 487px;
+  }
+}
+
+/* Reputation quote ≤375 — must stay last so it wins the cascade */
+@media (max-width: 375px) {
+  .reputation-section .reputation-quote__text--mobile .reputation-quote__line {
+    font-size: 15px !important;
+    line-height: 25px !important;
   }
 }
