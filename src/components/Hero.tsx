@@ -9,19 +9,40 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
         aria-hidden
       >
+        {/* Desktop */}
         <img
           src="/icons/Frame-29.svg"
           alt=""
           width={1440}
           height={894}
-          className="absolute left-0 top-0 h-full w-full max-w-none object-fill opacity-50"
+          className="absolute left-0 top-0 h-full w-full max-w-none object-fill opacity-50 max-lg:hidden"
         />
         <img
           src="/icons/Background-3.svg"
           alt=""
           width={1440}
           height={894}
-          className="absolute left-0 top-0 z-[1] h-full w-full max-w-none object-fill opacity-[0.75]"
+          className="absolute left-0 top-0 z-[1] h-full w-full max-w-none object-fill opacity-[0.75] max-lg:hidden"
+        />
+        {/* Mobile — mobilebg-2 base, mobilebg-1 overlay */}
+        <img
+          src="/icons/mobilebg-2.svg"
+          alt=""
+          width={1440}
+          height={894}
+          className="absolute left-0 top-0 hidden h-full w-full max-w-none object-cover max-lg:block"
+        />
+        <img
+          src="/icons/mobilebg-1.svg"
+          alt=""
+          width={402}
+          height={544}
+          className="absolute right-0 top-0 z-[1] hidden h-[544px] w-[402px] max-w-none object-contain max-lg:block"
+        />
+        {/* Mobile — bottom fade to #000C22 */}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] hidden h-[70%] bg-gradient-to-t from-[#000C22] from-55% via-[#000C22]/90 via-30% to-transparent max-lg:block"
+          aria-hidden
         />
       </div>
 
