@@ -1321,7 +1321,7 @@ blockquote,
 .footer-bg__overlay {
   position: absolute;
   inset: 0;
-  opacity: 0.63;
+  opacity: 0.83;
 }
 
 .footer-bg-mobile {

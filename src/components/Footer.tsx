@@ -20,14 +20,14 @@ export default function Footer() {
     <footer className="footer-section relative z-[1] w-full section-edge-overlap overflow-hidden bg-[#000C22] pb-0">
       <div className="footer-bg max-[768px]:hidden" aria-hidden>
         <img
-          src="/icons/footer-bg-desktop.svg"
+          src="/icons/footer-overlay-desktop.svg"
           alt=""
           width={1440}
           height={884}
           className="footer-bg__img max-w-none"
         />
         <img
-          src="/icons/footer-overlay-desktop.svg"
+          src="/icons/footer-bg-desktop.svg"
           alt=""
           width={1440}
           height={884}
