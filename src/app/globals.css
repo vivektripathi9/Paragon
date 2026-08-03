@@ -159,29 +159,13 @@ blockquote,
 }
 
 .hero-gradient-bg {
-  background-color: #010a1f;
-  background-image: linear-gradient(
-    180deg,
-    #010a1f 0%,
-    #010a1f 12%,
-    #041338 38%,
-    #041338 62%,
-    #000818 88%,
-    #000818 100%
-  );
+  background-color: #000c22;
+  background-image: none;
 }
 
 .hero-bg-color {
-  background-color: #010a1f;
-  background-image: linear-gradient(
-    180deg,
-    #010a1f 0%,
-    #010a1f 14%,
-    #041338 40%,
-    #041338 60%,
-    #000818 86%,
-    #000818 100%
-  );
+  background-color: #000c22;
+  background-image: none;
 }
 
 .hero-bg-color {
@@ -281,24 +265,11 @@ blockquote,
 }
 
 .hero-bg-vignette {
-  background: radial-gradient(
-    ellipse 82% 72% at 50% 42%,
-    transparent 28%,
-    rgba(0, 8, 24, 0.55) 100%
-  );
-  opacity: 0.78;
+  display: none;
 }
 
 .hero-bg-scrim {
-  background: linear-gradient(
-    180deg,
-    rgba(1, 10, 31, 0.62) 0%,
-    rgba(1, 10, 31, 0.22) 18%,
-    rgba(0, 8, 24, 0.12) 34%,
-    rgba(0, 8, 24, 0.12) 62%,
-    rgba(0, 8, 24, 0.28) 80%,
-    rgba(0, 8, 24, 0.58) 100%
-  );
+  display: none;
 }
 
 .hero-bg-drift {
@@ -309,7 +280,6 @@ blockquote,
   position: absolute;
   inset: 0;
   overflow: hidden;
-  filter: brightness(0.78) contrast(1.05);
 }
 
 /* Stretch SVG edge-to-edge at all desktop/tablet widths (incl. >1420) */
@@ -329,7 +299,6 @@ blockquote,
 
 .hero-bg-drift__layer--mobile {
   transform-origin: center center;
-  filter: brightness(0.78) contrast(1.05);
 }
 
 .hero-highlight {
