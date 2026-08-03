@@ -52,7 +52,7 @@ function NavLink({
       href={href}
       onClick={onNavigate}
       aria-current={isActive ? "page" : undefined}
-      className={`font-subheading relative inline-flex items-center text-[16px] font-light leading-[18.2px] tracking-[-0.5px] text-white opacity-100 transition-[opacity,font-weight] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#31EE97] after:opacity-0 after:transition-opacity hover:font-normal hover:opacity-80 hover:after:opacity-100 max-md:pb-0 md:pb-1 ${className}`}
+      className={`font-subheading relative inline-flex items-center text-[16px] font-light leading-[18.2px] tracking-[-0.5px] text-white opacity-100 transition-opacity after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#31EE97] after:opacity-0 after:transition-opacity hover:opacity-80 hover:after:opacity-100 max-md:pb-0 md:pb-1 ${className}`}
     >
       {label}
     </Link>

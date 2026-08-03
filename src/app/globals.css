@@ -1042,9 +1042,13 @@ blockquote,
 
 /* BL: mobile 127×518 @ left -8 / bottom -24 → desktop 516×1393 @ left -16 / bottom -500 */
 .difference-decor-desktop__bl {
+  --diff-bl-left-nudge: 0px;
   position: absolute;
   bottom: clamp(-500px, calc(-24px + (100vw - 375px) * -476 / 1065), -24px);
-  left: clamp(-16px, calc(-8px + (100vw - 375px) * -8 / 1065), -8px);
+  left: calc(
+    clamp(-16px, calc(-8px + (100vw - 375px) * -8 / 1065), -8px) +
+      var(--diff-bl-left-nudge)
+  );
   width: clamp(127px, calc(127px + (100vw - 375px) * 389 / 1065), 516px);
   height: clamp(518px, calc(518px + (100vw - 375px) * 875 / 1065), 1393px);
   max-width: none;
@@ -1055,10 +1059,19 @@ blockquote,
  * LOCKED — client-approved BL tablet/desktop geometry.
  * Preserve the approved 8px offset at 769px, then scale it with the
  * viewport so the artwork tracks the diagonal.
+ * Extra X nudges use --diff-bl-left-nudge (set on the img / Tailwind).
  */
 @media (min-width: 768px) {
   .difference-decor-desktop__bl--edge-locked {
     transform: translateX(clamp(11px, calc(1.0403vw + 3px), 18px));
+  }
+}
+
+/* 820 — BL decor X nudge */
+@media (min-width: 800px) and (max-width: 900px) {
+  .difference-decor-desktop__bl--edge-locked {
+    --diff-bl-left-nudge: 1px;
+    transform: translateX(calc(1.0403vw));
   }
 }
 
