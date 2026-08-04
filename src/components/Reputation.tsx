@@ -61,51 +61,51 @@ export default function Reputation() {
             <blockquote className="reputation-quote flex min-w-0 flex-col text-left opacity-100 not-italic">
               <div className="reputation-quote__text reputation-quote__text--mobile font-sans text-[#000C22] md:hidden">
                 <p>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     Over the past five years, RP
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     Management has done 10 defeasance
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     transactions with Paragon. Working
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     with Paragon was a great experience
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     from start to finish. Kevin was
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     organized, answered our questions,
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     addressed our concerns, and kept us
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     informed along the way.
                   </span>
                 </p>
                 <p className="mt-4">
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     We will use Paragon for our future
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     defeasances due to them providing us
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     with confidence for a smooth
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     transaction and peace of mind that
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     each transaction will close as promised.
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     I highly recommend Paragon to anyone
                   </span>
-                  <span className="reputation-quote__line block whitespace-nowrap max-[375px]:!text-[15px] max-[375px]:!leading-[25px]">
+                  <span className="reputation-quote__line block whitespace-nowrap">
                     seeking a trusted defeasance advisor.
                   </span>
                 </p>

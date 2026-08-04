@@ -1918,17 +1918,18 @@ blockquote,
   }
 
   .footer-nav {
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 1.5rem;
+    justify-content: flex-start;
+    gap: 3rem;
     width: 100%;
   }
 
   .footer-links,
   .footer-contact {
-    flex: 1 1 0;
+    flex: none;
     min-width: 0;
+    width: 100%;
   }
 
   .footer-links ul {
@@ -2940,8 +2941,8 @@ div.section-edge-seam-cover-light {
   }
 }
 
-/* Mobile quote type: 376–767 keep 18/30 scale; ≤375 uses a smaller size */
-@media (min-width: 376px) and (max-width: 767px) {
+/* Mobile quote type: wider phones keep 18/30 scale; narrow (≤390 / true 375 devices) handled below */
+@media (min-width: 391px) and (max-width: 767px) {
   .reputation-quote__text--mobile .reputation-quote__line {
     font-size: min(1.125rem, calc(100vw * 18 / 375)) !important;
     line-height: min(1.875rem, calc(100vw * 30 / 375)) !important;
@@ -3944,10 +3945,31 @@ div.section-edge-seam-cover-light {
   }
 }
 
-/* Reputation quote ≤375 — must stay last so it wins the cascade */
-@media (max-width: 375px) {
+/*
+ * Reputation quote — narrow phones (true 375 devices often report ~375.5px,
+ * so max-width: 375px never matches). Cap at 390px so 375 views get this scale.
+ */
+@media (max-width: 390px) {
+  .reputation-section .reputation-shell,
+  .reputation-section .reputation-testimonial,
+  .reputation-section .reputation-testimonial__layout,
+  .reputation-section .reputation-quote {
+    max-width: 100%;
+    overflow: visible;
+  }
+
   .reputation-section .reputation-quote__text--mobile .reputation-quote__line {
-    font-size: 15px !important;
-    line-height: 25px !important;
+    font-size: 14px !important;
+    line-height: 23px !important;
+  }
+
+  .reputation-section .reputation-quote__name {
+    font-size: 22px !important;
+    line-height: 1.15 !important;
+  }
+
+  .reputation-section .reputation-quote__role {
+    font-size: 18px !important;
+    line-height: 1.25 !important;
   }
 }
