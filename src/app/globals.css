@@ -1053,6 +1053,13 @@ blockquote,
   }
 }
 
+/* 759–798 — tiny left nudge so BL tracks other widths without the old jump */
+@media (min-width: 759px) and (max-width: 798px) {
+  .difference-decor-desktop__bl--edge-locked {
+    --diff-bl-left-nudge: -5px;
+  }
+}
+
 /* 820 — BL decor X nudge */
 @media (min-width: 800px) and (max-width: 900px) {
   .difference-decor-desktop__bl--edge-locked {

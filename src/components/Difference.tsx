@@ -207,7 +207,7 @@ export default function Difference() {
           <img
             src="/icons/Group 14.svg"
             alt=""
-            className="difference-decor-desktop__bl difference-decor-desktop__bl--edge-locked min-[768px]:max-[799px]:!left-[25px] min-[800px]:max-[900px]:[--diff-bl-left-nudge:1px]"
+            className="difference-decor-desktop__bl difference-decor-desktop__bl--edge-locked min-[800px]:max-[900px]:[--diff-bl-left-nudge:1px]"
           />
         </div>
       </div>
