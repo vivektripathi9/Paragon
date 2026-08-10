@@ -105,7 +105,7 @@ export default function Services() {
         <header className="w-full">
           <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
             <SectionLabelIcon variant="light" />
-            <span className="font-subheading text-sm font-semibold text-[#3E6BFF] min-[1195px]:text-[0.9375rem]">
+            <span className="font-subheading text-[16px] font-semibold leading-[14px] tracking-[-0.5px] text-[#1E4FFF]">
               Our Services
             </span>
           </div>

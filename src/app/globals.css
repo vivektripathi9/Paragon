@@ -1299,36 +1299,21 @@ blockquote,
 
 .footer-bg {
   position: absolute;
-  top: -13px;
-  left: 50%;
+  inset: 0;
   z-index: 1;
-  width: 100vw;
-  max-width: 100%;
-  height: 884px;
-  transform: translateX(-50%);
+  width: 100%;
   overflow: hidden;
   pointer-events: none;
 }
 
-.footer-bg__img,
-.footer-bg__overlay {
+.footer-bg__img {
   display: block;
   width: 100%;
-  height: 884px;
+  height: 100%;
   max-width: none;
   object-fit: cover;
   object-position: center top;
-}
-
-.footer-bg__img {
-  position: relative;
   opacity: 1;
-}
-
-.footer-bg__overlay {
-  position: absolute;
-  inset: 0;
-  opacity: 0.83;
 }
 
 .footer-bg-mobile {
@@ -1519,19 +1504,17 @@ blockquote,
   padding-block: 0.25rem;
 }
 
-/* Footer below-desktop band (769px–1195px) */
-@media (min-width: 769px) and (max-width: 1195px) {
+/* Footer tablet band (768px–1195px) — same bg image + #000C22 as desktop */
+@media (min-width: 768px) and (max-width: 1195px) {
   .footer-section {
     background: #000c22;
   }
 
   .footer-bg {
     display: block;
-    height: clamp(40rem, 78vw, 56rem);
   }
 
-  .footer-bg__img,
-  .footer-bg__overlay {
+  .footer-bg__img {
     height: 100%;
     object-fit: cover;
     object-position: center top;
@@ -1651,7 +1634,7 @@ blockquote,
   .footer-nav {
     align-items: start;
     flex-direction: row;
-    gap: clamp(4rem, 10vw, 6rem);
+    gap: clamp(5.5rem, 13vw, 9rem);
     justify-content: flex-end;
     margin-left: auto;
     max-width: 100%;
@@ -1808,7 +1791,7 @@ blockquote,
 
   .footer-nav {
     flex-direction: row;
-    gap: 6rem;
+    gap: 9rem;
     grid-column: 6 / -1;
     justify-content: flex-end;
     margin-top: -1.5rem;
@@ -1846,13 +1829,7 @@ blockquote,
 @media (max-width: 768px) {
   .footer-section {
     min-height: 0;
-    background: linear-gradient(
-      180deg,
-      #04143c 0%,
-      #0a2168 38%,
-      #000c22 58%,
-      #000c22 100%
-    );
+    background: #000c22;
   }
 
   .footer-shell {
@@ -3017,7 +2994,10 @@ div.section-edge-seam-cover-light {
   }
 
   .reputation-label__text {
-    font-size: clamp(0.875rem, 1.25vw, 0.9375rem);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 14px;
   }
 
   .reputation-heading {
@@ -3141,7 +3121,7 @@ div.section-edge-seam-cover-light {
     height: auto;
     padding-bottom: calc(var(--section-edge-height) + 4.375rem);
     padding-inline: 3rem;
-    padding-top: calc(var(--section-edge-height) + 2rem);
+    padding-top: calc(var(--section-edge-height) + 3rem);
   }
 
   .reputation-label {
@@ -3149,7 +3129,10 @@ div.section-edge-seam-cover-light {
   }
 
   .reputation-label__text {
-    font-size: 0.9375rem;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 14px;
   }
 
   .reputation-heading {
@@ -3949,6 +3932,10 @@ div.section-edge-seam-cover-light {
 
   .about-stats-row {
     min-height: 487px;
+  }
+
+  .footer-cta__right {
+    padding-left: 0.5rem;
   }
 }
 

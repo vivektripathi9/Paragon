@@ -18,34 +18,15 @@ const legalLinks = [
 export default function Footer() {
   return (
     <footer className="footer-section relative z-[1] w-full section-edge-overlap overflow-hidden bg-[#000C22] pb-0">
-      <div className="footer-bg max-[768px]:hidden" aria-hidden>
+      <div className="footer-bg max-[767px]:hidden" aria-hidden>
         <img
-          src="/icons/footer-overlay-desktop.svg"
+          src="/icons/footer-bg.svg"
           alt=""
           width={1440}
           height={884}
           className="footer-bg__img max-w-none"
         />
-        <img
-          src="/icons/footer-bg-desktop.svg"
-          alt=""
-          width={1440}
-          height={884}
-          className="footer-bg__overlay max-w-none"
-        />
       </div>
-      <div className="footer-bg-mobile max-[768px]:block min-[769px]:hidden" aria-hidden>
-        <div className="footer-bg-mobile__layer">
-          <img
-            src="/icons/footer-vector.svg"
-            alt=""
-            width={209}
-            height={581}
-            className="h-[581px] w-[209px] max-w-none"
-          />
-        </div>
-      </div>
-      <div className="hero-bg-grain" aria-hidden />
 
       <div className="footer-shell relative z-[2] mx-auto w-full min-w-0 max-w-[1440px] overflow-x-hidden max-[768px]:max-w-[402px] max-[768px]:px-5 max-[768px]:pb-8">
         <div className="footer-cta flex min-w-0 flex-col border-b border-white/10">
