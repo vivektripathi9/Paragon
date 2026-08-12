@@ -101,8 +101,8 @@ function CalculatorCard() {
 export function CalculatorContent() {
   return (
     <div className="calculator-shell relative z-[2] isolate mx-auto w-full max-w-[1440px] px-12 pb-[calc(7rem+var(--section-edge-height))] pt-12 max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(6rem+var(--section-edge-height))] max-md:pt-6">
-      <div className="calculator-block grid min-w-0 items-center gap-10 max-md:grid-cols-1 max-md:gap-6 min-[768px]:max-[1195px]:grid-cols-2 min-[768px]:max-[1195px]:gap-6 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
-        <div className="calculator-copy-wrap relative z-[3] min-w-0 max-md:order-2 min-[768px]:max-[1195px]:order-1 min-[768px]:max-[1195px]:col-start-1 min-[1195px]:order-1">
+      <div className="calculator-block grid min-w-0 items-center gap-10 max-md:grid-cols-1 max-md:gap-6 min-[768px]:max-[1194px]:grid-cols-2 min-[768px]:max-[1194px]:gap-6 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
+        <div className="calculator-copy-wrap relative z-[3] min-w-0 max-md:order-2 min-[768px]:max-[1194px]:order-1 min-[768px]:max-[1194px]:col-start-1 min-[1195px]:order-1">
           <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
             <SectionLabelIcon variant="dark" />
             <span className="font-subheading text-sm font-semibold text-[#B0CCFF] min-[1195px]:text-[0.9375rem]">
@@ -136,7 +136,7 @@ export function CalculatorContent() {
           </Link>
         </div>
 
-        <div className="calculator-cube-wrap relative z-[1] flex w-full min-w-0 justify-center max-md:order-1 min-[768px]:max-[1195px]:order-2 min-[768px]:max-[1195px]:col-start-2 min-[1195px]:order-2 min-[1195px]:justify-end">
+        <div className="calculator-cube-wrap relative z-[1] flex w-full min-w-0 justify-center max-md:order-1 min-[768px]:max-[1194px]:order-2 min-[768px]:max-[1194px]:col-start-2 min-[1195px]:order-2 min-[1195px]:justify-end">
           <CalculatorCard />
         </div>
       </div>

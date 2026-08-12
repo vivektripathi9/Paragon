@@ -52,7 +52,7 @@ function NavLink({
       href={href}
       onClick={onNavigate}
       aria-current={isActive ? "page" : undefined}
-      className={`font-subheading group relative inline-grid items-center text-[16px] leading-[18.2px] tracking-[-0.5px] text-[#FFFFFF] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#31EE97] after:opacity-0 after:transition-opacity hover:after:opacity-100 max-md:pb-0 md:pb-1 ${className}`}
+      className={`paragon-nav__link font-subheading group relative inline-grid items-center text-[16px] leading-[18.2px] tracking-[-0.5px] text-[#FFFFFF] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#31EE97] after:opacity-0 after:transition-opacity hover:after:opacity-100 max-md:pb-0 md:pb-1 ${className}`}
     >
       {/* Invisible semibold copy reserves width so hover weight doesn't reflow the nav */}
       <span
@@ -99,7 +99,7 @@ export default function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 bg-transparent pt-[env(safe-area-inset-top)]">
       <nav
-        className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 md:max-lg:px-8 lg:px-12"
+        className="paragon-nav mx-auto flex w-full max-w-[1440px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 md:max-lg:px-8 lg:px-12"
         aria-label="Main navigation"
       >
         <Link href="/" className="relative z-[60] shrink-0">
@@ -108,12 +108,12 @@ export default function Navbar() {
             alt="Paragon"
             width={146}
             height={40}
-            className="h-8 w-auto lg:h-9"
+            className="paragon-nav__logo h-8 w-auto lg:h-9"
           />
         </Link>
 
-        <div className="flex items-center gap-3 sm:gap-4 lg:gap-10">
-          <ul className="hidden items-center gap-5 md:max-lg:flex md:max-lg:gap-6 lg:flex lg:gap-8">
+        <div className="paragon-nav__cluster flex items-center gap-3 sm:gap-4 lg:gap-10">
+          <ul className="paragon-nav__links hidden items-center gap-5 md:max-lg:flex md:max-lg:gap-6 lg:flex lg:gap-8">
             {navLinks.map(({ href, label }) => {
               const isActive =
                 href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -133,7 +133,7 @@ export default function Navbar() {
 
           <Link
             href="/calculator"
-            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-[16px] font-semibold leading-[18.2px] tracking-[-0.5px] text-black transition-opacity hover:opacity-90 md:max-lg:inline-flex lg:inline-flex lg:px-6"
+            className="paragon-nav__cta bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-[16px] font-semibold leading-[18.2px] tracking-[-0.5px] text-black transition-opacity hover:opacity-90 md:max-lg:inline-flex lg:inline-flex lg:px-6"
           >
             Calculator
           </Link>

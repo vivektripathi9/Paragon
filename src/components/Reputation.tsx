@@ -9,7 +9,7 @@ function QuoteIcon() {
         alt=""
         width={192}
         height={185}
-        className="reputation-quote-icon__img min-[768px]:max-[1195px]:!ml-[clamp(3rem,6.7vw,5rem)] min-[768px]:max-[1195px]:!mt-[clamp(3.75rem,8vw,6rem)] min-[768px]:max-[1195px]:!h-auto"
+        className="reputation-quote-icon__img min-[768px]:max-[1194px]:!ml-[clamp(3rem,6.7vw,5rem)] min-[768px]:max-[1194px]:!mt-[clamp(3.75rem,8vw,6rem)] min-[768px]:max-[1194px]:!h-auto"
       />
     </div>
   );
@@ -126,7 +126,7 @@ export default function Reputation() {
                   advisor.
                 </p>
               </div>
-              <div className="reputation-quote__text reputation-quote__text--tablet hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] md:max-[1195px]:block">
+              <div className="reputation-quote__text reputation-quote__text--tablet hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] md:max-[1194px]:block">
                 <p>
                   <span className="block whitespace-nowrap">
                     Over the past five years, RP Management has done 10 defeasance

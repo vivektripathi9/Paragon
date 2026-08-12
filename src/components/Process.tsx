@@ -19,7 +19,7 @@ function ProcessGraphic() {
         alt=""
         width={439}
         height={439}
-        className="process-cube-tablet mx-auto h-auto w-full max-w-full object-contain opacity-100 max-md:hidden min-[768px]:max-[1195px]:block min-[1195px]:hidden"
+        className="process-cube-tablet mx-auto h-auto w-full max-w-full object-contain opacity-100 max-md:hidden min-[768px]:max-[1194px]:block min-[1195px]:hidden"
         aria-hidden
       />
       <div
@@ -34,12 +34,12 @@ export default function Process() {
   return (
     <section className="process-section full-bleed relative z-[3] section-edge-overlap overflow-hidden bg-[#000C22] pb-0">
       <div className="process-shell relative z-[2] isolate mx-auto w-full max-w-[1440px] px-12 pb-24 pt-20 max-md:max-w-[402px] max-md:px-5 max-md:pb-6 max-md:pt-[var(--section-edge-height)]">
-        <div className="process-block grid min-w-0 items-center gap-8 max-md:grid-cols-1 min-[768px]:max-[1195px]:grid-cols-2 min-[768px]:max-[1195px]:gap-6 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
-          <div className="process-cube-wrap relative z-[1] max-md:mx-auto min-[768px]:max-[1195px]:order-1 min-[768px]:max-[1195px]:col-start-1 min-[1195px]:justify-self-start">
+        <div className="process-block grid min-w-0 items-center gap-8 max-md:grid-cols-1 min-[768px]:max-[1194px]:grid-cols-2 min-[768px]:max-[1194px]:gap-6 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
+          <div className="process-cube-wrap relative z-[1] max-md:mx-auto min-[768px]:max-[1194px]:order-1 min-[768px]:max-[1194px]:col-start-1 min-[1195px]:justify-self-start">
             <ProcessGraphic />
           </div>
 
-          <div className="process-copy-wrap relative z-[3] min-w-0 max-md:pt-4 min-[768px]:max-[1195px]:order-2 min-[768px]:max-[1195px]:col-start-2 min-[1195px]:pt-6">
+          <div className="process-copy-wrap relative z-[3] min-w-0 max-md:pt-4 min-[768px]:max-[1194px]:order-2 min-[768px]:max-[1194px]:col-start-2 min-[1195px]:pt-6">
             <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
               <SectionLabelIcon variant="dark" />
               <span className="font-subheading text-sm font-semibold text-[#B0CCFF] min-[1195px]:text-[0.9375rem]">

@@ -103,14 +103,14 @@ export default function Services() {
     <section className="services-section full-bleed relative z-[4] section-edge-overlap overflow-visible bg-[#F0F3FC] max-md:h-auto max-md:min-h-0 md:h-auto min-[1195px]:min-h-[899px]">
       <div className="services-shell mx-auto flex w-full min-h-0 max-w-[1440px] flex-col px-12 pb-0 pt-[calc(var(--section-edge-height)+1.5rem)] max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(var(--section-edge-height)+3.5rem)] max-md:pt-[calc(var(--section-edge-height)+2.5rem)] md:min-h-0 min-[1195px]:px-12 min-[1195px]:pb-[calc(var(--section-edge-height)+2.5rem)] min-[1195px]:pt-[calc(var(--section-edge-height)+2rem)]">
         <header className="w-full">
-          <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
+          <div className="services-label mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
             <SectionLabelIcon variant="light" />
-            <span className="font-subheading text-[16px] font-semibold leading-[14px] tracking-[-0.5px] text-[#1E4FFF]">
+            <span className="section-label__text font-subheading text-[16px] font-semibold leading-[14px] tracking-[-0.5px] text-[#1E4FFF]">
               Our Services
             </span>
           </div>
 
-          <h2 className="font-heading h-[68px] w-full max-w-[1360px] text-[54px] !font-medium leading-[68px] tracking-[-2px] text-paragon-navy max-md:h-auto max-md:max-w-[362px] max-md:text-[36px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1194px]:h-auto md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(2rem,3.75vw,2.625rem)] md:max-[1194px]:leading-[clamp(2.75rem,4.8vw,3.5rem)] md:max-[1194px]:tracking-[-1.5px] min-[1195px]:text-[54px] min-[1195px]:leading-[68px] min-[1195px]:tracking-[-2px]">
+          <h2 className="services-heading font-heading h-[68px] w-full max-w-[1360px] text-[54px] !font-medium leading-[68px] tracking-[-2px] text-paragon-navy max-md:h-auto max-md:max-w-[362px] max-md:text-[36px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1194px]:h-auto md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(2rem,3.75vw,2.625rem)] md:max-[1194px]:leading-[clamp(2.75rem,4.8vw,3.5rem)] md:max-[1194px]:tracking-[-1.5px] min-[1195px]:text-[54px] min-[1195px]:leading-[68px] min-[1195px]:tracking-[-2px]">
             <span className="max-md:hidden">Services for every stage</span>
             <span className="hidden max-md:block">
               <span className="block whitespace-nowrap">Services for every</span>
@@ -118,7 +118,7 @@ export default function Services() {
             </span>
           </h2>
 
-          <p className="mt-4 w-full max-w-[776px] font-sans text-[0.9375rem] font-medium leading-[1.4] tracking-[-0.25px] text-[#000C22B2] max-md:mt-4 md:max-[1194px]:mt-3 md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(0.875rem,1.5vw,0.9375rem)] md:max-[1194px]:leading-[1.45] min-[1195px]:mt-5 min-[1195px]:h-[28px] min-[1195px]:text-[20px] min-[1195px]:leading-[28px]">
+          <p className="services-intro mt-4 w-full max-w-[776px] font-sans text-[0.9375rem] font-medium leading-[1.4] tracking-[-0.25px] text-[#000C22B2] max-md:mt-4 md:max-[1194px]:mt-3 md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(0.875rem,1.5vw,0.9375rem)] md:max-[1194px]:leading-[1.45] min-[1195px]:mt-5 min-[1195px]:h-[28px] min-[1195px]:text-[20px] min-[1195px]:leading-[28px]">
             <span className="max-md:hidden">
               Paragon&apos;s services are tailored to the needs borrowers face
               during defeasance
