@@ -244,7 +244,7 @@ export default function Difference() {
           <img
             src="/icons/Group 13.svg"
             alt=""
-            className="difference-decor-desktop__tr difference-decor-desktop__tr--desktop difference-decor-desktop__tr--edge-locked min-[1024px]:max-[1260px]:translate-x-[5px] min-[1260px]:max-[1342px]:translate-x-[11px] min-[1342px]:translate-x-[18px]"
+            className="difference-decor-desktop__tr difference-decor-desktop__tr--desktop difference-decor-desktop__tr--edge-locked max-md:translate-x-[2px] min-[1024px]:max-[1184px]:translate-x-[5px] min-[1184px]:max-[1260px]:translate-x-[5.5px] min-[1260px]:max-[1342px]:translate-x-[11px] min-[1342px]:max-[1440px]:translate-x-[18px] min-[1440px]:translate-x-[18.5px]"
             style={
               {
                 "--diff-tr-w":
