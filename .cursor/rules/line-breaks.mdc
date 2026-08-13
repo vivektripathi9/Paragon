@@ -1,0 +1,55 @@
+---
+description: Locked line-break workflow for Paragon sections (mobile / tablet / desktop)
+globs: src/components/**/*.tsx,src/app/globals.css
+alwaysApply: true
+---
+
+# Line breaks
+
+User pastes a screenshot per band. Lock **those exact wraps**. Do not invent new rag.
+
+Hero, About, Difference, Services, and Process/Calculator desktop are done. Remaining: Navbar, Process/Calculator (tablet/mobile), Reputation, Footer.
+
+## Markup
+
+Three separate copy blocks. Never one block that reflows.
+
+```tsx
+<span className="hidden min-[1200px]:!block">
+  <span className="block whitespace-nowrap">desktop line 1</span>
+</span>
+<span className="hidden md:max-[1200px]:!block">
+  <span className="block whitespace-nowrap">tablet line 1</span>
+</span>
+<span className="md:hidden">
+  <span className="block whitespace-nowrap">mobile line 1</span>
+</span>
+```
+
+If a band’s screenshot matches an existing block, keep it — only add nowrap / cqw so it holds across the full band.
+
+## Scale, don’t reflow
+
+Locked nowrap rows that overflow must shrink via `cqw` on `.block`, not wrap. Give the container a definite width (`w-full` or max-width) before using `container-type: inline-size` — nowrap + cqw on a shrink-to-fit parent collapses to 0.
+
+```css
+@media (min-width: 768px) and (width < 1200px) {
+  .section-copy { container-type: inline-size; }
+  .section-copy__tablet > .block {
+    font-size: min(1em, calc(100cqw * DESIGN_PX / LONGEST_ROW_PX)) !important;
+  }
+}
+```
+
+Measure `LONGEST_ROW_PX` at the design size for that band.
+
+## Do not
+
+- Do not wrap/stack/move CTAs to “make text bigger”.
+- Do not change 821px+ while fixing 768–820 (use `@media (min-width: 768px) and (width < 821px)`).
+- Do not use `md:!px-*` on hero/section CTAs if CSS already sets padding — `!` utilities beat later CSS.
+- Do not restyle other sections in the same pass.
+
+## New-chat prompt
+
+> Lock line breaks for **[section]** **[mobile | tablet | desktop]** only. Breakpoints: mobile &lt;768, tablet 768–1199 (`md:max-[1200px]`), desktop 1200+. Screenshot is the spec. Do not change button position, layout, or other bands/sections. Hero, About, Difference, Services, and Process/Calculator desktop are already done.

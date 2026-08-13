@@ -48,7 +48,7 @@ export default function Process() {
             </div>
 
             <h2 className="process-copy__title font-heading w-full font-medium text-white max-md:max-w-[362px] max-md:text-[34px] max-md:leading-[45px] max-md:tracking-[-1.5px]">
-              <span className="max-md:hidden">
+              <span className="process-copy__title-desktop hidden min-[1200px]:!block">
                 <span className="block whitespace-nowrap">
                   A process built backward
                 </span>
@@ -56,21 +56,84 @@ export default function Process() {
                   from your closing date
                 </span>
               </span>
-              <span className="hidden max-md:block">
+              <span className="process-copy__title-tablet hidden md:max-[1200px]:!block">
+                <span className="block whitespace-nowrap">
+                  A process built backward
+                </span>
+                <span className="block whitespace-nowrap">
+                  from your closing date
+                </span>
+              </span>
+              <span className="md:hidden">
                 A process built backward from your closing date
               </span>
             </h2>
 
             <div className="process-copy__stack mt-5 flex flex-col gap-4 max-md:mt-5 max-md:max-w-[367px] max-md:min-h-[156px] min-[1195px]:mt-5 min-[1195px]:gap-4">
               <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC] min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
-                Every defeasance follows a sequence. The challenge is that the
-                timing is driven by a transaction with its own closing deadline.
+                <span className="process-copy__body-desktop hidden min-[1200px]:!block">
+                  <span className="block whitespace-nowrap">
+                    Every defeasance follows a sequence. The challenge is that
+                    the timing is
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    driven by a transaction with its own closing deadline.
+                  </span>
+                </span>
+                <span className="process-copy__body-tablet hidden md:max-[1200px]:!block">
+                  <span className="block whitespace-nowrap">
+                    Every defeasance follows a sequence. The challenge is that
+                    the timing
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    is driven by a transaction with its own closing deadline.
+                  </span>
+                </span>
+                <span className="md:hidden">
+                  Every defeasance follows a sequence. The challenge is that the
+                  timing is driven by a transaction with its own closing
+                  deadline.
+                </span>
               </p>
               <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC] min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
-                Paragon works backward from that date. Servicer requirements,
-                securities structuring, documentation, and approvals are
-                addressed before they become urgent. By the time a request
-                arrives, the work behind it is already done.
+                <span className="process-copy__body-desktop hidden min-[1200px]:!block">
+                  <span className="block whitespace-nowrap">
+                    Paragon works backward from that date. Servicer
+                    requirements, securities
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    structuring, documentation, and approvals are addressed
+                    before they
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    become urgent. By the time a request arrives, the work
+                    behind it is already
+                  </span>
+                  <span className="block whitespace-nowrap">done.</span>
+                </span>
+                <span className="process-copy__body-tablet hidden md:max-[1200px]:!block">
+                  <span className="block whitespace-nowrap">
+                    Paragon works backward from that date. Servicer
+                    requirements,
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    securities structuring, documentation, and approvals are
+                    addressed
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    before they become urgent. By the time a request arrives,
+                    the work
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    behind it is already done.
+                  </span>
+                </span>
+                <span className="md:hidden">
+                  Paragon works backward from that date. Servicer requirements,
+                  securities structuring, documentation, and approvals are
+                  addressed before they become urgent. By the time a request
+                  arrives, the work behind it is already done.
+                </span>
               </p>
             </div>
 

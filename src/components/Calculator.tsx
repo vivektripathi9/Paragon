@@ -111,19 +111,84 @@ export function CalculatorContent() {
           </div>
 
           <h2 className="calculator-copy__title font-heading w-full font-medium text-white max-[768px]:max-w-[362px] max-[768px]:text-[34px] max-[768px]:leading-[45px] max-[768px]:!tracking-[-1.5px]">
-            Estimate defeasance cost
+            <span className="calculator-copy__title-desktop hidden min-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                Estimate defeasance cost
+              </span>
+            </span>
+            <span className="calculator-copy__title-tablet hidden md:max-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                Estimate defeasance cost
+              </span>
+            </span>
+            <span className="md:hidden">Estimate defeasance cost</span>
           </h2>
 
           <div className="calculator-copy__stack mt-5 flex w-full flex-col gap-6 min-[1195px]:mt-6 min-[1195px]:gap-6">
             <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
-              Paragon&apos;s calculator pulls your loan data from Trepp&apos;s
-              market-leading commercial real estate loan database so you can
-              weigh the cost of defeasance or prepayment against the economics
-              of your sale, refinance, or recapitalization.
+              <span className="calculator-copy__body-desktop hidden min-[1200px]:!block">
+                <span className="block whitespace-nowrap">
+                  Paragon&apos;s calculator pulls your loan data from
+                  Trepp&apos;s market-leading
+                </span>
+                <span className="block whitespace-nowrap">
+                  commercial real estate loan database so you can weigh the cost
+                  of
+                </span>
+                <span className="block whitespace-nowrap">
+                  defeasance or prepayment against the economics of your sale,
+                  refinance,
+                </span>
+                <span className="block whitespace-nowrap">
+                  or recapitalization.
+                </span>
+              </span>
+              <span className="calculator-copy__body-tablet hidden md:max-[1200px]:!block">
+                <span className="block whitespace-nowrap">
+                  Paragon&apos;s calculator pulls your loan data from
+                  Trepp&apos;s market-leading
+                </span>
+                <span className="block whitespace-nowrap">
+                  commercial real estate loan database so you can weigh the cost
+                  of
+                </span>
+                <span className="block whitespace-nowrap">
+                  defeasance or prepayment against the economics of your sale,
+                </span>
+                <span className="block whitespace-nowrap">
+                  refinance, or recapitalization.
+                </span>
+              </span>
+              <span className="md:hidden">
+                Paragon&apos;s calculator pulls your loan data from Trepp&apos;s
+                market-leading commercial real estate loan database so you can
+                weigh the cost of defeasance or prepayment against the economics
+                of your sale, refinance, or recapitalization.
+              </span>
             </p>
             <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
-              Save your estimate, compare scenarios, and share results with your
-              counsel or deal team through the Paragon portal.
+              <span className="calculator-copy__body-desktop hidden min-[1200px]:!block">
+                <span className="block whitespace-nowrap">
+                  Save your estimate, compare scenarios, and share results with
+                  your counsel
+                </span>
+                <span className="block whitespace-nowrap">
+                  or deal team through the Paragon portal.
+                </span>
+              </span>
+              <span className="calculator-copy__body-tablet hidden md:max-[1200px]:!block">
+                <span className="block whitespace-nowrap">
+                  Save your estimate, compare scenarios, and share results with
+                  your
+                </span>
+                <span className="block whitespace-nowrap">
+                  counsel or deal team through the Paragon portal.
+                </span>
+              </span>
+              <span className="md:hidden">
+                Save your estimate, compare scenarios, and share results with
+                your counsel or deal team through the Paragon portal.
+              </span>
             </p>
           </div>
 

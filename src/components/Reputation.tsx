@@ -28,14 +28,53 @@ export default function Reputation() {
           </div>
 
           <h2 className="reputation-heading font-heading font-medium text-paragon-navy">
-            Recommended by the professionals
+            <span className="reputation-heading__desktop hidden min-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                Recommended by the professionals
+              </span>
+            </span>
+            <span className="reputation-heading__tablet hidden md:max-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                Recommended by the professionals
+              </span>
+            </span>
+            <span className="md:hidden">Recommended by the professionals</span>
           </h2>
 
           <p className="reputation-intro mt-5 font-sans font-medium tracking-[-0.25px] text-[#000C22B2]">
-            The specialists responsible for reviewing defeasance transactions at
-            many of the nation&apos;s largest CMBS servicer organizations
-            regularly recommend Paragon because our transactions arrive complete,
-            organized, and ready for review.
+            <span className="reputation-intro__desktop hidden min-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                The specialists responsible for reviewing defeasance
+                transactions at many of
+              </span>
+              <span className="block whitespace-nowrap">
+                the nation&apos;s largest CMBS servicer organizations regularly
+                recommend Paragon
+              </span>
+              <span className="block whitespace-nowrap">
+                because our transactions arrive complete, organized, and ready
+                for review.
+              </span>
+            </span>
+            <span className="reputation-intro__tablet hidden md:max-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                The specialists responsible for reviewing defeasance
+                transactions at many of the nation&apos;s largest
+              </span>
+              <span className="block whitespace-nowrap">
+                CMBS servicer organizations regularly recommend Paragon because
+                our transactions arrive
+              </span>
+              <span className="block whitespace-nowrap">
+                complete, organized, and ready for review.
+              </span>
+            </span>
+            <span className="md:hidden">
+              The specialists responsible for reviewing defeasance transactions
+              at many of the nation&apos;s largest CMBS servicer organizations
+              regularly recommend Paragon because our transactions arrive
+              complete, organized, and ready for review.
+            </span>
           </p>
         </header>
 
@@ -110,32 +149,19 @@ export default function Reputation() {
                   </span>
                 </p>
               </div>
-              <div className="reputation-quote__text reputation-quote__text--natural hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] min-[1196px]:block">
-                <p>
-                  Over the past five years, RP Management has done 10 defeasance
-                  transactions with Paragon. Working with Paragon was a great
-                  experience from start to finish. Kevin was organized, answered
-                  our questions, addressed our concerns, and kept us informed along
-                  the way.
-                </p>
-                <p className="mt-4">
-                  We will use Paragon for our future defeasances due to them
-                  providing us with confidence for a smooth transaction and peace
-                  of mind that each transaction will close as promised. I highly
-                  recommend Paragon to anyone seeking a trusted defeasance
-                  advisor.
-                </p>
-              </div>
-              <div className="reputation-quote__text reputation-quote__text--tablet hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] md:max-[1194px]:block">
+              <div className="reputation-quote__text reputation-quote__text--desktop hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] min-[1200px]:!block">
                 <p>
                   <span className="block whitespace-nowrap">
-                    Over the past five years, RP Management has done 10 defeasance
+                    Over the past five years, RP Management has done 10
+                    defeasance
                   </span>
                   <span className="block whitespace-nowrap">
-                    transactions with Paragon. Working with Paragon was a great experience
+                    transactions with Paragon. Working with Paragon was a great
+                    experience
                   </span>
                   <span className="block whitespace-nowrap">
-                    from start to finish. Kevin was organized, answered our questions,
+                    from start to finish. Kevin was organized, answered our
+                    questions,
                   </span>
                   <span className="block whitespace-nowrap">
                     addressed our concerns, and kept us informed along the way.
@@ -143,16 +169,55 @@ export default function Reputation() {
                 </p>
                 <p className="mt-4">
                   <span className="block whitespace-nowrap">
-                    We will use Paragon for our future defeasances due to them providing us
+                    We will use Paragon for our future defeasances due to them
+                    providing us
                   </span>
                   <span className="block whitespace-nowrap">
-                    with confidence for a smooth transaction and peace of mind that each
+                    with confidence for a smooth transaction and peace of mind
+                    that each
                   </span>
                   <span className="block whitespace-nowrap">
-                    transaction will close as promised. I highly recommend Paragon to anyone
+                    transaction will close as promised. I highly recommend
+                    Paragon to anyone
                   </span>
                   <span className="block whitespace-nowrap">
                     seeking a trusted defeasance advisor.
+                  </span>
+                </p>
+              </div>
+              <div className="reputation-quote__text reputation-quote__text--tablet hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] md:max-[1200px]:!block">
+                <p>
+                  <span className="block whitespace-nowrap">
+                    Over the past five years, RP Management has done 10
+                    defeasance transactions
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    with Paragon. Working with Paragon was a great experience
+                    from start to finish.
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    Kevin was organized, answered our questions, addressed our
+                    concerns, and kept
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    us informed along the way.
+                  </span>
+                </p>
+                <p className="mt-4">
+                  <span className="block whitespace-nowrap">
+                    We will use Paragon for our future defeasances due to them
+                    providing us with
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    confidence for a smooth transaction and peace of mind that
+                    each transaction will
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    close as promised. I highly recommend Paragon to anyone
+                    seeking a trusted
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    defeasance advisor.
                   </span>
                 </p>
               </div>

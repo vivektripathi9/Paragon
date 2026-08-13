@@ -1,35 +1,29 @@
 ---
-description: Mobile-only responsive work must not change desktop (lg+) layout
+description: Paragon 3-band breakpoints — never leak layout across mobile/tablet/desktop
 alwaysApply: true
 ---
 
-# Mobile vs desktop (Paragon)
+# Breakpoints (Paragon)
 
-Unless the user **explicitly** asks to change desktop, treat all layout work as **mobile-only** (`< lg`, 1024px).
+Ignore XL (1600+). Work only in these three bands:
 
-## Required pattern: desktop-first + `max-lg:`
+| Band | Width | Target with |
+|---|---|---|
+| **Mobile** | `< 768px` | `max-md:` / `@media (max-width: 767px)` |
+| **Tablet** | `768px–1199px` | `md:max-[1200px]:` / `@media (min-width: 768px) and (width < 1200px)` |
+| **Desktop** | `1200px+` | `min-[1200px]:` / `@media (min-width: 1200px)` |
 
-- **Default (unprefixed) classes = desktop** — match existing `lg` specs.
-- **Mobile overrides only** via `max-lg:` — never the other way around.
+Tailwind v4: `max-[1200px]` is `width < 1200px` (includes 1199). Never use `max-[1199px]` — it leaves a 1px gap. Do not remap `lg` (still 1024).
 
-```tsx
-// ❌ BAD — mobile base bleeds into desktop unless every prop has lg: reset
-<section className="h-[852px] lg:h-[894px]">
-<div className="flex justify-between lg:block">
+## Isolation
 
-// ✅ GOOD — desktop is base; mobile adds max-lg: only
-<section className="h-[894px] max-lg:h-[852px]">
-<div className="max-lg:flex max-lg:justify-between">
-```
-
-## Markup and assets
-
-- Different copy/line breaks: two blocks — `max-lg:hidden` (desktop) and `hidden max-lg:block` (mobile).
-- Different backgrounds/images: separate wrappers — `max-lg:block lg:hidden` vs `hidden lg:block`.
-- Do not share one `Image`/`className` when mobile and desktop differ materially.
+- Change **only the band + section the user named**. Other bands and sections stay as-is.
+- Unprefixed classes = desktop. Add tablet/mobile as overrides (`max-md:`, `md:max-[1200px]:`).
+- Do not move/resize buttons, shells, or images unless the user asks. Line-break work is copy-only.
+- Many sections still use `1194` / `1195`. Shift a section to 1200 only while editing that section’s line breaks.
 
 ## Before finishing
 
-- Confirm no unprefixed class was added that changes desktop without a matching desktop spec.
-- Do not remove or weaken existing `lg:` / desktop layout unless asked.
-- Tablet (`md`/`sm`) follows mobile unless the user says otherwise.
+- Confirm desktop (`min-[1200px]`) still matches the last approved desktop spec.
+- Confirm tablet buttons/layout did not wrap, stack, or shift.
+- Confirm mobile (`< 768`) still uses the mobile copy block, not tablet.

@@ -17,11 +17,29 @@ const services: {
     title: "1. Defeasance Advisory",
     description: (
       <>
-        <span className="max-md:hidden">
-          Complimentary review of your loan documents, timing constraints, and
-          transaction objectives before you commit to a course of action.
+        <span className="services-card__copy-desktop hidden min-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            Complimentary review of your loan documents,
+          </span>
+          <span className="block whitespace-nowrap">
+            timing constraints, and transaction objectives
+          </span>
+          <span className="block whitespace-nowrap">
+            before you commit to a course of action.
+          </span>
         </span>
-        <span className="services-card__copy-mobile hidden max-md:block">
+        <span className="services-card__copy-tablet hidden md:max-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            Complimentary review of your loan documents,
+          </span>
+          <span className="block whitespace-nowrap">
+            timing constraints, and transaction objectives
+          </span>
+          <span className="block whitespace-nowrap">
+            before you commit to a course of action.
+          </span>
+        </span>
+        <span className="services-card__copy-mobile md:hidden">
           <span className="block whitespace-nowrap">
             Complimentary review of your loan documents,
           </span>
@@ -42,21 +60,35 @@ const services: {
     title: "2. Defeasance Execution",
     description: (
       <>
-        <span className="services-card__copy-locked max-md:hidden">
-          <span className="block">
+        <span className="services-card__copy-desktop hidden min-[1200px]:!block">
+          <span className="block whitespace-nowrap">
             Active transaction management, including
           </span>
-          <span className="block">
+          <span className="block whitespace-nowrap">
             structuring the securities portfolio, coordinating
           </span>
-          <span className="block">
+          <span className="block whitespace-nowrap">
             across multiple stakeholders, and managing the
           </span>
-          <span className="block">
+          <span className="block whitespace-nowrap">
             process from servicer review through closing.
           </span>
         </span>
-        <span className="services-card__copy-mobile hidden max-md:block">
+        <span className="services-card__copy-tablet hidden md:max-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            Active transaction management, including
+          </span>
+          <span className="block whitespace-nowrap">
+            structuring the securities portfolio, coordinating
+          </span>
+          <span className="block whitespace-nowrap">
+            across multiple stakeholders, and managing the
+          </span>
+          <span className="block whitespace-nowrap">
+            process from servicer review through closing.
+          </span>
+        </span>
+        <span className="services-card__copy-mobile md:hidden">
           <span className="block whitespace-nowrap">
             Active transaction management, including
           </span>
@@ -80,11 +112,29 @@ const services: {
     title: "3. Legal Coordination",
     description: (
       <>
-        <span className="max-md:hidden">
-          When borrower-side defeasance counsel is needed, we connect you with
-          attorneys who specialize in this work.
+        <span className="services-card__copy-desktop hidden min-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            When borrower-side defeasance counsel is
+          </span>
+          <span className="block whitespace-nowrap">
+            needed, we connect you with attorneys who
+          </span>
+          <span className="block whitespace-nowrap">
+            specialize in this work.
+          </span>
         </span>
-        <span className="services-card__copy-mobile hidden max-md:block">
+        <span className="services-card__copy-tablet hidden md:max-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            When borrower-side defeasance counsel is
+          </span>
+          <span className="block whitespace-nowrap">
+            needed, we connect you with attorneys who
+          </span>
+          <span className="block whitespace-nowrap">
+            specialize in this work.
+          </span>
+        </span>
+        <span className="services-card__copy-mobile md:hidden">
           <span className="block whitespace-nowrap">
             When borrower-side defeasance counsel is needed,
           </span>
@@ -101,7 +151,7 @@ const services: {
 export default function Services() {
   return (
     <section className="services-section full-bleed relative z-[4] section-edge-overlap overflow-visible bg-[#F0F3FC] max-md:h-auto max-md:min-h-0 md:h-auto min-[1195px]:min-h-[899px]">
-      <div className="services-shell mx-auto flex w-full min-h-0 max-w-[1440px] flex-col px-12 pb-0 pt-[calc(var(--section-edge-height)+1.5rem)] max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(var(--section-edge-height)+3.5rem)] max-md:pt-[calc(var(--section-edge-height)+2.5rem)] md:min-h-0 min-[1195px]:px-12 min-[1195px]:pb-[calc(var(--section-edge-height)+2.5rem)] min-[1195px]:pt-[calc(var(--section-edge-height)+2rem)]">
+      <div className="services-shell mx-auto flex w-full min-h-0 max-w-[1440px] flex-col px-12 pb-0 pt-[calc(var(--section-edge-height)+1.5rem)] max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(var(--section-edge-height)+3.5rem)] max-md:pt-[calc(var(--section-edge-height)+2.5rem)] md:max-[1200px]:!max-w-none md:min-h-0 min-[1195px]:px-12 min-[1195px]:pb-[calc(var(--section-edge-height)+2.5rem)] min-[1195px]:pt-[calc(var(--section-edge-height)+2rem)]">
         <header className="w-full">
           <div className="services-label mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
             <SectionLabelIcon variant="light" />
@@ -111,19 +161,36 @@ export default function Services() {
           </div>
 
           <h2 className="services-heading font-heading h-[68px] w-full max-w-[1360px] text-[54px] !font-medium leading-[68px] tracking-[-2px] text-paragon-navy max-md:h-auto max-md:max-w-[362px] max-md:text-[36px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1194px]:h-auto md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(2rem,3.75vw,2.625rem)] md:max-[1194px]:leading-[clamp(2.75rem,4.8vw,3.5rem)] md:max-[1194px]:tracking-[-1.5px] min-[1195px]:text-[54px] min-[1195px]:leading-[68px] min-[1195px]:tracking-[-2px]">
-            <span className="max-md:hidden">Services for every stage</span>
-            <span className="hidden max-md:block">
+            <span className="services-heading__desktop hidden min-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                Services for every stage
+              </span>
+            </span>
+            <span className="services-heading__tablet hidden md:max-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                Services for every stage
+              </span>
+            </span>
+            <span className="services-heading__mobile md:hidden">
               <span className="block whitespace-nowrap">Services for every</span>
               <span className="block whitespace-nowrap">stage</span>
             </span>
           </h2>
 
           <p className="services-intro mt-4 w-full max-w-[776px] font-sans text-[0.9375rem] font-medium leading-[1.4] tracking-[-0.25px] text-[#000C22B2] max-md:mt-4 md:max-[1194px]:mt-3 md:max-[1194px]:max-w-full md:max-[1194px]:text-[clamp(0.875rem,1.5vw,0.9375rem)] md:max-[1194px]:leading-[1.45] min-[1195px]:mt-5 min-[1195px]:h-[28px] min-[1195px]:text-[20px] min-[1195px]:leading-[28px]">
-            <span className="max-md:hidden">
-              Paragon&apos;s services are tailored to the needs borrowers face
-              during defeasance
+            <span className="services-intro__desktop hidden min-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                Paragon&apos;s services are tailored to the needs borrowers face
+                during defeasance
+              </span>
             </span>
-            <span className="services-intro-mobile hidden max-md:block">
+            <span className="services-intro__tablet hidden md:max-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                Paragon&apos;s services are tailored to the needs borrowers face
+                during defeasance
+              </span>
+            </span>
+            <span className="services-intro-mobile md:hidden">
               <span className="block whitespace-nowrap">
                 Paragon&apos;s services are tailored to the needs
               </span>
@@ -134,7 +201,7 @@ export default function Services() {
           </p>
         </header>
 
-        <div className="services-grid mt-10 grid min-w-0 max-md:grid-cols-1 max-md:gap-10 md:max-[1194px]:grid-cols-3 md:max-[1194px]:gap-[clamp(1rem,2.5vw,2.5rem)] min-[1195px]:mt-20 min-[1195px]:min-h-0 min-[1195px]:w-full min-[1195px]:max-w-none min-[1195px]:grid-cols-3 min-[1195px]:gap-10">
+        <div className="services-grid mt-10 grid w-full min-w-0 max-md:grid-cols-1 max-md:gap-10 md:max-[1200px]:grid-cols-3 min-[1200px]:mt-20 min-[1200px]:min-h-0 min-[1200px]:w-full min-[1200px]:max-w-none min-[1200px]:grid-cols-3 min-[1200px]:gap-10">
           {services.map((service) => (
             <article
               key={service.title}

@@ -10,13 +10,19 @@ const features = [
     iconHeight: 82,
     title: (
       <>
-        <span className="hidden min-[766px]:block">
+        <span className="difference-feature__title-desktop hidden min-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            We know what servicers need
+          </span>
+          <span className="block whitespace-nowrap">before they ask for it.</span>
+        </span>
+        <span className="difference-feature__title-tablet hidden md:max-[1200px]:!block">
           <span className="block whitespace-nowrap">
             We know what servicers need before
           </span>
           <span className="block whitespace-nowrap">they ask for it.</span>
         </span>
-        <span className="min-[766px]:hidden">
+        <span className="difference-feature__title-mobile md:hidden">
           <span className="block whitespace-nowrap">We know what servicers</span>
           <span className="block whitespace-nowrap">
             need before they ask for
@@ -27,7 +33,22 @@ const features = [
     ),
     description: (
       <>
-        <span className="difference-feature__copy-locked hidden min-[766px]:block">
+        <span className="difference-feature__copy-desktop hidden min-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            Our team has worked inside major CMBS servicer
+          </span>
+          <span className="block whitespace-nowrap">
+            organizations. We know what each servicer requires,
+          </span>
+          <span className="block whitespace-nowrap">
+            what they{"\u2019"}ll question, and what {"\u201c"}complete{"\u201d"}{" "}
+            means
+          </span>
+          <span className="block whitespace-nowrap">
+            to the team approving the file.
+          </span>
+        </span>
+        <span className="difference-feature__copy-locked hidden md:max-[1200px]:!block">
           <span className="block whitespace-nowrap">
             Our team has worked inside major CMBS servicer
           </span>
@@ -42,7 +63,7 @@ const features = [
             the team approving the file.
           </span>
         </span>
-        <span className="min-[766px]:hidden">
+        <span className="difference-feature__copy-mobile md:hidden">
           <span className="block whitespace-nowrap">
             Our team has worked inside major
           </span>
@@ -69,7 +90,7 @@ const features = [
     iconHeight: 82,
     title: (
       <>
-        <span className="hidden min-[766px]:block">
+        <span className="difference-feature__title-desktop hidden min-[1200px]:!block">
           <span className="block whitespace-nowrap">
             Every deal is built to preempt
           </span>
@@ -77,7 +98,15 @@ const features = [
             problems, not react to them.
           </span>
         </span>
-        <span className="min-[766px]:hidden">
+        <span className="difference-feature__title-tablet hidden md:max-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            Every deal is built to preempt
+          </span>
+          <span className="block whitespace-nowrap">
+            problems, not react to them.
+          </span>
+        </span>
+        <span className="difference-feature__title-mobile md:hidden">
           <span className="block whitespace-nowrap">Every deal is built to</span>
           <span className="block whitespace-nowrap">preempt problems, not</span>
           <span className="block whitespace-nowrap">react to them.</span>
@@ -86,7 +115,19 @@ const features = [
     ),
     description: (
       <>
-        <span className="difference-feature__copy-locked hidden min-[766px]:block">
+        <span className="difference-feature__copy-desktop hidden min-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            We map the servicer{"\u2019"}s requirements against your
+          </span>
+          <span className="block whitespace-nowrap">
+            closing date before the process begins. The result is
+          </span>
+          <span className="block whitespace-nowrap">
+            fewer last-minute requests and surprises when
+          </span>
+          <span className="block whitespace-nowrap">timing matters most.</span>
+        </span>
+        <span className="difference-feature__copy-locked hidden md:max-[1200px]:!block">
           <span className="block whitespace-nowrap">
             We map the servicer{"\u2019"}s requirements against your
           </span>
@@ -98,7 +139,7 @@ const features = [
           </span>
           <span className="block whitespace-nowrap">matters most.</span>
         </span>
-        <span className="min-[766px]:hidden">
+        <span className="difference-feature__copy-mobile md:hidden">
           <span className="block whitespace-nowrap">
             We map the servicer{"\u2019"}s requirements
           </span>
@@ -123,16 +164,19 @@ const features = [
     iconHeight: 82,
     title: (
       <>
-        <span className="hidden min-[1000px]:block">
+        <span className="difference-feature__title-desktop hidden min-[1200px]:!block">
           <span className="block whitespace-nowrap">
             Senior-led execution on every
           </span>
           <span className="block whitespace-nowrap">transaction.</span>
         </span>
-        <span className="hidden min-[766px]:max-[999px]:block">
-          Senior-led execution on every transaction.
+        <span className="difference-feature__title-tablet hidden md:max-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            Senior-led execution on every
+          </span>
+          <span className="block whitespace-nowrap">transaction.</span>
         </span>
-        <span className="min-[766px]:hidden">
+        <span className="difference-feature__title-mobile md:hidden">
           <span className="block whitespace-nowrap">
             Senior-led execution on
           </span>
@@ -142,7 +186,19 @@ const features = [
     ),
     description: (
       <>
-        <span className="difference-feature__copy-locked hidden min-[766px]:block">
+        <span className="difference-feature__copy-desktop hidden min-[1200px]:!block">
+          <span className="block whitespace-nowrap">
+            You work directly with experienced professionals
+          </span>
+          <span className="block whitespace-nowrap">
+            who have personally closed defeasance
+          </span>
+          <span className="block whitespace-nowrap">
+            transactions, not with associates relaying
+          </span>
+          <span className="block whitespace-nowrap">messages.</span>
+        </span>
+        <span className="difference-feature__copy-locked hidden md:max-[1200px]:!block">
           <span className="block whitespace-nowrap">
             You work directly with experienced professionals who
           </span>
@@ -153,7 +209,7 @@ const features = [
             with associates relaying messages.
           </span>
         </span>
-        <span className="min-[766px]:hidden">
+        <span className="difference-feature__copy-mobile md:hidden">
           <span className="block whitespace-nowrap">
             You work directly with experienced
           </span>
@@ -188,7 +244,7 @@ export default function Difference() {
           <img
             src="/icons/Group 13.svg"
             alt=""
-            className="difference-decor-desktop__tr difference-decor-desktop__tr--desktop difference-decor-desktop__tr--edge-locked min-[1024px]:max-[1342px]:translate-x-[5px] min-[1342px]:translate-x-[18px]"
+            className="difference-decor-desktop__tr difference-decor-desktop__tr--desktop difference-decor-desktop__tr--edge-locked min-[1024px]:max-[1260px]:translate-x-[5px] min-[1260px]:max-[1342px]:translate-x-[11px] min-[1342px]:translate-x-[18px]"
             style={
               {
                 "--diff-tr-w":
@@ -220,11 +276,16 @@ export default function Difference() {
               What makes us different
             </span>
           </div>
-          <h2 className="font-heading w-full max-w-[min(42.5rem,100%)] text-[clamp(2.25rem,3.75vw,3.375rem)] font-medium leading-[clamp(2.95rem,4.8vw,4.375rem)] tracking-[-0.04em] text-white">
-            <span className="hidden min-[766px]:inline">
+          <h2 className="difference-heading font-heading w-full max-w-[min(42.5rem,100%)] text-[clamp(2.25rem,3.75vw,3.375rem)] font-medium leading-[clamp(2.95rem,4.8vw,4.375rem)] tracking-[-0.04em] text-white">
+            <span className="hidden min-[1200px]:inline">
               The Paragon difference
             </span>
-            <span className="min-[766px]:hidden">
+            <span className="difference-heading__tablet hidden md:max-[1200px]:!block">
+              <span className="block whitespace-nowrap">
+                The Paragon difference
+              </span>
+            </span>
+            <span className="difference-heading__mobile md:hidden">
               <span className="block whitespace-nowrap">The Paragon</span>
               <span className="block whitespace-nowrap">difference</span>
             </span>
