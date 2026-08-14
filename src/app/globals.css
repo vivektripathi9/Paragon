@@ -1331,6 +1331,15 @@ blockquote,
   line-height: 1.61;
 }
 
+/* Tablet locked service descriptions — Figma row breaks, scale to card width */
+.services-card__copy-tablet > .block {
+  display: block;
+  white-space: nowrap !important;
+  /* Longest row ~301px at 14px → 100 * 14 / 302 ≈ 4.635cqw */
+  font-size: min(1rem, 4.635cqw) !important;
+  line-height: 1.5;
+}
+
 /*
  * Mobile locked service descriptions — keep design row breaks.
  * Spec: Poppins 14px / 24px lh / -0.25 tracking; shrinks on narrower widths.
@@ -1798,15 +1807,24 @@ blockquote,
     gap: 0;
   }
 
+  .footer-nav__label {
+    font-size: 0.8125rem;
+    letter-spacing: 2.5px;
+    line-height: 1.25rem;
+  }
+
   .footer-link {
-    font-size: 1rem;
-    line-height: 1.625;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    min-height: 1.375rem;
+    padding-block: 0.1875rem;
   }
 
   .footer-contact__item {
-    /* Interpolates mobile 16px -> desktop 20px so it never outgrows the 1195px spec */
-    font-size: clamp(1rem, 1.67vw, 1.25rem);
-    line-height: 1.45;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    min-height: 1.375rem;
+    padding-block: 0.1875rem;
   }
 
   .footer-legal {
@@ -1974,6 +1992,34 @@ blockquote,
     flex-direction: row;
     justify-content: space-between;
     padding-block: 2rem;
+  }
+}
+
+@media (min-width: 1196px) and (max-width: 1439px) {
+  .footer-nav__label {
+    font-size: 0.875rem;
+    letter-spacing: 2.5px;
+    line-height: 1.25rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .footer-links,
+  .footer-contact {
+    height: 9.5rem;
+  }
+
+  .footer-link {
+    font-size: 14px;
+    line-height: 22px;
+    min-height: 22px;
+    padding-block: 4px;
+  }
+
+  .footer-contact__item {
+    font-size: 16px;
+    line-height: 22px;
+    min-height: 22px;
+    padding-block: 4px;
   }
 }
 
@@ -3972,6 +4018,25 @@ div.section-edge-seam-cover-light {
     font-size: clamp(0.8125rem, 1.45vw, 0.875rem);
     line-height: 1.5;
     color: rgb(255 255 255 / 0.8);
+  }
+
+  .process-copy-wrap {
+    container-type: inline-size;
+    container-name: process-copy;
+  }
+
+  .calculator-copy-wrap {
+    container-type: inline-size;
+    container-name: calculator-copy;
+  }
+
+  .process-copy__body-tablet > .block,
+  .calculator-copy__body-tablet > .block {
+    display: block;
+    white-space: nowrap !important;
+    /* Longest tablet row ~481px at 14px → 100 * 14 / 486 ≈ 2.88cqw */
+    font-size: min(1em, 2.88cqw) !important;
+    line-height: inherit;
   }
 
   .process-copy__stack,

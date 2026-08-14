@@ -170,11 +170,21 @@ export function CalculatorContent() {
                   or recapitalization.
                 </span>
               </span>
-              <span className="hidden min-[768px]:max-[1194px]:block">
-                Paragon&apos;s calculator pulls your loan data from Trepp&apos;s
-                market-leading commercial real estate loan database so you can
-                weigh the cost of defeasance or prepayment against the economics
-                of your sale, refinance, or recapitalization.
+              <span className="calculator-copy__body-tablet hidden min-[768px]:max-[1194px]:block">
+                <span className="block whitespace-nowrap">
+                  Paragon&apos;s calculator pulls your loan data from
+                  Trepp&apos;s market-leading
+                </span>
+                <span className="block whitespace-nowrap">
+                  commercial real estate loan database so you can weigh the cost
+                  of
+                </span>
+                <span className="block whitespace-nowrap">
+                  defeasance or prepayment against the economics of your sale,
+                </span>
+                <span className="block whitespace-nowrap">
+                  refinance, or recapitalization.
+                </span>
               </span>
               <span className="min-[768px]:hidden">
                 Paragon&apos;s calculator pulls your loan data from Trepp&apos;s
@@ -193,9 +203,14 @@ export function CalculatorContent() {
                   or deal team through the Paragon portal.
                 </span>
               </span>
-              <span className="hidden min-[768px]:max-[1194px]:block">
-                Save your estimate, compare scenarios, and share results with
-                your counsel or deal team through the Paragon portal.
+              <span className="calculator-copy__body-tablet hidden min-[768px]:max-[1194px]:block">
+                <span className="block whitespace-nowrap">
+                  Save your estimate, compare scenarios, and share results with
+                  your
+                </span>
+                <span className="block whitespace-nowrap">
+                  counsel or deal team through the Paragon portal.
+                </span>
               </span>
               <span className="min-[768px]:hidden">
                 Save your estimate, compare scenarios, and share results with

@@ -28,9 +28,19 @@ const services: {
             before you commit to a course of action.
           </span>
         </span>
-        <span className="hidden min-[768px]:max-[1194px]:block">
-          Complimentary review of your loan documents, timing constraints, and
-          transaction objectives before you commit to a course of action.
+        <span className="services-card__copy-tablet hidden min-[768px]:max-[1194px]:block">
+          <span className="block whitespace-nowrap">
+            Complimentary review of your loan
+          </span>
+          <span className="block whitespace-nowrap">
+            documents, timing constraints, and
+          </span>
+          <span className="block whitespace-nowrap">
+            transaction objectives before you commit to
+          </span>
+          <span className="block whitespace-nowrap">
+            a course of action.
+          </span>
         </span>
         <span className="services-card__copy-mobile hidden max-md:block">
           <span className="block whitespace-nowrap">
@@ -67,18 +77,21 @@ const services: {
             process from servicer review through closing.
           </span>
         </span>
-        <span className="hidden min-[768px]:max-[1194px]:block">
-          <span className="block">
+        <span className="services-card__copy-tablet hidden min-[768px]:max-[1194px]:block">
+          <span className="block whitespace-nowrap">
             Active transaction management, including
           </span>
-          <span className="block">
-            structuring the securities portfolio, coordinating
+          <span className="block whitespace-nowrap">
+            structuring the securities portfolio,
           </span>
-          <span className="block">
-            across multiple stakeholders, and managing the
+          <span className="block whitespace-nowrap">
+            coordinating across multiple stakeholders,
           </span>
-          <span className="block">
-            process from servicer review through closing.
+          <span className="block whitespace-nowrap">
+            and managing the process from servicer
+          </span>
+          <span className="block whitespace-nowrap">
+            review through closing.
           </span>
         </span>
         <span className="services-card__copy-mobile hidden max-md:block">
@@ -116,9 +129,16 @@ const services: {
             specialize in this work.
           </span>
         </span>
-        <span className="hidden min-[768px]:max-[1194px]:block">
-          When borrower-side defeasance counsel is needed, we connect you with
-          attorneys who specialize in this work.
+        <span className="services-card__copy-tablet hidden min-[768px]:max-[1194px]:block">
+          <span className="block whitespace-nowrap">
+            When borrower-side defeasance counsel
+          </span>
+          <span className="block whitespace-nowrap">
+            is needed, we connect you with attorneys
+          </span>
+          <span className="block whitespace-nowrap">
+            who specialize in this work.
+          </span>
         </span>
         <span className="services-card__copy-mobile hidden max-md:block">
           <span className="block whitespace-nowrap">

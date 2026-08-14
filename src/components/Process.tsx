@@ -72,9 +72,14 @@ export default function Process() {
                     driven by a transaction with its own closing deadline.
                   </span>
                 </span>
-                <span className="hidden min-[768px]:max-[1194px]:block">
-                  Every defeasance follows a sequence. The challenge is that the
-                  timing is driven by a transaction with its own closing deadline.
+                <span className="process-copy__body-tablet hidden min-[768px]:max-[1194px]:block">
+                  <span className="block whitespace-nowrap">
+                    Every defeasance follows a sequence. The challenge is that
+                    the timing
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    is driven by a transaction with its own closing deadline.
+                  </span>
                 </span>
                 <span className="min-[768px]:hidden">
                   Every defeasance follows a sequence. The challenge is that the
@@ -98,11 +103,22 @@ export default function Process() {
                   </span>
                   <span className="block whitespace-nowrap">done.</span>
                 </span>
-                <span className="hidden min-[768px]:max-[1194px]:block">
-                  Paragon works backward from that date. Servicer requirements,
-                  securities structuring, documentation, and approvals are
-                  addressed before they become urgent. By the time a request
-                  arrives, the work behind it is already done.
+                <span className="process-copy__body-tablet hidden min-[768px]:max-[1194px]:block">
+                  <span className="block whitespace-nowrap">
+                    Paragon works backward from that date. Servicer
+                    requirements,
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    securities structuring, documentation, and approvals are
+                    addressed
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    before they become urgent. By the time a request arrives,
+                    the work
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    behind it is already done.
+                  </span>
                 </span>
                 <span className="min-[768px]:hidden">
                   Paragon works backward from that date. Servicer requirements,
