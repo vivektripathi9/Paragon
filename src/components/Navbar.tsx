@@ -99,7 +99,7 @@ export default function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 bg-transparent pt-[env(safe-area-inset-top)]">
       <nav
-        className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 md:max-lg:px-8 lg:px-12"
+        className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 md:max-lg:px-8 lg:px-12 min-[1195px]:max-[1439px]:!pr-5"
         aria-label="Main navigation"
       >
         <Link href="/" className="relative z-[60] shrink-0">
@@ -112,8 +112,9 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="flex items-center gap-3 sm:gap-4 lg:gap-10">
-          <ul className="hidden items-center gap-5 md:max-lg:flex md:max-lg:gap-6 lg:flex lg:gap-8">
+        {/* Mid-desktop (≥1195): tighter gaps so links clear hero copy */}
+        <div className="flex items-center gap-3 sm:gap-4 lg:gap-10 min-[1195px]:max-[1439px]:!gap-6">
+          <ul className="hidden items-center gap-5 md:max-lg:flex md:max-lg:gap-6 lg:flex lg:gap-8 min-[1195px]:max-[1439px]:!gap-5">
             {navLinks.map(({ href, label }) => {
               const isActive =
                 href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -133,7 +134,7 @@ export default function Navbar() {
 
           <Link
             href="/calculator"
-            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-[16px] font-semibold leading-[18.2px] tracking-[-0.5px] text-black transition-opacity hover:opacity-90 md:max-lg:inline-flex lg:inline-flex lg:px-6"
+            className="bg-calculator-btn relative z-[60] hidden shrink-0 bg-white px-7 py-2.5 text-[16px] font-semibold leading-[18.2px] tracking-[-0.5px] text-black transition-opacity hover:opacity-90 md:max-lg:inline-flex lg:inline-flex lg:px-6 min-[1195px]:max-[1439px]:!px-5"
           >
             Calculator
           </Link>

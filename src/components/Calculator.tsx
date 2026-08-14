@@ -11,6 +11,11 @@ type CostRowProps = {
   variant?: "primary" | "secondary" | "total";
 };
 
+type EstimateDates = {
+  closing: string;
+  ratesAsOf: string;
+};
+
 function formatMdY(date: Date) {
   const mm = String(date.getMonth() + 1).padStart(2, "0");
   const dd = String(date.getDate()).padStart(2, "0");
@@ -25,18 +30,50 @@ function addDays(from: Date, days: number) {
   return date;
 }
 
+/** Always relative to "now" — Closing = +30d, Rates As Of = +21d. No hardcoded dates. */
+function getCalculatorEstimateDates(from: Date = new Date()): EstimateDates {
+  return {
+    closing: formatMdY(addDays(from, 30)),
+    ratesAsOf: formatMdY(addDays(from, 21)),
+  };
+}
+
+function msUntilNextLocalMidnight(from: Date = new Date()) {
+  const next = new Date(from);
+  next.setHours(24, 0, 0, 0);
+  return Math.max(1000, next.getTime() - from.getTime());
+}
+
 function useEstimateDates() {
-  const [dates, setDates] = useState({
+  const [dates, setDates] = useState<EstimateDates>({
     closing: "",
     ratesAsOf: "",
   });
 
   useEffect(() => {
-    const today = new Date();
-    setDates({
-      closing: formatMdY(addDays(today, 30)),
-      ratesAsOf: formatMdY(addDays(today, 21)),
-    });
+    const refresh = () => setDates(getCalculatorEstimateDates());
+    refresh();
+
+    // Roll forward at local midnight so a long-lived tab stays current
+    let midnightTimer: ReturnType<typeof setTimeout>;
+    const scheduleMidnight = () => {
+      midnightTimer = setTimeout(() => {
+        refresh();
+        scheduleMidnight();
+      }, msUntilNextLocalMidnight());
+    };
+    scheduleMidnight();
+
+    // Fallback if the tab slept through midnight
+    const onVisible = () => {
+      if (document.visibilityState === "visible") refresh();
+    };
+    document.addEventListener("visibilitychange", onVisible);
+
+    return () => {
+      clearTimeout(midnightTimer);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
   }, []);
 
   return dates;
@@ -115,15 +152,55 @@ export function CalculatorContent() {
           </h2>
 
           <div className="calculator-copy__stack mt-5 flex w-full flex-col gap-6 min-[1195px]:mt-6 min-[1195px]:gap-6">
-            <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
-              Paragon&apos;s calculator pulls your loan data from Trepp&apos;s
-              market-leading commercial real estate loan database so you can
-              weigh the cost of defeasance or prepayment against the economics
-              of your sale, refinance, or recapitalization.
+            <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70">
+              <span className="calculator-copy__body-locked hidden min-[1195px]:block">
+                <span className="block whitespace-nowrap">
+                  Paragon&apos;s calculator pulls your loan data from
+                  Trepp&apos;s market-leading
+                </span>
+                <span className="block whitespace-nowrap">
+                  commercial real estate loan database so you can weigh the cost
+                  of
+                </span>
+                <span className="block whitespace-nowrap">
+                  defeasance or prepayment against the economics of your sale,
+                  refinance,
+                </span>
+                <span className="block whitespace-nowrap">
+                  or recapitalization.
+                </span>
+              </span>
+              <span className="hidden min-[768px]:max-[1194px]:block">
+                Paragon&apos;s calculator pulls your loan data from Trepp&apos;s
+                market-leading commercial real estate loan database so you can
+                weigh the cost of defeasance or prepayment against the economics
+                of your sale, refinance, or recapitalization.
+              </span>
+              <span className="min-[768px]:hidden">
+                Paragon&apos;s calculator pulls your loan data from Trepp&apos;s
+                market-leading commercial real estate loan database so you can
+                weigh the cost of defeasance or prepayment against the economics
+                of your sale, refinance, or recapitalization.
+              </span>
             </p>
-            <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
-              Save your estimate, compare scenarios, and share results with your
-              counsel or deal team through the Paragon portal.
+            <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70">
+              <span className="calculator-copy__body-locked hidden min-[1195px]:block">
+                <span className="block whitespace-nowrap">
+                  Save your estimate, compare scenarios, and share results with
+                  your counsel
+                </span>
+                <span className="block whitespace-nowrap">
+                  or deal team through the Paragon portal.
+                </span>
+              </span>
+              <span className="hidden min-[768px]:max-[1194px]:block">
+                Save your estimate, compare scenarios, and share results with
+                your counsel or deal team through the Paragon portal.
+              </span>
+              <span className="min-[768px]:hidden">
+                Save your estimate, compare scenarios, and share results with
+                your counsel or deal team through the Paragon portal.
+              </span>
             </p>
           </div>
 

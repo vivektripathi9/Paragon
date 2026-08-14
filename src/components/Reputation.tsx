@@ -18,7 +18,7 @@ function QuoteIcon() {
 export default function Reputation() {
   return (
     <section className="reputation-section full-bleed relative z-[2] -mt-px section-edge-overlap overflow-visible bg-[#F0F3FC]">
-      <div className="reputation-shell mx-auto flex w-full max-w-[1440px] flex-col max-md:max-w-[402px] max-md:px-5 max-md:pt-[calc(var(--section-edge-height)+1.5rem)] min-[1195px]:!h-auto min-[1195px]:!pb-[calc(var(--section-edge-height)+4.375rem)]">
+      <div className="reputation-shell mx-auto flex w-full min-w-0 max-w-[1440px] flex-col max-md:max-w-[402px] max-md:px-5 max-md:pt-[calc(var(--section-edge-height)+1.5rem)] min-[1195px]:!h-auto min-[1195px]:!pb-[calc(var(--section-edge-height)+clamp(7.5rem,9vw,9.5rem))] min-[1440px]:!pt-[calc(var(--section-edge-height)+4.5rem)]">
         <header className="reputation-header w-full">
           <div className="reputation-label mb-6 flex items-center gap-2.5">
             <SectionLabelIcon variant="light" />
@@ -31,11 +31,24 @@ export default function Reputation() {
             Recommended by the professionals
           </h2>
 
-          <p className="reputation-intro mt-5 font-sans font-medium tracking-[-0.25px] text-[#000C22B2]">
-            The specialists responsible for reviewing defeasance transactions at
-            many of the nation&apos;s largest CMBS servicer organizations
-            regularly recommend Paragon because our transactions arrive complete,
-            organized, and ready for review.
+          <p className="reputation-intro mt-5 font-sans font-medium tracking-[-0.25px] text-[#000C22B2] min-[1195px]:tracking-[0px]">
+            <span className="reputation-intro__locked hidden min-[1195px]:block">
+              <span className="block whitespace-nowrap">
+                The specialists responsible for reviewing defeasance transactions at many of
+              </span>
+              <span className="block whitespace-nowrap">
+                the nation&apos;s largest CMBS servicer organizations regularly recommend Paragon
+              </span>
+              <span className="block whitespace-nowrap">
+                because our transactions arrive complete, organized, and ready for review.
+              </span>
+            </span>
+            <span className="min-[1195px]:hidden">
+              The specialists responsible for reviewing defeasance transactions at
+              many of the nation&apos;s largest CMBS servicer organizations
+              regularly recommend Paragon because our transactions arrive complete,
+              organized, and ready for review.
+            </span>
           </p>
         </header>
 
@@ -55,10 +68,10 @@ export default function Reputation() {
 
         <TrustedLogos />
 
-        <figure className="reputation-testimonial w-full">
+        <figure className="reputation-testimonial w-full min-w-0">
           <div className="reputation-testimonial__layout flex w-full min-w-0 items-start opacity-100">
             <QuoteIcon />
-            <blockquote className="reputation-quote flex min-w-0 flex-col text-left opacity-100 not-italic">
+            <blockquote className="reputation-quote flex min-w-0 flex-1 flex-col text-left opacity-100 not-italic">
               <div className="reputation-quote__text reputation-quote__text--mobile font-sans text-[#000C22] md:hidden">
                 <p>
                   <span className="reputation-quote__line block whitespace-nowrap">
@@ -110,20 +123,34 @@ export default function Reputation() {
                   </span>
                 </p>
               </div>
-              <div className="reputation-quote__text reputation-quote__text--natural hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] min-[1196px]:block">
+              <div className="reputation-quote__text reputation-quote__text--natural hidden font-sans font-semibold italic tracking-[0px] text-[#000C22] min-[1196px]:block">
                 <p>
-                  Over the past five years, RP Management has done 10 defeasance
-                  transactions with Paragon. Working with Paragon was a great
-                  experience from start to finish. Kevin was organized, answered
-                  our questions, addressed our concerns, and kept us informed along
-                  the way.
+                  <span className="block whitespace-nowrap">
+                    Over the past five years, RP Management has done 10 defeasance
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    transactions with Paragon. Working with Paragon was a great experience
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    from start to finish. Kevin was organized, answered our questions,
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    addressed our concerns, and kept us informed along the way.
+                  </span>
                 </p>
                 <p className="mt-4">
-                  We will use Paragon for our future defeasances due to them
-                  providing us with confidence for a smooth transaction and peace
-                  of mind that each transaction will close as promised. I highly
-                  recommend Paragon to anyone seeking a trusted defeasance
-                  advisor.
+                  <span className="block whitespace-nowrap">
+                    We will use Paragon for our future defeasances due to them providing us
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    with confidence for a smooth transaction and peace of mind that each
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    transaction will close as promised. I highly recommend Paragon to anyone
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    seeking a trusted defeasance advisor.
+                  </span>
                 </p>
               </div>
               <div className="reputation-quote__text reputation-quote__text--tablet hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] md:max-[1195px]:block">
@@ -157,7 +184,7 @@ export default function Reputation() {
                 </p>
               </div>
               <figcaption className="reputation-quote__attribution flex flex-col text-left not-italic">
-                <p className="reputation-quote__name font-heading !font-semibold not-italic text-[#3E6BFF]">
+                <p className="reputation-quote__name font-heading !font-semibold not-italic text-[#1E4FFF]">
                   Jonathan H. Chattley
                 </p>
                 <p className="reputation-quote__role font-heading font-normal text-[#000C22]">

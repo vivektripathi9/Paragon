@@ -21,13 +21,13 @@ const stats = [
     id: "50-billion",
     value: (
       <>
-        <span className="min-[768px]:max-[1194px]:block min-[1195px]:inline">$50</span>{" "}
-        <span className="min-[768px]:max-[1194px]:block min-[1195px]:inline">Billion+</span>
+        <span className="block">$50</span>
+        <span className="block">Billion+</span>
       </>
     ),
     description: (
       <>
-        <span className="about-stat-description__locked hidden min-[768px]:block min-[1195px]:hidden">
+        <span className="about-stat-description__locked hidden min-[768px]:block">
           <span className="block whitespace-nowrap">
             Paragon principals{"\u2019"}
           </span>
@@ -39,7 +39,7 @@ const stats = [
           </span>
           <span className="block whitespace-nowrap">defeasance</span>
         </span>
-        <span className="min-[768px]:hidden min-[1195px]:block">
+        <span className="min-[768px]:hidden">
           Paragon principals{"\u2019"} experience in securitized loan transactions
           involving defeasance
         </span>
@@ -59,13 +59,13 @@ const stats = [
     value: "5,000+",
     description: (
       <>
-        <span className="about-stat-description__locked hidden min-[768px]:block min-[1195px]:hidden">
+        <span className="about-stat-description__locked hidden min-[768px]:block">
           <span className="block whitespace-nowrap">
             Defeasance transactions
           </span>
           <span className="block whitespace-nowrap">completed</span>
         </span>
-        <span className="min-[768px]:hidden min-[1195px]:block">
+        <span className="min-[768px]:hidden">
           Defeasance transactions completed
         </span>
       </>
@@ -94,7 +94,7 @@ const stats = [
           <span className="block whitespace-nowrap">
             Average closing time for defeasance
           </span>
-          <span className="block">transactions</span>
+          <span className="block whitespace-nowrap">transactions</span>
         </span>
         <span className="min-[768px]:hidden">
           Average closing time for defeasance transactions
@@ -123,8 +123,19 @@ export default function About() {
             </span>
           </div>
 
-          <p className="font-heading w-full max-w-[1081px] text-[48px] font-medium leading-[68px] tracking-[-2px] max-md:h-auto max-md:max-w-[362px] max-md:text-[28px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1439px]:h-auto md:max-[1439px]:max-w-[min(56rem,100%)] md:max-[1439px]:text-[clamp(2rem,3.75vw,3rem)] md:max-[1439px]:leading-[clamp(2.75rem,5.2vw,3.5rem)] md:max-[1439px]:tracking-[-1.75px] min-[1195px]:!font-medium min-[1440px]:min-h-[204px]">
-            <span className="max-md:hidden">
+          <p className="about-heading font-heading w-full max-w-[1081px] text-[48px] font-medium leading-[68px] tracking-[-2px] max-md:h-auto max-md:max-w-[362px] max-md:text-[28px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1439px]:h-auto md:max-[1194px]:max-w-[min(56rem,100%)] min-[1195px]:max-[1439px]:max-w-[min(67.5625rem,100%)] md:max-[1439px]:text-[clamp(2rem,3.75vw,3rem)] md:max-[1439px]:leading-[clamp(2.75rem,5.2vw,3.5rem)] md:max-[1439px]:tracking-[-1.75px] min-[1195px]:!font-medium min-[1440px]:min-h-[204px]">
+            <span className="about-heading__desktop hidden min-[1195px]:block">
+              <span className="block whitespace-nowrap text-paragon-muted">
+                Paragon is the only independent defeasance
+              </span>
+              <span className="block whitespace-nowrap text-paragon-navy">
+                consultant recommended by two of the nation&apos;s
+              </span>
+              <span className="block whitespace-nowrap text-paragon-navy">
+                four largest CMBS servicers
+              </span>
+            </span>
+            <span className="hidden min-[768px]:max-[1194px]:block">
               <span className="text-paragon-muted">
                 Paragon is the only independent defeasance
               </span>{" "}
@@ -153,7 +164,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="about-stats-row relative z-[1] mt-10 flex w-full max-w-[1362px] min-h-[487px] flex-row items-end gap-[39px] pb-4 max-md:mt-[79px] max-md:min-h-0 max-md:flex-col max-md:items-stretch max-md:gap-[34px] max-md:pb-0 max-md:pr-6 md:max-[1439px]:mt-10 md:max-[1439px]:w-full md:max-[1439px]:max-w-full md:max-[1439px]:min-h-0 md:max-[1439px]:flex-row md:max-[1439px]:items-end md:max-[1439px]:pb-4 md:max-[1439px]:pr-0">
+        <div className="about-stats-row relative z-[1] mt-10 flex w-full max-w-[1362px] min-h-[487px] flex-row items-end gap-[39px] pb-4 max-md:mt-[79px] max-md:min-h-0 max-md:flex-col max-md:items-stretch max-md:gap-[34px] max-md:pb-0 max-md:pr-6 md:max-[1194px]:mt-10 min-[1195px]:mt-[clamp(3.75rem,6vw,5.5rem)] md:max-[1439px]:w-full md:max-[1439px]:max-w-full md:max-[1439px]:min-h-0 md:max-[1439px]:flex-row md:max-[1439px]:items-end md:max-[1439px]:pb-4 md:max-[1439px]:pr-0 min-[1440px]:mt-[5.5rem]">
           {stats.map((stat) => (
             <article
               key={stat.id}

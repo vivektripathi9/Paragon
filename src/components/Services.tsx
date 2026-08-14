@@ -17,7 +17,18 @@ const services: {
     title: "1. Defeasance Advisory",
     description: (
       <>
-        <span className="max-md:hidden">
+        <span className="services-card__copy-locked hidden min-[1195px]:block">
+          <span className="block whitespace-nowrap">
+            Complimentary review of your loan documents,
+          </span>
+          <span className="block whitespace-nowrap">
+            timing constraints, and transaction objectives
+          </span>
+          <span className="block whitespace-nowrap">
+            before you commit to a course of action.
+          </span>
+        </span>
+        <span className="hidden min-[768px]:max-[1194px]:block">
           Complimentary review of your loan documents, timing constraints, and
           transaction objectives before you commit to a course of action.
         </span>
@@ -42,7 +53,21 @@ const services: {
     title: "2. Defeasance Execution",
     description: (
       <>
-        <span className="services-card__copy-locked max-md:hidden">
+        <span className="services-card__copy-locked hidden min-[1195px]:block">
+          <span className="block whitespace-nowrap">
+            Active transaction management, including
+          </span>
+          <span className="block whitespace-nowrap">
+            structuring the securities portfolio, coordinating
+          </span>
+          <span className="block whitespace-nowrap">
+            across multiple stakeholders, and managing the
+          </span>
+          <span className="block whitespace-nowrap">
+            process from servicer review through closing.
+          </span>
+        </span>
+        <span className="hidden min-[768px]:max-[1194px]:block">
           <span className="block">
             Active transaction management, including
           </span>
@@ -80,7 +105,18 @@ const services: {
     title: "3. Legal Coordination",
     description: (
       <>
-        <span className="max-md:hidden">
+        <span className="services-card__copy-locked hidden min-[1195px]:block">
+          <span className="block whitespace-nowrap">
+            When borrower-side defeasance counsel is
+          </span>
+          <span className="block whitespace-nowrap">
+            needed, we connect you with attorneys who
+          </span>
+          <span className="block whitespace-nowrap">
+            specialize in this work.
+          </span>
+        </span>
+        <span className="hidden min-[768px]:max-[1194px]:block">
           When borrower-side defeasance counsel is needed, we connect you with
           attorneys who specialize in this work.
         </span>
@@ -101,7 +137,7 @@ const services: {
 export default function Services() {
   return (
     <section className="services-section full-bleed relative z-[4] section-edge-overlap overflow-visible bg-[#F0F3FC] max-md:h-auto max-md:min-h-0 md:h-auto min-[1195px]:min-h-[899px]">
-      <div className="services-shell mx-auto flex w-full min-h-0 max-w-[1440px] flex-col px-12 pb-0 pt-[calc(var(--section-edge-height)+1.5rem)] max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(var(--section-edge-height)+3.5rem)] max-md:pt-[calc(var(--section-edge-height)+2.5rem)] md:min-h-0 min-[1195px]:px-12 min-[1195px]:pb-[calc(var(--section-edge-height)+2.5rem)] min-[1195px]:pt-[calc(var(--section-edge-height)+2rem)]">
+      <div className="services-shell mx-auto flex w-full min-h-0 max-w-[1440px] flex-col px-12 pb-0 pt-[calc(var(--section-edge-height)+1.5rem)] max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(var(--section-edge-height)+3.5rem)] max-md:pt-[calc(var(--section-edge-height)+2.5rem)] md:min-h-0 min-[1195px]:px-12 min-[1195px]:pb-[calc(var(--section-edge-height)+2.5rem)] min-[1195px]:pt-[calc(var(--section-edge-height)+clamp(3.25rem,5vw,4.5rem))] min-[1440px]:pt-[calc(var(--section-edge-height)+4.5rem)]">
         <header className="w-full">
           <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
             <SectionLabelIcon variant="light" />

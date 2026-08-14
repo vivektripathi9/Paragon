@@ -27,6 +27,27 @@ export default function Footer() {
           className="footer-bg__img max-w-none"
         />
       </div>
+      <div
+        className="footer-bg-mobile pointer-events-none absolute inset-0 z-[1] hidden overflow-hidden max-[767px]:block"
+        aria-hidden
+      >
+        <img
+          src="/icons/footer-bg-mobile.png"
+          alt=""
+          width={402}
+          height={1480}
+          className="block h-full w-full max-w-none object-cover object-top"
+        />
+        <div className="footer-bg-mobile__layer absolute right-0 top-0">
+          <img
+            src="/icons/Vector.svg"
+            alt=""
+            width={209}
+            height={581}
+            className="h-[581px] w-[209px] max-w-none"
+          />
+        </div>
+      </div>
 
       <div className="footer-shell relative z-[2] mx-auto w-full min-w-0 max-w-[1440px] overflow-x-hidden max-[768px]:max-w-[402px] max-[768px]:px-5 max-[768px]:pb-8">
         <div className="footer-cta flex min-w-0 flex-col border-b border-white/10">

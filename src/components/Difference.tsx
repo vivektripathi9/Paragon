@@ -10,7 +10,15 @@ const features = [
     iconHeight: 82,
     title: (
       <>
-        <span className="hidden min-[766px]:block">
+        <span className="hidden min-[1195px]:block">
+          <span className="block whitespace-nowrap">
+            We know what servicers need
+          </span>
+          <span className="block whitespace-nowrap">
+            before they ask for it.
+          </span>
+        </span>
+        <span className="hidden min-[766px]:max-[1194px]:block">
           <span className="block whitespace-nowrap">
             We know what servicers need before
           </span>
@@ -27,7 +35,22 @@ const features = [
     ),
     description: (
       <>
-        <span className="difference-feature__copy-locked hidden min-[766px]:block">
+        <span className="difference-feature__copy-locked hidden min-[1195px]:block">
+          <span className="block whitespace-nowrap">
+            Our team has worked inside major CMBS servicer
+          </span>
+          <span className="block whitespace-nowrap">
+            organizations. We know what each servicer requires,
+          </span>
+          <span className="block whitespace-nowrap">
+            what they{"\u2019"}ll question, and what {"\u201c"}complete{"\u201d"}{" "}
+            means
+          </span>
+          <span className="block whitespace-nowrap">
+            to the team approving the file.
+          </span>
+        </span>
+        <span className="difference-feature__copy-locked hidden min-[766px]:max-[1194px]:block">
           <span className="block whitespace-nowrap">
             Our team has worked inside major CMBS servicer
           </span>
@@ -86,7 +109,19 @@ const features = [
     ),
     description: (
       <>
-        <span className="difference-feature__copy-locked hidden min-[766px]:block">
+        <span className="difference-feature__copy-locked hidden min-[1195px]:block">
+          <span className="block whitespace-nowrap">
+            We map the servicer{"\u2019"}s requirements against your
+          </span>
+          <span className="block whitespace-nowrap">
+            closing date before the process begins. The result is
+          </span>
+          <span className="block whitespace-nowrap">
+            fewer last-minute requests and surprises when
+          </span>
+          <span className="block whitespace-nowrap">timing matters most.</span>
+        </span>
+        <span className="difference-feature__copy-locked hidden min-[766px]:max-[1194px]:block">
           <span className="block whitespace-nowrap">
             We map the servicer{"\u2019"}s requirements against your
           </span>
@@ -123,7 +158,13 @@ const features = [
     iconHeight: 82,
     title: (
       <>
-        <span className="hidden min-[1000px]:block">
+        <span className="hidden min-[1195px]:block">
+          <span className="block whitespace-nowrap">
+            Senior-led execution on every
+          </span>
+          <span className="block whitespace-nowrap">transaction.</span>
+        </span>
+        <span className="hidden min-[1000px]:max-[1194px]:block">
           <span className="block whitespace-nowrap">
             Senior-led execution on every
           </span>
@@ -142,7 +183,19 @@ const features = [
     ),
     description: (
       <>
-        <span className="difference-feature__copy-locked hidden min-[766px]:block">
+        <span className="difference-feature__copy-locked hidden min-[1195px]:block">
+          <span className="block whitespace-nowrap">
+            You work directly with experienced professionals
+          </span>
+          <span className="block whitespace-nowrap">
+            who have personally closed defeasance
+          </span>
+          <span className="block whitespace-nowrap">
+            transactions, not with associates relaying
+          </span>
+          <span className="block whitespace-nowrap">messages.</span>
+        </span>
+        <span className="difference-feature__copy-locked hidden min-[766px]:max-[1194px]:block">
           <span className="block whitespace-nowrap">
             You work directly with experienced professionals who
           </span>
@@ -188,7 +241,7 @@ export default function Difference() {
           <img
             src="/icons/Group 13.svg"
             alt=""
-            className="difference-decor-desktop__tr difference-decor-desktop__tr--desktop difference-decor-desktop__tr--edge-locked min-[1024px]:max-[1342px]:translate-x-[5px] min-[1342px]:translate-x-[18px]"
+            className="difference-decor-desktop__tr difference-decor-desktop__tr--desktop difference-decor-desktop__tr--edge-locked min-[1024px]:max-[1194px]:translate-x-[5px] min-[1195px]:max-[1342px]:translate-x-[10px] min-[1342px]:translate-x-[22px]"
             style={
               {
                 "--diff-tr-w":

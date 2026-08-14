@@ -209,6 +209,96 @@ blockquote,
   }
 }
 
+@media (min-width: 1440px) {
+  .hero-bg-color {
+    --hero-cta-right-padding: 3rem;
+  }
+
+  .hero-content-shell {
+    --hero-inline-padding: 3rem;
+  }
+
+  .hero-description {
+    container-type: inline-size;
+    container-name: hero-desc;
+  }
+
+  .hero-heading {
+    container-type: inline-size;
+    container-name: hero-heading;
+    max-width: none !important;
+    width: 100%;
+  }
+
+  /* 742px = longest heading row at 62px — scale into description column */
+  .hero-heading > .block {
+    font-size: min(3.875rem, calc(100cqw * 62 / 742)) !important;
+    line-height: calc(73 / 62);
+  }
+
+  /* 693px = longest desktop locked row at 18px */
+  .hero-description__desktop > .block {
+    font-size: min(1.125rem, calc(100cqw * 18 / 693)) !important;
+    line-height: calc(30 / 18);
+  }
+}
+
+@media (min-width: 1195px) and (max-width: 1439px) {
+  .hero-bg-color {
+    --hero-cta-right-padding: clamp(2.75rem, 3.75vw, 3rem);
+    /* Column measure + inset: clears P, widens gap to CTAs vs old 1194 shell */
+    --hero-copy-max: clamp(36rem, 48vw, 42rem);
+    --hero-copy-shift: 0;
+  }
+
+  .hero-content-shell {
+    --hero-inline-padding: clamp(2.75rem, 3.75vw, 3rem);
+    max-width: 1440px;
+  }
+
+  .hero-heading-col {
+    margin-left: var(--hero-copy-shift);
+    max-width: var(--hero-copy-max);
+  }
+
+  .hero-description {
+    container-type: inline-size;
+    container-name: hero-desc;
+    margin-left: var(--hero-copy-shift) !important;
+    max-width: var(--hero-copy-max) !important;
+  }
+
+  .hero-heading {
+    container-type: inline-size;
+    container-name: hero-heading;
+    max-width: none !important;
+    width: 100%;
+    font-size: clamp(3.25rem, 4.3vw, 3.875rem) !important;
+    line-height: clamp(3.75rem, 5.05vw, 4.5625rem) !important;
+  }
+
+  .hero-description-row {
+    gap: clamp(5rem, 12vw, 14.375rem) !important;
+  }
+
+  .hero-cta-cluster {
+    margin-left: auto;
+    /* Pull toward the right edge; keep ~20px inset */
+    margin-right: calc(-1 * (var(--hero-inline-padding) - 1.25rem));
+  }
+
+  /* Scale locked rows into the narrower mid-desktop column (clears the P) */
+  .hero-heading > .block {
+    font-size: min(1em, calc(100cqw * 62 / 742)) !important;
+    line-height: calc(73 / 62);
+  }
+
+  .hero-description__desktop > .block {
+    font-size: min(1.125rem, calc(100cqw * 18 / 693)) !important;
+    line-height: calc(30 / 18);
+  }
+}
+
 @media (min-width: 1195px) {
   .hero-bg-color {
     --hero-cta-right-padding: 3rem;
@@ -710,6 +800,67 @@ blockquote,
   .difference-feature__copy {
     font-size: calc(12.54px + (100vw - 1195px) * 3.46 / 171);
     line-height: 1.5;
+  }
+}
+
+@media (min-width: 1195px) and (max-width: 1439px) {
+  .difference-feature--1,
+  .difference-feature--2 {
+    max-width: clamp(18rem, 38vw, 34rem);
+  }
+
+  .difference-feature--1 .difference-feature__row,
+  .difference-feature--2 .difference-feature__row {
+    max-width: clamp(18rem, 38vw, 34rem);
+    gap: clamp(0.75rem, 1.8vw, 1.5rem);
+  }
+
+  .difference-feature--3 .difference-feature__row {
+    gap: clamp(0.75rem, 1.8vw, 1.5rem);
+  }
+
+  .difference-feature--1 .difference-feature__row img,
+  .difference-feature--2 .difference-feature__row img,
+  .difference-feature--3 .difference-feature__row img {
+    width: clamp(4.75rem, 7vw, 6.1875rem); /* → ~99px */
+    height: clamp(3.95rem, 5.8vw, 5.125rem); /* → ~82px */
+  }
+
+  .difference-feature--1 .difference-feature__title,
+  .difference-feature--2 .difference-feature__title,
+  .difference-feature--3 .difference-feature__title {
+    font-size: clamp(1.375rem, 1.9vw, 1.875rem); /* → ~30px */
+    line-height: 1.28;
+  }
+
+  .difference-feature--1 .difference-feature__copy,
+  .difference-feature--2 .difference-feature__copy,
+  .difference-feature--3 .difference-feature__copy {
+    font-size: clamp(0.875rem, 1.2vw, 1.0625rem); /* → ~17px */
+    line-height: 1.55;
+  }
+}
+
+@media (min-width: 1440px) {
+  .difference-feature--1 .difference-feature__row img,
+  .difference-feature--2 .difference-feature__row img,
+  .difference-feature--3 .difference-feature__row img {
+    width: 6.1875rem; /* 99px */
+    height: 5.125rem; /* 82px */
+  }
+
+  .difference-feature--1 .difference-feature__title,
+  .difference-feature--2 .difference-feature__title,
+  .difference-feature--3 .difference-feature__title {
+    font-size: 1.875rem; /* 30px */
+    line-height: 1.28;
+  }
+
+  .difference-feature--1 .difference-feature__copy,
+  .difference-feature--2 .difference-feature__copy,
+  .difference-feature--3 .difference-feature__copy {
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.55;
   }
 }
 
@@ -1318,9 +1469,9 @@ blockquote,
 
 .footer-bg-mobile {
   position: absolute;
-  top: 0;
-  right: 0;
+  inset: 0;
   z-index: 1;
+  width: 100%;
   pointer-events: none;
   overflow: hidden;
   opacity: 1;
@@ -1956,7 +2107,7 @@ blockquote,
   }
 
   .footer-bg-mobile {
-    right: 0;
+    inset: 0;
     max-width: 100%;
     overflow: hidden;
   }
@@ -3119,9 +3270,9 @@ div.section-edge-seam-cover-light {
 @media (min-width: 1195px) {
   .reputation-shell {
     height: auto;
-    padding-bottom: calc(var(--section-edge-height) + 4.375rem);
+    padding-bottom: calc(var(--section-edge-height) + clamp(7.5rem, 9vw, 9.5rem));
     padding-inline: 3rem;
-    padding-top: calc(var(--section-edge-height) + 3rem);
+    padding-top: calc(var(--section-edge-height) + clamp(3.5rem, 4.5vw, 4.5rem));
   }
 
   .reputation-label {
@@ -3140,7 +3291,7 @@ div.section-edge-seam-cover-light {
     font-weight: 500;
     height: auto;
     margin-left: -0.25rem;
-    letter-spacing: -2px;
+    letter-spacing: -1.25px;
     line-height: 66px;
     max-width: 863px;
     white-space: nowrap;
@@ -3148,14 +3299,149 @@ div.section-edge-seam-cover-light {
 
   .reputation-intro {
     font-size: 22px;
+    letter-spacing: 0;
     line-height: 38px;
     max-width: 954px;
   }
 
+  .reputation-header {
+    container-name: reputation-header;
+    container-type: inline-size;
+  }
+
+  .reputation-intro__locked > .block {
+    font-size: min(1em, calc(100cqw * 22 / 954)) !important;
+    line-height: 38px !important;
+  }
+
   .reputation-trusted-divider__line {
-    flex: none;
+    flex: 1 1 auto;
     max-width: none;
     min-width: 0;
+    width: auto;
+  }
+
+  .reputation-trusted-divider__label {
+    font-size: clamp(1.125rem, 1.8vw, 1.5rem);
+    line-height: 1.2;
+    width: auto;
+  }
+
+  .reputation-trusted-divider {
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 5rem;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .reputation-logos {
+    flex-wrap: nowrap;
+    gap: clamp(2rem, 5vw, 7rem);
+    justify-content: space-between;
+    margin-top: 2rem;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .reputation-logo__img {
+    height: clamp(3.25rem, 5.5vw, 4.9375rem);
+    opacity: 0.67;
+    width: auto;
+    max-width: clamp(6.5rem, 12vw, 11.8125rem);
+  }
+
+  .reputation-testimonial__layout {
+    flex-direction: row;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    height: auto;
+    justify-content: flex-start;
+    max-width: 100%;
+    min-width: 0;
+    overflow: visible;
+    width: 100%;
+  }
+
+  .reputation-testimonial {
+    margin-top: 5rem;
+    max-width: 100%;
+    min-width: 0;
+    overflow: visible;
+    width: 100%;
+  }
+
+  .reputation-quote-icon {
+    flex: 0 0 368px;
+    height: 428px;
+    width: 368px;
+  }
+
+  .reputation-quote-icon__img {
+    height: 185px;
+    margin-left: 5rem;
+    margin-top: 6rem;
+    width: 192px;
+  }
+
+  .reputation-quote {
+    container-name: reputation-quote;
+    container-type: inline-size;
+    /* flex-basis 0 — size from free space, not nowrap min-content */
+    flex: 1 1 0;
+    gap: clamp(1.25rem, 2vw, 2rem);
+    height: auto;
+    max-width: 100%;
+    min-width: 0;
+    overflow: visible;
+    width: auto;
+  }
+
+  /*
+   * Longest locked row ≈ 960px at 24px. Scale to the quote column so
+   * nowrap lines never spill past the shell / clip-path.
+   */
+  .reputation-quote__text--natural {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .reputation-quote__text--natural > p > span {
+    display: block;
+    font-size: min(1.5rem, calc(100cqw * 24 / 960)) !important;
+    line-height: 1.58 !important;
+    max-width: 100%;
+    white-space: nowrap !important;
+  }
+
+  .reputation-quote__text {
+    font-size: min(1.5rem, calc(100cqw * 24 / 960));
+    letter-spacing: 0;
+    line-height: 1.58;
+    max-width: 100%;
+  }
+
+  .reputation-quote__attribution {
+    gap: 1rem;
+  }
+
+  .reputation-quote__name {
+    font-size: clamp(1.125rem, 2.5cqw, 1.5rem);
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+  }
+
+  .reputation-quote__role {
+    font-size: clamp(1rem, 2.2cqw, 1.25rem);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1440px) {
+  .reputation-trusted-divider__line {
+    flex: none;
     width: 482.5px;
   }
 
@@ -3165,34 +3451,22 @@ div.section-edge-seam-cover-light {
     width: 163px;
   }
 
-  .reputation-trusted-divider {
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 5rem;
-  }
-
   .reputation-logos {
-    flex-wrap: nowrap;
-    gap: 7rem 7rem;
-    margin-top: 2rem;
+    gap: 7rem;
+    justify-content: center;
   }
 
   .reputation-logo__img {
     height: 79px;
-    opacity: 0.67;
+    max-width: none;
     width: 189px;
   }
 
   .reputation-testimonial__layout {
-    flex-direction: row;
     gap: 0;
     height: 428px;
     justify-content: space-between;
     max-width: 1360px;
-  }
-
-  .reputation-testimonial {
-    margin-top: 5rem;
   }
 
   .reputation-quote-icon {
@@ -3208,10 +3482,15 @@ div.section-edge-seam-cover-light {
   }
 
   .reputation-quote {
-    gap: 2rem;
+    flex: 0 0 904px;
     height: 428px;
     max-width: 904px;
     width: 904px;
+  }
+
+  .reputation-quote__text--natural > p > span {
+    font-size: 1.5rem !important;
+    line-height: 38px !important;
   }
 
   .reputation-quote__text {
@@ -3220,19 +3499,13 @@ div.section-edge-seam-cover-light {
     max-width: 904px;
   }
 
-  .reputation-quote__attribution {
-    gap: 1rem;
-  }
-
   .reputation-quote__name {
     font-size: 24px;
-    letter-spacing: -0.5px;
     line-height: 24px;
   }
 
   .reputation-quote__role {
     font-size: 20px;
-    letter-spacing: -0.5px;
     line-height: 14px;
   }
 }
@@ -3480,20 +3753,14 @@ div.section-edge-seam-cover-light {
     height: 100%;
   }
 
-  .process-copy__title {
-    font-size: clamp(1.6875rem, 2.75vw, 1.875rem);
-    height: auto;
-    letter-spacing: -0.04em;
-    line-height: 1.3;
-    max-width: 100%;
-  }
-
+  /* Process + Calculator @ 1280 Figma — shared title scale */
+  .process-copy__title,
   .calculator-copy__title {
-    font-size: clamp(1.6875rem, 2.75vw, 1.875rem);
+    font-size: clamp(2.125rem, 3.75vw, 3.25rem); /* ~34 → 52 */
     height: auto;
     letter-spacing: -0.04em;
     line-height: 1.3;
-    max-width: 100%;
+    max-width: min(42.5rem, 100%);
   }
 
   .process-copy__stack,
@@ -3502,10 +3769,40 @@ div.section-edge-seam-cover-light {
     max-width: 100%;
   }
 
-  .process-copy__body,
+  .process-copy-wrap {
+    container-type: inline-size;
+    container-name: process-copy;
+  }
+
+  .process-copy__body {
+    font-size: clamp(0.875rem, 1.25vw, 1.0625rem); /* ~14 → 17 */
+    line-height: 1.65;
+  }
+
+  /* Longest locked body row ≈ 620px at 17px */
+  .process-copy__body-locked > .block {
+    display: block;
+    white-space: nowrap !important;
+    font-size: min(1em, calc(100cqw * 17 / 620)) !important;
+    line-height: inherit;
+  }
+
   .calculator-copy__body {
-    font-size: clamp(0.8125rem, 1.2vw, 0.9375rem);
-    line-height: 1.5;
+    font-size: clamp(0.875rem, 1.25vw, 1.0625rem);
+    line-height: 1.65;
+  }
+
+  .calculator-copy-wrap {
+    container-type: inline-size;
+    container-name: calculator-copy;
+  }
+
+  /* Longest locked Calculator body row ≈ 640px at 17px */
+  .calculator-copy__body-locked > .block {
+    display: block;
+    white-space: nowrap !important;
+    font-size: min(1em, calc(100cqw * 17 / 640)) !important;
+    line-height: inherit;
   }
 }
 
@@ -3532,10 +3829,38 @@ div.section-edge-seam-cover-light {
     max-width: 680px;
   }
 
-  .process-copy__body,
+  .process-copy-wrap {
+    container-type: inline-size;
+    container-name: process-copy;
+  }
+
+  .process-copy__body {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .process-copy__body-locked > .block {
+    display: block;
+    white-space: nowrap !important;
+    font-size: min(1em, calc(100cqw * 17 / 620)) !important;
+    line-height: inherit;
+  }
+
   .calculator-copy__body {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .calculator-copy-wrap {
+    container-type: inline-size;
+    container-name: calculator-copy;
+  }
+
+  .calculator-copy__body-locked > .block {
+    display: block;
+    white-space: nowrap !important;
+    font-size: min(1em, calc(100cqw * 17 / 640)) !important;
+    line-height: inherit;
   }
 }
 
@@ -3803,6 +4128,19 @@ div.section-edge-seam-cover-light {
 
   .about-stats-row {
     gap: clamp(1.5rem, 2.5vw, 2.4375rem);
+  }
+}
+
+@media (min-width: 1195px) and (max-width: 1439px) {
+  .about-heading {
+    container-type: inline-size;
+    container-name: about-heading;
+  }
+
+  /* 1006px ≈ longest locked row at 48px — scale so nowrap stays inside */
+  .about-heading__desktop > .block {
+    font-size: min(1em, calc(100cqw * 48 / 1006)) !important;
+    line-height: 1.42 !important;
   }
 }
 

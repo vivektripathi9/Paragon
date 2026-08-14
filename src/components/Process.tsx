@@ -62,15 +62,54 @@ export default function Process() {
             </h2>
 
             <div className="process-copy__stack mt-5 flex flex-col gap-4 max-md:mt-5 max-md:max-w-[367px] max-md:min-h-[156px] min-[1195px]:mt-5 min-[1195px]:gap-4">
-              <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC] min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
-                Every defeasance follows a sequence. The challenge is that the
-                timing is driven by a transaction with its own closing deadline.
+              <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC]">
+                <span className="process-copy__body-locked hidden min-[1195px]:block">
+                  <span className="block whitespace-nowrap">
+                    Every defeasance follows a sequence. The challenge is that
+                    the timing is
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    driven by a transaction with its own closing deadline.
+                  </span>
+                </span>
+                <span className="hidden min-[768px]:max-[1194px]:block">
+                  Every defeasance follows a sequence. The challenge is that the
+                  timing is driven by a transaction with its own closing deadline.
+                </span>
+                <span className="min-[768px]:hidden">
+                  Every defeasance follows a sequence. The challenge is that the
+                  timing is driven by a transaction with its own closing
+                  deadline.
+                </span>
               </p>
-              <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC] min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
-                Paragon works backward from that date. Servicer requirements,
-                securities structuring, documentation, and approvals are
-                addressed before they become urgent. By the time a request
-                arrives, the work behind it is already done.
+              <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC]">
+                <span className="process-copy__body-locked hidden min-[1195px]:block">
+                  <span className="block whitespace-nowrap">
+                    Paragon works backward from that date. Servicer
+                    requirements, securities
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    structuring, documentation, and approvals are addressed
+                    before they
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    become urgent. By the time a request arrives, the work
+                    behind it is already
+                  </span>
+                  <span className="block whitespace-nowrap">done.</span>
+                </span>
+                <span className="hidden min-[768px]:max-[1194px]:block">
+                  Paragon works backward from that date. Servicer requirements,
+                  securities structuring, documentation, and approvals are
+                  addressed before they become urgent. By the time a request
+                  arrives, the work behind it is already done.
+                </span>
+                <span className="min-[768px]:hidden">
+                  Paragon works backward from that date. Servicer requirements,
+                  securities structuring, documentation, and approvals are
+                  addressed before they become urgent. By the time a request
+                  arrives, the work behind it is already done.
+                </span>
               </p>
             </div>
 
