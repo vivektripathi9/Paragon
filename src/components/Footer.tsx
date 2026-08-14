@@ -86,7 +86,7 @@ export default function Footer() {
             <p className="footer-cta__body font-sans font-medium tracking-[-0.25px] text-white/70">
               <span className="max-[768px]:block min-[769px]:hidden">
                 <span className="block whitespace-nowrap">
-                  Speak with Paragon about your loan, your
+                  Speak with Paragon about your loan,
                 </span>
                 <span className="block whitespace-nowrap">
                   closing date, and the variables that will
@@ -97,7 +97,7 @@ export default function Footer() {
               </span>
               <span className="footer-cta__body-tablet hidden min-[769px]:max-[1196px]:!block">
                 <span className="block whitespace-nowrap">
-                  Speak with Paragon about your loan, your closing date,
+                  Speak with Paragon about your loan, closing date,
                 </span>
                 <span className="block whitespace-nowrap">
                   and the variables that will affect your defeasance.
@@ -105,7 +105,7 @@ export default function Footer() {
               </span>
               <span className="footer-cta__body-desktop hidden min-[1196px]:!block">
                 <span className="block whitespace-nowrap">
-                  Speak with Paragon about your loan, your closing date, and
+                  Speak with Paragon about your loan, closing date, and
                 </span>
                 <span className="block whitespace-nowrap">
                   the variables that will affect your defeasance.
