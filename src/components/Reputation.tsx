@@ -9,7 +9,7 @@ function QuoteIcon() {
         alt=""
         width={192}
         height={185}
-        className="reputation-quote-icon__img min-[768px]:max-[1194px]:!ml-[clamp(3rem,6.7vw,5rem)] min-[768px]:max-[1194px]:!mt-[clamp(3.75rem,8vw,6rem)] min-[768px]:max-[1194px]:!h-auto"
+        className="reputation-quote-icon__img min-[768px]:max-[1199px]:!ml-[clamp(3rem,6.7vw,5rem)] min-[768px]:max-[1199px]:!mt-[clamp(3.75rem,8vw,6rem)] min-[768px]:max-[1199px]:!h-auto"
       />
     </div>
   );
@@ -18,7 +18,7 @@ function QuoteIcon() {
 export default function Reputation() {
   return (
     <section className="reputation-section full-bleed relative z-[2] -mt-px section-edge-overlap overflow-visible bg-[#F0F3FC]">
-      <div className="reputation-shell mx-auto flex w-full max-w-[1440px] flex-col max-md:max-w-[402px] max-md:px-5 max-md:pt-[calc(var(--section-edge-height)+1.5rem)] min-[1195px]:!h-auto min-[1195px]:!pb-[calc(var(--section-edge-height)+4.375rem)]">
+      <div className="reputation-shell mx-auto flex w-full max-w-[1440px] flex-col max-md:max-w-[402px] max-md:px-5 max-md:pt-[calc(var(--section-edge-height)+1.5rem)] min-[1200px]:!h-auto min-[1200px]:!pb-[calc(var(--section-edge-height)+4.375rem)]">
         <header className="reputation-header w-full">
           <div className="reputation-label mb-6 flex items-center gap-2.5">
             <SectionLabelIcon variant="light" />
@@ -110,7 +110,7 @@ export default function Reputation() {
                   </span>
                 </p>
               </div>
-              <div className="reputation-quote__text reputation-quote__text--natural hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] min-[1196px]:block">
+              <div className="reputation-quote__text reputation-quote__text--natural hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] min-[1200px]:block">
                 <p>
                   Over the past five years, RP Management has done 10 defeasance
                   transactions with Paragon. Working with Paragon was a great
@@ -126,7 +126,7 @@ export default function Reputation() {
                   advisor.
                 </p>
               </div>
-              <div className="reputation-quote__text reputation-quote__text--tablet hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] md:max-[1194px]:block">
+              <div className="reputation-quote__text reputation-quote__text--tablet hidden font-sans font-semibold italic tracking-[-0.25px] text-[#000C22] md:max-[1199px]:block">
                 <p>
                   <span className="block whitespace-nowrap">
                     Over the past five years, RP Management has done 10 defeasance

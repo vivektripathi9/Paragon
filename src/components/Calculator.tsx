@@ -101,11 +101,11 @@ function CalculatorCard() {
 export function CalculatorContent() {
   return (
     <div className="calculator-shell relative z-[2] isolate mx-auto w-full max-w-[1440px] px-12 pb-[calc(7rem+var(--section-edge-height))] pt-12 max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(6rem+var(--section-edge-height))] max-md:pt-6">
-      <div className="calculator-block grid min-w-0 items-center gap-10 max-md:grid-cols-1 max-md:gap-6 min-[768px]:max-[1194px]:grid-cols-2 min-[768px]:max-[1194px]:gap-6 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
-        <div className="calculator-copy-wrap relative z-[3] min-w-0 max-md:order-2 min-[768px]:max-[1194px]:order-1 min-[768px]:max-[1194px]:col-start-1 min-[1195px]:order-1">
-          <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
+      <div className="calculator-block grid min-w-0 items-center gap-10 max-md:grid-cols-1 max-md:gap-6 min-[768px]:max-[1199px]:grid-cols-2 min-[768px]:max-[1199px]:gap-6 min-[1200px]:grid-cols-2 min-[1200px]:gap-10">
+        <div className="calculator-copy-wrap relative z-[3] min-w-0 max-md:order-2 min-[768px]:max-[1199px]:order-1 min-[768px]:max-[1199px]:col-start-1 min-[1200px]:order-1">
+          <div className="mb-6 flex items-center gap-2.5 min-[1200px]:mb-8">
             <SectionLabelIcon variant="dark" />
-            <span className="font-subheading text-sm font-semibold text-[#B0CCFF] min-[1195px]:text-[0.9375rem]">
+            <span className="font-subheading text-sm font-semibold text-[#B0CCFF] min-[1200px]:text-[0.9375rem]">
               Calculator
             </span>
           </div>
@@ -114,7 +114,7 @@ export function CalculatorContent() {
             Estimate defeasance cost
           </h2>
 
-          <div className="calculator-copy__stack mt-5 flex w-full flex-col gap-6 min-[1195px]:mt-6 min-[1195px]:gap-6">
+          <div className="calculator-copy__stack mt-5 flex w-full flex-col gap-6 min-[1200px]:mt-6 min-[1200px]:gap-6">
             <p className="calculator-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
               Paragon&apos;s calculator pulls your loan data from Trepp&apos;s
               market-leading commercial real estate loan database so you can
@@ -129,14 +129,14 @@ export function CalculatorContent() {
 
           <Link
             href="/calculator"
-            className="calculator-cta btn-hero group mt-8 inline-flex h-[54px] w-[216px] items-center justify-center gap-3 whitespace-nowrap bg-[#31EE97] px-[25px] text-sm font-semibold text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:mt-8 min-[1195px]:mt-10 min-[1195px]:text-base"
+            className="calculator-cta btn-hero group mt-8 inline-flex h-[54px] w-[216px] items-center justify-center gap-3 whitespace-nowrap bg-[#31EE97] px-[25px] text-sm font-semibold text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:mt-8 min-[1200px]:mt-10 min-[1200px]:text-base"
           >
             Run the Calculator
             <ArrowIcon />
           </Link>
         </div>
 
-        <div className="calculator-cube-wrap relative z-[1] flex w-full min-w-0 justify-center max-md:order-1 min-[768px]:max-[1194px]:order-2 min-[768px]:max-[1194px]:col-start-2 min-[1195px]:order-2 min-[1195px]:justify-end">
+        <div className="calculator-cube-wrap relative z-[1] flex w-full min-w-0 justify-center max-md:order-1 min-[768px]:max-[1199px]:order-2 min-[768px]:max-[1199px]:col-start-2 min-[1200px]:order-2 min-[1200px]:justify-end">
           <CalculatorCard />
         </div>
       </div>

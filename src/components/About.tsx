@@ -21,13 +21,13 @@ const stats = [
     id: "50-billion",
     value: (
       <>
-        <span className="min-[768px]:max-[1194px]:block min-[1195px]:inline">$50</span>{" "}
-        <span className="min-[768px]:max-[1194px]:block min-[1195px]:inline">Billion+</span>
+        <span className="min-[768px]:max-[1199px]:block min-[1200px]:inline">$50</span>{" "}
+        <span className="min-[768px]:max-[1199px]:block min-[1200px]:inline">Billion+</span>
       </>
     ),
     description: (
       <>
-        <span className="about-stat-description__locked hidden min-[768px]:block min-[1195px]:hidden">
+        <span className="about-stat-description__locked hidden min-[768px]:block min-[1200px]:hidden">
           <span className="block whitespace-nowrap">
             Paragon principals{"\u2019"}
           </span>
@@ -39,7 +39,7 @@ const stats = [
           </span>
           <span className="block whitespace-nowrap">defeasance</span>
         </span>
-        <span className="min-[768px]:hidden min-[1195px]:block">
+        <span className="min-[768px]:hidden min-[1200px]:block">
           Paragon principals{"\u2019"} experience in securitized loan transactions
           involving defeasance
         </span>
@@ -59,13 +59,13 @@ const stats = [
     value: "5,000+",
     description: (
       <>
-        <span className="about-stat-description__locked hidden min-[768px]:block min-[1195px]:hidden">
+        <span className="about-stat-description__locked hidden min-[768px]:block min-[1200px]:hidden">
           <span className="block whitespace-nowrap">
             Defeasance transactions
           </span>
           <span className="block whitespace-nowrap">completed</span>
         </span>
-        <span className="min-[768px]:hidden min-[1195px]:block">
+        <span className="min-[768px]:hidden min-[1200px]:block">
           Defeasance transactions completed
         </span>
       </>
@@ -82,7 +82,7 @@ const stats = [
     value: "3 Weeks",
     description: (
       <>
-        <span className="about-stat-description__locked hidden min-[768px]:block min-[1195px]:hidden">
+        <span className="about-stat-description__locked hidden min-[768px]:block min-[1200px]:hidden">
           <span className="block whitespace-nowrap">
             Average closing time for
           </span>
@@ -90,7 +90,7 @@ const stats = [
             defeasance transactions
           </span>
         </span>
-        <span className="about-stat-description__desktop hidden min-[1195px]:block">
+        <span className="about-stat-description__desktop hidden min-[1200px]:block">
           <span className="block whitespace-nowrap">
             Average closing time for defeasance
           </span>
@@ -123,7 +123,7 @@ export default function About() {
             </span>
           </div>
 
-          <p className="about-lede font-heading w-full max-w-[1081px] text-[48px] font-medium leading-[68px] tracking-[-2px] max-md:h-auto max-md:max-w-[362px] max-md:text-[28px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1439px]:h-auto md:max-[1439px]:max-w-[min(56rem,100%)] md:max-[1439px]:text-[clamp(2rem,3.75vw,3rem)] md:max-[1439px]:leading-[clamp(2.75rem,5.2vw,3.5rem)] md:max-[1439px]:tracking-[-1.75px] min-[1195px]:!font-medium min-[1440px]:min-h-[204px]">
+          <p className="about-lede font-heading w-full max-w-[1081px] text-[48px] font-medium leading-[68px] tracking-[-2px] max-md:h-auto max-md:max-w-[362px] max-md:text-[28px] max-md:leading-[42px] max-md:tracking-[-1.5px] md:max-[1439px]:h-auto md:max-[1439px]:max-w-[min(56rem,100%)] md:max-[1439px]:text-[clamp(2rem,3.75vw,3rem)] md:max-[1439px]:leading-[clamp(2.75rem,5.2vw,3.5rem)] md:max-[1439px]:tracking-[-1.75px] min-[1200px]:!font-medium min-[1440px]:min-h-[204px]">
             <span className="max-md:hidden">
               <span className="text-paragon-muted">
                 Paragon is the only independent defeasance

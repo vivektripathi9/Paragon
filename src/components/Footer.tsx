@@ -28,7 +28,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="footer-shell relative z-[2] mx-auto w-full min-w-0 max-w-[1440px] overflow-x-hidden max-[768px]:max-w-[402px] max-[768px]:px-5 max-[768px]:pb-8">
+      <div className="footer-shell relative z-[2] mx-auto w-full min-w-0 max-w-[1440px] overflow-x-hidden max-[767px]:max-w-[402px] max-[767px]:px-5 max-[767px]:pb-8">
         <div className="footer-cta flex min-w-0 flex-col border-b border-white/10">
           <div className="footer-cta__left min-w-0">
             <div className="footer-label mb-6 flex items-center gap-2.5">
@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
 
             <h2 className="footer-cta__title font-heading font-medium text-white">
-              <span className="max-[768px]:hidden">
+              <span className="max-[767px]:hidden">
                 <span className="footer-cta__title-line block">
                   Your deal has a timeline.
                 </span>
@@ -47,7 +47,7 @@ export default function Footer() {
                   Let&apos;s get ahead of it.
                 </span>
               </span>
-              <span className="hidden max-[768px]:block">
+              <span className="hidden max-[767px]:block">
                 <span className="footer-cta__title-line block whitespace-nowrap">
                   Your deal has a
                 </span>
@@ -63,7 +63,7 @@ export default function Footer() {
 
           <div className="footer-cta__right flex min-w-0 flex-col">
             <p className="footer-cta__body font-sans font-medium tracking-[-0.25px] text-white/70">
-              <span className="max-[768px]:block min-[769px]:hidden">
+              <span className="max-[767px]:block min-[768px]:hidden">
                 <span className="block whitespace-nowrap">
                   Speak with Paragon about your loan, your
                 </span>
@@ -74,7 +74,7 @@ export default function Footer() {
                   affect your defeasance.
                 </span>
               </span>
-              <span className="footer-cta__body-tablet hidden min-[769px]:max-[1196px]:!block">
+              <span className="footer-cta__body-tablet hidden min-[768px]:max-[1199px]:!block">
                 <span className="block whitespace-nowrap">
                   Speak with Paragon about your loan, your closing date,
                 </span>
@@ -82,7 +82,7 @@ export default function Footer() {
                   and the variables that will affect your defeasance.
                 </span>
               </span>
-              <span className="footer-cta__body-desktop hidden min-[1196px]:!block">
+              <span className="footer-cta__body-desktop hidden min-[1200px]:!block">
                 <span className="block whitespace-nowrap">
                   Speak with Paragon about your loan, your closing date, and
                 </span>
@@ -109,7 +109,7 @@ export default function Footer() {
                   Stay Informed
                 </h3>
                 <p className="footer-newsletter__copy font-sans font-medium tracking-[-0.25px] text-white/60">
-                  <span className="max-[768px]:block min-[769px]:hidden">
+                  <span className="max-[767px]:block min-[768px]:hidden">
                     <span className="block whitespace-nowrap">
                       Sign up to receive market insights and
                     </span>
@@ -120,7 +120,7 @@ export default function Footer() {
                       privacy and send updates sparingly.
                     </span>
                   </span>
-                  <span className="hidden min-[769px]:block">
+                  <span className="hidden min-[768px]:block">
                     Sign up to receive market insights and defeasance updates. We
                     respect your privacy and send updates sparingly.
                   </span>
@@ -204,7 +204,7 @@ export default function Footer() {
 
         <div className="footer-legal flex min-w-0 flex-col border-t border-white/10">
           <p className="footer-legal__copy text-white/50">© 2026 Paragon</p>
-          <ul className="footer-legal__links flex w-full flex-row flex-nowrap items-center justify-between gap-x-3 max-[768px]:gap-x-2 min-[769px]:w-auto min-[769px]:justify-start min-[769px]:gap-x-6">
+          <ul className="footer-legal__links flex w-full flex-row flex-nowrap items-center justify-between gap-x-3 max-[767px]:gap-x-2 min-[768px]:w-auto min-[768px]:justify-start min-[768px]:gap-x-6">
             {legalLinks.map(({ href, label }) => (
               <li key={href} className="shrink-0">
                 <Link

@@ -5,19 +5,11 @@
   --foreground: #050a18;
 
   /* Diagonal edge feature (light→navy right cut + shared strip height).
-     402 floor → 135×39; 1194 → ~232×48.5; 1440 → 280×58.5; capped above. */
-  /* Upper bound is 280u / 58.5u rather than a flat 280 / 58.5 so the diagonal
-     keeps its proportion as the desktop canvas grows past 1440 (see --u). */
-  --section-edge-diag-width: clamp(
-    135px,
-    calc(100vw * 280 / 1440),
-    calc(280 * var(--u))
-  );
-  --section-edge-height: clamp(
-    39px,
-    calc(100vw * 58.5 / 1440),
-    calc(58.5 * var(--u))
-  );
+     402 floor → 135×39; 1194 → ~232×48.5; 1440 → 280×58.5; capped above.
+     The laptop band re-bases these on --u further down; below 1200 this
+     original definition is what applies. */
+  --section-edge-diag-width: clamp(135px, calc(100vw * 280 / 1440), 280px);
+  --section-edge-height: clamp(39px, calc(100vw * 58.5 / 1440), 58.5px);
   --section-edge-seam: 2px;
   /* 45° run equals height; flat tab fills the rest of the cut width */
   --section-edge-diag-span: var(--section-edge-height);
@@ -35,21 +27,32 @@
   --letter-spacing-body: -0.25px;
 
   /*
-   * ── Desktop canvas unit ───────────────────────────────────────────────
-   * The desktop composition is authored on a 1440px canvas with hand-locked
+   * ── Laptop canvas unit ────────────────────────────────────────────────
+   * The laptop composition is authored on a 1440px canvas with hand-locked
    * line breaks (.block + white-space: nowrap), so it scales as a single
    * unit rather than reflowing. 1u == 1px at the 1440 design width.
    *
-   * Ramps linearly 1195 → 1760, then holds so the page centres in gutters
-   * on very wide monitors instead of growing without limit.
-   *   1195/1440 = 0.829861   1440/1440 = 1   1760/1440 = 1.222222
+   * Laptop band is 1200–1599. --u ramps linearly across it and then holds,
+   * so 1600+ monitors show the design at its 1600 size, centred in gutters.
+   *   1200/1440 = 0.833333   1440/1440 = 1   1600/1440 = 1.111111
    *
-   * Below 1195 this floor is inert — the tablet (768–1194) and mobile
-   * (≤767) bands have their own tuned clamps and do not use --u.
+   * --u is referenced ONLY inside @media (min-width: 1200px) blocks. Below
+   * 1200 nothing reads it, so the tablet (768–1199) and mobile (≤767) bands
+   * keep their own tuned clamps, untouched.
    */
-  --u: clamp(0.829861px, calc(100vw / 1440), 1.222222px);
-  /* Canvas width itself, for shell max-widths: 1440u, capped at 1760. */
+  --u: clamp(0.833333px, calc(100vw / 1440), 1.111111px);
+  /* Canvas width itself, for shell max-widths: 1440u, capped at 1600. */
   --canvas-w: calc(1440 * var(--u));
+}
+
+/* Laptop band re-bases the section diagonal on the canvas so it keeps its
+   proportion as the design grows past 1440. Identical to the base definition
+   throughout 1200–1440; only 1440–1600 differs (where the base one capped). */
+@media (min-width: 1200px) {
+  :root {
+    --section-edge-diag-width: calc(280 * var(--u));
+    --section-edge-height: calc(58.5 * var(--u));
+  }
 }
 
 @theme inline {
@@ -188,90 +191,6 @@ blockquote,
 .hero-gradient-bg {
   background-color: #000c22;
   background-image: none;
-}
-
-.hero-bg-color {
-  background-color: #000c22;
-  background-image: none;
-}
-
-.hero-bg-color {
-  --hero-cta-right-padding: 21px;
-}
-
-.hero-content-shell {
-  --hero-inline-padding: 21px;
-}
-
-@media (min-width: 768px) and (max-width: 1194px) {
-  .hero-content-shell {
-    --hero-inline-padding: clamp(2.5rem, 4.25vw, 3.75rem);
-  }
-
-  .hero-description {
-    container-type: inline-size;
-    container-name: hero-desc;
-  }
-
-  .hero-heading {
-    container-type: inline-size;
-    container-name: hero-heading;
-    max-width: none !important;
-    width: 100%;
-    font-size: clamp(2.375rem, 4vw, 2.875rem) !important;
-    line-height: clamp(2.75rem, 4.6vw, 3.375rem) !important;
-    letter-spacing: -1.5px !important;
-  }
-
-  /* Scale locked rows to the heading column (same band as description) */
-  .hero-heading > .block {
-    font-size: min(1em, calc(100cqw * 46 / 537)) !important;
-    line-height: 1.18 !important;
-  }
-
-  /* 648px = longest tablet locked row at ~17.3px */
-  .hero-description__tablet > .block {
-    font-size: min(1em, calc(100cqw * 17.3 / 648)) !important;
-    line-height: 1.7;
-  }
-}
-
-@media (min-width: 1195px) {
-  .hero-bg-color {
-    --hero-cta-right-padding: calc(48 * var(--u));
-  }
-
-  .hero-content-shell {
-    --hero-inline-padding: calc(48 * var(--u));
-  }
-
-  .hero-description {
-    container-type: inline-size;
-    container-name: hero-desc;
-  }
-
-  .hero-heading {
-    container-type: inline-size;
-    container-name: hero-heading;
-    max-width: none !important;
-    width: 100%;
-  }
-
-  /*
-   * 742px = longest heading row at 62px. The cqw term now tracks a column
-   * that is itself sized in --u, so it stays proportional; the cap scales
-   * with the canvas so the row never freezes at the 1440 size.
-   */
-  .hero-heading > .block {
-    font-size: min(calc(62 * var(--u)), calc(100cqw * 62 / 742)) !important;
-    line-height: calc(73 / 62);
-  }
-
-  /* 693px = longest desktop locked row at 18px */
-  .hero-description__desktop > .block {
-    font-size: min(calc(18 * var(--u)), calc(100cqw * 18 / 693)) !important;
-    line-height: calc(30 / 18);
-  }
 }
 
 .hero-bg-shimmer {
@@ -706,7 +625,7 @@ blockquote,
 }
 
 /* Tablet / small desktop columns are tighter — shrink type a bit more */
-@media (min-width: 766px) and (max-width: 1194px) {
+@media (min-width: 766px) and (max-width: 1199px) {
   .difference-feature__title {
     font-size: clamp(1rem, 1.45vw, 1.375rem); /* ~16 → 22 */
     line-height: 1.28;
@@ -733,17 +652,17 @@ blockquote,
 }
 
 /*
- * Difference desktop band.
+ * Difference laptop band.
  * The 375→1440 piecewise clamps above are already continuous, but they cap at
  * their 1440 values — which would freeze this section while the rest of the
- * page keeps growing. Restate the 1440 geometry in canvas units from 1195 up.
+ * page keeps growing. Restate the 1440 geometry in canvas units from 1200 up.
  *
  * This also replaces the old 1195–1365 copy ramp: that existed because jumping
- * straight to a flat 16px at 1195 widened the locked nowrap rows enough to push
- * block 3 past the section edge. At 16u the copy and its column shrink by the
- * same factor, so the rows sit exactly as they do at 1440 and cannot crop.
+ * straight to a flat 16px widened the locked nowrap rows enough to push block 3
+ * past the section edge. At 16u the copy and its column shrink by the same
+ * factor, so the rows sit exactly as they do at 1440 and cannot crop.
  */
-@media (min-width: 1195px) {
+@media (min-width: 1200px) {
   .difference-shell {
     --difference-inline-padding: calc(48 * var(--u));
     --diff-pt-2: calc(348 * var(--u));
@@ -1206,7 +1125,7 @@ blockquote,
 }
 
 /* Services tablet band (768px–1194px inclusive) */
-@media (min-width: 768px) and (width < 1195px) {
+@media (min-width: 768px) and (width < 1200px) {
   .services-section {
     height: auto;
     min-height: 0;
@@ -1621,7 +1540,7 @@ blockquote,
 }
 
 /* Footer tablet band (768px–1195px) — same bg image + #000C22 as desktop */
-@media (min-width: 768px) and (max-width: 1195px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .footer-section {
     background: #000c22;
   }
@@ -1630,10 +1549,14 @@ blockquote,
     display: block;
   }
 
+  /*
+   * The artwork is an abstract 1440x884 stripe/beam pattern, not a photo, so it
+   * scales rather than crops: `cover` zooms it ~1.33x at iPad-class widths and
+   * chops ~25% off each side, pulling the stripes off the layout gutters.
+   */
   .footer-bg__img {
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: fill;
   }
 
   .footer-shell {
@@ -1763,14 +1686,21 @@ blockquote,
     gap: 0;
   }
 
+  /* Links / Contact run a notch smaller than the rest of the tablet scale so
+   * the two columns don't crowd the newsletter block. */
+  .footer-nav__label {
+    font-size: 0.875rem;
+    letter-spacing: 2.5px;
+  }
+
   .footer-link {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     line-height: 1.625;
   }
 
   .footer-contact__item {
     /* Interpolates mobile 16px -> desktop 20px so it never outgrows the 1195px spec */
-    font-size: clamp(1rem, 1.67vw, 1.25rem);
+    font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
     line-height: 1.45;
   }
 
@@ -1782,7 +1712,7 @@ blockquote,
   }
 }
 
-@media (min-width: 1196px) {
+@media (min-width: 1200px) {
   .footer-section {
     background: #000c22;
   }
@@ -1967,7 +1897,9 @@ blockquote,
   }
 }
 
-@media (max-width: 768px) {
+/* Footer mobile (<=767px) — must stop below the 768px tablet band, or both
+ * apply at exactly 768px and the mobile 402px shell wins over the tablet grid. */
+@media (max-width: 767px) {
   .footer-section {
     min-height: 0;
     background: #000c22;
@@ -3120,7 +3052,7 @@ div.section-edge-seam-cover-light {
 }
 
 /* Reputation tablet + small laptop band (768px–1194px inclusive) */
-@media (min-width: 768px) and (width < 1195px) {
+@media (min-width: 768px) and (width < 1200px) {
   .reputation-shell {
     --reputation-inline-padding: clamp(2rem, 3.5vw, 3rem);
     justify-content: flex-start;
@@ -3257,7 +3189,7 @@ div.section-edge-seam-cover-light {
   }
 }
 
-@media (min-width: 1195px) {
+@media (min-width: 1200px) {
   .reputation-shell {
     height: auto;
     padding-bottom: calc(var(--section-edge-height) + 70 * var(--u));
@@ -3524,7 +3456,7 @@ div.section-edge-seam-cover-light {
 .calculator-cube__row--total .calculator-cube__value {
   color: #fff;
   font-family: var(--font-poppins), ui-sans-serif, sans-serif;
-  font-size: clamp(0.625rem, calc(100cqw * 14.9 / 439), calc(20 * var(--u)));
+  font-size: clamp(0.625rem, calc(100cqw * 14.9 / 439), 1.25rem);
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
@@ -3535,7 +3467,7 @@ div.section-edge-seam-cover-light {
 .calculator-cube__row--secondary .calculator-cube__value {
   color: rgba(255, 255, 255, 0.61);
   font-family: var(--font-poppins), ui-sans-serif, sans-serif;
-  font-size: clamp(0.5625rem, calc(100cqw * 13.41 / 439), calc(18 * var(--u)));
+  font-size: clamp(0.5625rem, calc(100cqw * 13.41 / 439), 1.125rem);
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
@@ -3549,11 +3481,11 @@ div.section-edge-seam-cover-light {
 }
 
 /*
- * Process + Calculator desktop band.
+ * Process + Calculator laptop band.
  * Previously split across 1195–1352 (fluid bridge) and ≥1353 (px lock), which
  * stepped at 1353. One proportional ramp on --u replaces both.
  */
-@media (min-width: 1195px) {
+@media (min-width: 1200px) {
   .process-shell,
   .calculator-shell {
     padding-inline: calc(48 * var(--u));
@@ -3641,7 +3573,7 @@ div.section-edge-seam-cover-light {
 }
 
 /* Process + Calculator tablet band (768px–1194px inclusive) */
-@media (min-width: 768px) and (width < 1195px) {
+@media (min-width: 768px) and (width < 1200px) {
   .process-shell,
   .calculator-shell {
     --process-inline-padding: clamp(1.75rem, 3.25vw, 2.75rem);
@@ -3780,7 +3712,7 @@ div.section-edge-seam-cover-light {
   }
 }
 
-@media (min-width: 1120px) and (width < 1195px) {
+@media (min-width: 1120px) and (width < 1200px) {
   .process-copy__title,
   .calculator-copy__title {
     font-size: clamp(1.5625rem, 2.55vw, 1.8125rem);
@@ -3843,7 +3775,7 @@ div.section-edge-seam-cover-light {
 }
 
 /* Hide corner mark while pressed/hovered — reliable on touch (tablet/mobile). */
-@media (max-width: 1194px) {
+@media (max-width: 1199px) {
   .about-stat-card:hover .about-stat-corner,
   .about-stat-card:active .about-stat-corner {
     opacity: 0 !important;
@@ -3880,7 +3812,7 @@ div.section-edge-seam-cover-light {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1194px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .about-content-shell {
     --about-inline-padding: clamp(1.75rem, 3.25vw, 3.75rem);
   }
@@ -3967,11 +3899,9 @@ div.section-edge-seam-cover-light {
   }
 }
 
-@media (min-width: 1100px) and (max-width: 1194px) {
+@media (min-width: 1100px) and (max-width: 1199px) {
   /*
-   * Upper tablet (1100–1194): ramps the cards up to meet the desktop canvas
-   * at 1195, where --u = 0.829861 (so 487u = 404.2, 360u = 298.8, 248u = 205.8).
-   * Landing on those exact values keeps the 1194→1195 seam continuous.
+   * Mid-range (1100–1199): stepped cards between tablet and the laptop canvas.
    * Type uses cqw from each card so nowrap copy stays inside.
    */
   .about-stat-card {
@@ -3980,19 +3910,19 @@ div.section-edge-seam-cover-light {
   }
 
   .about-stat-card--first {
-    height: calc(345px + (100vw - 1100px) * 59.2 / 95) !important;
-    max-height: 404.2px;
+    height: calc(345px + (100vw - 1100px) * 80 / 339) !important;
+    max-height: 425px;
   }
 
   .about-stat-card--stacked:nth-child(2) {
-    height: calc(260px + (100vw - 1100px) * 38.8 / 95) !important;
-    max-height: 298.8px;
+    height: calc(260px + (100vw - 1100px) * 55 / 339) !important;
+    max-height: 315px;
   }
 
   .about-stat-card--stacked:last-child {
-    height: calc(180px + (100vw - 1100px) * 25.8 / 95) !important;
+    height: calc(180px + (100vw - 1100px) * 40 / 339) !important;
     min-height: 0;
-    max-height: 205.8px;
+    max-height: 220px;
   }
 
   .about-stats-row {
@@ -4019,10 +3949,10 @@ div.section-edge-seam-cover-light {
 }
 
 /*
- * About desktop band. Folds in the former ≥1440 lock so the 1440 geometry
- * is expressed once, in canvas units, and holds from 1195 up.
+ * About laptop band. Folds in the former ≥1440 lock so the 1440 geometry
+ * is expressed once, in canvas units, and holds from 1200 up.
  */
-@media (min-width: 1195px) {
+@media (min-width: 1200px) {
   .about-content-shell {
     --about-inline-padding: calc(40 * var(--u));
   }
@@ -4071,18 +4001,18 @@ div.section-edge-seam-cover-light {
 
 /*
  * ═══════════════════════════════════════════════════════════════════════
- * Desktop canvas band (≥1195px)
+ * Laptop canvas band (1200–1599, then held)
  *
  * Everything below restates the approved 1440 geometry in canvas units
  * (--u), replacing values that were previously pinned in px by Tailwind
- * `min-[1195px]:` / `min-[1440px]:` utilities.
+ * `min-[1200px]:` / `min-[1440px]:` utilities.
  *
  * These rules sit outside @layer, so they win over Tailwind's utility
  * layer regardless of source order. Values without a `!important`
  * counterpart in the markup are simply overridden here.
  * ═══════════════════════════════════════════════════════════════════════
  */
-@media (min-width: 1195px) {
+@media (min-width: 1200px) {
   /* ── Navbar ───────────────────────────────────────────────────────── */
   .paragon-nav {
     max-width: var(--canvas-w);
@@ -4125,62 +4055,6 @@ div.section-edge-seam-cover-light {
   }
 
   /* ── Hero ─────────────────────────────────────────────────────────── */
-  /*
-   * The headline fix: the shell used to cap at 1194px for 1195–1439 and then
-   * snap to 1440px at exactly 1440 — a 246px jump on one pixel of resize.
-   */
-  .hero-bg-color {
-    height: calc(894 * var(--u));
-  }
-
-  .hero-content-shell {
-    max-width: var(--canvas-w);
-  }
-
-  .hero-heading-wrap {
-    padding-top: calc(144 * var(--u));
-  }
-
-  .hero-heading-col {
-    max-width: calc(709 * var(--u));
-  }
-
-  .hero-label {
-    margin-bottom: calc(20 * var(--u));
-    font-size: calc(16 * var(--u));
-    gap: calc(10 * var(--u));
-  }
-
-  .hero-heading {
-    font-size: calc(62 * var(--u));
-    line-height: calc(73 * var(--u));
-    letter-spacing: calc(-3 * var(--u));
-  }
-
-  .hero-description-row {
-    top: calc(579 * var(--u));
-    height: calc(120 * var(--u));
-    gap: calc(64 * var(--u));
-  }
-
-  .hero-description {
-    max-width: calc(709 * var(--u)) !important;
-    height: calc(120 * var(--u));
-    font-size: calc(18 * var(--u));
-    line-height: calc(30 * var(--u));
-  }
-
-  .hero-cta-row {
-    gap: calc(16 * var(--u));
-  }
-
-  .hero-content-shell .btn-hero {
-    height: calc(54 * var(--u));
-    padding-inline: calc(24 * var(--u)) !important;
-    gap: calc(8 * var(--u));
-    font-size: calc(16 * var(--u));
-  }
-
   /* ── Services ─────────────────────────────────────────────────────── */
   .services-section {
     min-height: calc(899 * var(--u));
@@ -4320,7 +4194,7 @@ div.section-edge-seam-cover-light {
    * Card 3's locked row "Average closing time for defeasance" measures 397px
    * at 22px, but the description box is only 364px (428 card − 2×32 padding),
    * so a flat 22px crops it to "…defeasar". The old 1100–1439 band already
-   * corrected this with a cqw fit; carry the same fit across the whole desktop
+   * corrected this with a cqw fit; carry the same fit across the whole laptop
    * band so all three cards share one size and nothing clips.
    *
    * cqw resolves against the card's CONTENT box (364px on the stacked cards,
@@ -4395,9 +4269,142 @@ div.section-edge-seam-cover-light {
   .calculator-shell {
     max-width: var(--canvas-w);
   }
+
+  /*
+   * ── Locked-row caps ───────────────────────────────────────────────
+   * These rows are cqw-fitted globally; only their upper cap is restated
+   * here so they keep growing with the canvas past 1440 instead of
+   * freezing at the flat 1440 size. Below 1200 the global caps apply.
+   */
+  .services-card__copy-locked > .block {
+    font-size: min(calc(18 * var(--u)), 4.235cqw) !important;
+  }
+
+  .calculator-cube__row--primary .calculator-cube__label,
+  .calculator-cube__row--primary .calculator-cube__value,
+  .calculator-cube__row--total .calculator-cube__label,
+  .calculator-cube__row--total .calculator-cube__value {
+    font-size: clamp(0.625rem, calc(100cqw * 14.9 / 439), calc(20 * var(--u)));
+  }
+
+  .calculator-cube__row--secondary .calculator-cube__label,
+  .calculator-cube__row--secondary .calculator-cube__value {
+    font-size: clamp(0.5625rem, calc(100cqw * 13.41 / 439), calc(18 * var(--u)));
+  }
+}
+/*
+ * ── HERO — driven by the Figma boards ────────────────────────────────
+ * Anchors: Mobile 402 · Tablet 1194 · Desktop 1440 · XL 1920.
+ * Values interpolate linearly between anchors and hold outside them, so
+ * every board renders exactly as drawn and the widths between them are a
+ * continuous blend. Generated from the Figma REST API — do not hand-tune
+ * individual numbers; change the board and regenerate.
+ *
+ * Figma has no explicit line breaks in this copy: each text is a single
+ * run wrapping inside a fixed-width box, so the box width is the spec and
+ * the text wraps naturally. No nowrap spans, no shrink-to-fit.
+ */
+.hero-bg-color {
+  /* Restored with the generated block — the base fill the artwork sits on. */
+  background-color: #000c22;
+  background-image: none;
+  height: calc(852px + clamp(-42px, (100vw - 402px) * -0.0530303, 0px) + clamp(0px, (100vw - 1194px) * 0.341463, 84px) + clamp(0px, (100vw - 1440px) * 0.3875, 186px));
 }
 
-/* Locked-row caps: scale with the canvas so rows don't freeze at 1440. */
-.services-card__copy-locked > .block {
-  font-size: min(calc(18 * var(--u)), 4.235cqw) !important;
+.hero-content-shell {
+  --hero-heading-inset: calc(21px + clamp(0px, (100vw - 402px) * 0.0239899, 19px) + clamp(0px, (100vw - 1440px) * 0.0833333, 40px));
+  --hero-desc-inset: calc(20px + clamp(0px, (100vw - 402px) * 0.0252525, 20px) + clamp(0px, (100vw - 1194px) * 0.0325203, 8px) + clamp(0px, (100vw - 1440px) * 0.0666667, 32px));
+  position: relative;
+  z-index: 10;
+  margin-inline: auto;
+  width: 100%;
+  max-width: calc(402px + clamp(0px, (100vw - 402px) * 1, 792px) + clamp(0px, (100vw - 1194px) * 1, 246px) + clamp(0px, (100vw - 1440px) * 1, 480px));
+  height: 100%;
+}
+
+/* Heading block — top-left on every board */
+.hero-heading-wrap {
+  position: absolute;
+  top: calc(144px + clamp(-5px, (100vw - 402px) * -0.00631313, 0px) + clamp(0px, (100vw - 1194px) * 0.227642, 56px) + clamp(0px, (100vw - 1440px) * 0.0541667, 26px));
+  left: var(--hero-heading-inset);
+  right: var(--hero-heading-inset);
+}
+
+.hero-heading-col {
+  max-width: calc(360px + clamp(0px, (100vw - 402px) * 0.27399, 217px) + clamp(0px, (100vw - 1194px) * 0.650407, 160px) + clamp(0px, (100vw - 1440px) * 0.370833, 178px));
+}
+
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: calc(8px + clamp(0px, (100vw - 1440px) * 0.00416667, 2px));
+  margin-bottom: calc(15px + clamp(0px, (100vw - 402px) * 0.00126263, 1px) + clamp(0px, (100vw - 1194px) * 0.0203252, 5px) + clamp(0px, (100vw - 1440px) * 0.00625, 3px));
+  font-size: calc(14px + clamp(0px, (100vw - 402px) * 0.00252525, 2px) + clamp(0px, (100vw - 1440px) * 0.00416667, 2px));
+  line-height: calc(14px + clamp(0px, (100vw - 1440px) * 0.00416667, 2px));
+  letter-spacing: -0.5px;
+}
+
+.hero-heading {
+  width: 100%;
+  max-width: calc(360px + clamp(0px, (100vw - 402px) * 0.27399, 217px) + clamp(0px, (100vw - 1194px) * 0.650407, 160px) + clamp(0px, (100vw - 1440px) * 0.370833, 178px));
+  font-size: calc(40px + clamp(0px, (100vw - 402px) * 0.010101, 8px) + clamp(0px, (100vw - 1194px) * 0.0569106, 14px) + clamp(0px, (100vw - 1440px) * 0.0208333, 10px));
+  line-height: calc(47px + clamp(0px, (100vw - 402px) * 0.020202, 16px) + clamp(0px, (100vw - 1194px) * 0.0406504, 10px) + clamp(0px, (100vw - 1440px) * 0.0270833, 13px));
+  letter-spacing: calc(-1.5px + clamp(-0.5px, (100vw - 402px) * -0.000631313, 0px) + clamp(-1px, (100vw - 1194px) * -0.00406504, 0px));
+  font-weight: 500;
+}
+
+/* Description + CTA row */
+.hero-description-row {
+  position: absolute;
+  top: calc(437px + clamp(0px, (100vw - 402px) * 0.14899, 118px) + clamp(0px, (100vw - 1194px) * 0.097561, 24px) + clamp(0px, (100vw - 1440px) * 0.402083, 193px));
+  left: var(--hero-desc-inset);
+  right: var(--hero-desc-inset);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(24px + clamp(0px, (100vw - 402px) * 0.020202, 16px) + clamp(0px, (100vw - 1194px) * 0.097561, 24px) + clamp(0px, (100vw - 1440px) * 0.0333333, 16px));
+}
+
+.hero-description {
+  flex: 0 1 auto;
+  width: 100%;
+  max-width: calc(362px + clamp(0px, (100vw - 402px) * 0.275253, 218px) + clamp(0px, (100vw - 1194px) * 0.52439, 129px) + clamp(0px, (100vw - 1440px) * 0.354167, 170px));
+  font-size: calc(15px + clamp(0px, (100vw - 402px) * 0.00126263, 1px) + clamp(0px, (100vw - 1194px) * 0.00813008, 2px) + clamp(0px, (100vw - 1440px) * 0.0125, 6px));
+  line-height: calc(26px + clamp(0px, (100vw - 402px) * 0.00505051, 4px) + clamp(0px, (100vw - 1440px) * 0.0125, 6px));
+  letter-spacing: -0.25px;
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: calc(14px + clamp(0px, (100vw - 1194px) * 0.00406504, 1px) + clamp(0px, (100vw - 1440px) * 0.0104167, 5px));
+}
+
+.hero-content-shell .btn-hero {
+  height: calc(54px + clamp(0px, (100vw - 1440px) * 0.0225, 10.8px));
+  padding-inline: calc(25px + clamp(0px, (100vw - 1440px) * 0.0104167, 5px));
+  gap: calc(12px + clamp(0px, (100vw - 1440px) * 0.00416667, 2px));
+  font-size: calc(15px + clamp(0px, (100vw - 402px) * 0.00126263, 1px) + clamp(0px, (100vw - 1440px) * 0.00416667, 2px));
+  line-height: calc(14px + clamp(0px, (100vw - 1440px) * 0.00625, 3px));
+  letter-spacing: -0.5px;
+}
+
+/* Mobile stacks the row: description above full-width buttons (Figma 402). */
+@media (max-width: 767px) {
+  .hero-description-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .hero-content-shell .btn-hero {
+    width: 100%;
+  }
 }

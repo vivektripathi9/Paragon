@@ -19,11 +19,11 @@ function ProcessGraphic() {
         alt=""
         width={439}
         height={439}
-        className="process-cube-tablet mx-auto h-auto w-full max-w-full object-contain opacity-100 max-md:hidden min-[768px]:max-[1194px]:block min-[1195px]:hidden"
+        className="process-cube-tablet mx-auto h-auto w-full max-w-full object-contain opacity-100 max-md:hidden min-[768px]:max-[1199px]:block min-[1200px]:hidden"
         aria-hidden
       />
       <div
-        className="process-cube-desktop hidden min-[1195px]:block"
+        className="process-cube-desktop hidden min-[1200px]:block"
         aria-hidden
       />
     </div>
@@ -34,15 +34,15 @@ export default function Process() {
   return (
     <section className="process-section full-bleed relative z-[3] section-edge-overlap overflow-hidden bg-[#000C22] pb-0">
       <div className="process-shell relative z-[2] isolate mx-auto w-full max-w-[1440px] px-12 pb-24 pt-20 max-md:max-w-[402px] max-md:px-5 max-md:pb-6 max-md:pt-[var(--section-edge-height)]">
-        <div className="process-block grid min-w-0 items-center gap-8 max-md:grid-cols-1 min-[768px]:max-[1194px]:grid-cols-2 min-[768px]:max-[1194px]:gap-6 min-[1195px]:grid-cols-2 min-[1195px]:gap-10">
-          <div className="process-cube-wrap relative z-[1] max-md:mx-auto min-[768px]:max-[1194px]:order-1 min-[768px]:max-[1194px]:col-start-1 min-[1195px]:justify-self-start">
+        <div className="process-block grid min-w-0 items-center gap-8 max-md:grid-cols-1 min-[768px]:max-[1199px]:grid-cols-2 min-[768px]:max-[1199px]:gap-6 min-[1200px]:grid-cols-2 min-[1200px]:gap-10">
+          <div className="process-cube-wrap relative z-[1] max-md:mx-auto min-[768px]:max-[1199px]:order-1 min-[768px]:max-[1199px]:col-start-1 min-[1200px]:justify-self-start">
             <ProcessGraphic />
           </div>
 
-          <div className="process-copy-wrap relative z-[3] min-w-0 max-md:pt-4 min-[768px]:max-[1194px]:order-2 min-[768px]:max-[1194px]:col-start-2 min-[1195px]:pt-6">
-            <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
+          <div className="process-copy-wrap relative z-[3] min-w-0 max-md:pt-4 min-[768px]:max-[1199px]:order-2 min-[768px]:max-[1199px]:col-start-2 min-[1200px]:pt-6">
+            <div className="mb-6 flex items-center gap-2.5 min-[1200px]:mb-8">
               <SectionLabelIcon variant="dark" />
-              <span className="font-subheading text-sm font-semibold text-[#B0CCFF] min-[1195px]:text-[0.9375rem]">
+              <span className="font-subheading text-sm font-semibold text-[#B0CCFF] min-[1200px]:text-[0.9375rem]">
                 Our Process
               </span>
             </div>
@@ -61,7 +61,7 @@ export default function Process() {
               </span>
             </h2>
 
-            <div className="process-copy__stack mt-5 flex flex-col gap-4 max-md:mt-5 max-md:max-w-[367px] max-md:min-h-[156px] min-[1195px]:mt-5 min-[1195px]:gap-4">
+            <div className="process-copy__stack mt-5 flex flex-col gap-4 max-md:mt-5 max-md:max-w-[367px] max-md:min-h-[156px] min-[1200px]:mt-5 min-[1200px]:gap-4">
               <p className="process-copy__body font-sans font-medium tracking-[-0.25px] text-white/70 max-md:text-[16px] max-md:leading-[26px] max-md:text-[#FFFFFFCC] min-[1353px]:text-[18px] min-[1353px]:leading-[30px]">
                 Every defeasance follows a sequence. The challenge is that the
                 timing is driven by a transaction with its own closing deadline.
@@ -76,7 +76,7 @@ export default function Process() {
 
             <Link
               href="/process"
-              className="process-cta btn-hero group mt-8 inline-flex h-[54px] w-[203px] items-center justify-center gap-3 whitespace-nowrap bg-[#31EE97] px-[25px] text-sm font-semibold text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:mt-8 min-[1195px]:mt-10 min-[1195px]:text-base"
+              className="process-cta btn-hero group mt-8 inline-flex h-[54px] w-[203px] items-center justify-center gap-3 whitespace-nowrap bg-[#31EE97] px-[25px] text-sm font-semibold text-paragon-navy opacity-100 transition-[transform,box-shadow,filter] duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-[0_8px_30px_rgba(49,238,151,0.25)] max-md:mt-8 min-[1200px]:mt-10 min-[1200px]:text-base"
             >
               See Our Process
               <ArrowIcon />
