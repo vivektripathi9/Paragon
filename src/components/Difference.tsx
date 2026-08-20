@@ -160,24 +160,36 @@ const features = [
       <>
         <span className="hidden min-[1195px]:block">
           <span className="block whitespace-nowrap">
-            Senior-led execution on every
+            We bring senior-led execution
           </span>
-          <span className="block whitespace-nowrap">transaction.</span>
+          <span className="block whitespace-nowrap">
+            to every transaction.
+          </span>
         </span>
         <span className="hidden min-[1000px]:max-[1194px]:block">
           <span className="block whitespace-nowrap">
-            Senior-led execution on every
+            We bring senior-led execution
           </span>
-          <span className="block whitespace-nowrap">transaction.</span>
+          <span className="block whitespace-nowrap">
+            to every transaction.
+          </span>
         </span>
         <span className="hidden min-[766px]:max-[999px]:block">
-          Senior-led execution on every transaction.
+          <span className="block whitespace-nowrap">
+            We bring senior-led execution
+          </span>
+          <span className="block whitespace-nowrap">
+            to every transaction.
+          </span>
         </span>
         <span className="min-[766px]:hidden">
           <span className="block whitespace-nowrap">
-            Senior-led execution on
+            We bring senior-led
           </span>
-          <span className="block whitespace-nowrap">every transaction.</span>
+          <span className="block whitespace-nowrap">
+            execution to every
+          </span>
+          <span className="block whitespace-nowrap">transaction.</span>
         </span>
       </>
     ),

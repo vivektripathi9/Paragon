@@ -43,7 +43,7 @@ export default function Process() {
             <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
               <SectionLabelIcon variant="dark" />
               <span className="font-subheading text-sm font-semibold text-[#B0CCFF] min-[1195px]:text-[0.9375rem]">
-                Our Process
+                Our process
               </span>
             </div>
 

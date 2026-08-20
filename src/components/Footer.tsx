@@ -55,7 +55,7 @@ export default function Footer() {
             <div className="footer-label mb-6 flex items-center gap-2.5">
               <SectionLabelIcon variant="dark" />
               <span className="footer-label__text font-subheading text-sm font-semibold text-[#B0CCFF]">
-                Getting Started
+                Getting started
               </span>
             </div>
 
