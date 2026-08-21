@@ -54,7 +54,7 @@ export default function Hero() {
               <span>Paragon Loan Advisors</span>
             </div>
 
-            <h1 className="hero-heading font-heading h-auto w-full text-[clamp(3.125rem,4.6vw,3.875rem)] font-medium leading-[clamp(3.6rem,5.2vw,4.5rem)] tracking-[-0.14em] text-white md:max-[1195px]:!text-[clamp(2.375rem,4vw,2.875rem)] md:max-[1195px]:!leading-[clamp(2.75rem,4.6vw,3.375rem)] md:max-[1195px]:!tracking-[-1.5px] min-[1440px]:text-[62px] min-[1440px]:leading-[73px] min-[1195px]:tracking-[-3px]">
+            <h1 className="hero-heading font-heading h-auto w-full text-[clamp(3.125rem,4.6vw,3.875rem)] !font-medium leading-[clamp(3.6rem,5.2vw,4.5rem)] tracking-[-0.14em] text-white md:max-[1195px]:!text-[clamp(2.375rem,4vw,2.875rem)] md:max-[1195px]:!leading-[clamp(2.75rem,4.6vw,3.375rem)] md:max-[1195px]:!tracking-[-1.5px] min-[1440px]:text-[62px] min-[1440px]:leading-[73px] min-[1195px]:tracking-[-3px]">
               <span className="block whitespace-nowrap">
                 Defeasance is not the deal.
               </span>
@@ -94,7 +94,7 @@ export default function Hero() {
             <span>Paragon Loan Advisors</span>
           </div>
 
-          <h1 className="font-heading h-[188px] w-full max-w-[360px] text-[40px] font-medium leading-[47px] tracking-[-1.5px] text-white">
+          <h1 className="font-heading h-[188px] w-full max-w-[360px] text-[40px] !font-medium leading-[47px] tracking-[-1.5px] text-white">
             <span className="block">Defeasance is not</span>
             <span className="block">the deal. It&apos;s the</span>
             <span className="block">step that makes the</span>
