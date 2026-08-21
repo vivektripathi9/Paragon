@@ -186,7 +186,7 @@ export default function Footer() {
                       href={link.href}
                       className={`footer-link inline-flex items-center rounded-[5px] font-sans font-medium transition-opacity hover:opacity-80 ${
                         "accent" in link && link.accent
-                          ? "text-paragon-green"
+                          ? "text-[#31EE97]"
                           : "text-white"
                       }`}
                     >

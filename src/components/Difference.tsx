@@ -285,7 +285,7 @@ export default function Difference() {
               What makes us different
             </span>
           </div>
-          <h2 className="font-heading w-full max-w-[min(42.5rem,100%)] text-[clamp(2.25rem,3.75vw,3.375rem)] !font-medium leading-[clamp(2.95rem,4.8vw,4.375rem)] tracking-[-0.04em] text-white">
+          <h2 className="font-heading mb-7 w-full max-w-[min(42.5rem,100%)] text-[clamp(2.25rem,3.75vw,3.375rem)] !font-medium leading-[clamp(2.95rem,4.8vw,4.375rem)] tracking-[-0.04em] text-white">
             <span className="hidden min-[766px]:inline">
               The Paragon difference
             </span>
