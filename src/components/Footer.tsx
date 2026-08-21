@@ -59,7 +59,7 @@ export default function Footer() {
               </span>
             </div>
 
-            <h2 className="footer-cta__title font-heading font-medium text-white">
+            <h2 className="footer-cta__title font-heading !font-medium text-white">
               <span className="max-[768px]:hidden">
                 <span className="footer-cta__title-line block">
                   Your deal has a timeline.
