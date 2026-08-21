@@ -1253,7 +1253,7 @@ blockquote,
     --services-inline-padding: clamp(1.75rem, 3.25vw, 2.0625rem);
     height: auto;
     max-width: min(100%, 75rem);
-    padding-inline: var(--services-inline-padding);
+    padding-inline: var(--services-inline-padding) !important;
     padding-top: calc(var(--section-edge-height) + clamp(1.25rem, 2.5vw, 1.75rem));
     /* Extra clearance so the CTA clears the navy bottom-edge / Process overlap */
     padding-bottom: calc(var(--section-edge-height) + clamp(3rem, 5vw, 4.5rem));
@@ -1262,7 +1262,7 @@ blockquote,
   .services-grid {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: clamp(1rem, 2.5vw, 2.5rem);
+    gap: clamp(1.75rem, 4vw, 3.25rem) !important;
     margin-top: clamp(1.5rem, 3vw, 2.5rem);
     min-height: 0;
     width: 100%;
@@ -1311,6 +1311,39 @@ blockquote,
     width: 14.625rem !important;
     max-width: 14.625rem;
     padding-inline: 25px;
+  }
+}
+
+/*
+ * 1195–1439: Figma uses less side inset than px-12, with columns spanning
+ * the leftover width. Interpolate toward 1440 (40px pad / 40px gap).
+ */
+@media (min-width: 1195px) and (max-width: 1439px) {
+  .services-shell {
+    padding-left: clamp(
+      1.5rem,
+      calc(1.5rem + (100vw - 1195px) * 16 / 245),
+      2.5rem
+    ) !important;
+    padding-right: clamp(
+      1.5rem,
+      calc(1.5rem + (100vw - 1195px) * 16 / 245),
+      2.5rem
+    ) !important;
+  }
+
+  .services-grid {
+    gap: 4rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-card:nth-child(2) {
+    transform: translateX(1.25rem);
+  }
+
+  .services-card:nth-child(3) {
+    transform: translateX(2.25rem);
   }
 }
 

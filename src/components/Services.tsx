@@ -157,7 +157,7 @@ const services: {
 export default function Services() {
   return (
     <section className="services-section full-bleed relative z-[4] section-edge-overlap overflow-visible bg-[#F0F3FC] max-md:h-auto max-md:min-h-0 md:h-auto min-[1195px]:min-h-[899px]">
-      <div className="services-shell mx-auto flex w-full min-h-0 max-w-[1440px] flex-col px-12 pb-0 pt-[calc(var(--section-edge-height)+1.5rem)] max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(var(--section-edge-height)+3.5rem)] max-md:pt-[calc(var(--section-edge-height)+2.5rem)] md:min-h-0 min-[1195px]:px-12 min-[1195px]:pb-[calc(var(--section-edge-height)+2.5rem)] min-[1195px]:pt-[calc(var(--section-edge-height)+clamp(3.25rem,5vw,4.5rem))] min-[1440px]:pt-[calc(var(--section-edge-height)+4.5rem)]">
+      <div className="services-shell mx-auto flex w-full min-h-0 max-w-[1440px] flex-col pb-0 pt-[calc(var(--section-edge-height)+1.5rem)] max-md:max-w-[402px] max-md:px-5 max-md:pb-[calc(var(--section-edge-height)+3.5rem)] max-md:pt-[calc(var(--section-edge-height)+2.5rem)] md:min-h-0 min-[1195px]:pb-[calc(var(--section-edge-height)+2.5rem)] min-[1195px]:pt-[calc(var(--section-edge-height)+clamp(3.25rem,5vw,4.5rem))] min-[1440px]:px-10 min-[1440px]:pt-[calc(var(--section-edge-height)+4.5rem)]">
         <header className="w-full">
           <div className="mb-6 flex items-center gap-2.5 min-[1195px]:mb-8">
             <SectionLabelIcon variant="light" />
@@ -190,7 +190,7 @@ export default function Services() {
           </p>
         </header>
 
-        <div className="services-grid mt-10 grid min-w-0 max-md:grid-cols-1 max-md:gap-10 md:max-[1194px]:grid-cols-3 md:max-[1194px]:gap-[clamp(1rem,2.5vw,2.5rem)] min-[1195px]:mt-20 min-[1195px]:min-h-0 min-[1195px]:w-full min-[1195px]:max-w-none min-[1195px]:grid-cols-3 min-[1195px]:gap-10">
+        <div className="services-grid mt-10 grid min-w-0 max-md:grid-cols-1 max-md:gap-10 md:max-[1194px]:grid-cols-3 md:max-[1194px]:gap-[clamp(1.75rem,4vw,3.25rem)] min-[1195px]:mt-20 min-[1195px]:min-h-0 min-[1195px]:w-full min-[1195px]:max-w-none min-[1195px]:grid-cols-3 min-[1195px]:max-[1439px]:gap-16 min-[1440px]:gap-10">
           {services.map((service) => (
             <article
               key={service.title}

@@ -48,7 +48,7 @@ export default function Hero() {
 
       <div className="hero-content-shell relative z-10 mx-auto h-full w-full max-w-[1440px] max-md:flex max-md:max-w-[402px] max-md:flex-col max-md:justify-between max-md:px-[var(--hero-inline-padding)] max-md:pb-20 max-md:pt-20 md:block md:max-[1194px]:max-w-[1194px] md:max-[1195px]:!flex md:max-[1195px]:!flex-col md:max-[1195px]:!justify-center md:max-[1195px]:!gap-32 md:max-[1195px]:!px-[var(--hero-inline-padding)] md:max-[1195px]:!pt-[clamp(3.5rem,7vw,5.5rem)] md:max-[1195px]:!pb-[clamp(3rem,6vw,5rem)] md:pb-0 md:pt-0 min-[1195px]:px-12 min-[1440px]:max-w-[1440px]">
       <div className="hero-heading-wrap max-md:hidden px-[var(--hero-inline-padding)] pt-24 md:max-[1195px]:!flex md:max-[1195px]:!w-full md:max-[1195px]:!items-start md:max-[1195px]:!gap-[clamp(1.5rem,3vw,2.5rem)] md:max-[1195px]:!px-0 md:max-[1195px]:!pt-0 md:max-[1195px]:!-mt-14 min-[1195px]:px-0 min-[1195px]:pt-36">
-          <div className="hero-heading-col min-w-0 md:max-[1195px]:flex-1 md:max-[1195px]:max-w-[min(680px,62%)] min-[1440px]:max-w-[709px]">
+          <div className="hero-heading-col min-w-0 translate-y-8 min-[1280px]:max-[1439px]:translate-y-10 md:max-[1195px]:flex-1 md:max-[1195px]:max-w-[min(680px,62%)] min-[1440px]:max-w-[709px]">
             <div className="font-subheading mb-5 flex items-center gap-2.5 text-sm font-semibold text-[#B0CCFF] min-[1195px]:text-base">
               <SectionLabelIcon variant="dark" />
               <span>Paragon Loan Advisors</span>
